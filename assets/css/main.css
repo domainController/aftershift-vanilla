@@ -1,0 +1,117 @@
+/* =====================================================
+   main.css (ex‑legal.css) – charte graphique principale pour OB1 & AfterShift
+   À placer dans assets/css/ et linked depuis toutes les pages :
+   <link rel="stylesheet" href="/assets/css/main.css" />
+   ===================================================== */
+
+/* === BASE GLOBAL === */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap');
+
+body {
+  background-color: #f9f9f9;
+  color: #495057;
+  font-family: 'Source Sans Pro', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* === CONTAINER CENTRAL === */
+.container,
+.legal-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.legal-container h4,
+h4 {
+  font-size: 16px;
+  line-height: 23px;
+  margin: 5px 0;
+  color: #495057; /* gris sérieux */
+  font-weight: 600;
+}
+
+/* === TITRES === */
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #495057;
+  margin: 0 0 1rem;
+}
+
+h2 { font-size: 24px; margin: 1.5rem 0 .75rem; }
+h3 { font-size: 18px; margin: 1.25rem 0 .5rem; }
+
+/* === LIENS === */
+a { color: #495057; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === LISTES ORDONNÉES COMMENTO === */
+ol {
+  list-style: none;
+  counter-reset: num;
+  margin: 0 0 15px 0;
+  padding: 0 0 24px 0;
+}
+
+ol li {
+  counter-increment: num;
+  position: relative;
+  padding-left: 1.5em;
+  margin: 6px 0;
+}
+
+ol li::before {
+  content: counter(num) ".";
+  position: absolute;
+  left: 0;
+  color: #495057;
+  font-weight: bold;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  padding: 12px 24px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e9ecef;
+  z-index: 5;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: 48px;
+  font-size: 16px;
+  color: #707080;
+  text-decoration: none;
+}
+
+.navbar-item:hover { background-color: #f8f9fa; }
+
+.navbar-logo-text {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-left: 56px;
+  color: #495057;
+  line-height: 1;
+}
+
+.navbar-item.current-navbar-item {
+    background-color: #f7f6f4;
+  color: #495057;
+}
+
+/* === UTILITAIRES === */
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0 !important; }
