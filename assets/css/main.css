@@ -43,8 +43,8 @@ h1 {
   margin: 0 0 1rem;
 }
 
-h2 { font-size: 24px; margin: 1.5rem 0 .75rem; }
-h3 { font-size: 18px; margin: 1.25rem 0 .5rem; }
+h2 { font-size: 18px; margin: 1.5rem 0 .75rem; }
+h3 { font-size: 14px; margin: 1.25rem 0 .5rem; }
 
 /* === LIENS === */
 a { color: #495057; text-decoration: none; }

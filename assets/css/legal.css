@@ -1,0 +1,115 @@
+/* === BASE GLOBAL === */
+body {
+  background-color: #f9f9f9;
+  color: #495057;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* === CONTAINER CENTRAL === */
+.legal-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+.legal-container h4 {
+  font-size: 16px;
+  line-height: 23px;
+  margin: 5px 0;
+  color: #495057; /* Ton gris légal sérieux */
+  font-weight: 600;
+}
+/* === TITRE PRINCIPAL === */
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #495057;
+}
+
+
+/* === LIENS === */
+a {
+  color: #495057;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === LISTES ORDONNÉES NUMÉROTÉES STYLE COMMENTO === */
+ol {
+  list-style: none;
+  counter-reset: mycounter;
+  margin: 0 0 15px 0;
+  padding: 0 0 24px 0;
+}
+
+ol li {
+  counter-increment: mycounter;
+  position: relative;
+  padding-left: 1.5em;
+  margin: 6px 0;
+}
+
+ol li::before {
+  content: counter(mycounter) ".";
+  position: absolute;
+  left: 0;
+  color: #495057;
+  font-weight: bold;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  z-index: 5;
+  background-color: #f9f9f9; /* optionnel */
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  height: 48px;
+  color: #707080;
+  text-decoration: none;
+}
+
+.navbar-item:hover {
+  background-color: #f9f9f9;
+}
+
+.navbar-logo-text {
+  font-size: 16px;
+  margin-left: 56px;
+  color: #495057;
+  font-weight: 600;
+}
+
+.navbar-item.current-navbar-item {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.navbar-logo-text {
+  font-size: 34px; /* réduit depuis 40, mais toujours plus grand que le reste */
+  font-weight: 800; /* plus massif que 700 */
+  letter-spacing: -1px; /* resserre les lettres, visuellement plus compact */
+  line-height: 1;
+  margin-left: 56px;
+  color: #495057; /* ou #1a1a1a pour une petite nuance sobre */
+  font-family: 'Source Sans Pro', sans-serif; /* pour matcher ton texte principal */
+}
