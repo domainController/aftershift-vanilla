@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "add-timestamps": "node scripts/add-timestamps.cjs",
     "generate-home-updates": "node scripts/generate-home-updates.mjs",
+    "prepare-commit": "npm run add-timestamps && npm run generate-home-updates && npm run generate-updates",
     "generate-updates": "node scripts/generate-updates.mjs"
   },
   "dependencies": {
