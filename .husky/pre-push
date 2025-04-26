@@ -1,27 +1,30 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🔄 Running update scripts before pushing..."
+echo "🔍 Checking staged changes for HTML files..."
 
-npm run prepare-commit
+# Récupérer la liste des fichiers staged pour le push
+MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
-echo ""
-echo "🔍 Checking critical files (index.html and update.html)..."
+# Liste des fichiers HTML à surveiller
+TARGET_FILES="index.html updates.html legal.html forum.html form.html about.html"
 
-CRITICAL_CHANGED=false
+TO_UPDATE=""
 
-for file in "index.html" "update.html"; do
-  if git diff --cached --name-only | grep -q "$file"; then
-    echo "✅ $file has been updated."
-    CRITICAL_CHANGED=true
-  else
-    echo "⚠️ $file has NOT been updated."
-  fi
+# Vérifie si des fichiers staged correspondent aux fichiers HTML suivis
+for file in $MODIFIED_FILES; do
+  for target in $TARGET_FILES; do
+    if [ "$file" = "$target" ]; then
+      TO_UPDATE="$TO_UPDATE $file"
+    fi
+  done
 done
 
-echo ""
-if [ "$CRITICAL_CHANGED" = true ]; then
-  echo "✅ Critical updates detected. Proceeding with push."
+# Si aucun fichier HTML n'a été modifié, on continue normalement
+if [ -z "$TO_UPDATE" ]; then
+  echo "✅ No relevant HTML files changed. Proceeding to push."
 else
-  echo "⚠️ Warning: Critical files not updated. Please review before pushing."
+  echo "🔄 Updating timestamps for modified HTML files..."
+  node scripts/add-timestamps.mjs $TO_UPDATE
+  git add $TO_UPDATE
 fi
