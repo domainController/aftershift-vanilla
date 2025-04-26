@@ -122,3 +122,29 @@ ol li::before {
   text-align: center;
   padding: 0.5rem;
 }
+
+/* === SITE FOOTER === */
+.site-footer {
+  /* espace au-dessus */
+  margin-top: 3rem;
+  /* petits paddings horizontal et vertical */
+  padding: 1rem 2rem;
+  /* si vous voulez que le bloc ne soit pas trop large, décommentez les lignes suivantes :
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  */
+}
+
+.site-footer p {
+  /* plus lisible, aligné à gauche */
+  text-align: left;
+  /* on enlève le margin par défaut du p */
+  margin: 0;
+  /* on pousse un peu vers la droite pour éviter que ça colle au bord */
+  padding-left: 1rem;
+  /* taille et couleur comme vous l’aviez */
+  font-size: 12px;
+  color: #999;
+  line-height: 1.4;
+}
