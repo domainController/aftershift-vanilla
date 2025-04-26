@@ -2,12 +2,14 @@
   "type": "module",
   "devDependencies": {
     "cheerio": "^1.0.0",
-    "husky": "^9.1.7"
+    "husky": "^8.0.0"
   },
   "scripts": {
-    "prepare": "husky install .husky",
+    "postinstall": "husky install",
+    "test": "echo \"No tests defined\"",
     "add-timestamps": "node scripts/add-timestamps.cjs",
-    "generate-updates": "node scripts/generate-updates.mjs"
+    "generate-updates": "node scripts/generate-updates.mjs",
+    "prepare": "husky install"
   },
   "dependencies": {
     "simple-git": "^3.27.0"

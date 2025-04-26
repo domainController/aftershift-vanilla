@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run generate-updates && git add updates.html && git diff --staged --quiet || git commit -m 'chore: regenerate updates'
+npm run generate-updates &&    git add updates.html &&    git diff --staged --quiet ||    git commit -m 'chore: regenerate updates'
