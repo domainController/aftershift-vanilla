@@ -1,5 +1,27 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-npm run generate-updates && git add updates.html && git diff --staged --quiet || git commit -m 'chore: regenerate updates'
-npm run generate-updates &&    git add updates.html &&    git diff --staged --quiet ||    git commit -m 'chore: regenerate updates'
+echo "🔄 Running update scripts before pushing..."
+
+npm run prepare-commit
+
+echo ""
+echo "🔍 Checking critical files (index.html and update.html)..."
+
+CRITICAL_CHANGED=false
+
+for file in "index.html" "update.html"; do
+  if git diff --cached --name-only | grep -q "$file"; then
+    echo "✅ $file has been updated."
+    CRITICAL_CHANGED=true
+  else
+    echo "⚠️ $file has NOT been updated."
+  fi
+done
+
+echo ""
+if [ "$CRITICAL_CHANGED" = true ]; then
+  echo "✅ Critical updates detected. Proceeding with push."
+else
+  echo "⚠️ Warning: Critical files not updated. Please review before pushing."
+fi

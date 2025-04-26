@@ -1,15 +1,14 @@
 {
   "type": "module",
   "devDependencies": {
-    "cheerio": "^1.0.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "cheerio": "^1.0.0"
   },
   "scripts": {
-    "postinstall": "husky install",
-    "test": "echo \"No tests defined\"",
+    "prepare": "husky install",
     "add-timestamps": "node scripts/add-timestamps.cjs",
-    "generate-updates": "node scripts/generate-updates.mjs",
-    "prepare": "husky install"
+    "generate-home-updates": "node scripts/generate-home-updates.mjs",
+    "generate-updates": "node scripts/generate-updates.mjs"
   },
   "dependencies": {
     "simple-git": "^3.27.0"

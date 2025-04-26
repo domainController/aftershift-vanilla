@@ -6,8 +6,8 @@ import simpleGit from "simple-git";
 
 const git = simpleGit();
 // Paths for template and output (root)
-const TEMPLATE_PATH = path.resolve("updates_template.html");
-const OUTPUT_PATH = path.resolve("updates.html");
+const TEMPLATE_PATH = path.resolve("update.html");
+const OUTPUT_PATH = path.resolve("update.html");
 
 // Icon picker based on commit message tag
 function pickIcon(message) {
