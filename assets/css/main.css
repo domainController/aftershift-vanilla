@@ -22,7 +22,11 @@ body {
 .legal-container {
   max-width: 750px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px 40px 20px;
+}
+
+.legal-container .update-entry:first-of-type {
+  margin-top: 0.5rem; /* ou même 0.5rem si tu veux hyper serré */
 }
 
 .legal-container h4,
@@ -40,7 +44,16 @@ h1 {
   font-weight: 700;
   text-align: center;
   color: #495057;
-  margin: 0 0 1rem;
+  margin: 0 0 0rem;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #999;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
 }
 
 h2 { font-size: 18px; margin: 1.5rem 0 .75rem; }
@@ -65,6 +78,9 @@ ol li {
   margin: 6px 0;
 }
 
+a {
+  font-weight: bold;
+}
 ol li::before {
   content: counter(num) ".";
   position: absolute;
@@ -84,6 +100,11 @@ ol li::before {
   background-color: #f9f9f9;
   border-bottom: 1px solid #e9ecef;
   z-index: 5;
+
+}
+
+.navbar a {
+  font-weight: normal;
 }
 
 .navbar-item {
@@ -120,6 +141,8 @@ ol li::before {
   font-size: 0.75rem;
   color: #999;
   padding: 0.5rem;
+  margin-top: 0;
+
 }
 
 /* === SITE FOOTER === */
@@ -160,3 +183,6 @@ ol li::before {
   text-align: center;
 }
 
+.update-entry:first-of-type {
+  margin-top: 1rem; /* Ou même 0.5rem pour être bien compact */
+}

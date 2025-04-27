@@ -7,7 +7,7 @@ echo "🔍 Checking staged changes for HTML files..."
 MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
 # Liste des fichiers HTML à surveiller dans OB1 Vanilla
-TARGET_FILES="index.html updates.html legal.html forum.html about.html"
+TARGET_FILES="index.html updates.html legal.html forum.html about.html timeline.html home.html"
 
 TO_UPDATE=""
 

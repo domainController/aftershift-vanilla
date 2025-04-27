@@ -30,7 +30,7 @@ function formatDay(dateObj) {
 }
 
 // Fetch commits from the last `sinceDays`
-async function getCommits(sinceDays = 2) {
+async function getCommits(sinceDays = 3) {
   const sinceDateObj = new Date();
   sinceDateObj.setHours(0, 0, 0, 0);
   sinceDateObj.setDate(sinceDateObj.getDate() - sinceDays);
