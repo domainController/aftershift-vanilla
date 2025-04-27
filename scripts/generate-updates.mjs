@@ -4,10 +4,27 @@ import { promises as fs } from "fs";
 import path from "path";
 import simpleGit from "simple-git";
 
+// --- ARCHIVING TO LOGS ---
+
+import fs from "fs";
+import path from "path";
+
 const git = simpleGit();
 // Paths for template and output (root)
 const TEMPLATE_PATH = path.resolve("update.html");
 const OUTPUT_PATH = path.resolve("update.html");
+
+// Créer le dossier logs/ s'il n'existe pas
+const logsDir = path.resolve("logs");
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir);
+}
+
+// Définir le chemin du fichier archive
+const archivePath = path.join(logsDir, "updates-archive.html");
+
+// Lire le contenu déjà généré pour updates.html
+const updatesHtmlContent = fs.readFileSync(outputPath, "utf-8");
 
 // Icon picker based on commit message tag
 function pickIcon(message) {
@@ -141,6 +158,10 @@ async function main() {
     `✅ Generated ${OUTPUT_PATH} with ${groups.length} day group(s).`
   );
 }
+// Ajouter tout le contenu au fichier d'archive (append)
+fs.appendFileSync(archivePath, updatesHtmlContent + "\n\n", "utf-8");
+
+console.log(`✅ Updates archived successfully to logs/updates-archive.html`);
 
 main().catch((err) => {
   console.error(err);

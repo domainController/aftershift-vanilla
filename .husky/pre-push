@@ -3,15 +3,15 @@
 
 echo "🔍 Checking staged changes for HTML files..."
 
-# Récupérer la liste des fichiers staged pour le push
+# Liste des fichiers modifiés qui sont en attente de push
 MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
-# Liste des fichiers HTML à surveiller
-TARGET_FILES="index.html updates.html legal.html forum.html form.html about.html"
+# Liste des fichiers HTML à surveiller dans OB1 Vanilla
+TARGET_FILES="index.html updates.html legal.html forum.html about.html"
 
 TO_UPDATE=""
 
-# Vérifie si des fichiers staged correspondent aux fichiers HTML suivis
+# Vérifie si un fichier modifié fait partie de ceux qu'on veut timestamp
 for file in $MODIFIED_FILES; do
   for target in $TARGET_FILES; do
     if [ "$file" = "$target" ]; then
@@ -20,7 +20,7 @@ for file in $MODIFIED_FILES; do
   done
 done
 
-# Si aucun fichier HTML n'a été modifié, on continue normalement
+# Si aucun fichier HTML important n'est modifié ➔ push direct
 if [ -z "$TO_UPDATE" ]; then
   echo "✅ No relevant HTML files changed. Proceeding to push."
 else
