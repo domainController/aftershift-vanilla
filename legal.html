@@ -4,20 +4,41 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.aftershift.se"]);
+  _paq.push(["setDomains", ["*.aftershift.se"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://aftershift.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
   <header>
     <div class="navbar">
-      <a href="/home.html" class="navbar-item">Home</a>
-      <a href="/author.html" class="navbar-item">Author</a>
-      <a href="/forum.html" class="navbar-item">Forum</a>
-      <a href="/updates.html" class="navbar-item">Updates</a>
-    </div>
-  </header>
+        <a href="/posts" class="navbar-item navbar-logo-text"></a>
+        <a href="/home.tml" class="navbar-item">Home</a>
+        <a href="/posts.html" class="navbar-item">Blog</a>
+        <a href="/updates.html" class="navbar-item">Activity Log</a>
+        <a href="/timeline.html" class="navbar-item">Timeline</a>
+        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
+        <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
+        <a href="/about.html" class="navbar-item">Author</a>
+      </div>
+</header>
   <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
     <h1>Legal Notice &amp; Data Policy</h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Monday, April 28, 2025 at 01:17 AM</small>
-<p class="page-timestamp">Updated: Saturday, 26 April 2025 at 06:29:57</p>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Monday, April 28, 2025 at 01:34 AM</small>
 
     <h2>1. Site Publisher</h2>
     <p>
@@ -80,8 +101,14 @@
     <p>
       AfterShift is independent but connected to OB1.se (a separate community platform). Both are maintained by the same author but serve different purposes. Legal responsibilities are clearly separated.
     </p>
-
-    <p style="margin-top: 2rem; font-size: 12px; color: #999;">© 2025 AfterShift. All rights reserved.</p>
   </main>
 
+    <footer class="site-footer">
+      <p>
+        © 2025 AfterShift. All rights reserved.<br>
+        Content provided as-is without warranty.<br>
+          Governing law: Swedish law. Jurisdiction: Malmö courts.
+      </p>
+    </footer>
+ 
 </body></html>

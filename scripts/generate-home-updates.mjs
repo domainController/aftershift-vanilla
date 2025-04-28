@@ -30,7 +30,7 @@ function formatDay(dateObj) {
 }
 
 // Fetch commits from the last `sinceDays`
-async function getCommits(sinceDays = 3) {
+async function getCommits(sinceDays = 1) {
   const sinceDateObj = new Date();
   sinceDateObj.setHours(0, 0, 0, 0);
   sinceDateObj.setDate(sinceDateObj.getDate() - sinceDays);
@@ -85,7 +85,7 @@ async function main() {
 
   // Build snippet with maximum 2 days
   let snippet = '<div class="legal-container">\n';
-  for (const g of groups.slice(0, 2)) {
+  for (const g of groups.slice(0, 1)) {
     if (!g.entries.length) continue;
     snippet += `<h2>${g.entries[0].icon} ${g.day}</h2>\n<ul>\n`;
     for (const e of g.entries) {

@@ -116,7 +116,10 @@ ol li::before {
   color: #707080;
   text-decoration: none;
 }
+.navbar-item[aria-current="page"] {
 
+  text-decoration: underline; /* ou toute autre mise en avant */
+}
 .navbar-item:hover { background-color: #f8f9fa; }
 
 .navbar-logo-text {
@@ -131,6 +134,37 @@ ol li::before {
 .navbar-item.current-navbar-item {
     background-color: #f7f6f4;
   color: #495057;
+}
+
+/* style du bouton */
+.burger {
+  display: none;            /* caché par défaut */
+  font-size: 1.5rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* mobile : cacher la nav, montrer le burger */
+@media (max-width: 640px) {
+  .burger { display: block; }
+
+  .navbar {
+    position: fixed;        /* panneau slide-in */
+    top: 0; right: 0;
+    height: 100vh;
+    width: 70vw;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4rem;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+  }
+
+  .navbar.show {            /* classe active via JS */
+    transform: translateX(0);
+  }
 }
 
 /* === UTILITAIRES === */

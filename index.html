@@ -2,64 +2,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to OB1</title>
+    <title>Aftershift Blog</title>
     <link rel="stylesheet" href="assets/css/main.css">
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.aftershift.se"]);
+  _paq.push(["setDomains", ["*.aftershift.se"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://aftershift.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
-
 <header>
     <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
-                        <a href="/about.html" class="navbar-item">Author</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-        <a href="/legal.html" class="navbar-item">Legal</a>
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/updates.html" class="navbar-item">Activity Log</a>
         <a href="/home.tml" class="navbar-item">Home</a>
+        <a href="/posts.html" class="navbar-item">Blog</a>
+        <a href="/updates.html" class="navbar-item">Activity Log</a>
         <a href="/timeline.html" class="navbar-item">Timeline</a>
-
-    </div>
+        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
+        <a href="/legal.html" class="navbar-item">Legal</a>
+        <a href="/about.html" class="navbar-item">Author</a>
+      </div>
 </header>
 <main>
         <div class="legal-container">
-            <h1>On Multiple Hands<br><small class="subtitle">A Tactical Journal of Legal Inertia and employer neglect in a high-end Malmö restaurant.</small></h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Monday, April 28, 2025 at 01:17 AM</small>
+            <h1>On Multiple Hands<br><small class="subtitle">A Tactical Journal of Legal Inertia and Employer Neglect in a High-end Malmö Restaurant.</small></h1>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Monday, April 28, 2025 at 01:34 AM</small>
         </div>
         <div style="text-align: center; margin-top: 10px; margin-bottom: 10px; ">
           <img src="./assets/img/20231026_155218.jpg" alt="AfterShift Banner" style="max-width: 40%; height: auto; border-radius: 8px;">
         </div>           
     <div class="legal-container">
-        <h2 class="centered">Blog Development Log</h2>
-        <p>
-        This blog is currently in its early development stage. While not intended for full-scale content publication yet, it serves as a structural prototype to define the foundations of a more comprehensive and SEO-oriented platform.
-        </p>
-        <p>
-          Only minimal publication activity is planned during this phase. Updates focus on setting up the framework, structuring content, and ensuring traceability through a documented log.
+        <h2 class="centered">Development Log – Last 24 h</h2>
+      <p>
+            This site is in an early test phase.  
+            The goal is to lay the groundwork for a fast, multilingual, data-driven platform
+            optimised for SEO and long-form legal content.
           </p>
-          <p>
-            This documentation approach aligns with key principles of transparency, traceability, and good faith. 
-            Those interested in understanding the broader context are invited to explore 
-            <a href="updates.html"><strong>the rationale behind this log</strong></a>.
-            </p>
                 <!-- START INDEX UPDATES -->
 <div class="legal-container">
-<h2>✅ Monday 28 April 2025</h2>
+<h2>🔧 Monday 28 April 2025</h2>
 <ul>
+  <li>🔧 01:34:01 – chore(content): update blog title to 'On Multiple Hands' and remove construction icon for cleaner mobile display</li>
   <li>✅ 01:17:53 – feat(about): update blog description and clarify AfterShift project scope</li>
   <li>🔄 22:23:08 – style(css): refine layout and adjust container and internal link styles</li>
   <li>🔧 22:22:41 – fix(hooks): update pre-push logic and refine timestamp and update generation scripts</li>
   <li>✅ 14:16:10 – feat(index): finalize homepage setup with intro, timestamp and first image | feat(content): add home.html and timeline.html structure | docs(scripts): add README-technical-logs.md for automation summary</li>
-</ul>
-<h2>🔧 Saturday 26 April 2025</h2>
-<ul>
-  <li>🔧 19:25:51 – fix(hooks): correct pre-push and migrate timestamp script to ES Modules</li>
-  <li>✅ 17:23:17 – feat(index): create initial homepage structure and intro text</li>
-  <li>🔧 17:18:55 – fix: add prepare-commit script for pre-push automation</li>
-  <li>🔄 17:15:50 – setup(aftershift): initialize timestamp and activity logs</li>
-  <li>🔧 06:29:57 – chore: regenerate updates</li>
-  <li>🔧 06:29:56 – chore: regenerate updates</li>
-  <li>🔧 06:29:02 – chore: remove npm test from pre-commit hook</li>
-  <li>🔄 06:05:42 – Votre message de commit pour aujourd'hui</li>
 </ul>
 </div>
 <!-- END INDEX UPDATES -->
