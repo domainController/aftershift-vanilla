@@ -25,6 +25,21 @@
 </head>
 <body>
   <header>
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
+</script>
     <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
         <a href="/" class="navbar-item">Home</a>
@@ -36,16 +51,19 @@
         <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
         <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
         <a href="/about.html" class="navbar-item">Author</a>
+        <a href="/contact.html" class="navbar-item">Contact</a>
       </div>
 </header>
   <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
       <h1>xxxxxxxxx</h1>
     
+
+    </footer>
     <footer class="site-footer">
       <p>
-        © 2025 OB1. All rights reserved.<br>
-        Content provided “as is” without warranties.<br>
-        Terms governed by Swedish law – Malmö courts have exclusive jurisdiction.
+        © 2025 AfterShift. All rights reserved.<br>
+        Content provided as-is without warranty.<br>
+          Governing law: Swedish law. Jurisdiction: Malmö courts.
       </p>
     </footer>
    </main></body></html>

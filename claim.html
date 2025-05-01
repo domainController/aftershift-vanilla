@@ -31,17 +31,33 @@
   </head>
   <body>
     <header>
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
+</script>
       <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
         <a href="/" class="navbar-item">Home</a>
         <a href="/posts.html" class="navbar-item">Blog</a>
-        <a href="/claim.html" class="navbar-item">Claim</a>
+        <a href="/claim.html" class="navbar-item" aria-current="page">Claim</a>
         <a href="/context.html" class="navbar-item">Context</a>
         <a href="/updates.html" class="navbar-item">Activity Log</a>
         <a href="/timeline.html" class="navbar-item">Timeline</a>
         <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
+        <a href="/legal.html" class="navbar-item">Legal</a>
         <a href="/about.html" class="navbar-item">Author</a>
+        <a href="/contact.html" class="navbar-item">Contact</a>
       </div>
     </header>
     <main
@@ -53,84 +69,57 @@
       "
     >
       <h1>Claim</h1>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Thursday, May 1, 2025 at 09:50 PM</small>
+
       <p>
-        <strong>The Unsocial Hours</strong> est un journal
-        tactico-stratégique-juridique. Il prolonge publiquement un litige de
-        travail toujours actif, né d’un licenciement sans contrat écrit en tant
-        que <strong>dishwasher</strong>. La dernière communication de
-        l’employeur remonte à avril 2025.
+        <strong>The Unsocial Hours</strong> is a
+        <strong>tactical-legal journal</strong> that publicly extends a
+        still-active labor dispute. It originated in the aftermath of a
+        <strong>dishwasher dismissal without a written contract</strong>, and
+        the last contact with the employer occurred in
+        <strong>mid-April 2025</strong>.
       </p>
 
       <p>
-        Ce blog retrace les faits dans une
-        <strong>chronologie structurée</strong>, expose les carences et abus
-        rencontrés, et interroge les textes et obligations légales applicables.
-        Il combine <strong>narration factuelle</strong>,
-        <strong>exploration juridique</strong> et
-        <strong>réflexion sociétale</strong>.
+        <strong>This blog</strong> offers a
+        <strong>structured timeline</strong> of events, highlights
+        <strong>contractual breaches</strong> and
+        <strong>administrative irregularities</strong>, and examines the
+        <strong>legal obligations</strong> potentially violated. It combines
+        <strong>factual narration</strong>,
+        <strong>legal interpretation</strong>, and
+        <strong>socio-professional reflection</strong>.
       </p>
 
       <p>
-        Il fonctionne comme un <strong>cadre public d’analyse</strong>, ancré
-        dans les termes du droit du travail. C’est un
-        <strong>exercice de style</strong>, une
-        <strong>initiation à la pensée juridique</strong>, un entraînement
-        méthodique au raisonnement structuré.
+        It functions as a <strong>public legal framework</strong> anchored in
+        labor law terminology. It is also a
+        <strong>personal training space</strong>, an
+        <strong>initiation into legal reasoning</strong>, and a method to
+        clarify damages while identifying actionable paths.
       </p>
 
       <p>
-        Il permet de clarifier les <strong>préjudices subis</strong>, de les
-        nommer, et d’ouvrir des pistes concrètes d’action pour d’autres
-        travailleurs. Il vise à dégager, par l’exemple, des axes de défense.
-      </p>
-
-      <p>
-        C’est aussi un
+        The blog serves as a
         <strong
-          >outil de documentation, d’anticipation stratégique et de
-          défense</strong
-        >. Il cherche à mettre en lumière les logiques de contournement, de
-        silence ou de domination, que l’analyse juridique peut progressivement
-        décoder.
+          >modular platform for defense, documentation, and strategic
+          anticipation</strong
+        >. It encourages <strong>collaboration</strong> among workers,
+        whistleblowers, union advocates, and legal thinkers. It also aims to
+        <strong>federate those affected</strong> by similar situations and
+        create shared frameworks for response.
       </p>
-
       <p>
-        Je cherche à esquisser des
-        <strong>stratégies protéiformes d’auto-justice</strong>, sans dépendre
-        entièrement des procédures judiciaires classiques — trop lentes, trop
-        coûteuses, trop incertaines. Le blog s’inscrit comme un
-        <strong>laboratoire d’initiatives</strong> pour faire respecter le droit
-        par des voies nouvelles.
+        Finally, <em>The Unsocial Hours</em> explores
+        <strong>protean strategies of legal activation</strong> — new approaches
+        to <strong>applying the law through digital tools</strong>, especially
+        when traditional litigation proves too slow, opaque, or inaccessible. It
+        also aims to
+        <strong
+          >envision alternative forms of collaboration with legal
+          professionals</strong
+        >, in order to respond more effectively to structural neglect.
       </p>
-
-      <p>
-        Il s’adresse à celles et ceux qui souhaitent comprendre, réagir, se
-        défendre, ou simplement documenter. Il propose une méthode
-        reproductible, ajustable, qui s’appuie sur des preuves, des textes, et
-        des stratégies légales modulables.
-      </p>
-
-      <p>
-        C’est aussi un espace <strong>ouvert à la collaboration</strong> :
-        syndicalistes, doctorants, inspecteurs, avocats, journalistes,
-        travailleurs. Ce blog cherche à <strong>fédérer</strong>, partager,
-        transmettre. Une défense ne se pense pas seul.
-      </p>
-
-      <p>
-        Enfin, il constitue une
-        <strong>plateforme d’expression autonome</strong>, née du refus de tout
-        dialogue par l’employeur. Là où il y a eu silence, je construis la
-        parole. Là où il y a eu négligence, je bâtis des faits.
-      </p>
-
-      <p>
-        <strong>“Unsocial Hours”</strong> est la traduction littérale du terme
-        suédois <strong>“OB-timmar”</strong>, qui désigne les heures de travail
-        dites atypiques ou désocialisées. Ce blog en reprend le nom pour
-        explorer, à travers ce conflit, une relecture des marges du travail.
-      </p>
-
       <footer class="site-footer">
         <p>
           © 2025 OB1. All rights reserved.<br />

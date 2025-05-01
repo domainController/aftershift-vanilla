@@ -1,110 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog – AfterShift</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Matomo -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog – AfterShift</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.aftershift.se"]);
+      _paq.push(["setDomains", ["*.aftershift.se"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://aftershift.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
+
+  <body>
+    <header>
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
 <script>
-  var _paq = window._paq = window._paq || [];
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "*.aftershift.se"]);
-  _paq.push(["setDomains", ["*.aftershift.se"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://aftershift.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
 </script>
-<!-- End Matomo Code -->
-</head>
+      <div class="navbar">
+        <a href="/posts" class="navbar-item navbar-logo-text"></a>
+        <a href="/" class="navbar-item">Home</a>
+        <a href="/posts.html" class="navbar-item">Blog</a>
+        <a href="/claim.html" class="navbar-item">Claim</a>
+        <a href="/context.html" class="navbar-item">Context</a>
+        <a href="/updates.html" class="navbar-item">Activity Log</a>
+        <a href="/timeline.html" class="navbar-item">Timeline</a>
+        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
+        <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
+        <a href="/about.html" class="navbar-item">Author</a>
+        <a href="/contact.html" class="navbar-item">Contact</a>
+      </div>
+    </header>
 
-<body>
-  <header>
-    <div class="navbar">
-      <a href="/posts" class="navbar-item navbar-logo-text"></a>
-      <a href="/" class="navbar-item">Home</a>
-      <a href="/posts.html" class="navbar-item" aria-current="page">Blog</a>
-      <a href="/updates.html" class="navbar-item">Activity Log</a>
-      <a href="/timeline.html" class="navbar-item">Timeline</a>
-      <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-      <a href="/legal.html" class="navbar-item">Legal</a>
-      <a href="/about.html" class="navbar-item">Author</a>
-    </div>
-  </header>
+    <main
+      style="
+        max-width: 740px;
+        margin: auto;
+        padding: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+      "
+    >
+      <h1>Upcoming Publications</h1>
+      <small class="timestamp" style="display: block; text-align: center"
+        >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
+      >
 
-  <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
-    <h1>Upcoming Publications</h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Thursday, May 1, 2025 at 02:33 AM</small>
+      <p>
+        This section will soon feature a handful of articles. Each release will
+        consist of two distinct parts: a
+        <strong>detailed chronological reconstruction of events</strong> and an
+        <strong>autonomous legal reflection</strong> focusing on applicable
+        laws, available remedies, and broader systemic issues.
+      </p>
 
+      <p>
+        No more than <strong>three pairs</strong> will be published at this
+        stage—<strong>six articles maximum</strong>. The objective is to explore
+        formats, refine editorial tone, and prepare for a future advanced
+        platform.
+      </p>
 
-    <p>This section will soon feature a handful of articles. Each release will consist of two distinct parts: a <strong>detailed chronological reconstruction of events</strong> and an <strong>autonomous legal reflection</strong> focusing on applicable laws, available remedies, and broader systemic issues.</p>
+      <h2>
+        First Article: <em>On Dismissal by Text</em> (Om uppsägning via SMS)
+      </h2>
 
-    <p>No more than <strong>three pairs</strong> will be published at this stage—<strong>six articles maximum</strong>. The objective is to explore formats, refine editorial tone, and prepare for a future advanced platform.</p>
+      <p>
+        Across industries, from anonymous workers to famous CEOs and
+        professional sports coaches, dismissals have often adopted the form of a
+        <strong>coward elegance</strong>: swift, discreet, and elegantly
+        detached, avoiding the direct confrontation of a traditional
+        face-to-face dismissal, which though painful, retains a certain
+        nobility.
+      </p>
 
-    <h2>First Article: <em>On Dismissal by Text</em> (Om uppsägning via SMS)</h2>
+      <p>
+        These practices reflect less a conscious cruelty than a blend of urgent
+        pragmatism and <strong>efficient contempt</strong>, treating individuals
+        not as unique beings but as disposable assets — echoing, perhaps, the
+        raw cynicism embedded in the term "Human Resources."
+      </p>
 
-    <p>Across industries, from anonymous workers to famous CEOs and professional sports coaches, dismissals have often adopted the form of a <strong>coward elegance</strong>: swift, discreet, and elegantly detached, avoiding the direct confrontation of a traditional face-to-face dismissal, which though painful, retains a certain nobility.</p>
+      <p>
+        Drawing from personal experience and broader examples, the articles will
+        examine:
+      </p>
+      <ul>
+        <li>What constitutes a valid resignation?</li>
+        <li>What is the purpose of a notice period?</li>
+        <li>How can an employment contract be terminated?</li>
+        <li>Is a <strong>friendly procedure</strong> legally acceptable?</li>
+        <li>
+          What concrete remedies are available to contest such dismissals?
+        </li>
+      </ul>
 
-    <p>These practices reflect less a conscious cruelty than a blend of urgent pragmatism and <strong>efficient contempt</strong>, treating individuals not as unique beings but as disposable assets — echoing, perhaps, the raw cynicism embedded in the term "Human Resources."</p>
+      <p>
+        Each article pair will serve as an
+        <strong>exercise in style and structure</strong>, setting the
+        foundations for the editorial DNA of the future platform.
+      </p>
 
-    <p>Drawing from personal experience and broader examples, the articles will examine:</p>
-    <ul>
-      <li>What constitutes a valid resignation?</li>
-      <li>What is the purpose of a notice period?</li>
-      <li>How can an employment contract be terminated?</li>
-      <li>Is a <strong>friendly procedure</strong> legally acceptable?</li>
-      <li>What concrete remedies are available to contest such dismissals?</li>
-    </ul>
+      <p>
+        The first article is nearing completion and will be released when the
+        foundations feel right.
+      </p>
 
-    <p>Each article pair will serve as an <strong>exercise in style and structure</strong>, setting the foundations for the editorial DNA of the future platform.</p>
+      <h2>Call for Collaboration</h2>
 
-    <p>The first article is nearing completion and will be released when the foundations feel right.</p>
+      <p>
+        To strengthen the legal reflections, a call for collaboration is open.
+      </p>
+      <p>
+        I am seeking serious contributors interested in bringing their
+        expertise, whether through short commentaries or more structured
+        validations.
+      </p>
 
-    <h2>Call for Collaboration</h2>
+      <p>Primarily, I am looking for:</p>
+      <ul>
+        <li>
+          <strong>Blogging lawyers</strong> (especially those interested in
+          labor and employment topics),
+        </li>
+        <li><strong>Experienced union representatives</strong>,</li>
+        <li><strong>Retired labor inspectors</strong>,</li>
+        <li><strong>PhD candidates in labor law</strong>,</li>
+        <li><strong>Labor law jurists</strong> (junior or experienced),</li>
+        <li>
+          <strong>Master’s students working on labor-related theses</strong>.
+        </li>
+      </ul>
 
-    <p>To strengthen the legal reflections, a call for collaboration is open.</p>
-    <p>I am seeking serious contributors interested in bringing their expertise, whether through short commentaries or more structured validations.</p>
+      <p>
+        This list is not exclusive. Anyone with a serious background in labor
+        law and employment relations is warmly encouraged to reach out.
+      </p>
 
-    <p>Primarily, I am looking for:</p>
-    <ul>
-      <li><strong>Blogging lawyers</strong> (especially those interested in labor and employment topics),</li>
-      <li><strong>Experienced union representatives</strong>,</li>
-      <li><strong>Retired labor inspectors</strong>,</li>
-      <li><strong>PhD candidates in labor law</strong>,</li>
-      <li><strong>Labor law jurists</strong> (junior or experienced),</li>
-      <li><strong>Master’s students working on labor-related theses</strong>.</li>
-    </ul>
+      <p>
+        If you are interested, please contact me directly at
+        <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>.
+      </p>
 
-    <p>This list is not exclusive. Anyone with a serious background in labor law and employment relations is warmly encouraged to reach out.</p>
+      <h2>In Conclusion</h2>
 
-    <p>If you are interested, please contact me directly at <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>.</p>
+      <p>
+        As Friedrich Nietzsche once wrote,
+        <em>"No one lies as much as an indignant man."</em>
+      </p>
 
-    <h2>In Conclusion</h2>
+      <p>
+        Rather than indulging in outrage, these articles aim to observe,
+        document, and reflect calmly on realities that have long been part of
+        the contemporary employment landscape.
+      </p>
 
-    <p>As Friedrich Nietzsche once wrote, <em>"No one lies as much as an indignant man."</em></p>
+      <p>
+        This current site is a <strong>foundational workspace</strong>: a place
+        to establish methods, define themes, and set structural baselines before
+        transitioning to a more advanced, writing-focused platform.
+      </p>
 
-    <p>Rather than indulging in outrage, these articles aim to observe, document, and reflect calmly on realities that have long been part of the contemporary employment landscape.</p>
+      <p>Thank you.</p>
+    </main>
 
-    <p>This current site is a <strong>foundational workspace</strong>: a place to establish methods, define themes, and set structural baselines before transitioning to a more advanced, writing-focused platform.</p>
-
-    <p>Thank you.</p>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>
-      © 2025 OB1. All rights reserved.<br>
-      Content provided “as is” without warranties.<br>
-      Terms governed by Swedish law – Mälmo courts have exclusive jurisdiction.
-    </p>
-  </footer>
-
-</body>
+    <footer class="site-footer">
+      <p>
+        © 2025 OB1. All rights reserved.<br />
+        Content provided “as is” without warranties.<br />
+        Terms governed by Swedish law – Malmö courts have exclusive
+        jurisdiction.
+      </p>
+    </footer>
+  </body>
 </html>

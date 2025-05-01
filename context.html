@@ -1,51 +1,86 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <title>What's New</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Matomo -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.aftershift.se"]);
+      _paq.push(["setDomains", ["*.aftershift.se"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://aftershift.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
 <script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "*.aftershift.se"]);
-  _paq.push(["setDomains", ["*.aftershift.se"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://aftershift.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
 </script>
-<!-- End Matomo Code -->
-</head>
-<body>
-  <header>
-    <div class="navbar">
+      <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
         <a href="/" class="navbar-item">Home</a>
         <a href="/posts.html" class="navbar-item">Blog</a>
-<a href="/claim.html" class="navbar-item">Claim</a>
-<a href="/context.html" class="navbar-item">Context</a>
+        <a href="/claim.html" class="navbar-item">Claim</a>
+        <a href="/context.html" class="navbar-item" aria-current="page"
+          >Context</a
+        >
         <a href="/updates.html" class="navbar-item">Activity Log</a>
         <a href="/timeline.html" class="navbar-item">Timeline</a>
         <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
+        <a href="/legal.html" class="navbar-item">Legal</a>
         <a href="/about.html" class="navbar-item">Author</a>
+        <a href="/contact.html" class="navbar-item">Contact</a>
       </div>
-</header>
-  <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
+    </header>
+    <main
+      style="
+        max-width: 740px;
+        margin: auto;
+        padding: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+      "
+    >
       <h1>Context</h1>
-    
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Thursday, May 1, 2025 at 09:50 PM</small>
+
+    </main>
     <footer class="site-footer">
       <p>
-        © 2025 OB1. All rights reserved.<br>
-        Content provided “as is” without warranties.<br>
-        Terms governed by Swedish law – Malmö courts have exclusive jurisdiction.
+        © 2025 OB1. All rights reserved.<br />
+        Content provided “as is” without warranties.<br />
+        Terms governed by Swedish law – Malmö courts have exclusive
+        jurisdiction.
       </p>
     </footer>
-   </main></body></html>
+  </body>
+</html>

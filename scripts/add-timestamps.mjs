@@ -22,6 +22,8 @@ const filesToUpdate = [
   "about.html",
   "legal.html",
   "posts.html",
+  "claim.html",
+  "context.html",
   // Ajoute ici d'autres fichiers HTML manuellement si besoin
 ];
 

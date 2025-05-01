@@ -67,6 +67,21 @@
   </head>
   <body>
     <header>
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
+</script>
       <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
         <a href="/" class="navbar-item">Home</a>
@@ -78,6 +93,7 @@
         <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
         <a href="/legal.html" class="navbar-item">Legal</a>
         <a href="/about.html" class="navbar-item" aria-current="page">Author</a>
+        <a href="/contact.html" class="navbar-item">Contact</a>
       </div>
     </header>
     <main>

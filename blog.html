@@ -1,69 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog • AfterShift</title>
-  <meta name="description" content="Chronicles of legal inertia and working life reflections — AfterShift." />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <style>
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 1.5rem;
-    }
-    .teaser {
-      font-style: italic;
-      color: #777;
-      margin-top: 2rem;
-    }
-  </style>
-<!-- Matomo -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog • AfterShift</title>
+    <meta
+      name="description"
+      content="Chronicles of legal inertia and working life reflections — AfterShift."
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <style>
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 1.5rem;
+      }
+      .teaser {
+        font-style: italic;
+        color: #777;
+        margin-top: 2rem;
+      }
+    </style>
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.aftershift.se"]);
+      _paq.push(["setDomains", ["*.aftershift.se"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://aftershift.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <nav class="navbar">
+<!-- BOUTON BURGER -->
+<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+<!-- JS BURGER -->
 <script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "*.aftershift.se"]);
-  _paq.push(["setDomains", ["*.aftershift.se"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://aftershift.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("burger-toggle");
+    const nav = document.querySelector("nav ul");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  });
 </script>
-<!-- End Matomo Code -->
-</head>
-<body>
-  <nav class="navbar">
-    <a class="navbar-item" href="/">Home</a>
-    <a class="navbar-item" href="/author.html">Author</a>
-    <a class="navbar-item current-navbar-item" href="/blog.html">Blog</a>
-    <a class="navbar-item" href="/legal.html">Legal</a>
-  </nav>
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/author.html">Author</a>
+    <a href="contact.html">Contact</a>
+      <a class="navbar-item current-navbar-item" href="/blog.html">Blog</a>
+      <a class="navbar-item" href="/legal.html">Legal</a>
+    </nav>
 
-  <main>
-    <h1>AfterShift Blog</h1>
+    <main>
+      <h1>AfterShift Blog</h1>
 
-    <p>This space will soon host a series of written chronicles, drawing from my lived experience in Malmö's restaurant industry.</p>
-    <p>Each article will explore two dimensions: the chronological unfolding of events, and a parallel legal reflection based on those facts.</p>
+      <p>
+        This space will soon host a series of written chronicles, drawing from
+        my lived experience in Malmö's restaurant industry.
+      </p>
+      <p>
+        Each article will explore two dimensions: the chronological unfolding of
+        events, and a parallel legal reflection based on those facts.
+      </p>
 
-    <p class="teaser">First upcoming post: <strong>On dismissal by text</strong> — a reflection on the normalization of termination without explanation or documentation.</p>
+      <p class="teaser">
+        First upcoming post: <strong>On dismissal by text</strong> — a
+        reflection on the normalization of termination without explanation or
+        documentation.
+      </p>
 
-    <p>Before launching the first entries, legal disclaimers and policy details are being finalized.</p>
-  </main>
-</body>
+      <p>
+        Before launching the first entries, legal disclaimers and policy details
+        are being finalized.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <p>
+        © 2025 AfterShift. All rights reserved.<br />
+        Content provided as-is without warranty.<br />
+        Governing law: Swedish law. Jurisdiction: Malmö courts.
+      </p>
+    </footer>
+  </body>
 </html>
