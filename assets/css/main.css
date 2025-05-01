@@ -194,7 +194,7 @@ ol li::before {
 
 .site-footer p {
   /* plus lisible, aligné à gauche */
-  text-align: left;
+  text-align: center;
   /* on enlève le margin par défaut du p */
   margin: 0;
   /* on pousse un peu vers la droite pour éviter que ça colle au bord */
