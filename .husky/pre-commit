@@ -1,5 +1,13 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-npm run add-timestamps
-git add .
+echo "🔁 Running update scripts before commit..."
+
+# Execute the 3 update scripts
+node scripts/add-timestamps.mjs
+node scripts/generate-home-updates.mjs
+node scripts/generate-updates.mjs
+
+# Stage updated files automatically
+git add index.html updates.html timeline.html
+git add about.html home.html posts.html legal.html claim.html context.html
