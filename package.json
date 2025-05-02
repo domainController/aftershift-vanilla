@@ -9,7 +9,8 @@
     "add-timestamps": "node scripts/add-timestamps.mjs",
     "generate-home-updates": "node scripts/generate-home-updates.mjs",
     "prepare-commit": "npm run add-timestamps && npm run generate-home-updates && npm run generate-updates",
-    "generate-updates": "node scripts/generate-updates.mjs"
+    "generate-updates": "node scripts/generate-updates.mjs",
+    "update-site": "node scripts/add-timestamps.mjs && node scripts/generate-home-updates.mjs && node scripts/generate-updates.mjs"
   },
   "dependencies": {
     "simple-git": "^3.27.0"
