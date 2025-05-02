@@ -31,21 +31,21 @@
   </head>
   <body>
     <header>
-<!-- BOUTON BURGER -->
-<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <!-- BOUTON BURGER -->
+      <button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
 
-<!-- JS BURGER -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("burger-toggle");
-    const nav = document.querySelector("nav ul");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
-  });
-</script>
+      <!-- JS BURGER -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.getElementById("burger-toggle");
+          const nav = document.querySelector("nav ul");
+          if (toggle && nav) {
+            toggle.addEventListener("click", () => {
+              nav.classList.toggle("open");
+            });
+          }
+        });
+      </script>
       <div class="navbar">
         <a href="/posts" class="navbar-item navbar-logo-text"></a>
         <a href="/" class="navbar-item">Home</a>
@@ -76,7 +76,7 @@
           >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
         >
 
-        <details open>
+        <details>
           <summary><strong>About This Update Section</strong></summary>
           <p>
             This section documents the continuous technical and editorial
@@ -115,7 +115,7 @@
           </p>
         </details>
         <div id="purpose-log"></div>
-        <details open>
+        <details>
           <summary>
             <strong>About the Purpose of This Log</strong>
           </summary>
@@ -193,6 +193,7 @@
 <div class="legal-container">
 <strong>🔄 Friday 2 May 2025</strong>
 <ul>
+  <li>🔄 02:26:55 – correcting config update logs scripts - pre commit settings</li>
   <li>🔄 02:25:18 – correcting config update logs scripts - pre commit settings</li>
   <li>🔄 02:09:46 – correcting the disclaimer</li>
 </ul>
