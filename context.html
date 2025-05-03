@@ -31,43 +31,37 @@
   </head>
   <body>
     <header>
-      <div class="sidebar">
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
         <!-- Bloc Dossier d'Enquête -->
-        <a href="/">Home</a>
+        <a href="/" aria-current="page">Home</a>
         <a href="/posts.html">Blog</a>
         <a href="/claim.html">Claim</a>
         <hr />
         <!-- Bloc Références -->
         <strong>Case Dossier</strong>
         <a href="/context.html" aria-current="page">Context</a>
-        <a href="/working.html">Working Dynamics</a>
-        <a href="/structure.html">Structure</a>
-        <a href="/philosophy.html">Philosophy</a>
+        <a href="/working-dynamics.html">Dynamics</a>
+        <a href="/structure.html">Entities</a>
+        <a href="/philosophy.html">Mindset</a>
         <hr />
         <!-- Bloc Références -->
         <strong>References</strong>
         <a href="/glossary.html">Glossary</a>
         <a href="/timeline.html">Timeline</a>
-        <a href="/updates.html">Activity Log</a>
+        <a href="/updates.html">Logs</a>
         <hr />
         <!-- Bloc Communauté et Légal -->
         <strong>Other</strong>
-        <a href="https://obl.se/forum.html">Forum</a>
+        <a href="https://ob1.se/forum.html">Forum</a>
         <a href="/legal.html">Legal</a>
         <a href="/about.html">Author</a>
-        <a href="/contact.html" aria-current="page">Contact</a>
+        <a href="/contact.html" >Contact</a>
       </div>
     </header>
-    <main
-      style="
-        max-width: 740px;
-        margin: auto;
-        padding: 2rem;
-        font-family: 'Source Sans Pro', sans-serif;
-      "
-    >
+    <main class="main-content">
       <h1>Context</h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 3, 2025 at 02:10 AM</small>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 3, 2025 at 02:17 AM</small>
 
       <details class="definition-box">
         <summary><strong>What is this section?</strong></summary>
@@ -98,9 +92,10 @@
       </p>
 
       <p>
-        Before Sweden, I had mostly worked as a
-        <strong>qualified technician, consultant, or junior manager</strong> —
-        often with engineering responsibilities. This was the first time I had
+        Before moving to Sweden, I mostly worked in <a href="https://www.linkedin.com/in/patrice-kenmo%C3%A9-a27236207"><strong>technical support</strong></a> and <strong>IT operations</strong>
+         roles across Europe — sometimes with
+         <strong>partial engineering</strong> or <strong>coordination responsibilities</strong>. 
+          This was the first time I had
         held a truly subordinate position for so long. And after a full year,
         despite the salary and decent conditions, the role had become
         <strong>morally exhausting</strong>.
@@ -219,5 +214,12 @@
         jurisdiction.
       </p>
     </footer>
+    <script>
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+    </script>
   </body>
 </html>

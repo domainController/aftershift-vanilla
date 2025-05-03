@@ -26,7 +26,8 @@
 </head>
 <body>
   <header>
-    <div class="sidebar">
+    <button id="toggleNavbar" class="toggle-btn">☰</button>
+    <div class="navbar">
       <!-- Bloc Dossier d'Enquête -->
       <a href="/" aria-current="page">Home</a>
       <a href="/posts.html">Blog</a>
@@ -34,29 +35,29 @@
       <hr />
       <!-- Bloc Références -->
       <strong>Case Dossier</strong>
-      <a href="/context.html">Context</a>
-      <a href="/working.html">Working Dynamics</a>
-      <a href="/structure.html">Structure</a>
-      <a href="/philosophy.html">Philosophy</a>
+      <a href="/context.html" aria-current="page">Context</a>
+      <a href="/working-dynamics.html">Dynamics</a>
+      <a href="/structure.html">Entities</a>
+      <a href="/philosophy.html">Mindset</a>
       <hr />
       <!-- Bloc Références -->
       <strong>References</strong>
       <a href="/glossary.html">Glossary</a>
       <a href="/timeline.html">Timeline</a>
-      <a href="/updates.html">Activity Log</a>
+      <a href="/updates.html">Logs</a>
       <hr />
       <!-- Bloc Communauté et Légal -->
       <strong>Other</strong>
-      <a href="https://obl.se/forum.html">Forum</a>
+      <a href="https://ob1.se/forum.html">Forum</a>
       <a href="/legal.html">Legal</a>
       <a href="/about.html">Author</a>
-      <a href="/contact.html" aria-current="page">Contact</a>
+      <a href="/contact.html" >Contact</a>
     </div>
   </header>
-<main>
+ <main class="main-content">
         <div class="legal-container">
             <h1>The Inconvenient Hours<br><small class="subtitle">A Tactical Journal of Legal Inertia and Employer Neglect in a High-end Malmö Restaurant.</small></h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 3, 2025 at 02:10 AM</small>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 3, 2025 at 02:17 AM</small>
         </div>
         <div style="text-align: center; margin-top: 10px; margin-bottom: 10px; ">
           <img src="./assets/img/20231026_155218.jpg" alt="AfterShift Banner" style="max-width: 40%; height: auto; border-radius: 8px;">
@@ -72,6 +73,7 @@
 <div class="legal-container">
 <h2>🔄 Saturday 3 May 2025</h2>
 <ul>
+  <li>🔄 02:17:21 – style(navbar): aligned links left, removed burger menu, cleaned up legacy layout</li>
   <li>🔄 02:10:40 – test</li>
   <li>🔄 02:04:05 – content(context): added full draft text to contextual introduction</li>
   <li>🔄 02:03:50 – style(navbar): align left, cleaned mobile burger nav and removed unused horizontal menu styles</li>
@@ -79,7 +81,8 @@
 </div>
 <!-- END INDEX UPDATES -->
         </p>
-    </div>
+   
+
 </main>
 <footer class="site-footer">
   <p>
@@ -88,5 +91,12 @@
       Governing law: Swedish law. Jurisdiction: Malmö courts.
   </p>
 </footer>
+<script>
+  const toggleBtn = document.getElementById("toggleNavbar");
+  const navbar = document.querySelector(".navbar");
+  toggleBtn.addEventListener("click", () => {
+    navbar.classList.toggle("collapsed");
+  });
+</script>
 </body>
 </html>

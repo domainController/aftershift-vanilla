@@ -28,46 +28,38 @@
     </script>
     <!-- End Matomo Code -->
   </head>
-
   <body>
     <header>
       <header>
-        <div class="sidebar">
+        <button id="toggleNavbar" class="toggle-btn">☰</button>
+        <div class="navbar">
           <!-- Bloc Dossier d'Enquête -->
-          <a href="/">Home</a>
-          <a href="/posts.html" aria-current="page">Blog</a>
+          <a href="/" aria-current="page">Home</a>
+          <a href="/posts.html">Blog</a>
           <a href="/claim.html">Claim</a>
           <hr />
           <!-- Bloc Références -->
           <strong>Case Dossier</strong>
-          <a href="/context.html">Context</a>
-          <a href="/working.html">Working Dynamics</a>
-          <a href="/structure.html">Structure</a>
-          <a href="/philosophy.html">Philosophy</a>
+          <a href="/context.html" aria-current="page">Context</a>
+          <a href="/working-dynamics.html">Dynamics</a>
+          <a href="/structure.html">Entities</a>
+          <a href="/philosophy.html">Mindset</a>
           <hr />
           <!-- Bloc Références -->
           <strong>References</strong>
           <a href="/glossary.html">Glossary</a>
           <a href="/timeline.html">Timeline</a>
-          <a href="/updates.html">Activity Log</a>
+          <a href="/updates.html">Logs</a>
           <hr />
           <!-- Bloc Communauté et Légal -->
           <strong>Other</strong>
-          <a href="https://obl.se/forum.html">Forum</a>
+          <a href="https://ob1.se/forum.html">Forum</a>
           <a href="/legal.html">Legal</a>
           <a href="/about.html">Author</a>
           <a href="/contact.html" >Contact</a>
         </div>
       </header>
-
-    <main
-      style="
-        max-width: 740px;
-        margin: auto;
-        padding: 2rem;
-        font-family: 'Source Sans Pro', sans-serif;
-      "
-    >
+    <main class="main-content">
       <h1>Upcoming Publications</h1>
       <small class="timestamp" style="display: block; text-align: center"
         >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
@@ -190,7 +182,6 @@
 
       <p>Thank you.</p>
     </main>
-
     <footer class="site-footer">
       <p>
         © 2025 OB1. All rights reserved.<br />
@@ -199,5 +190,12 @@
         jurisdiction.
       </p>
     </footer>
+    <script>
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+    </script>
   </body>
 </html>

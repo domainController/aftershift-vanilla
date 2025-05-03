@@ -67,33 +67,32 @@
   </head>
   <body>
     <header>
-<!-- BOUTON BURGER -->
-<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
-
-<!-- JS BURGER -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("burger-toggle");
-    const nav = document.querySelector("nav ul");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
-  });
-</script>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
       <div class="navbar">
-        <a href="/posts" class="navbar-item navbar-logo-text"></a>
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-        <a href="/claim.html" class="navbar-item">Claim</a>
-        <a href="/context.html" class="navbar-item">Context</a>
-        <a href="/updates.html" class="navbar-item">Activity Log</a>
-        <a href="/timeline.html" class="navbar-item">Timeline</a>
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item">Legal</a>
-        <a href="/about.html" class="navbar-item" aria-current="page">Author</a>
-        <a href="/contact.html" class="navbar-item">Contact</a>
+        <!-- Bloc Dossier d'Enquête -->
+        <a href="/">Home</a>
+        <a href="/posts.html">Blog</a>
+        <a href="/claim.html">Claim</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>Case Dossier</strong>
+        <a href="/context.html" aria-current="page">Context</a>
+        <a href="/working-dynamics.html">Working Dynamics</a>
+        <a href="/structure.html">Structure</a>
+        <a href="/philosophy.html">Philosophy</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>References</strong>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Activity Log</a>
+        <hr />
+        <!-- Bloc Communauté et Légal -->
+        <strong>Other</strong>
+        <a href="https://obl.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/about.html">Author</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
       </div>
     </header>
     <main>
@@ -107,7 +106,7 @@
           My name is <strong>Patrice Kenmoé</strong>, I’m 47 years old. Born in
           <strong>Lyon</strong>, of <strong>Bamiléké</strong> ethnicity, I’ve
           lived in six countries. After three years in Ireland, I moved to
-          <strong>Malmö</strong> (Sweden) on November 1st, 2024.
+          <strong>Sweden</strong> on April 21st, 2022.
         </p>
 
         <p>

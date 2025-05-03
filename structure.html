@@ -1,64 +1,164 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <title>What's New</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setCookieDomain", "*.aftershift.se"]);
-  _paq.push(["setDomains", ["*.aftershift.se"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://aftershift.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
-</head>
-<body>
-  <header>
-<!-- BOUTON BURGER -->
-<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
-
-<!-- JS BURGER -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("burger-toggle");
-    const nav = document.querySelector("nav ul");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
-  });
-</script>
-    <div class="navbar">
-        <a href="/posts" class="navbar-item navbar-logo-text"></a>
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-<a href="/claim.html" class="navbar-item">Claim</a>
-<a href="/context.html" class="navbar-item">Context</a>
-        <a href="/updates.html" class="navbar-item">Activity Log</a>
-        <a href="/timeline.html" class="navbar-item">Timeline</a>
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item" aria-current="page">Legal</a>
-        <a href="/about.html" class="navbar-item">Author</a>
-        <a href="/contact.html" class="navbar-item">Contact</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.aftershift.se"]);
+      _paq.push(["setDomains", ["*.aftershift.se"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://aftershift.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <!-- Bloc Dossier d'Enquête -->
+        <a href="/" aria-current="page">Home</a>
+        <a href="/posts.html">Blog</a>
+        <a href="/claim.html">Claim</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>Case Dossier</strong>
+        <a href="/context.html" >Context</a>
+        <a href="/working-dynamics.html">Dynamics</a>
+        <a href="/structure.html" aria-current="page">Entities</a>
+        <a href="/philosophy.html">Mindset</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>References</strong>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <hr />
+        <!-- Bloc Communauté et Légal -->
+        <strong>Other</strong>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/about.html">Author</a>
+        <a href="/contact.html" >Contact</a>
       </div>
-</header>
-  <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
-      <h1>xxxxxxxxx</h1>
-    
+    </header>
+    <main class="main-content">
+      <h1>Entities</h1>
+      <details class="definition-box">
+        <summary><strong>What is this section?</strong></summary>
+        <p>
+          This section outlines the <strong>organizational and structural anatomy</strong> of the employer entity.
+          It maps the <em>visible</em> and <em>latent hierarchies</em> that shaped the experience of work,
+          including overlaps between restaurant, hotel, external ownership, and informal delegation.
+        </p>
+        <p>
+          Depending on the context, this may resemble a <em>corporate organigram</em> (business),
+          a <em>chain of command</em> (logistics), or a <em>liability map</em> (legal accountability).
+          It provides structural clarity to support later claims.
+        </p>
+        <p>
+          Many terms here—such as <em>proxy management</em>, <em>shadow delegation</em>,
+          or <em>contractual opacity</em>—will be indexed in the <a href="/glossary.html">glossary</a>.
+        </p>
+      </details>
+      <main class="main-content">
+        <p><strong>Quan</strong> is a restaurant, but not a registered company. A search in the Swedish company registry yields no results under that name. It appears to function as a <strong>brand</strong>, not a legal entity.</p>
 
-    </footer>
+        <p>Upon arrival, I was directed to enter through the <strong>Elite Hotel</strong>. Quan operates physically within the hotel premises. No signage, uniform, or internal communication displayed its own corporate identity.</p>
+        
+        <p>The domain <strong>quanbyquan.se</strong> was registered on <strong>24 August 2018</strong> and remains active to this day (over six years). WHOIS records reveal no owner identity. No legal entity or <em>impressum</em> is mentioned on the site.</p>
+        
+        <p>Swedish law (Act 2002:562) requires e-commerce and hospitality sites to disclose their operator. The Quan site contains <strong>no VAT number, company name, or legal contact</strong>.</p>
+        
+        <p>Using the Wayback Machine, over <strong>45 snapshots</strong> from 2018–2024 were reviewed. No version ever included legal information, reinforcing the structural opacity of the domain's ownership.</p>
+        
+        <p>Despite this, the domain <strong>quanbyquan.se</strong> is used for professional email communication. Three addresses were verified as active: <strong>hs@</strong>, <strong>sc@</strong>, and <strong>hk@quanbyquan.se</strong>.</p>
+        
+        <p>These addresses correspond to <strong>Henrik Siebert</strong>, <strong>Sahar El Nasser</strong>, and <strong>Alexander Saahil Chudasama</strong>. All of them confirmed receipt of a formal letter in <strong>January 2025</strong>.</p>
+        
+        <p>Weeks into the job, I discovered the restaurant was operated by <strong>HSSC Event AB</strong>, not Elite Hotel. This became visible when I accessed the internal planning platform <strong>Personalkollum</strong>.</p>
+        
+        <p><strong>HSSC Event AB</strong> was incorporated on <strong>25 June 2018</strong> by <strong>Alexander Saahil Chudasama</strong>. Its registration number is <strong>559163-2764</strong>. <strong>Sahar El Nasser</strong> is listed as an alternate board member (<em>suppleant</em>).</p>
+
+        <p>
+          The company name <strong>HSSC Event AB</strong> does not formally list <strong>Henrik Siebert</strong> among its board members. However, the initials <strong>HSSC</strong> match the combination of <strong>Henrik Siebert (HS)</strong> and <strong>Sahil Chudasama (SC)</strong>, two individuals closely tied to the project. This strongly suggests that the name was derived from their identities.
+          </p>
+        
+        <p>According to the <strong>Swedish ownership register</strong>, <strong>Lin Daniella Dahl</strong> holds between <strong>50–75%</strong> of HSSC Event AB via <strong>KEHDA Holding AB</strong>. She is not referenced on the restaurant's website or in internal documents.</p>
+        
+        <p><strong>Chudasama Invest AB</strong>, owned by Alexander Chudasama, holds <strong>less than 25%</strong> of shares. However, he has the right to appoint and dismiss the majority of board members.</p>
+        
+        <p>This governance clause gives Alexander <strong>effective control</strong> of the company, even without majority ownership. His presence is confirmed by field reports and internal emails.</p>
+        
+        <p><strong>Henrik Siebert</strong> does not appear in official company documents. His email under the domain suggests a <strong>non-registered but active role</strong> in Quan’s operations.</p>
+        
+        <p><strong>Sahar El Nasser</strong>, although not listed as an owner, was the only managerial figure on site. Her status as <em>suppleant</em> indicates a formal link without legal authority over company direction.</p>
+
+        <p>In <strong>June 2024</strong>, a new entity named <strong>Tributum AB</strong> was incorporated under organisation number <strong>559488-5476</strong>. It shares the same address as Quan and HSSC Event AB: <strong>Mäster Johansgatan 15, Malmö</strong>, the location of the Elite Hotel.</p>
+
+        <p>The company lists <strong>Henrik Kei Siebert</strong> as <em>verkställande direktör</em> (external CEO), <strong>Sahar El Nasser</strong> as <em>ledamot</em> (board member), and <strong>Lin Daniella Dahl</strong> as <em>suppleant</em> (board deputy). These appointments form a coherent triangle of decision-making involving the same individuals previously connected to Quan.</p>
+        
+        <p><strong>Daniella Dahl</strong> is officially registered at the same residential address in Trelleborg as Henrik Siebert. This may indicate a domestic or familial connection, though this is not confirmed in official company filings. Their shared involvement in the company strengthens the perception of a jointly coordinated initiative.</p>
+        
+        <p><strong>Tributum AB</strong> was registered with a clear declared business activity: <strong>restaurangverksamhet</strong> (restaurant operations). This represents a contrast with the structurally opaque profile of HSSC Event AB, which never publicly disclosed its corporate purpose nor maintained a visible legal imprint on Quan’s communications.</p>
+        
+        <p>Despite this formal declaration, <strong>Tributum AB has never issued payslips or registered any employment documents</strong> with the HRAK unemployment fund, at least in relation to the complainant. It remains a dormant entity on paper, showing <strong>no revenue, no registered staff, and no known operations</strong> to date.</p>
+        
+        <p>Whether <strong>Tributum AB</strong> was designed to replace, absorb, or complement <strong>HSSC Event AB</strong> is still unclear. However, the continuity in <strong>address</strong>, <strong>management</strong>, and <strong>declared purpose</strong> strongly suggests that these entities are structurally interconnected. Their combined presence within the same premises indicates a coordinated ecosystem managed by the same group of individuals.</p>
+
+        <p>
+          Although <strong>Alexander Sahil Chudasama</strong> is officially recorded as founder and lead board member of HSSC Event AB, he was <strong>never present</strong> on site during the entire period I worked at Quan. His absence was consistent and total, despite his formal status as the person holding the company’s registration and signing authority.
+          </p>
+          
+          <p>
+          Alexander Chudasama is reportedly active at another restaurant location elsewhere in Malmö, suggesting that <strong>his operational involvement at Quan was outsourced or delegated</strong> entirely. This further supports the impression of a layered governance system, where legal responsibility is separated from daily managerial presence.
+          </p>
+          
+          <p>
+          Two chefs, <strong>Robin Albay Dinopol</strong> and <strong>Satoru Yoshizawa</strong>, who were regularly scheduled on evening shifts, were later identified as the sole partners of <strong>BURI Handelsbolag</strong> (org.nr 969798-6447). Their company is not listed as a subcontractor, but they both worked onsite as cooks.
+          </p>
+          
+          <p>
+          This configuration raises the possibility of <strong>undeclared subcontracting</strong>, where staff are employed through a third-party vehicle without formal declaration. No document or contract was disclosed to clarify the terms of their engagement with Quan or HSSC Event AB.
+
+          <p>
+            No public record directly links <strong>Elite Hotels</strong> and <strong>HSSC Event AB</strong>. However, both companies officially operate from the same address: <strong>Mäster Johansgatan 15, Malmö</strong>. This overlap may indicate a tenancy or subcontracting arrangement, but the absence of published contracts prevents confirmation.
+            <p>
+              <p>
+                Another <strong>external subcontractor</strong> was regularly observed on site every Friday night. A cleaning couple arrived at approximately <strong>23:30</strong> and remained on site until around <strong>04:00</strong>, working four hours each.
+                </p>
+                
+                <p>
+                Their presence accounted for a total of <strong>eight hours per session</strong>. They were not listed on any official schedule, and no company name or contractual arrangement was ever disclosed. Management suggested I might be asked to <strong>replace them</strong> due to dissatisfaction with their work.
+                </p>
+                
+                <p>
+                Separately, the <strong>employment certificate</strong> issued in my name was <strong>signed by Sahar El Nasser</strong>. This formal act establishes her involvement in administrative and personnel matters, beyond her nominal board position.
+                </p>
+                
+                <p>
+                Despite being officially registered only as a <em>suppleant</em> (alternate board member), her signature confirms an <strong>operational role in human resources</strong>. It also implies her position as the primary interface with <strong>external entities such as HRAK</strong>.
+                </p>
+    
+          </p>
+    </main>
     <footer class="site-footer">
       <p>
         © 2025 AfterShift. All rights reserved.<br>
@@ -66,4 +166,12 @@
           Governing law: Swedish law. Jurisdiction: Malmö courts.
       </p>
     </footer>
-   </main></body></html>
+    <script>
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+    </script>
+  </body>
+</html>
