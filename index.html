@@ -25,40 +25,38 @@
 <!-- End Matomo Code -->
 </head>
 <body>
-<header>
-<!-- BOUTON BURGER -->
-<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
-
-<!-- JS BURGER -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("burger-toggle");
-    const nav = document.querySelector("nav ul");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
-  });
-</script>
-    <div class="navbar">
-        <a href="/posts" class="navbar-item navbar-logo-text"></a>
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-<a href="/claim.html" class="navbar-item">Claim</a>
-<a href="/context.html" class="navbar-item">Context</a>
-        <a href="/updates.html" class="navbar-item">Activity Log</a>
-        <a href="/timeline.html" class="navbar-item">Timeline</a>
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item">Legal</a>
-        <a href="/about.html" class="navbar-item">Author</a>
-        <a href="/contact.html" class="navbar-item">Contact</a>
-      </div>
-</header>
+  <header>
+    <div class="sidebar">
+      <!-- Bloc Dossier d'Enquête -->
+      <a href="/" aria-current="page">Home</a>
+      <a href="/posts.html">Blog</a>
+      <a href="/claim.html">Claim</a>
+      <hr />
+      <!-- Bloc Références -->
+      <strong>Case Dossier</strong>
+      <a href="/context.html">Context</a>
+      <a href="/working.html">Working Dynamics</a>
+      <a href="/structure.html">Structure</a>
+      <a href="/philosophy.html">Philosophy</a>
+      <hr />
+      <!-- Bloc Références -->
+      <strong>References</strong>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/timeline.html">Timeline</a>
+      <a href="/updates.html">Activity Log</a>
+      <hr />
+      <!-- Bloc Communauté et Légal -->
+      <strong>Other</strong>
+      <a href="https://obl.se/forum.html">Forum</a>
+      <a href="/legal.html">Legal</a>
+      <a href="/about.html">Author</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+    </div>
+  </header>
 <main>
         <div class="legal-container">
-            <h1>The Unsocial Hours<br><small class="subtitle">A Tactical Journal of Legal Inertia and Employer Neglect in a High-end Malmö Restaurant.</small></h1>
-<small class="timestamp" style="display: block; text-align: center;">Last updated: Friday, May 2, 2025 at 02:26 AM</small>
+            <h1>The Inconvenient Hours<br><small class="subtitle">A Tactical Journal of Legal Inertia and Employer Neglect in a High-end Malmö Restaurant.</small></h1>
+<small class="timestamp" style="display: block; text-align: center;">Last updated: Friday, May 2, 2025 at 02:32 AM</small>
         </div>
         <div style="text-align: center; margin-top: 10px; margin-bottom: 10px; ">
           <img src="./assets/img/20231026_155218.jpg" alt="AfterShift Banner" style="max-width: 40%; height: auto; border-radius: 8px;">
@@ -72,8 +70,9 @@
           </p>
                 <!-- START INDEX UPDATES -->
 <div class="legal-container">
-<h2>🔄 Friday 2 May 2025</h2>
+<h2>🔧 Friday 2 May 2025</h2>
 <ul>
+  <li>🔧 02:32:09 – fix(hooks) test script</li>
   <li>🔄 02:26:55 – correcting config update logs scripts - pre commit settings</li>
   <li>🔄 02:25:18 – correcting config update logs scripts - pre commit settings</li>
   <li>🔄 02:09:46 – correcting the disclaimer</li>
