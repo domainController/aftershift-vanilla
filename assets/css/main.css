@@ -220,7 +220,7 @@ details.info-box[open] {
 }
 
 .sidebar {
-  width: 220px;
+  width: 130px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -228,7 +228,13 @@ details.info-box[open] {
   background-color: #f8f9fa;
   padding: 1em;
   border-right: 1px solid #ccc;
+  transition: width 0.3s ease;
 }
+.sidebar.collapsed {
+  width: 50px; /* ou même 0 */
+  overflow: hidden;
+}
+
 .sidebar a {
   display: block;
   color: #333;
