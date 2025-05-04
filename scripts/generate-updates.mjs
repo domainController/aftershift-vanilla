@@ -25,10 +25,19 @@ const archivePath = path.join(logsDir, "updates-archive.html");
 // Icon picker based on commit message tag
 function pickIcon(message) {
   const msg = message.toLowerCase();
+
   if (msg.includes("legal")) return "⚖️";
-  if (msg.startsWith("feat")) return "✅";
-  if (msg.startsWith("fix") || msg.startsWith("chore")) return "🔧";
-  return "🔄";
+  if (msg.includes("content")) return "✍️";
+  if (msg.includes("style") || msg.includes("css")) return "🎨";
+  if (msg.includes("structure") || msg.includes("refactor")) return "🧱";
+  if (msg.includes("timeline") || msg.includes("log")) return "🕰️";
+  if (msg.includes("docs")) return "📚";
+  if (msg.includes("ux") || msg.includes("design")) return "🧠";
+  if (msg.includes("form") || msg.includes("input")) return "📝";
+  if (msg.includes("contact")) return "💬";
+  if (msg.includes("feat")) return "✅";
+  if (msg.includes("fix") || msg.includes("chore")) return "🔧";
+  return "🔄"; // fallback
 }
 
 // Format a Date object into 'Saturday 26 April 2025'
