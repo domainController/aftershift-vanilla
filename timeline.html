@@ -31,34 +31,32 @@
   </head>
   <body>
     <header>
-<!-- BOUTON BURGER -->
-<button id="burger-toggle" aria-label="Toggle Menu">&#9776;</button>
-
-<!-- JS BURGER -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("burger-toggle");
-    const nav = document.querySelector("nav ul");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
-  });
-</script>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
       <div class="navbar">
-        <a href="/posts" class="navbar-item navbar-logo-text"></a>
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-        <a href="/claim.html" class="navbar-item">Claim</a>
-        <a href="/context.html" class="navbar-item">Context</a>
-        <a href="/updates.html" class="navbar-item">Activity Log</a>
-        <a href="/timeline.html" class="navbar-item" aria-current="page"
-          >Timeline</a
-        >
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item">Legal</a>
-        <a href="/about.html" class="navbar-item">Author</a>
+        <!-- Bloc Dossier d'Enquête -->
+        <a href="/">Home</a>
+        <a href="/posts.html">Blog</a>
+        <a href="/claim.html">Claim</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>Case Dossier</strong>
+        <a href="/context.html">Context</a>
+        <a href="/working-dynamics.html">Dynamics</a>
+        <a href="/structure.html">Entities</a>
+        <a href="/philosophy.html">Mindset</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>References</strong>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html" aria-current="page">Logs</a>
+        <hr />
+        <!-- Bloc Communauté et Légal -->
+        <strong>Other</strong>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/about.html">Author</a>
+        <a href="/contact.html">Contact</a>
       </div>
     </header>
     <main
@@ -109,4 +107,12 @@
       </footer>
     </main>
   </body>
+  <script>
+    const toggleBtn = document.getElementById("toggleNavbar");
+    const navbar = document.querySelector(".navbar");
+
+    toggleBtn.addEventListener("click", () => {
+      navbar.classList.toggle("collapsed");
+    });
+  </script>
 </html>

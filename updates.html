@@ -31,20 +31,32 @@
   </head>
   <body>
     <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
       <div class="navbar">
-        <a href="/posts" class="navbar-item navbar-logo-text"></a>
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/posts.html" class="navbar-item">Blog</a>
-        <a href="/claim.html" class="navbar-item">Claim</a>
-        <a href="/context.html" class="navbar-item">Context</a>
-        <a href="/updates.html" class="navbar-item" aria-current="page"
-          >Activity Log</a
-        >
-        <a href="/timeline.html" class="navbar-item">Timeline</a>
-        <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-        <a href="/legal.html" class="navbar-item">Legal</a>
-        <a href="/about.html" class="navbar-item">Author</a>
-        <a href="/contact.html" class="navbar-item">Contact</a>
+        <!-- Bloc Dossier d'Enquête -->
+        <a href="/">Home</a>
+        <a href="/posts.html">Blog</a>
+        <a href="/claim.html">Claim</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>Case Dossier</strong>
+        <a href="/context.html">Context</a>
+        <a href="/working-dynamics.html">Dynamics</a>
+        <a href="/structure.html">Entities</a>
+        <a href="/philosophy.html">Mindset</a>
+        <hr />
+        <!-- Bloc Références -->
+        <strong>References</strong>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html" aria-current="page">Logs</a>
+        <hr />
+        <!-- Bloc Communauté et Légal -->
+        <strong>Other</strong>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/about.html">Author</a>
+        <a href="/contact.html">Contact</a>
       </div>
     </header>
     <main
@@ -178,6 +190,7 @@
 <div class="legal-container">
 <strong>🔄 Saturday 3 May 2025</strong>
 <ul>
+  <li>🔄 23:52:19 – style(css): adjust main layout styles in main.css</li>
   <li>🔄 23:51:42 – refactor(structure): reorganize and clean HTML structure, remove burger.html</li>
   <li>🔄 02:17:21 – style(navbar): aligned links left, removed burger menu, cleaned up legacy layout</li>
   <li>🔄 02:10:40 – test</li>
@@ -229,14 +242,7 @@
   <li>🔧 06:29:02 – chore: remove npm test from pre-commit hook</li>
   <li>🔄 06:05:42 – Votre message de commit pour aujourd'hui</li>
 </ul>
-<strong>⚖️ Friday 25 April 2025</strong>
-<ul>
-  <li>⚖️ 23:15:25 – added legal disclamer footer</li>
-  <li>⚖️ 04:56:15 – Legal work</li>
-  <li>⚖️ 03:40:13 – legal notice work</li>
-  <li>🔄 02:30:04 – core changes</li>
-</ul>
-<p>📊 Yesterday: 4 updates across 15 files.</p>
+<p>📊 Yesterday: 6 updates across 35 files.</p>
 </div>
 <!-- END UPDATES SNIPPET -->
       <footer class="site-footer">
@@ -247,5 +253,13 @@
         </p>
       </footer>
     </main>
+    <script>
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+
+      toggleBtn.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+    </script>
   </body>
 </html>

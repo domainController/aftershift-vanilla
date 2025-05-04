@@ -142,6 +142,11 @@ ol li::before {
 
 .navbar-item[aria-current="page"] {
   text-decoration: underline;
+  font-weight: 600; /* ou bold */
+  color: #1a73e8;    /* une couleur plus vive (bleu Google) */
+  background-color: rgba(26, 115, 232, 0.08); /* léger fond bleu transparent */
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
 }
 
 .navbar-item.current-navbar-item {
@@ -332,3 +337,22 @@ details.info-box[open] {
   cursor: pointer;
   color: #495057;
 }
+
+.article-meta {
+  background: #f9f9f9;
+
+}
+
+.article-meta h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-meta .tag {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-right: 4px;
+  font-size: 0.9rem;
+}
+
