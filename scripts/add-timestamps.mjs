@@ -24,6 +24,7 @@ const filesToUpdate = [
   "posts.html",
   "claim.html",
   "context.html",
+  "structurel.html",
   "posts/on-dismissal-sms-restaurant-sweden.html",
   // Ajoute ici d'autres fichiers HTML manuellement si besoin
 ];
