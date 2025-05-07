@@ -25,19 +25,6 @@ body {
   padding: 20px 20px 40px 20px;
 }
 
-.legal-container .update-entry:first-of-type {
-  margin-top: 0.5rem; /* ou même 0.5rem si tu veux hyper serré */
-}
-
-.legal-container h4,
-h4 {
-  font-size: 16px;
-  line-height: 23px;
-  margin: 5px 0;
-  color: #495057; /* gris sérieux */
-  font-weight: 600;
-}
-
 /* === TITRES === */
 h1 {
   font-size: 30px;
@@ -57,7 +44,6 @@ h1 {
 }
 
 h2 { font-size: 18px; margin: 1.5rem 0 .75rem; }
-h3 { font-size: 14px; margin: 1.25rem 0 .5rem; }
 
 /* === LIENS === */
 a { color: #495057; text-decoration: none; }
@@ -178,8 +164,6 @@ ol li::before {
   line-height: 1;
 }
 /* === UTILITAIRES === */
-.text-center { text-align: center; }
-.mb-0 { margin-bottom: 0 !important; }
 
 .timestamp {
   font-size: 0.75rem;
@@ -227,32 +211,6 @@ ol li::before {
   text-align: center;
 }
 
-.update-entry:first-of-type {
-  margin-top: 1rem; /* Ou même 0.5rem pour être bien compact */
-}
-
-details.info-box {
-  margin: 1em 0;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0.8em 1em;
-  font-size: 0.95em;
-}
-
-details.info-box[open] {
-  box-shadow: 0 0 0 2px #ccc;
-}
-
-
-.definition-box {
-  border: 1px solid #ccc;
-  border-radius: 8px; /* <-- arrondi doux */
-  padding: 1.25em;
-  background-color: #f6f6f6;
-  margin-bottom: 2em;
-}
-
 .flou {
   filter: blur(4px);
   pointer-events: none;
@@ -293,10 +251,6 @@ details.info-box[open] {
     position: fixed;
     height: 100%;
     transform: translateX(-100%);
-  }
-
-  .navbar.show {
-    transform: translateX(0);
   }
 
   .main-content {
@@ -345,14 +299,6 @@ details.info-box[open] {
 .article-meta h1 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-}
-
-.article-meta .tag {
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  padding: 2px 6px;
-  margin-right: 4px;
-  font-size: 0.9rem;
 }
 
 a.subtle-link {
