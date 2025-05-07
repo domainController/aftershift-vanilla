@@ -95,7 +95,7 @@ ol li::before {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 140px;
+  width: 110px;
   background-color: #f9f9f9;
   padding: 1rem;
   border-right: 1px solid #e9ecef;
@@ -242,6 +242,7 @@ details.info-box[open] {
   box-shadow: 0 0 0 2px #ccc;
 }
 
+
 .definition-box {
   border: 1px solid #ccc;
   border-radius: 8px; /* <-- arrondi doux */
@@ -305,10 +306,6 @@ details.info-box[open] {
 }
 
 
-
-
-
-
 .navbar.collapsed + .main-content {
   margin-left: 0;
 }
@@ -356,3 +353,16 @@ details.info-box[open] {
   font-size: 0.9rem;
 }
 
+a.subtle-link {
+  color: #4c6e91; /* Gris-bleu doux */
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: #a0b8ce;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+a.subtle-link:hover {
+  color: #203851; /* Teinte plus foncée au survol */
+  text-decoration-color: #203851;
+}

@@ -25,25 +25,50 @@
 </head>
 <body>
   <header>
+    <button id="toggleNavbar" class="toggle-btn">☰</button>
     <div class="navbar">
-      <a href="/posts" class="navbar-item navbar-logo-text"></a>
-      <a href="/" class="navbar-item">Home</a>
-      <a href="/posts.html" class="navbar-item">Blog</a>
-      <a href="/claim.html" class="navbar-item">Claim</a>
-      <a href="/context.html" class="navbar-item">Context</a>
-      <a href="/updates.html" class="navbar-item" aria-current="page"
-        >Activity Log</a
-      >
-      <a href="/timeline.html" class="navbar-item">Timeline</a>
-      <a href="https://ob1.se/forum.html" class="navbar-item">Forum</a>
-      <a href="/legal.html" class="navbar-item">Legal</a>
-      <a href="/about.html" class="navbar-item">Author</a>
-      <a href="/contact.html" class="navbar-item">Contact</a>
-    </div>
-</header>
+      <!-- Bloc Dossier d'Enquête -->
+      <a href="/" aria-current="page">Home</a>
+      <a href="/posts.html">Blog</a>
+      <a href="/claim.html">Position Framework</a>
+      <hr />
+      <!-- Bloc Références -->
+      <strong>Case Dossier</strong>
+      <a href="/context.html">Context</a>
+      <a href="/working-dynamics.html">Working Dynamics</a>
+<a href="/governance.html">Governance</a>
+      <a href="/philosophy.html">Mindset</a>
+      <hr />
+      <!-- Bloc Références -->
+      <strong>References</strong>
+      <a href="/glossary.html">Glossary</a>
+<a href="/search.html">Search</a>      <a href="/timeline.html">Timeline</a>
+      <a href="/updates.html">Activity Logs</a>
+      <hr />
+      <!-- Bloc Communauté et Légal -->
+      <strong>Other</strong>
+      <a href="https://ob1.se/forum.html">Forum</a>
+      <a href="/legal.html">Legal</a>
+      <a href="/about.html">Author</a>
+      <a href="/contact.html">Contact</a>
+<a href="/simulator.html">Simulator</a>    </div>
+  </header>
   <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
-      <h1>xxxxxxxxx</h1>
+      <h1>Glossary</h1>
     
+      <details>
+        <summary><strong>Disclaimer</strong></summary>
+        <p>A <strong>disclaimer</strong> is a legal statement that limits or denies liability for the consequences of using or interpreting published content.</p>
+        <p>It is commonly placed at the end of web pages or documents, and clarifies that the information provided does not constitute legal or professional advice.</p>
+        <p><em>Example on this site:</em> “Content provided 'as is' without warranties. Terms governed by Swedish law — Malmö courts have exclusive jurisdiction.”</p>
+      </details>
+
+      <details>
+        <summary><strong>Legal Notice</strong></summary>
+        <p>A <strong>legal notice</strong> (or <em>mentions légales</em> in French) refers to the mandatory publication of identifying details about the entity behind a website, such as the publisher, address, VAT number, or legal operator.</p>
+        <p>In Sweden, this is enforced under the <strong>E-commerce Act (2002:562)</strong> and ensures transparency, consumer protection, and traceability.</p>
+        <p>Non-compliance can hinder legal recourse in disputes or complaints.</p>
+      </details>
 
     </footer>
     <footer class="site-footer">
@@ -53,4 +78,11 @@
           Governing law: Swedish law. Jurisdiction: Malmö courts.
       </p>
     </footer>
+    <script>
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+    </script>
    </main></body></html>
