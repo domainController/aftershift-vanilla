@@ -95,7 +95,7 @@ ol li::before {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 125px;
+  width: 160px;
   background-color: #f9f9f9;
   padding: 1rem;
   border-right: 1px solid #e9ecef;
@@ -125,6 +125,17 @@ ol li::before {
   margin-bottom: 1rem;
   padding: 0,1rem;
 
+}
+.navbar a::before {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 0.25em;
+}
+
+.navbar a span.nav-icon {
+  font-size: 1.4em;
+  margin-right: 0.2em;
+  vertical-align: -0.1em;
 }
 
 .navbar-item {
@@ -379,4 +390,23 @@ a.subtle-link:hover {
   font-family: inherit;             /* Police identique */
   width: calc(100% + 2rem);         /* Compense le -1rem gauche et droite */
   box-sizing: border-box;
+}
+
+.narrative-intro {
+  background-color: #e5e7eb;
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.narrative-intro summary {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+.section-order {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
 }

@@ -30,35 +30,42 @@
     <!-- End Matomo Code -->
   </head>
   <body>
-    <header>
-      <button id="toggleNavbar" class="toggle-btn">☰</button>
-      <div class="navbar">
-        <!-- Bloc Dossier d'Enquête -->
-        <a href="/">Home</a>
-        <a href="/posts.html">Blog</a>
-        <a href="/claim.html">Claim</a>
-        <hr />
-        <!-- Bloc Références -->
-        <strong>Case Dossier</strong>
-        <a href="/context.html">Context</a>
-        <a href="/working-dynamics.html">Dynamics</a>
-<a href="/governance.html">Governance</a>
-        <a href="/philosophy.html">Mindset</a>
-        <hr />
-        <!-- Bloc Références -->
-        <strong>References</strong>
-        <a href="/glossary.html">Glossary</a>
-<a href="/search.html">Search</a>        <a href="/timeline.html">Timeline</a>
-        <a href="/updates.html" aria-current="page">Logs</a>
-        <hr />
-        <!-- Bloc Communauté et Légal -->
-        <strong>Other</strong>
-        <a href="https://ob1.se/forum.html">Forum</a>
-        <a href="/legal.html">Legal</a>
-        <a href="/about.html">Author</a>
-        <a href="/contact.html">Contact</a>
-<a href="/simulator.html">Simulator</a>      </div>
-    </header>
+<header>
+  <button id="toggleNavbar" class="toggle-btn">☰</button>
+  <div class="navbar">
+    <a href="/">Home</a>
+    <!-- Bloc Auteur -->
+    <div class="nav-section">About the Author</div>
+
+    <a href="/philosophy.html">Philosophy</a>
+    <a href="/about.html">Bio</a>
+    <a href="/claim.html">Editorial Framework</a>
+    <a href="/context.html">① Personal Context</a>
+
+    <!-- Bloc Contexte -->
+    <div class="nav-section">Case Background</div>
+    <a href="/working-dynamics.html">② Working Dynamics</a>
+    <a href="/governance.html">③ Governance</a>
+
+    <!-- Bloc Références -->
+    <div class="nav-section">Tools & References</div>
+    <a href="/glossary.html">Glossary</a>
+    <a href="/search.html">Search</a>
+    <a href="/timeline.html">Timeline</a>
+    <a href="/updates.html">Logs</a>
+
+    <!-- Bloc Publications -->
+    <div class="nav-section">Articles & Simulations</div>
+    <a href="/posts.html">Blog</a>
+    <a href="/simulator.html">Simulator</a>
+
+    <!-- Bloc Communauté et légal -->
+    <div class="nav-section">Community & Legal</div>
+    <a href="https://ob1.se/forum.html">Forum</a>
+    <a href="/legal.html">Legal</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</header>
     <main
       style="
         max-width: 740px;
@@ -188,8 +195,9 @@
       </div>
       <!-- START UPDATES SNIPPET -->
 <div class="legal-container">
-<strong>🕰️ Wednesday 7 May 2025</strong>
+<strong>🔄 Wednesday 7 May 2025</strong>
 <ul>
+  <li>🔄 23:44:46 – 🛠 Script | Script d'automatisation pour appliquer la nouvelle sidebar à tous les fichiers HTML.</li>
   <li>🕰️ 23:44:26 – 🎨 UX | Ajout d’icônes dans le script pour distinguer visuellement les types de mises à jour dans les logs.</li>
   <li>🗂️ 23:44:13 – 🧱 Ref | Ajout du fichier de référence pour la nouvelle sidebar (Pontex.html) utilisé comme base de structure.</li>
   <li>🔄 03:50:21 – 🧱 Rebuild posts.html with upcoming article list and editorial statement</li>
@@ -239,15 +247,7 @@
   <li>🗂️ 02:19:43 – refactor(layout): restructure about.html with 'flow' class and consistent paragraph spacing</li>
   <li>✅ 02:16:32 – feat(about): Completed bio both in FR and ENG</li>
 </ul>
-<strong>🕰️ Tuesday 29 April 2025</strong>
-<ul>
-  <li>🕰️ 02:23:17 – chore: Remove deprecated docs.html and update timestamp script docs: Add new posts.html for blog articles</li>
-</ul>
-<strong>🔄 Tuesday 29 April 2025</strong>
-<ul>
-  <li>🔄 00:33:12 – remove all home.tml</li>
-</ul>
-<p>📊 Yesterday: 4 updates across 24 files.</p>
+<p>📊 Yesterday: 7 updates across 63 files.</p>
 </div>
 <!-- END UPDATES SNIPPET -->
       <footer class="site-footer">
