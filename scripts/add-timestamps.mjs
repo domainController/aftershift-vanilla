@@ -28,6 +28,13 @@ const filesToUpdate = [
   "governance.html",
   "search.html",
   "simulator.html",
+  "philosophy.html",
+  "glossary.html",
+  "contact.html",
+  "form.html",
+
+  "foundations.html",
+  "working-dynamics.html",
   "posts/on-dismissal-sms-restaurant-sweden.html",
   // Ajoute ici d'autres fichiers HTML manuellement si besoin
 ];
