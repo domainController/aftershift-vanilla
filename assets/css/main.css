@@ -226,6 +226,7 @@ ol li::before {
   line-height: 1.4;
 }
 
+
 .subtitle {
   display: block;
   font-size: 0.9rem;
@@ -234,6 +235,15 @@ ol li::before {
   margin-top: 0.3rem;
 }
 
+
+.subtitleh2 {
+  font-size: 1.5rem;           /* ou 1.6rem selon ta base typographique */
+  font-weight: 400;            /* plus léger que le H1 */
+  text-align: center;
+  margin-top: -0.5rem;         /* rapproche du H1 */
+  margin-bottom: 1.5rem;
+  color: #444;                 /* légèrement grisé si tu veux du contraste */
+}
 .centered {
   text-align: center;
 }
