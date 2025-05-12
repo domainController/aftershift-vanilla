@@ -31,6 +31,7 @@ const filesToUpdate = [
   "philosophy.html",
   "glossary.html",
   "contact.html",
+  "notes.html",
   "form.html",
 
   "foundations.html",

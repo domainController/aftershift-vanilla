@@ -1,0 +1,1415 @@
+diff --git a/context.html b/context.html
+index 638e8d6..a5908f6 100644
+--- a/context.html
++++ b/context.html
+@@ -30,48 +30,51 @@
+     <!-- End Matomo Code -->
+   </head>
+   <body>
+-<header>
+-  <button id="toggleNavbar" class="toggle-btn">☰</button>
++    <header>
++      <button id="toggleNavbar" class="toggle-btn">☰</button>
++      <div class="navbar">
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
+ 
+-  <div class="navbar">
+-    <a href="/">Home</a>
+-    <!-- Bloc Auteur -->
+-    <div class="nav-section">About the Author</div>
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/context.html"
++          ><span class="nav-icon">①</span> Personal Context</a
++        >
+ 
+-    <a href="/philosophy.html">Operating Principles</a>
+-    <a href="/about.html">Trajectory</a>
+-    <a href="/claim.html">Editorial Framework</a>
+-    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Setup Path</a>
+ 
+-    <!-- Bloc Contexte -->
+-    <div class="nav-section">Case Background</div>
+-    <a href="/working-dynamics.html"
+-      ><span class="nav-icon">②</span> Working Dynamics</a
+-    >
+-    <a href="/governance.html"
+-      ><span class="nav-icon">③</span> Operational Authority</a
+-    >
+-    <a href="/structure.html">Legal Structure</a>
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">②</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
+ 
+-    <!-- Bloc Publications -->
+-    <div class="nav-section">Articles</div>
+-    <a href="/posts.html">Blog</a>
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
++        <a href="/posts.html">Blog</a>
+ 
+-    <!-- Bloc Références -->
+-    <div class="nav-section">Tools & References</div>
+-    <a href="/glossary.html">Glossary</a>
+-    <a href="/search.html">Search</a>
+-    <a href="/timeline.html">Timeline</a>
+-    <a href="/updates.html">Logs</a>
+-    <a href="/simulator.html">Simulator</a>
++        <!-- Bloc Références -->
++        <div class="nav-section">Tools & References</div>
++        <a href="/glossary.html">Glossary</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
+ 
+-    <!-- Bloc Communauté et légal -->
+-    <div class="nav-section">Community & Legal</div>
+-    <a href="https://ob1.se/forum.html">Forum</a>
+-    <a href="/legal.html">Legal</a>
+-    <a href="/contact.html">Contact</a>
+-  </div>
+-</header>
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
++        <a href="https://ob1.se/forum.html">Forum</a>
++        <a href="/legal.html">Legal</a>
++        <a href="/contact.html">Contact</a>
++      </div>
++    </header>
+     <main class="main-content">
+       <h1>Context</h1>
+       <small class="timestamp" style="display: block; text-align: center"
+diff --git a/foundations.html b/foundations.html
+index 8aa486b..700c366 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -78,8 +78,9 @@
+     </header>
+     <main class="main-content">
+       <h1>Legacy Foundations of Quan</h1>
+-<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 10, 2025 at 11:26 PM</small>
+-
++      <small class="timestamp" style="display: block; text-align: center"
++        >Last updated: Saturday, May 10, 2025 at 11:26 PM</small
++      >
+ 
+       <details
+         open
+@@ -149,43 +150,49 @@
+         laid.
+       </p>
+       <p>
+-        What would later become Quan’s core emerged over a decade earlier at
++        What would later become Quan’s core emerged over two decades earlier at
+         <strong>Lilla Torg</strong>, a central square in Malmö known for upscale
+         restaurants and nightlife.
+       </p>
+ 
+       <p>
+         On <strong>April 16, 1993</strong>, brothers
+-        <strong>Toni Petersson</strong> and <strong>Ronnie Petersson</strong>,
+-        both of mixed Japanese–Swedish heritage, opened
+-        <strong>Izakaya Koi</strong> — a chic venue blending sushi bar
+-        aesthetics with lounge and nightclub energy. It quickly became one of
+-        Malmö’s most popular spots.
++        <strong>Toni Petersson (26)</strong> and
++        <strong>Ronnie Petersson (22)</strong>, both of mixed Japanese–Swedish
++        heritage, opened <strong>Izakaya Koi</strong> — a chic venue blending
++        sushi bar aesthetics with lounge and nightclub energy. It quickly became
++        one of Malmö’s most popular spots.
+       </p>
+ 
+       <p>
+-        Just meters away, <strong>Jayantilal Chudasama</strong>, a respected
+-        figure in Malmö’s Lilla Torg restaurant scene, had formalized the
+-        <em>Steakhouse Lilla Torg</em> concept in <strong>1991</strong>. His
+-        son, <strong>Saahil Chudasama</strong>, would later join him, already
+-        familiar with the square’s daily rhythm.
++        Just meters away, <strong>Jayantilal Chudasama (46)</strong>, a
++        respected figure in Malmö’s Lilla Torg restaurant scene, had formalized
++        the <em>Steakhouse Lilla Torg</em> concept in <strong>1994</strong>. His
++        son, <strong>Saahil Chudasama (14)</strong>, would later join him,
++        already familiar with the square’s daily rhythm.
+       </p>
+ 
+       <p>
+         By <strong>late 2004</strong>, the Petersson brothers had disappeared
+         from the official records — reportedly relocating to Costa Rica.
+-        <strong>Henrik Siebert</strong> emerged publicly for the first time as
+-        the one taking over the venue.
++        <strong>Henrik Siebert (27)</strong> emerged publicly for the first time
++        as the one taking over the venue.
+       </p>
+ 
+-      <h3>📍 <span style="font-size: 1.2rem; font-weight: 600">2004</span></h3>
++      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2004</span></h3>
+       <p>
+-        On <strong>November 19</strong>, <strong>Henrik</strong> was officially
++        On <strong>November 19</strong>, <strong>Henrik</strong> is officially
+         registered as a <em>Board Member</em> of
+-        <strong>IZAKAYAKOI Aktiebolag</strong> — the original corporate entity
+-        behind Izakaya Koi's first iteration. He remained in this role until the
+-        company’s <strong>liquidation in 2011</strong>, marking the end of its
+-        legal structure.
++        <strong>IZAKAYAKOI Aktiebolag (556462-5761)</strong> — the original
++        corporate entity behind Izakaya Koi's first iteration. He remains listed
++        until the company’s <strong>liquidation in 2011</strong>, marking the
++        legal end of this structure.
++      </p>
++      <p>
++        At that time, the board consists of only two individuals: Henrik as
++        <em>Board Member</em>, and a second person as
++        <em>Deputy Board Member</em>. In addition, the structure includes one
++        <em>Auditor</em> and one <em>Deputy Auditor</em>.
+       </p>
+       <h3>📍 <span style="font-size: 1.2rem; font-weight: 600">2006</span></h3>
+ 
+@@ -212,6 +219,32 @@
+         <strong>September 2007</strong> at Malmö District Court.
+       </p>
+ 
++      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2007</span></h3>
++      <p>
++        📄 On December 31, the
++        <a href="/documents/Annual_report_2007-12-31.pdf" target="_blank"
++          ><strong>Annual Report</strong></a
++        >
++        shows a shift in trajectory: turnover reaches 10.99M SEK, but the
++        company records a loss of <strong>−248K SEK</strong>.
++      </p>
++      <p>
++        <strong
++          >The decline in profit following a record surplus the year
++          before</strong
++        >
++        raises concerns of
++        <span style="background-color: #e5e7eb"
++          >artificial earnings inflation or concealed cash outflows</span
++        >.
++      </p>
++      <p>
++        Governance remains minimal: Henrik is the only Board Member, joined only
++        by a <em>Deputy Board Member</em> and a formal audit pair.
++        <span style="background-color: #e5e7eb"
++          >No operational management is documented</span
++        >.
++      </p>
+       <h3>📍 <span style="font-size: 1.2rem; font-weight: 600">2008</span></h3>
+ 
+       <p>
+diff --git a/glossary.html b/glossary.html
+index b8ff257..f9273be 100644
+--- a/glossary.html
++++ b/glossary.html
+@@ -1,103 +1,859 @@
+-<!DOCTYPE html><html lang="en"><head>
+-  <meta charset="UTF-8">
+-  <title>What's New</title>
+-  <link rel="stylesheet" href="/assets/css/main.css">
+-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<!-- Matomo -->
+-<script>
+-  var _paq = window._paq = window._paq || [];
+-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+-  _paq.push(["setCookieDomain", "*.aftershift.se"]);
+-  _paq.push(["setDomains", ["*.aftershift.se"]]);
+-  _paq.push(['trackPageView']);
+-  _paq.push(['enableLinkTracking']);
+-  (function() {
+-    var u="https://aftershift.matomo.cloud/";
+-    _paq.push(['setTrackerUrl', u+'matomo.php']);
+-    _paq.push(['setSiteId', '1']);
+-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+-    g.async=true; g.src='https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+-  })();
+-</script>
+-<!-- End Matomo Code -->
+-</head>
+-<body>
+-<header>
+-  <button id="toggleNavbar" class="toggle-btn">☰</button>
+-
+-  <div class="navbar">
+-    <a href="/">Home</a>
+-    <!-- Bloc Auteur -->
+-    <div class="nav-section">About the Author</div>
+-
+-    <a href="/philosophy.html">Operating Principles</a>
+-    <a href="/about.html">Trajectory</a>
+-    <a href="/claim.html">Editorial Framework</a>
+-    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
+-
+-    <!-- Bloc Contexte -->
+-    <div class="nav-section">Case Background</div>
+-    <a href="/working-dynamics.html"
+-      ><span class="nav-icon">②</span> Working Dynamics</a
+-    >
+-    <a href="/governance.html"
+-      ><span class="nav-icon">③</span> Operational Authority</a
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <title>What's New</title>
++    <link rel="stylesheet" href="/assets/css/main.css" />
++    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <!-- Matomo -->
++    <script>
++      var _paq = (window._paq = window._paq || []);
++      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
++      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
++      _paq.push(["setCookieDomain", "*.aftershift.se"]);
++      _paq.push(["setDomains", ["*.aftershift.se"]]);
++      _paq.push(["trackPageView"]);
++      _paq.push(["enableLinkTracking"]);
++      (function () {
++        var u = "https://aftershift.matomo.cloud/";
++        _paq.push(["setTrackerUrl", u + "matomo.php"]);
++        _paq.push(["setSiteId", "1"]);
++        var d = document,
++          g = d.createElement("script"),
++          s = d.getElementsByTagName("script")[0];
++        g.async = true;
++        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
++        s.parentNode.insertBefore(g, s);
++      })();
++    </script>
++    <!-- End Matomo Code -->
++  </head>
++  <body>
++    <header>
++      <button id="toggleNavbar" class="toggle-btn">☰</button>
++
++      <div class="navbar">
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
++
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/context.html"
++          ><span class="nav-icon">①</span> Personal Context</a
++        >
++
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Setup Path</a>
++
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">②</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
++
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
++        <a href="/posts.html">Blog</a>
++
++        <!-- Bloc Références -->
++        <div class="nav-section">Tools & References</div>
++        <a href="/glossary.html">Glossary</a>
++        <a href="/notes.html">Notes</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
++
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
++        <a href="https://ob1.se/forum.html">Forum</a>
++        <a href="/legal.html">Legal</a>
++        <a href="/contact.html">Contact</a>
++      </div>
++    </header>
++    <main
++      style="
++        max-width: 740px;
++        margin: auto;
++        padding: 2rem;
++        font-family: 'Source Sans Pro', sans-serif;
++      "
+     >
+-    <a href="/structure.html">Legal Structure</a>
+-
+-    <!-- Bloc Publications -->
+-    <div class="nav-section">Articles</div>
+-    <a href="/posts.html">Blog</a>
+-
+-    <!-- Bloc Références -->
+-    <div class="nav-section">Tools & References</div>
+-    <a href="/glossary.html">Glossary</a>
+-    <a href="/search.html">Search</a>
+-    <a href="/timeline.html">Timeline</a>
+-    <a href="/updates.html">Logs</a>
+-    <a href="/simulator.html">Simulator</a>
+-
+-    <!-- Bloc Communauté et légal -->
+-    <div class="nav-section">Community & Legal</div>
+-    <a href="https://ob1.se/forum.html">Forum</a>
+-    <a href="/legal.html">Legal</a>
+-    <a href="/contact.html">Contact</a>
+-  </div>
+-</header>
+-  <main style="max-width: 740px; margin: auto; padding: 2rem; font-family: 'Source Sans Pro', sans-serif;">
+       <h1>Glossary</h1>
+-<small class="timestamp" style="display: block; text-align: center;">Last updated: Saturday, May 10, 2025 at 11:26 PM</small>
++      <small class="timestamp" style="display: block; text-align: center"
++        >Last updated: Saturday, May 10, 2025 at 11:26 PM</small
++      >
+ 
+-    
+       <details>
+         <summary><strong>Disclaimer</strong></summary>
+-        <p>A <strong>disclaimer</strong> is a legal statement that limits or denies liability for the consequences of using or interpreting published content.</p>
+-        <p>It is commonly placed at the end of web pages or documents, and clarifies that the information provided does not constitute legal or professional advice.</p>
+-        <p><em>Example on this site:</em> “Content provided 'as is' without warranties. Terms governed by Swedish law — Malmö courts have exclusive jurisdiction.”</p>
++        <p>
++          A <strong>disclaimer</strong> is a legal statement that limits or
++          denies liability for the consequences of using or interpreting
++          published content.
++        </p>
++        <p>
++          It is commonly placed at the end of web pages or documents, and
++          clarifies that the information provided does not constitute legal or
++          professional advice.
++        </p>
++        <p>
++          <em>Example on this site:</em> “Content provided 'as is' without
++          warranties. Terms governed by Swedish law — Malmö courts have
++          exclusive jurisdiction.”
++        </p>
++      </details>
++
++      <details>
++        <summary><strong>Holding Company</strong></summary>
++        <p style="line-height: 1.4">
++          A <strong>Holding Company</strong> is an entity created to own shares
++          in one or more other companies, usually without direct commercial
++          operations of its own. Its purpose is to control, consolidate, or
++          protect underlying business assets.
++        </p>
++        <p style="line-height: 1.4">
++          In large corporate groups, a holding might coordinate finance, legal
++          strategy, and investment flows across subsidiaries.
++          <u>In smaller setups or offshore structures</u>, however, holdings may
++          serve more symbolic or strategic purposes — such as
++          <span style="background-color: #e5e7eb"
++            >isolating liabilities, fragmenting control, or hiding the true
++            beneficial owner</span
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          The term “holding” does not guarantee operational depth.
++          <strong>In your case, MedFood Holdings Ltd</strong> is registered in
++          Cyprus, has no known employees or infrastructure, and serves
++          exclusively as the legal owner of IzakayaKoi AB post-2004. This is a
++          <u>classic example of a passive holding vehicle</u> — potentially
++          designed for tax or opacity purposes.
++        </p>
++        <p style="line-height: 1.4">
++          A holding may appear legitimate in public records, yet be disconnected
++          from the daily operations, which remain handled by nominees or
++          external managers. That’s why
++          <span style="background-color: #e5e7eb"
++            >the title “holding” must always be cross-examined</span
++          >
++          with actual business substance.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic work, holdings act as anchors: they centralize formal
++          control but may not reflect the real ecosystem of people, payments,
++          and power.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>In corporate genealogy, holdings are structural pivots</strong
++          >: they signal transitions, ownership shifts, or hidden
++          consolidations. Identifying their connections helps reconstruct
++          ownership trees and expose coordination across legal entities.
++        </p>
+       </details>
+ 
+       <details>
+         <summary><strong>Legal Notice</strong></summary>
+-        <p>A <strong>legal notice</strong> (or <em>mentions légales</em> in French) refers to the mandatory publication of identifying details about the entity behind a website, such as the publisher, address, VAT number, or legal operator.</p>
+-        <p>In Sweden, this is enforced under the <strong>E-commerce Act (2002:562)</strong> and ensures transparency, consumer protection, and traceability.</p>
+-        <p>Non-compliance can hinder legal recourse in disputes or complaints.</p>
++        <p>
++          A <strong>legal notice</strong> (or <em>mentions légales</em> in
++          French) refers to the mandatory publication of identifying details
++          about the entity behind a website, such as the publisher, address, VAT
++          number, or legal operator.
++        </p>
++        <p>
++          In Sweden, this is enforced under the
++          <strong>E-commerce Act (2002:562)</strong> and ensures transparency,
++          consumer protection, and traceability.
++        </p>
++        <p>
++          Non-compliance can hinder legal recourse in disputes or complaints.
++        </p>
++      </details>
++
++      <details>
++        <summary><strong>Corporate Genealogy</strong></summary>
++        <p>
++          <strong>Corporate genealogy</strong> is the structured mapping of a
++          company's legal identity over time: mergers, name changes,
++          acquisitions, etc.
++        </p>
++        <p>
++          It is widely used in <em>finance</em>, <em>M&A</em>,
++          <em>regulatory compliance</em>, and
++          <em>journalistic investigations</em>.
++        </p>
++        <p>
++          Example: tracing ownership chains to assess liability or business
++          continuity.
++        </p>
++      </details>
++
++      <details>
++        <summary><strong>Forensic History</strong></summary>
++        <p style="line-height: 1.4">
++          <strong>Forensic History</strong> is the structured reconstruction of
++          past events, decisions, and connections in order to understand how a
++          situation unfolded — especially in the context of conflict, risk, or
++          hidden agendas.
++        </p>
++        <p style="line-height: 1.4">
++          Unlike classic historical narrative, forensic history focuses on
++          <strong
++            >intentional omissions, grey zones, and invisible
++            relationships</strong
++          >. It aims to reassemble what was disaggregated — legally,
++          structurally, or rhetorically.
++        </p>
++        <p style="line-height: 1.4">
++          It is particularly useful when
++          <span style="background-color: #e5e7eb"
++            >official documents appear clean</span
++          >
++          but a deeper logic of obfuscation or control is suspected. It
++          mobilizes documents, registries, press archives, leaks, and timeline
++          inconsistencies to create a coherent map.
++        </p>
++        <p style="line-height: 1.4">
++          In your use case, forensic history helps determine
++          <u>when real ownership diverged from legal representation</u>, and
++          whether events (e.g. liquidation, resignations, trust formations) are
++          symptoms of deeper coordination.
++        </p>
++        <p style="line-height: 1.4">
++          Forensic history is used by investigative journalists, judicial
++          commissions, corporate analysts, and researchers dealing with opaque
++          ecosystems. It often reveals
++          <strong>the intentional engineering of forgetting</strong>.
++        </p>
++        <p style="line-height: 1.4">
++          It does not prove fraud directly — but it builds a high-resolution
++          narrative capable of exposing contradictions that justify deeper
++          scrutiny.
++        </p>
++      </details>
++
++      <details>
++        <summary><strong>Four Corners Rule</strong></summary>
++        <p style="line-height: 1.4">
++          The <strong>Four Corners Rule</strong> is a legal principle stating
++          that a document must be interpreted solely based on what is written
++          “within its four corners” — meaning the four sides of the paper. No
++          external evidence may be introduced to modify or explain the text
++          unless the document is ambiguous.
++        </p>
++        <p style="line-height: 1.4">
++          Originating in <strong>Anglo-American contract law</strong>, the
++          doctrine is used in courts to determine the intent of a contract or
++          agreement, by restricting analysis to its internal content.
++          <u
++            >Everything needed for interpretation must be found in the document
++            itself</u
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic work, this principle becomes relevant when documents (like
++          shareholder agreements, minutes, audits) are drafted to appear
++          self-contained and unambiguous — even when their real function may be
++          to disguise a transfer, an omission, or a hidden beneficiary.
++        </p>
++        <p style="line-height: 1.4">
++          <span style="background-color: #e5e7eb"
++            >The Four Corners Rule is useful to expose what is intentionally
++            omitted</span
++          >. When a document is silent on a topic that would logically be
++          mentioned, the absence itself can become a clue — especially when
++          compared across versions or years.
++        </p>
++        <p style="line-height: 1.4">
++          In your case, the principle helps evaluate whether documents (e.g.
++          annual reports, resolutions, agreements) are “complete” or were
++          drafted to
++          <strong
++            >appear formally correct while omitting material relationships or
++            changes of control</strong
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          It is not a forensic tool in itself — but it sets the ground for
++          spotting legal engineering or documentary stagecraft, especially when
++          paired with timeline analysis and external evidence.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Principle of the 4 Coherences</strong></summary>
++        <p style="line-height: 1.4">
++          This method tests the plausibility of a structural or operational link
++          between two entities by evaluating consistency across four forensic
++          axes:
++        </p>
++        <ul style="line-height: 1.4">
++          <li>
++            <strong>Temporal Coherence</strong>: Do major events (e.g. share
++            transfers, liquidations, restructurings) occur in synchrony or
++            sequence?
++          </li>
++          <li>
++            <strong>Geographic Coherence</strong>: Do both companies operate
++            from the same physical or legal address? Any overlap in site usage
++            or postal registrations?
++          </li>
++          <li>
++            <strong>Financial Coherence</strong>: Are there interlinked cash
++            flows (e.g. rent, loans, management fees)? Do declared profits and
++            losses evolve in tandem or offset each other?
++          </li>
++          <li>
++            <strong>Decision-Making Coherence</strong>: Do the same individuals
++            appear in both boards, signatures, or meeting minutes?
++          </li>
++        </ul>
++        <p style="line-height: 1.4">
++          A strong match across all four dimensions can justify a hypothesis of
++          concealed continuity, de facto control, or orchestrated restructuring
++          — even without a formal merger or holding structure.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Theory A – Risk-Sharing Structure</strong></summary>
++        <p style="line-height: 1.4">
++          This hypothesis assumes that multiple companies are maintained in
++          parallel in order to distribute tax exposure or legal liability. One
++          company (e.g. IzakayaKoi) takes on aggressive practices (undeclared
++          cash, off-book transactions), while another (e.g. Steakhouse AB)
++          remains “clean” and operational.
++        </p>
++        <p style="line-height: 1.4">
++          The goal is to let one entity absorb the risk — tax audits, sanctions,
++          or permanent revocation — while keeping another entity
++          <strong
++            >shielded from scrutiny and ready to continue operations</strong
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          This structure is most effective when
++          <span style="background-color: #e5e7eb"
++            >the clean company is superficially unconnected</span
++          >
++          but shares key characteristics: location, people, suppliers, and cash
++          patterns.
++        </p>
++        <p style="line-height: 1.4">
++          It often appears as a legal relay, where one entity “falls” while
++          another quietly takes over without interruption.
++        </p>
+       </details>
++      <details>
++        <summary><strong>Theory B – Asset Stripping Strategy</strong></summary>
++        <p style="line-height: 1.4">
++          This theory posits that one company is progressively emptied of its
++          valuable assets (equipment, personnel, clientele, brand, cash) in
++          favor of another — typically a newer, safer, or less exposed entity.
++        </p>
++        <p style="line-height: 1.4">
++          The original entity (e.g. IzakayaKoi AB) appears to decline in
++          performance, while the receiving entity (e.g. Steakhouse AB) suddenly
++          improves, often without a formal transfer or acquisition.
++        </p>
++        <p style="line-height: 1.4">
++          Red flags include: <strong>underpriced asset sales</strong>,
++          <span style="background-color: #e5e7eb"
++            >overlapping employees or leases</span
++          >, and strategic underreporting of profits in the stripped entity.
++        </p>
++        <p style="line-height: 1.4">
++          The intent is to allow one company to "die" formally while another
++          captures the value — often in anticipation of bankruptcy, audit, or
++          tax exposure.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Board Member</strong></summary>
++        <p style="line-height: 1.4">
++          A <strong>Board Member</strong> is a legally registered director
++          responsible for overseeing and formally representing the company’s
++          interests. In most jurisdictions, this position grants voting power on
++          key governance issues such as financial reporting, strategic
++          decisions, and executive appointments.
++        </p>
++        <p style="line-height: 1.4">
++          Board Members are usually appointed by shareholders. In larger
++          companies, they are selected for their experience or expertise and may
++          sit as part of a multi-member board with clear role distributions
++          (Chairperson, Treasurer, etc.).
++          <strong
++            >In smaller companies, the board may consist of a single
++            individual</strong
++          >
++          — often the founder or a family member — making the board structure a
++          legal formality rather than a functioning body.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>The presence of only one board member</strong> (especially
++          when coupled with a <em>Deputy Board Member</em> but no wider
++          governance team) often reflects a tightly held company,
++          <strong>possibly a shell entity</strong>, or a low-activity business.
++          In forensic terms, this may suggest risk exposure due to limited
++          oversight or consolidated control.
++        </p>
++        <p style="line-height: 1.4">
++          Board members have <strong>personal legal liability</strong> in cases
++          of fraudulent reporting, tax evasion, or corporate negligence. Their
++          names are typically listed in national company registries and can be
++          tracked across multiple entities to detect patterns of control,
++          influence, or recurring irregularities.
++        </p>
++        <p style="line-height: 1.4">
++          The board structure serves
++          <strong>both functional and symbolic</strong> purposes. In robust
++          firms, it supports governance and transparency. In minimal structures,
++          it may serve only to meet registration requirements while
++          <strong>shielding decision-makers behind formal titles</strong>.
++        </p>
++        <p style="line-height: 1.4">
++          In corporate genealogy, board members are essential markers for
++          tracing continuity and control across legal entities, especially when
++          company names or registration numbers change but human operators
++          remain the same.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Deputy Board Member</strong></summary>
++        <p style="line-height: 1.4">
++          A Deputy Board Member (or
++          <em>Alternate Director</em>) is a legally designated substitute who
++          takes over a Board Member’s duties
++          <strong
++            >in case of death, resignation, illness, or formal absence</strong
++          >. Outside of such events, this role is passive and has no legal
++          authority or voting power.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>In smaller companies or single-director firms</strong>, this
++          role is often added <u>for compliance reasons</u>.
++          <span style="background-color: #e5e7eb"
++            >Swedish law, for example, requires the nomination of a deputy if
++            the board has only one formal member</span
++          >. The deputy ensures administrative continuity without implying any
++          real involvement.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>This position is typically symbolic</strong> and rarely
++          activated in practice. In many cases, deputy members are friends,
++          family members, or legal acquaintances of the main director — not
++          selected for oversight capacity but simply to satisfy registry
++          conditions.
++        </p>
++        <p style="line-height: 1.4">
++          From a forensic standpoint, the appointment of a
++          <strong
++            >Deputy Board Member with no corporate activity or public
++            presence</strong
++          >
++          can be an indicator of a closed governance model. It may also suggest
++          that the formal board is not the true locus of power, especially when
++          the same names appear repeatedly across related legal entities.
++        </p>
++        <p style="line-height: 1.4">
++          While technically part of the governance framework,
++          <strong
++            >the deputy board member holds no operational role unless
++            activated</strong
++          >. This makes it difficult to assess their knowledge of day-to-day
++          operations or accountability in irregular situations.
++        </p>
++        <p style="line-height: 1.4">
++          In corporate genealogy, deputy members are worth noting primarily to
++          reveal structural minimalism or strategic patterns — such as legal
++          insulation of the primary board member through dormant or nominal
++          substitutes.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Auditor</strong></summary>
++        <p style="line-height: 1.4">
++          An <strong>Auditor</strong> (or statutory auditor) is an
++          <u>external party legally appointed</u> to review, verify, and sign
++          off on a company’s financial statements. Their mission is to certify
++          that the accounts give a fair view of the company's financial position
++          and comply with applicable laws.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>In larger corporations</strong>, this role is held by licensed
++          audit firms (e.g., KPMG, PwC) and plays a crucial part in investor
++          confidence and regulatory compliance.
++          <u>In small private companies</u>, the auditor is often an independent
++          accountant — or sometimes a close associate — with a role that is
++          <span style="background-color: #e5e7eb"
++            >more formal than substantial</span
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          <span style="background-color: #e5e7eb"
++            ><strong>Auditors must be independent</strong></span
++          >, both in function and appearance. They are legally barred from
++          management roles or shareholding. However, in practice —
++          <u>especially in small firms</u> — the auditor may be a friend, former
++          consultant, or recurring figure validating multiple companies across a
++          network.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>The identity of the auditor</strong> is often a critical
++          forensic clue: do they appear in other linked firms? Are they involved
++          in known tax audits? <u>A passive or unqualified auditor</u> may
++          indicate systemic opacity or administrative negligence.
++        </p>
++        <p style="line-height: 1.4">
++          <span style="background-color: #e5e7eb"
++            ><strong>This role is a legal residue</strong></span
++          >
++          from 20th-century commercial codes, where trust between stakeholders
++          required third-party oversight.
++          <u
++            >Today, audit requirements are often waived below certain
++            thresholds</u
++          >, yet many companies keep the title for compliance or image purposes
++          — even if the audit is superficial.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic history and corporate genealogy, the auditor may not hold
++          power, but
++          <strong>their recurrence across entities is a red flag</strong>. They
++          help identify hidden connections, legal insulation tactics, or serial
++          patterns of governance without transparency.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Deputy Auditor</strong></summary>
++        <p style="line-height: 1.4">
++          A <strong>Deputy Auditor</strong> (or <em>alternate auditor</em>) is a
++          legal substitute for the main auditor, stepping in only if the primary
++          auditor resigns, becomes incapacitated, or is otherwise unable to
++          fulfill their role. <u>Outside of such circumstances</u>, the deputy
++          has no official function, no signature power, and no influence on the
++          company's financial reporting.
++        </p>
++        <p style="line-height: 1.4">
++          In many jurisdictions — including Sweden —
++          <span style="background-color: #e5e7eb"
++            >this position is a formal safeguard</span
++          >, required only when an official auditor is appointed. The deputy
++          exists to preserve continuity in the audit process, but
++          <u>in practice, is rarely involved</u> unless triggered by an
++          unforeseen event.
++        </p>
++        <p style="line-height: 1.4">
++          <strong>In small or private companies</strong>, deputy auditors are
++          often individuals with no active link to the business: acquaintances,
++          family members, or professionals added to satisfy registration forms.
++          <span style="background-color: #e5e7eb"
++            >Their appointment does not indicate active oversight</span
++          >, and they typically do not participate in meetings or review
++          internal documents.
++        </p>
++        <p style="line-height: 1.4">
++          From a forensic perspective,
++          <strong
++            >deputy auditors may help confirm structural minimalism</strong
++          >
++          — especially when their names never appear elsewhere in the corporate
++          ecosystem. If they reappear across related entities, however, it may
++          suggest the existence of a revolving governance shell or shadow
++          network.
++        </p>
++        <p style="line-height: 1.4">
++          <u
++            >Deputy auditors are not bound by the same intensity of reporting
++            obligations as main auditors</u
++          >, yet they still carry a degree of formal responsibility if
++          activated. This duality — formal but dormant — makes them useful
++          markers for identifying when a company is built more for legal
++          compliance than operational robustness.
++        </p>
++        <p style="line-height: 1.4">
++          In genealogy work, deputy auditors are
++          <span style="background-color: #e5e7eb"
++            >low-signal but high-value datapoints</span
++          >: they rarely act, but their mere presence reflects how a company
++          anticipates legal risk. Their invisibility in practice is often the
++          very sign of a shallow governance layer.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Offshore Country</strong></summary>
++        <p style="line-height: 1.4">
++          An <strong>Offshore Country</strong> refers to a jurisdiction where
++          companies can be registered with minimal regulatory requirements, low
++          or zero corporate taxes, and often strong confidentiality laws. These
++          jurisdictions are sometimes used to create legal distance between
++          ownership and operation.
++        </p>
++        <p style="line-height: 1.4">
++          <u>Examples include Cyprus, Panama, and Costa Rica</u>. Companies
++          registered there may act as passive owners of other entities abroad,
++          while concealing the identity of the true controlling party.
++        </p>
++        <p style="line-height: 1.4">
++          These legal structures often allow nominee directors or legal
++          representatives to appear on official documents, while
++          <span style="background-color: #e5e7eb"
++            >the beneficial owner remains hidden</span
++          >
++          through trusts or corporate layers.
++        </p>
++        <p style="line-height: 1.4">
++          <u>Offshore does not mean illegal</u>, but these countries are often
++          found in investigations involving complex asset transfers, tax
++          structuring, or shell companies with no visible operations.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic work,
++          <strong>offshore jurisdictions function as blind spots</strong> —
++          deliberately or not — breaking traceability between control and
++          accountability unless other documents (financial statements, leaks, or
++          court filings) allow connections to be restored.
++        </p>
++        <p style="line-height: 1.4">
++          In corporate genealogy, they often mark transitions in ownership
++          strategy, opacity level, or jurisdictional anchoring, especially in
++          periods of restructuring or risk exposure.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Holding Company</strong></summary>
++        <p style="line-height: 1.4">
++          A <strong>Holding Company</strong> is a legal entity created to own
++          shares in one or more other companies. It typically does not produce
++          goods or services itself but exists to manage equity, coordinate
++          ownership, or consolidate financial control.
++        </p>
++        <p style="line-height: 1.4">
++          <u>In large corporate groups</u>, holding companies may centralize
++          strategy, tax optimization, or risk management across subsidiaries.
++          However,
++          <span style="background-color: #e5e7eb"
++            >in smaller or offshore structures</span
++          >, they may have little or no operational activity and serve more as
++          legal containers.
++        </p>
++        <p style="line-height: 1.4">
++          <strong
++            >The word “holding” does not guarantee operational depth</strong
++          >. Some entities with this label are dormant, symbolic, or registered
++          in secrecy jurisdictions. Their purpose can include
++          <u>insulating liabilities</u>, <u>obscuring control chains</u>, or
++          <span style="background-color: #e5e7eb"
++            >fragmenting ownership visibility</span
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          Holding companies are often used to group together several businesses
++          under a common ownership umbrella, but they can also appear in
++          multi-layered ownership networks where the real actors remain behind
++          nominees or corporate veils.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic analysis, a holding company may act as an anchor — it
++          holds the legal link to assets, but not necessarily the power to
++          operate or decide. Identifying who controls the holding itself is
++          often more important than the holding’s official status.
++        </p>
++        <p style="line-height: 1.4">
++          In corporate genealogy,
++          <strong>holdings mark key transitions</strong>: acquisitions,
++          consolidations, spin-offs, or restructurings. They are critical nodes
++          for tracing continuity and control through complex ownership chains.
++        </p>
++      </details>
++      <details>
++        <summary><strong>PPOWER(E) Method</strong></summary>
++
++        <p style="line-height: 1.4">
++          The PPOWER(E) method is a simple tool to figure out who really
++          controls a business — not just on paper, but in practice. It’s used
++          when official ownership doesn’t match what’s actually happening on the
++          ground.
++        </p>
++
++        <p style="line-height: 1.4">
++          The name stands for six key things to check. If one person or group
++          shows up on most of them, they’re likely in charge — even if they
++          don’t legally “own” anything.
++        </p>
+ 
+-    </footer>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br>
+-        Content provided as-is without warranty.<br>
++        <table
++          style="width: 100%; border-collapse: collapse; font-size: 0.95em"
++        >
++          <thead>
++            <tr style="background-color: #f3f4f6">
++              <th style="text-align: left; padding: 8px">Axis</th>
++              <th style="text-align: left; padding: 8px">What to look for</th>
++            </tr>
++          </thead>
++          <tbody>
++            <tr>
++              <td style="padding: 8px"><strong>P – Power</strong></td>
++              <td style="padding: 8px">
++                Who gives orders? Who takes the real decisions?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>P – Property</strong></td>
++              <td style="padding: 8px">
++                Who owns it — even indirectly or through someone else?
++              </td>
++            </tr>
++            <tr>
++              <td style="padding: 8px"><strong>O – Operation</strong></td>
++              <td style="padding: 8px">
++                Who runs it day to day? Who shows up on site?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>W – Wallet</strong></td>
++              <td style="padding: 8px">
++                Who receives payments? Who pays the bills?
++              </td>
++            </tr>
++            <tr>
++              <td style="padding: 8px"><strong>E – Employees</strong></td>
++              <td style="padding: 8px">
++                Are staff shared across companies? Who hires them?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>R – Reputation</strong></td>
++              <td style="padding: 8px">
++                Who is publicly seen as “the boss” or the face of the company?
++              </td>
++            </tr>
++          </tbody>
++        </table>
++
++        <p style="line-height: 1.4; margin-top: 1rem">
++          <span style="background-color: #e5e7eb"
++            >In your case, this is useful to understand how HSSC, Aspircio,
++            Queda Consulting and Tributum AB might be controlled by the same
++            group — without sharing official owners.</span
++          >
++        </p>
++
++        <h4 style="margin-top: 1rem">📚 Where does it come from?</h4>
++        <p style="line-height: 1.4">
++          The method was first developed in the 2010s by financial investigators
++          working on corruption and shell companies. It’s now used by
++          investigative journalists, fraud examiners, and forensic analysts to
++          spot real control hidden behind fake legal structures.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Panama Papers</strong></summary>
++        <p style="line-height: 1.4">
++          The <strong>Panama Papers</strong> refer to a large-scale data leak
++          published in 2016, exposing over 11.5 million confidential documents
++          from the Panamanian law firm <u>Mossack Fonseca</u>. These files
++          revealed the global use of offshore companies to conceal ownership,
++          shift assets, or optimize taxation.
++        </p>
++        <p style="line-height: 1.4">
++          The leak was obtained by a whistleblower and shared with the German
++          newspaper <em>Süddeutsche Zeitung</em>, which partnered with the
++          <strong>ICIJ</strong> (International Consortium of Investigative
++          Journalists) to coordinate a worldwide investigation across more than
++          80 countries.
++        </p>
++        <p style="line-height: 1.4">
++          <span style="background-color: #e5e7eb"
++            >The documents named over 200,000 offshore entities</span
++          >, many linked to public figures, politicians, business magnates, and
++          intermediaries in tax havens like Panama, the British Virgin Islands,
++          Cyprus, and Seychelles.
++        </p>
++        <p style="line-height: 1.4">
++          <u>The Panama Papers do not prove illegality</u> by themselves.
++          However, they exposed structures often used to
++          <strong
++            >conceal beneficial ownership, avoid scrutiny, or simulate distance
++            between control and responsibility</strong
++          >.
++        </p>
++        <p style="line-height: 1.4">
++          In forensic investigations, Panama Papers records are used to trace
++          <strong>hidden corporate relationships</strong>, nominee directors,
++          and cross-border control networks. The ICIJ provides a free searchable
++          database of companies, agents, and addresses mentioned in the leak.
++        </p>
++        <p style="line-height: 1.4">
++          In corporate genealogy, the Panama Papers serve as a historical
++          milestone — a public map of how formal company structures can be used
++          to shape narratives of legitimacy while shielding complex financial
++          arrangements.
++        </p>
++      </details>
++      <details>
++        <summary><strong>Forensic Accounting</strong></summary>
++        <p style="line-height: 1.4">
++          <strong>Forensic Accounting</strong> refers to the specialized
++          analysis of financial records in order to detect, explain, or prove
++          fraud, manipulation, or hidden transactions. It goes beyond standard
++          auditing by focusing on intentional irregularities or deceptive
++          practices.
++        </p>
++        <p style="line-height: 1.4">
++          Practitioners combine accounting expertise with investigative
++          techniques to reveal
++          <u
++            >where money has gone, who benefited, and whether numbers reflect
++            real activity</u
++          >. This often involves tracing the flow of funds, identifying
++          fictitious invoices, undeclared revenues, or disguised expenses.
++        </p>
++        <p style="line-height: 1.4">
++          In the context of small businesses or shell companies, forensic
++          accounting is used to
++          <strong>spot sudden profitability shifts</strong>,
++          <span style="background-color: #e5e7eb"
++            >abnormally timed dividends</span
++          >, or <u>implausible operating margins</u> — especially when these
++          precede a liquidation, transfer of shares, or tax audit.
++        </p>
++        <p style="line-height: 1.4">
++          The method is particularly useful when a company presents a legal
++          appearance of normality but maintains internal inconsistencies between
++          declared income and operational scale. It helps distinguish between
++          <strong>genuine decline and strategic concealment</strong>.
++        </p>
++        <p style="line-height: 1.4">
++          Forensic accounting is widely used in tax disputes, fraud litigation,
++          bankruptcy proceedings, and corporate investigations — both in courts
++          and by journalists, regulators, or internal auditors.
++        </p>
++        <p style="line-height: 1.4">
++          In your use case, forensic accounting underpins the detection of
++          <span style="background-color: #e5e7eb"
++            >profit inflation followed by asset extraction</span
++          >, and helps anchor suspicion when no legal violation is yet
++          officially stated.
++        </p>
++      </details>
++      <footer class="site-footer">
++        <p>
++          © 2025 AfterShift. All rights reserved.<br />
++          Content provided as-is without warranty.<br />
+           Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+-    <script>
+-      const toggleBtn = document.getElementById("toggleNavbar");
+-      const navbar = document.querySelector(".navbar");
+-      toggleBtn.addEventListener("click", () => {
+-        navbar.classList.toggle("collapsed");
+-      });
+-    </script>
+-   </main></body></html>
++        </p>
++      </footer>
++      <script>
++        const toggleBtn = document.getElementById("toggleNavbar");
++        const navbar = document.querySelector(".navbar");
++        toggleBtn.addEventListener("click", () => {
++          navbar.classList.toggle("collapsed");
++        });
++      </script>
++    </main>
++  </body>
++</html>
+diff --git a/structure.html b/structure.html
+index 32ad82b..5d79d4c 100644
+--- a/structure.html
++++ b/structure.html
+@@ -47,7 +47,7 @@
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Setup Path</a>
++        <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"
+           ><span class="nav-icon">②</span> Working Dynamics</a
+@@ -60,9 +60,10 @@
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+ 
+-        <!-- Bloc Références -->
++        <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
++        <a href="/notes.html">Notes</a>
+         <a href="/search.html">Search</a>
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+@@ -81,7 +82,6 @@
+       <small class="timestamp" style="display: block; text-align: center"
+         >Last updated: Friday, May 9, 2025 at 02:29 AM</small
+       >
+-
+       <details
+         open
+         style="
+@@ -138,7 +138,6 @@
+           operational authority may diverge.
+         </p>
+       </details>
+-
+       <p>
+         By <strong>2014</strong>, Henrik is understood to have joined
+         <strong>Renaissance Hotel Malmö</strong> (then under
+@@ -146,15 +145,203 @@
+         <strong>food and beverage operations</strong>, reportedly holding that
+         role for two and a half years by <strong>2018</strong>.
+       </p>
++      <details>
++        <summary><strong>PPOWER(E) Method</strong></summary>
++
++        <p style="line-height: 1.4">
++          The PPOWER(E) method is a simple tool to figure out who really
++          controls a business — not just on paper, but in practice. It’s used
++          when official ownership doesn’t match what’s actually happening on the
++          ground.
++        </p>
++
++        <p style="line-height: 1.4">
++          The name stands for six key things to check. If one person or group
++          shows up on most of them, they’re likely in charge — even if they
++          don’t legally “own” anything.
++        </p>
++
++        <table
++          style="width: 100%; border-collapse: collapse; font-size: 0.95em"
++        >
++          <thead>
++            <tr style="background-color: #f3f4f6">
++              <th style="text-align: left; padding: 8px">Axis</th>
++              <th style="text-align: left; padding: 8px">What to look for</th>
++            </tr>
++          </thead>
++          <tbody>
++            <tr>
++              <td style="padding: 8px"><strong>P – Power</strong></td>
++              <td style="padding: 8px">
++                Who gives orders? Who takes the real decisions?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>P – Property</strong></td>
++              <td style="padding: 8px">
++                Who owns it — even indirectly or through someone else?
++              </td>
++            </tr>
++            <tr>
++              <td style="padding: 8px"><strong>O – Operation</strong></td>
++              <td style="padding: 8px">
++                Who runs it day to day? Who shows up on site?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>W – Wallet</strong></td>
++              <td style="padding: 8px">
++                Who receives payments? Who pays the bills?
++              </td>
++            </tr>
++            <tr>
++              <td style="padding: 8px"><strong>E – Employees</strong></td>
++              <td style="padding: 8px">
++                Are staff shared across companies? Who hires them?
++              </td>
++            </tr>
++            <tr style="background-color: #f9fafb">
++              <td style="padding: 8px"><strong>R – Reputation</strong></td>
++              <td style="padding: 8px">
++                Who is publicly seen as “the boss” or the face of the company?
++              </td>
++            </tr>
++          </tbody>
++        </table>
++
++        <p style="line-height: 1.4; margin-top: 1rem">
++          <span style="background-color: #e5e7eb"
++            >In your case, this is useful to understand how HSSC, Aspircio,
++            Queda Consulting and Tributum AB might be controlled by the same
++            group — without sharing official owners.</span
++          >
++        </p>
++
++        <h4 style="margin-top: 1rem">📚 Where does it come from?</h4>
++        <p style="line-height: 1.4">
++          The method was first developed in the 2010s by financial investigators
++          working on corruption and shell companies. It’s now used by
++          investigative journalists, fraud examiners, and forensic analysts to
++          spot real control hidden behind fake legal structures.
++        </p>
++      </details>
++
++      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2018</span></h3>
++
++      <p>
++        📄 <strong>On June 25</strong>, the company
++        <strong>HSSC Event AB</strong> (registration no.
++        <strong>559163-2764</strong>) is officially registered in Malmö. Its
++        name clearly reflects the initials of <u>Henrik Siebert</u> and
++        <u>Saahil Chudasama</u>, who were both
++        <strong>publicly presented as “co-founders” of the Quan project</strong
++        >.
++      </p>
++      <p>
++        📄 The company,
++        <strong
++          >registered under the activity of restaurant and event
++          services</strong
++        >, lists <strong>Mäster Johansgatan 15, Malmö</strong> as its official
++        address — the same as the hotel hosting the Quan project.
++      </p>
++
++      <p></p>
++      <p>
++        📌 All other companies introduced in this sequence are likewise
++        <strong>legally domiciled at the same address</strong>, forming what is
++        often referred to as a
++        <a href="notes.html#note-shared-setup">shared registration setup</a>.
++      </p>
++
++      <p>
++        📑 In the legal filings, <strong>Saahil Chudasama</strong> is declared
++        as <a href="#board-member">board member</a>, and
++        <strong>Sahar El Nasser</strong> as
++        <a href="#deputy-board-member">deputy board member</a>.
++        <em
++          >No principal auditor is listed
++          <a href="#note-auditor-threshold">*</a>.</em
++        >
++      </p>
++      <p style="line-height: 1.5">
++        📎 As shown in the <strong>beneficial ownership register</strong>,
++        <span style="background-color: #e5e7eb"
++          ><strong>Kehda Holding AB</strong></span
++        >
++        — holding <u>between 50% and 75%</u> of the company — is controlled by
++        <strong>Daniella Lin Dahl</strong>. <u>Saahil Chudasama</u>, via
++        <em>Chudasama Invest AB</em>, holds <u>less than 25%</u> but retains
++        <strong>strategic rights</strong>, including board control.
++      </p>
++      <p style="line-height: 1.5">
++        ⚠️ The absence of Henrik Siebert from any formal role — despite his
++        visibility — may reflect a strategy of <u>protective distancing</u>,
++        allowing others to front the legal structure while he remains behind the
++        scenes.
++      </p>
++
++      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2020</span></h3>
++
++      <p>
++        📄 <strong>On 30 September</strong>, company no.
++        <strong>559274-2042</strong> is registered under the name KEHDA Holding
++        AB. Its declared purpose is <u>property and asset management</u>, with
++        initial control by four Göteborg-based appointees — all replaced weeks
++        later by <strong>Daniella Lin Dahl</strong>.
++      </p>
++
++      <p>
++        📌 Despite reporting
++        <u>no employees, clients, or listed assignments</u>, KEHDA votes four
++        consecutive <strong>profit distributions</strong> between 2021 and 2024,
++        totaling <strong>over 1.2 million SEK</strong>. At least one appears
++        linked to
++        <span style="background-color: #e5e7eb"
++          >strategic advisory billing from HSSC Event AB</span
++        >, without itemized explanation.
++      </p>
+ 
+       <p>
+-        In <strong>February 2018</strong>, the Renaissance Hotel was acquired by
+-        a Swedish group and renamed <strong>Elite Hotel Adlon</strong>. Shortly
+-        after, the restaurant project <strong>Quan</strong> was launched on the
+-        same premises. Henrik Siebert was introduced as
+-        <strong>concept lead</strong> and <strong>co-manager</strong>.
++        🧩 The setup suggests a <u>silent profit vehicle</u>: KEHDA operates
++        without public presence, while its sole representative shares a
++        residence with <strong>Henrik Siebert</strong>. This may indicate a
++        <span style="background-color: #e5e7eb">private holding layer</span>,
++        designed to channel earnings while shielding visible ownership.
+       </p>
+ 
++      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2024</span></h3>
++
++      <p>
++        📄 <strong>On 1 July</strong>, two new companies are formally
++        registered: <strong>Tributum AB</strong> (Org.nr: 559488-5484) and
++        <strong>Aspiratio Holding AB</strong> (Org.nr: 559488-5476). They are
++        incorporated through the legal service provider
++        <u>Bolagsstiftarna AB</u>, known for rapid creation and liquidation of
++        shelf companies.
++      </p>
++
++      <p>
++        ⚙️ Both entities are born with <u>identical governance templates</u>:
++        temporary board members linked to Göteborg, all replaced within weeks.
++        On <strong>29 July</strong>, Sahar El Nasser and Daniella Dahl take
++        formal control of both boards.
++      </p>
++
++      <p>
++        🧱 <strong>Tributum AB</strong> is declared as a restaurant business,
++        while <strong>Aspiratio</strong> is set up as a property and asset
++        manager. This distinction suggests an early intent to separate
++        <u>operational activities</u> from <u>holding structures</u>.
++      </p>
++
++      <p>
++        📍 Both are registered at the same address as HSSC and KEHDA, further
++        reinforcing the emerging architecture. Whether these entities were
++        created to absorb risk, optimize flows, or serve future roles remains to
++        be clarified.
++      </p>
+       <p>
+         Quan operates physically within the premises of Elite Hotel Esplanade,
+         at Mäster Johansgatan 15 in Malmö. While customers often believe they
