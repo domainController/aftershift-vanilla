@@ -1,103 +1,73 @@
-// scripts/add-timestamps.mjs
-// Script ultra simple pour mettre à jour manuellement une liste de fichiers
-
-import fs from "fs";
+// scripts/add-timestamps-all.js
+import fs from "fs/promises";
 import path from "path";
-import simpleGit from "simple-git";
-import { fileURLToPath } from "url";
+import { readdir } from "fs/promises";
 
-// Setup Node ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const folder = "./"; // Répertoire courant
 
-// Préparer Git pour aller chercher la date du dernier commit
-const git = simpleGit();
+console.log("📦 Scanning directory for .html files...");
 
-// ✍️ Ici tu ajoutes manuellement tous les fichiers à mettre à jour
-const filesToUpdate = [
-  "index.html",
-  "updates.html",
-  "home.html",
-  "timeline.html",
-  "about.html",
-  "legal.html",
-  "posts.html",
-  "claim.html",
-  "context.html",
-  "structure.html",
-  "governance.html",
-  "search.html",
-  "simulator.html",
-  "philosophy.html",
-  "glossary.html",
-  "contact.html",
-  "notes.html",
-  "form.html",
+let files;
+try {
+  files = await readdir(folder);
+} catch (err) {
+  console.error("❌ Unable to read directory:", err.message);
+  process.exit(1);
+}
 
-  "foundations.html",
-  "working-dynamics.html",
-  "posts/on-dismissal-sms-restaurant-sweden.html",
-  // Ajoute ici d'autres fichiers HTML manuellement si besoin
-];
+const htmlFiles = files.filter((f) => f.endsWith(".html"));
+console.log(`🔍 Found ${htmlFiles.length} HTML file(s).\n`);
 
-// Fonction pour récupérer la date du dernier commit
-const getLastCommitDate = async () => {
-  const log = await git.log({ maxCount: 1 });
-  return new Date(log.latest.date);
-};
+for (const file of htmlFiles) {
+  console.log(`➡️ Processing: ${file}`);
 
-const updateTimestamps = async () => {
-  if (filesToUpdate.length === 0) {
-    console.log("ℹ️ No files listed for timestamp update.");
-    process.exit(0);
+  let content;
+  try {
+    content = await fs.readFile(file, "utf-8");
+  } catch (err) {
+    console.error(`❌ Failed to read ${file}:`, err.message);
+    continue;
   }
 
-  console.log("🛠 Starting manual timestamp update...");
-
-  const lastCommitDate = await getLastCommitDate();
-
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  };
-  const formattedDate = lastCommitDate.toLocaleString("en-US", options);
-
-  const timestampHTML = `<small class="timestamp" style="display: block; text-align: center;">Last updated: ${formattedDate}</small>\n`;
-
-  for (const file of filesToUpdate) {
-    const filePath = path.resolve(__dirname, "../", file);
-    console.log(`📄 Processing ${file}...`);
-
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, "utf-8");
-
-      if (content.includes('<small class="timestamp"')) {
-        content = content.replace(
-          /<small class="timestamp".*?<\/small>\n?/,
-          timestampHTML
-        );
-        console.log(`♻️ Updated existing timestamp in ${file}`);
-      } else if (content.includes("<h1")) {
-        content = content.replace(
-          /(<h1[^>]*>.*?<\/h1>)/s,
-          `$1\n${timestampHTML}`
-        );
-        console.log(`➕ Inserted new timestamp after <h1> in ${file}`);
-      } else {
-        console.warn(`⚠️ No <h1> found in ${file}. Skipped.`);
-      }
-
-      fs.writeFileSync(filePath, content, "utf-8");
-    } else {
-      console.warn(`⚠️ File ${file} not found. Skipped.`);
+  const timestampHTML = `<small class="timestamp">Last updated: ${new Date().toLocaleString(
+    "en-US",
+    {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     }
+  )}</small>\n`;
+
+  if (content.includes('<small class="timestamp">')) {
+    content = content.replace(/<small class="timestamp">.*?<\/small>\s*/s, "");
+    console.log("♻️  Removed existing timestamp.");
+  } else {
+    console.log("ℹ️  No existing timestamp found.");
   }
 
-  console.log("✅ Manual timestamp update process finished.");
-};
+  const h1Match = content.match(/<h1[^>]*>/);
+  if (!h1Match) {
+    console.warn(`⚠️  No <h1> tag found in ${file}. Skipping.`);
+    continue;
+  }
 
-updateTimestamps();
+  const indexAfterH1 = content.indexOf(h1Match[0]) + h1Match[0].length;
+  const updated =
+    content.slice(0, indexAfterH1) +
+    "\n" +
+    timestampHTML +
+    content.slice(indexAfterH1);
+
+  try {
+    await fs.writeFile(file, updated);
+    console.log(`✅ Timestamp inserted into ${file}\n`);
+  } catch (err) {
+    console.error(`❌ Failed to write ${file}:`, err.message);
+  }
+}
+
+console.log("✅ Batch timestamp process finished.");
