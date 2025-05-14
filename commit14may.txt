@@ -1,85 +1,973 @@
 diff --git a/about.html b/about.html
-index 23d15ad..ef05809 100644
+index ef05809..bf230fb 100644
 --- a/about.html
 +++ b/about.html
-@@ -117,7 +117,7 @@
+@@ -116,16 +116,7 @@
+       </div>
      </header>
      <main>
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/assets/img/On_Dissmissal_By_Text.jpg b/assets/img/On_Dissmissal_By_Text.jpg
-deleted file mode 100644
-index b9ba340..0000000
-Binary files a/assets/img/On_Dissmissal_By_Text.jpg and /dev/null differ
+-      <h1>
+-
+-
+-
+-
+-Profil</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Thursday, May 1, 2025 at 02:20 AM</small
+-      >
+-
++      <h1>Profil</h1>
+       <section class="max-w-3xl mx-auto p-4 text-lg leading-relaxed">
+         <p>
+           My name is <strong>Patrice Kenmoé</strong>, I’m 47 years old. Born in
+@@ -179,12 +170,5 @@ Profil</h1>
+         </p>
+       </section>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+   </body>
+ </html>
 diff --git a/blog.html b/blog.html
-index f588d83..602657b 100644
+index 602657b..cc0ca2f 100644
 --- a/blog.html
 +++ b/blog.html
-@@ -80,7 +80,7 @@
- 
-     <main>
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+@@ -106,12 +106,5 @@ AfterShift Blog</h1>
+         are being finalized.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+   </body>
+ </html>
 diff --git a/claim.html b/claim.html
-index 02b37a8..a0ecc0a 100644
+index 7955a3d..fd06b11 100644
 --- a/claim.html
 +++ b/claim.html
-@@ -88,7 +88,7 @@
-       "
-     >
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+@@ -340,13 +340,6 @@ Position Framework</h1>
+           >.
+         </p>
+       </div>
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+   </body>
+ </html>
+diff --git a/commit14may.txt b/commit14may.txt
+index 3cb7a61..e69de29 100644
+--- a/commit14may.txt
++++ b/commit14may.txt
+@@ -1,523 +0,0 @@
+-diff --git a/about.html b/about.html
+-index 23d15ad..ef05809 100644
+---- a/about.html
+-+++ b/about.html
+-@@ -117,7 +117,7 @@
+-     </header>
+-     <main>
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/assets/img/On_Dissmissal_By_Text.jpg b/assets/img/On_Dissmissal_By_Text.jpg
+-deleted file mode 100644
+-index b9ba340..0000000
+-Binary files a/assets/img/On_Dissmissal_By_Text.jpg and /dev/null differ
+-diff --git a/blog.html b/blog.html
+-index f588d83..602657b 100644
+---- a/blog.html
+-+++ b/blog.html
+-@@ -80,7 +80,7 @@
+- 
+-     <main>
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/claim.html b/claim.html
+-index 02b37a8..a0ecc0a 100644
+---- a/claim.html
+-+++ b/claim.html
+-@@ -88,7 +88,7 @@
+-       "
+-     >
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/contact.html b/contact.html
+-index 5cad852..968b5af 100644
+---- a/contact.html
+-+++ b/contact.html
+-@@ -60,7 +60,7 @@
+-     <main class="main-content">
+-       <section class="max-w-3xl mx-auto p-4 text-lg leading-relaxed">
+-         <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/context.html b/context.html
+-index 6f52b4d..1b67429 100644
+---- a/context.html
+-+++ b/context.html
+-@@ -47,7 +47,7 @@
+-         <!-- Bloc Contexte -->
+-         <div class="nav-section">Case Background</div>
+-         <a href="/foundations.html">Founding Genesis</a>
+--        <a href="/structure.html">Setup Path</a>
+-+        <a href="/structure.html">Current Architecture</a>
+- 
+-         <a href="/working-dynamics.html"
+-           ><span class="nav-icon">②</span> Working Dynamics</a
+-@@ -60,9 +60,10 @@
+-         <div class="nav-section">Articles</div>
+-         <a href="/posts.html">Blog</a>
+- 
+--        <!-- Bloc Références -->
+-+        <!-- Bloc Outils & Références -->
+-         <div class="nav-section">Tools & References</div>
+-         <a href="/glossary.html">Glossary</a>
+-+        <a href="/notes.html">Notes</a>
+-         <a href="/search.html">Search</a>
+-         <a href="/timeline.html">Timeline</a>
+-         <a href="/updates.html">Logs</a>
+-@@ -72,16 +73,14 @@
+-         <div class="nav-section">Community & Legal</div>
+-         <a href="https://ob1.se/forum.html">Forum</a>
+-         <a href="/legal.html">Legal</a>
+-+        <a href="/faq.html">Defense FAQ</a>
+-+        <a href="/guide.html">Reading Help</a>
+-+        <a href="/press.html">Media Access</a>
+-         <a href="/contact.html">Contact</a>
+-       </div>
+-     </header>
+-     <main class="main-content">
+--      <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+--
+--
+--
+--Context</h1>
+-+      <h1>Context</h1>
+-       <small class="timestamp" style="display: block; text-align: center"
+-         >Last updated: Wednesday, May 7, 2025 at 03:45 AM</small
+-       >
+-diff --git a/faq.html b/faq.html
+-index cd15b78..967dad9 100644
+---- a/faq.html
+-+++ b/faq.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/foundations.html b/foundations.html
+-index 6cb87ef..53cd350 100644
+---- a/foundations.html
+-+++ b/foundations.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/glossary.html b/glossary.html
+-index d40cf39..a2faf9c 100644
+---- a/glossary.html
+-+++ b/glossary.html
+-@@ -88,7 +88,7 @@
+-       "
+-     >
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/governance.html b/governance.html
+-index 56ae65b..c8227f4 100644
+---- a/governance.html
+-+++ b/governance.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/guide.html b/guide.html
+-index 15ba9ce..7c4a87f 100644
+---- a/guide.html
+-+++ b/guide.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/home.html b/home.html
+-index 415208b..7413c6e 100644
+---- a/home.html
+-+++ b/home.html
+-@@ -84,7 +84,7 @@
+-       "
+-     >
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/index.html b/index.html
+-index b634ad6..692af06 100644
+---- a/index.html
+-+++ b/index.html
+-@@ -78,7 +78,7 @@
+-     <main class="main-content">
+-       <div class="legal-container">
+-         <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/legal.html b/legal.html
+-index 3d96df1..bdf986a 100644
+---- a/legal.html
+-+++ b/legal.html
+-@@ -81,7 +81,7 @@
+-       "
+-     >
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/narrative-grid.html b/narrative-grid.html
+-index 8f14ad7..f566a05 100644
+---- a/narrative-grid.html
+-+++ b/narrative-grid.html
+-@@ -76,7 +76,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/notes.html b/notes.html
+-index 61dc3a9..bd445e7 100644
+---- a/notes.html
+-+++ b/notes.html
+-@@ -78,7 +78,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/philosophy.html b/philosophy.html
+-index 16dd4c9..9355de9 100644
+---- a/philosophy.html
+-+++ b/philosophy.html
+-@@ -72,7 +72,7 @@
+-   </header>
+-   <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/posts.html b/posts.html
+-index 97049f5..aa1f033 100644
+---- a/posts.html
+-+++ b/posts.html
+-@@ -80,7 +80,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/posts_old.html b/posts_old.html
+-index 11d9908..33bcb22 100644
+---- a/posts_old.html
+-+++ b/posts_old.html
+-@@ -60,7 +60,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/press.html b/press.html
+-index 15ba9ce..7c4a87f 100644
+---- a/press.html
+-+++ b/press.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/scripts/add-timestamps.mjs b/scripts/add-timestamps.mjs
+-index 70c39d0..fbded48 100755
+---- a/scripts/add-timestamps.mjs
+-+++ b/scripts/add-timestamps.mjs
+-@@ -1,73 +1,103 @@
+--// scripts/add-timestamp-once.js
+--import fs from "fs/promises";
+--
+--const filePath = process.argv[2];
+--
+--console.log("🔍 Starting timestamp injection process...");
+--
+--if (!filePath) {
+--  console.error(
+--    "❌ No file path provided. Usage: node scripts/add-timestamp-once.js path/to/file.html"
+--  );
+--  process.exit(1);
+--}
+--
+--console.log(`📄 Target file: ${filePath}`);
+--
+--let content;
+--try {
+--  content = await fs.readFile(filePath, "utf-8");
+--  console.log("✅ File successfully read.");
+--} catch (err) {
+--  console.error("❌ Failed to read the file:", err.message);
+--  process.exit(1);
+--}
+--
+--const timestampHTML = `<small class="timestamp">Last updated: ${new Date().toLocaleString(
+--  "en-US",
+--  {
+-+// scripts/add-timestamps.mjs
+-+// Script ultra simple pour mettre à jour manuellement une liste de fichiers
+-+
+-+import fs from "fs";
+-+import path from "path";
+-+import simpleGit from "simple-git";
+-+import { fileURLToPath } from "url";
+-+
+-+// Setup Node ES modules
+-+const __filename = fileURLToPath(import.meta.url);
+-+const __dirname = path.dirname(__filename);
+-+
+-+// Préparer Git pour aller chercher la date du dernier commit
+-+const git = simpleGit();
+-+
+-+// ✍️ Ici tu ajoutes manuellement tous les fichiers à mettre à jour
+-+const filesToUpdate = [
+-+  "index.html",
+-+  "updates.html",
+-+  "home.html",
+-+  "timeline.html",
+-+  "about.html",
+-+  "legal.html",
+-+  "posts.html",
+-+  "claim.html",
+-+  "context.html",
+-+  "structure.html",
+-+  "governance.html",
+-+  "search.html",
+-+  "simulator.html",
+-+  "philosophy.html",
+-+  "glossary.html",
+-+  "contact.html",
+-+  "notes.html",
+-+  "form.html",
+-+
+-+  "foundations.html",
+-+  "working-dynamics.html",
+-+  "posts/on-dismissal-sms-restaurant-sweden.html",
+-+  // Ajoute ici d'autres fichiers HTML manuellement si besoin
+-+];
+-+
+-+// Fonction pour récupérer la date du dernier commit
+-+const getLastCommitDate = async () => {
+-+  const log = await git.log({ maxCount: 1 });
+-+  return new Date(log.latest.date);
+-+};
+-+
+-+const updateTimestamps = async () => {
+-+  if (filesToUpdate.length === 0) {
+-+    console.log("ℹ️ No files listed for timestamp update.");
+-+    process.exit(0);
+-+  }
+-+
+-+  console.log("🛠 Starting manual timestamp update...");
+-+
+-+  const lastCommitDate = await getLastCommitDate();
+-+
+-+  const options = {
+-     weekday: "long",
+-     year: "numeric",
+-     month: "long",
+-     day: "numeric",
+-     hour: "2-digit",
+-     minute: "2-digit",
+--    hour12: true,
+-+  };
+-+  const formattedDate = lastCommitDate.toLocaleString("en-US", options);
+-+
+-+  const timestampHTML = `<small class="timestamp" style="display: block; text-align: center;">Last updated: ${formattedDate}</small>\n`;
+-+
+-+  for (const file of filesToUpdate) {
+-+    const filePath = path.resolve(__dirname, "../", file);
+-+    console.log(`📄 Processing ${file}...`);
+-+
+-+    if (fs.existsSync(filePath)) {
+-+      let content = fs.readFileSync(filePath, "utf-8");
+-+
+-+      if (content.includes('<small class="timestamp"')) {
+-+        content = content.replace(
+-+          /<small class="timestamp".*?<\/small>\n?/,
+-+          timestampHTML
+-+        );
+-+        console.log(`♻️ Updated existing timestamp in ${file}`);
+-+      } else if (content.includes("<h1")) {
+-+        content = content.replace(
+-+          /(<h1[^>]*>.*?<\/h1>)/s,
+-+          `$1\n${timestampHTML}`
+-+        );
+-+        console.log(`➕ Inserted new timestamp after <h1> in ${file}`);
+-+      } else {
+-+        console.warn(`⚠️ No <h1> found in ${file}. Skipped.`);
+-+      }
+-+
+-+      fs.writeFileSync(filePath, content, "utf-8");
+-+    } else {
+-+      console.warn(`⚠️ File ${file} not found. Skipped.`);
+-+    }
+-   }
+--)}</small>\n`;
+--
+--console.log("⏱️ Generated timestamp:", timestampHTML.trim());
+--
+--// Vérifie s’il y a déjà une balise <small class="timestamp"> pour l’enlever
+--if (content.includes('<small class="timestamp">')) {
+--  content = content.replace(
+--    /<small class="timestamp"[^>]*>[\s\S]*?<\/small>\s*/g,
+--    ""
+--  );
+--  console.log("♻️ Existing timestamp removed.");
+--} else {
+--  console.log("ℹ️ No existing timestamp found. Proceeding...");
+--}
+--
+--// Trouver <h1> pour insérer après
+--const h1Match = content.match(/<h1[^>]*>/);
+--if (!h1Match) {
+--  console.error("❌ No <h1> tag found in the file. Cannot insert timestamp.");
+--  process.exit(1);
+--}
+--
+--const indexAfterH1 = content.indexOf(h1Match[0]) + h1Match[0].length;
+--
+--const updated =
+--  content.slice(0, indexAfterH1) +
+--  "\n" +
+--  timestampHTML +
+--  content.slice(indexAfterH1);
+--
+--try {
+--  await fs.writeFile(filePath, updated);
+--  console.log(`✅ Timestamp successfully injected into ${filePath}`);
+--} catch (err) {
+--  console.error("❌ Failed to write to the file:", err.message);
+--  process.exit(1);
+--}
+-+
+-+  console.log("✅ Manual timestamp update process finished.");
+-+};
+-+
+-+updateTimestamps();
+-diff --git a/search.html b/search.html
+-index 90d8d32..7d82b39 100644
+---- a/search.html
+-+++ b/search.html
+-@@ -103,7 +103,7 @@
+-     template.html
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/structure.html b/structure.html
+-index 3590229..357c669 100644
+---- a/structure.html
+-+++ b/structure.html
+-@@ -78,7 +78,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/template.html b/template.html
+-index cd15b78..967dad9 100644
+---- a/template.html
+-+++ b/template.html
+-@@ -81,7 +81,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/updates.html b/updates.html
+-index 70e514b..6a79a4e 100644
+---- a/updates.html
+-+++ b/updates.html
+-@@ -82,7 +82,7 @@
+-     >
+-       <div class="intro_changelog">
+-         <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
+-diff --git a/working-dynamics.html b/working-dynamics.html
+-index 1d71ea7..7c7c632 100644
+---- a/working-dynamics.html
+-+++ b/working-dynamics.html
+-@@ -78,7 +78,7 @@
+-     </header>
+-     <main class="main-content">
+-       <h1>
+--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-+
+- 
+- 
+- 
 diff --git a/contact.html b/contact.html
-index 5cad852..968b5af 100644
+index b412322..444a7c5 100644
 --- a/contact.html
 +++ b/contact.html
-@@ -60,7 +60,7 @@
-     <main class="main-content">
-       <section class="max-w-3xl mx-auto p-4 text-lg leading-relaxed">
-         <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+@@ -65,7 +65,6 @@
+ 
+ 
+ Contact & Collaboration</h1>
+-<small class="timestamp" style="display: block; text-align: center;">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
  
  
  
+@@ -160,13 +159,6 @@ Contact & Collaboration</h1>
+         </div>
+       </section>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById('toggleNavbar');
+       const navbar = document.querySelector('.navbar');
 diff --git a/context.html b/context.html
-index 6f52b4d..1b67429 100644
+index 1b67429..6a6f210 100644
 --- a/context.html
 +++ b/context.html
-@@ -47,7 +47,7 @@
-         <!-- Bloc Contexte -->
-         <div class="nav-section">Case Background</div>
-         <a href="/foundations.html">Founding Genesis</a>
--        <a href="/structure.html">Setup Path</a>
-+        <a href="/structure.html">Current Architecture</a>
+@@ -81,9 +81,6 @@
+     </header>
+     <main class="main-content">
+       <h1>Context</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Wednesday, May 7, 2025 at 03:45 AM</small
+-      >
+       <section class="narrative-intro">
+         <p>
+           This part introduces the <em>narrative grid</em> — a
+@@ -349,14 +346,6 @@
+         interpreted as the <strong>start of formal employment</strong>.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Some names have been changed for privacy.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/faq.html b/faq.html
+index 967dad9..bdc819c 100644
+--- a/faq.html
++++ b/faq.html
+@@ -79,21 +79,69 @@
+         <a href="/contact.html">Contact</a>
+       </div>
+     </header>
+-    <main class="main-content">
+-      <h1>
++    <main class="main-content" style="max-width: 740px; margin: auto; padding: 2rem;">
++      <h1>Defense FAQ</h1>
  
-         <a href="/working-dynamics.html"
-           ><span class="nav-icon">②</span> Working Dynamics</a
-@@ -60,9 +60,10 @@
-         <div class="nav-section">Articles</div>
-         <a href="/posts.html">Blog</a>
++      <h2>1. What is the legal nature of this site?</h2>
++      <p>
++        This site is a civic archive authored by an individual residing in Sweden. It documents first-hand labor experiences, backed by personal and official records. It is non-commercial, non-affiliated, and protected under Swedish and European legal frameworks (freedom of expression, right to document, public interest).
++      </p>
  
--        <!-- Bloc Références -->
-+        <!-- Bloc Outils & Références -->
-         <div class="nav-section">Tools & References</div>
-         <a href="/glossary.html">Glossary</a>
-+        <a href="/notes.html">Notes</a>
-         <a href="/search.html">Search</a>
-         <a href="/timeline.html">Timeline</a>
-         <a href="/updates.html">Logs</a>
-@@ -72,16 +73,14 @@
++      <h2>2. Are personal names or companies exposed?</h2>
++      <p>
++        Names are mentioned only when they are part of:
++        <ul>
++          <li>Public registries (e.g., Bolagsverket, Skatteverket)</li>
++          <li>Legally documented employer roles or decision-making positions</li>
++          <li>Situations with direct operational or legal relevance to the grievance</li>
++        </ul>
++        Where appropriate, names may be anonymized or partially redacted.
++      </p>
+ 
++      <h2>3. Why is this public and not private?</h2>
++      <p>
++        Legal communication channels have been exhausted or met with silence, threats, or procedural evasion. Not all damage is litigable. Public documentation allows patterns to emerge, informs others in similar situations, and serves as a civil ledger of misconduct or procedural failure.
++      </p>
+ 
+-Template</h1>
+-    </main>
+-    <footer class="site-footer">
++      <h2>4. Is this defamatory?</h2>
++      <p>
++        No. Every element is:
++        <ul>
++          <li>Backed by documents, screenshots, or official filings</li>
++          <li>Presented in a structured, cautious, and legally filtered tone</li>
++          <li>Free from insult or distortion</li>
++        </ul>
++        If an error is found, it may be corrected upon request.
++      </p>
++
++      <h2>5. What if you are mentioned?</h2>
+       <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
++        You may:
++        <ul>
++          <li>Submit a factual correction or clarification</li>
++          <li>Provide a verifiable rebuttal or timeline</li>
++          <li>Request anonymization if proportionate and justified</li>
++        </ul>
++        Contact: <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a> or use the <a href="/contact.html">contact form</a>.
+       </p>
+-    </footer>
++
++      <h2>6. Can this be cited or reused?</h2>
++      <p>
++        Yes. Provided that:
++        <ul>
++          <li>AfterShift.se is mentioned as the source</li>
++          <li>No modification is made to the excerpts</li>
++          <li>The context of citation respects proportionality and good faith</li>
++        </ul>
++        Journalists, academics, and legal professionals are welcome to contact the author for clarification.
++      </p>
++
++      <h2>7. Is this politically or union-affiliated?</h2>
++      <p>
++        No. The initiative is personal and independent. Any external reuse by union or political actors is not coordinated or solicited.
++      </p>
++
++    </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/foundations.html b/foundations.html
+index 53cd350..5c35e85 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -80,16 +80,7 @@
+       </div>
+     </header>
+     <main class="main-content">
+-      <h1>
+-
+-
+-
+-
+-Legacy Foundations of Quan</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Saturday, May 10, 2025 at 11:26 PM</small
+-      >
+-
++      <h1>Legacy Foundations of Quan</h1>
+       <details style="background-color: #e5e7eb; border-radius: 0.6rem; padding: 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6;" closed>
+         <summary style="font-weight: bold; font-size: 1.05rem;">
+           🧭 Methodology & Disciplines Used in This Chronology
+@@ -336,13 +327,6 @@ Legacy Foundations of Quan</h1>
+           The company’s official address is simultaneously changed to <strong>c/o Etagegruppen AB, Stortorget 6, 211 34 Malmö</strong>, directly aligning its operations with the group’s headquarters. From this point onward, <strong>IzakayaKoi AB becomes a wholly owned subsidiary</strong> of Etagegruppen AB, marking the end of the Peterson era and a <span class="highlight">strategic absorption into a new corporate lineage</span>.
+           </p>
+ 
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/glossary.html b/glossary.html
+index a2faf9c..db6383e 100644
+--- a/glossary.html
++++ b/glossary.html
+@@ -87,16 +87,9 @@
+         font-family: 'Source Sans Pro', sans-serif;
+       "
+     >
+-      <h1>
++      <h1>Glossary</h1>
+ 
+ 
+-
+-
+-Glossary</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Saturday, May 10, 2025 at 11:26 PM</small
+-      >
+-
+       <details id="">
+         <summary><strong>Disclaimer</strong></summary>
+         <p>
+@@ -926,13 +919,6 @@ Glossary</h1>
+             </p>
+           </details>
+     
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+       <script>
+         const toggleBtn = document.getElementById("toggleNavbar");
+         const navbar = document.querySelector(".navbar");
+diff --git a/governance.html b/governance.html
+index c8227f4..f157def 100644
+--- a/governance.html
++++ b/governance.html
+@@ -80,16 +80,8 @@
+       </div>
+     </header>
+     <main class="main-content">
+-      <h1>
+-
+-
+-
+-
+-Operational Authority</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Wednesday, May 7, 2025 at 11:44 PM</small
+-      >
+-      <section class="narrative-intro">
++      <h1>Operational Authority</h1>
++  <section class="narrative-intro">
+         <p>
+           This part completes the <em>narrative grid</em> — by focusing on how
+           authority was distributed, claimed, or blurred throughout the
+@@ -334,19 +326,21 @@ Operational Authority</h1>
+     </p>
+   </details>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
++      // Script pour la sidebar
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+       toggleBtn.addEventListener("click", () => {
+         navbar.classList.toggle("collapsed");
+       });
++            // Script pour injecter le footer
++            fetch("/components/footer.html")
++        .then(res => res.text())
++        .then(html => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
+     </script>
+   </body>
+ </html>
+diff --git a/guide.html b/guide.html
+index 7c4a87f..4b0da63 100644
+--- a/guide.html
++++ b/guide.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+-    <title>What's New</title>
++    <title>Reading Help — AfterShift</title>
+     <link rel="stylesheet" href="/assets/css/main.css" />
+     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+@@ -79,27 +79,65 @@
+         <a href="/contact.html">Contact</a>
+       </div>
+     </header>
+-    <main class="main-content">
+-      <h1>
++    <main class="main-content" style="max-width: 740px; margin: auto; padding: 2rem;">
++      <h1>Reading Help</h1>
+ 
++      <p>
++        This section is designed to help readers understand the structure and logic behind the AfterShift archive.
++        It is not a blog in the conventional sense — it is a layered civic testimony built with legal and editorial intention.
++      </p>
+ 
++      <h2>🧭 What this archive contains</h2>
++      <ul>
++        <li><strong>Chronological posts</strong> documenting events and grievances as they unfolded</li>
++        <li><strong>Fact-based reconstructions</strong> of employment abuse, contract denial, wage theft</li>
++        <li><strong>Structural analyses</strong> of corporate opacity and hidden employer responsibility</li>
++        <li><strong>Legal framing tools</strong> such as glossary, FAQ, or timeline</li>
++        <li><strong>Public evidence</strong> (e.g. payslips, certificates, email captures)</li>
++      </ul>
+ 
++      <h2>📚 How to navigate</h2>
++      <ul>
++        <li>Start with <a href="/context.html">Personal Context</a> and <a href="/claim.html">Editorial Framework</a></li>
++        <li>Use the <a href="/timeline.html">Timeline</a> for event-based navigation</li>
++        <li>Consult the <a href="/glossary.html">Glossary</a> if legal or technical terms are unclear</li>
++        <li>Refer to <a href="/faq.html">Defense FAQ</a> for legal boundaries and intent</li>
++        <li>Visit <a href="/notes.html">Notes</a> for deep dives into corporate or procedural anomalies</li>
++      </ul>
+ 
+-Template</h1>
+-    </main>
+-    <footer class="site-footer">
++      <h2>🧠 What to keep in mind</h2>
++      <ul>
++        <li>This is a real situation, involving real legal and financial damage</li>
++        <li>The tone is factual, deliberate, and non-emotional — even when the content is serious</li>
++        <li>The site is <strong>not intended as a diary</strong> but as a reference dossier for legal, journalistic, or civic use</li>
++        <li>Each post is linked to one or more verifiable documents</li>
++      </ul>
++
++      <h2>💬 Questions or clarifications?</h2>
+       <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
++        If something is unclear, or if you'd like to contribute, correct, or discuss a specific post, feel free to:
++        <ul>
++          <li>Use the <a href="/contact.html">contact form</a></li>
++          <li>Email: <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a></li>
++        </ul>
++        I welcome all respectful inquiries — whether legal, journalistic, or personal.
+       </p>
+-    </footer>
++    </main>
+     <script>
++      // Script pour la sidebar
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+       toggleBtn.addEventListener("click", () => {
+         navbar.classList.toggle("collapsed");
+       });
++            // Script pour injecter le footer
++            fetch("/components/footer.html")
++        .then(res => res.text())
++        .then(html => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
+     </script>
+   </body>
+ </html>
+diff --git a/home.html b/home.html
+index 7413c6e..69c0d8a 100644
+--- a/home.html
++++ b/home.html
+@@ -105,12 +105,5 @@ Perspectives and Ideas</h1>
+         broader context are invited to explore the rationale behind this log.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+   </body>
+ </html>
+diff --git a/index.html b/index.html
+index ab5a609..713a708 100644
+--- a/index.html
++++ b/index.html
+@@ -72,24 +72,20 @@
          <div class="nav-section">Community & Legal</div>
          <a href="https://ob1.se/forum.html">Forum</a>
          <a href="/legal.html">Legal</a>
@@ -90,434 +978,1391 @@ index 6f52b4d..1b67429 100644
        </div>
      </header>
      <main class="main-content">
--      <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
--
--
--
--Context</h1>
-+      <h1>Context</h1>
-       <small class="timestamp" style="display: block; text-align: center"
-         >Last updated: Wednesday, May 7, 2025 at 03:45 AM</small
-       >
-diff --git a/faq.html b/faq.html
-index cd15b78..967dad9 100644
---- a/faq.html
-+++ b/faq.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/foundations.html b/foundations.html
-index 6cb87ef..53cd350 100644
---- a/foundations.html
-+++ b/foundations.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/glossary.html b/glossary.html
-index d40cf39..a2faf9c 100644
---- a/glossary.html
-+++ b/glossary.html
-@@ -88,7 +88,7 @@
-       "
-     >
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/governance.html b/governance.html
-index 56ae65b..c8227f4 100644
---- a/governance.html
-+++ b/governance.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/guide.html b/guide.html
-index 15ba9ce..7c4a87f 100644
---- a/guide.html
-+++ b/guide.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/home.html b/home.html
-index 415208b..7413c6e 100644
---- a/home.html
-+++ b/home.html
-@@ -84,7 +84,7 @@
-       "
-     >
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
-diff --git a/index.html b/index.html
-index b634ad6..692af06 100644
---- a/index.html
-+++ b/index.html
-@@ -78,7 +78,7 @@
-     <main class="main-content">
        <div class="legal-container">
          <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+-
+-
+-
+-
+-The Inconvenient Hours<br /><small class="subtitle"
++          The Inconvenient Hours<br /><small class="subtitle"
+             >A Tactical Journal of Legal Inertia and Employer Neglect in a
+             High-end Malmö Restaurant.</small
+           >
+         </h1>
+-        <small class="timestamp" style="display: block; text-align: center"
+-          >Last updated: Thursday, May 8, 2025 at 05:51 AM</small
+-        >
+       </div>
+       <div style="text-align: center; margin-top: 10px; margin-bottom: 10px">
+         <img
+@@ -107,28 +103,45 @@ The Inconvenient Hours<br /><small class="subtitle"
+         </p>
+       </div>
+       <!-- START INDEX UPDATES -->
+-<div class="legal-container">
+-<h2>📌 Wednesday 14 May 2025</h2>
+-<ul>
+-  <li>📌 20:11:58 – Restore on-dismissal-sms post removed in commit e4f944a</li>
+-  <li>🕰️ 19:56:26 – glossary: added Shadow Governance, Liability Mapping, Corporate Genealogy, Forensic Accounting</li>
+-  <li>⚖️ 19:56:24 – feat: updated nav labels and layout to integrate Working Dynamics and Legal Architecture</li>
+-  <li>🕰️ 19:56:21 – cleanup: removed legacy chronology from foundations.html (pre-Quan timeline) to enable reallocation</li>
+-  <li>🗂️ 03:06:00 – updates: added log summary for refactor and glossary integration (May 13)</li>
+-  <li>🕰️ 03:05:58 – glossary: added Shadow Governance, Liability Mapping, Corporate Genealogy, Forensic Accounting</li>
+-  <li>⚖️ 03:05:56 – feat: updated nav labels and layout to integrate Working Dynamics and Legal Architecture</li>
+-  <li>🕰️ 03:05:53 – cleanup: removed legacy chronology from foundations.html (pre-Quan timeline) to enable reallocation</li>
+-</ul>
+-</div>
+-<!-- END INDEX UPDATES -->
++      <div class="legal-container">
++        <h2>📌 Wednesday 14 May 2025</h2>
++        <ul>
++          <li>
++            📌 20:11:58 – Restore on-dismissal-sms post removed in commit
++            e4f944a
++          </li>
++          <li>
++            🕰️ 19:56:26 – glossary: added Shadow Governance, Liability Mapping,
++            Corporate Genealogy, Forensic Accounting
++          </li>
++          <li>
++            ⚖️ 19:56:24 – feat: updated nav labels and layout to integrate
++            Working Dynamics and Legal Architecture
++          </li>
++          <li>
++            🕰️ 19:56:21 – cleanup: removed legacy chronology from
++            foundations.html (pre-Quan timeline) to enable reallocation
++          </li>
++          <li>
++            🗂️ 03:06:00 – updates: added log summary for refactor and glossary
++            integration (May 13)
++          </li>
++          <li>
++            🕰️ 03:05:58 – glossary: added Shadow Governance, Liability Mapping,
++            Corporate Genealogy, Forensic Accounting
++          </li>
++          <li>
++            ⚖️ 03:05:56 – feat: updated nav labels and layout to integrate
++            Working Dynamics and Legal Architecture
++          </li>
++          <li>
++            🕰️ 03:05:53 – cleanup: removed legacy chronology from
++            foundations.html (pre-Quan timeline) to enable reallocation
++          </li>
++        </ul>
++      </div>
++      <!-- END INDEX UPDATES -->
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/legal.html b/legal.html
-index 3d96df1..bdf986a 100644
+index bdf986a..118082a 100644
 --- a/legal.html
 +++ b/legal.html
-@@ -81,7 +81,7 @@
+@@ -30,48 +30,55 @@
+     <!-- End Matomo Code -->
+   </head>
+   <body>
+-<header>
+-  <button id="toggleNavbar" class="toggle-btn">☰</button>
+-
+-  <div class="navbar">
+-    <a href="/">Home</a>
+-    <!-- Bloc Auteur -->
+-    <div class="nav-section">About the Author</div>
+-
+-    <a href="/philosophy.html">Operating Principles</a>
+-    <a href="/about.html">Trajectory</a>
+-    <a href="/claim.html">Editorial Framework</a>
+-    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
+-
+-    <!-- Bloc Contexte -->
+-    <div class="nav-section">Case Background</div>
+-    <a href="/working-dynamics.html"
+-      ><span class="nav-icon">②</span> Working Dynamics</a
+-    >
+-    <a href="/governance.html"
+-      ><span class="nav-icon">③</span> Operational Authority</a
+-    >
+-    <a href="/structure.html">Legal Structure</a>
+-
+-    <!-- Bloc Publications -->
+-    <div class="nav-section">Articles</div>
+-    <a href="/posts.html">Blog</a>
+-
+-    <!-- Bloc Références -->
+-    <div class="nav-section">Tools & References</div>
+-    <a href="/glossary.html">Glossary</a>
+-    <a href="/search.html">Search</a>
+-    <a href="/timeline.html">Timeline</a>
+-    <a href="/updates.html">Logs</a>
+-    <a href="/simulator.html">Simulator</a>
+-
+-    <!-- Bloc Communauté et légal -->
+-    <div class="nav-section">Community & Legal</div>
+-    <a href="https://ob1.se/forum.html">Forum</a>
+-    <a href="/legal.html">Legal</a>
+-    <a href="/contact.html">Contact</a>
+-  </div>
+-</header>
++    <header>
++      <button id="toggleNavbar" class="toggle-btn">☰</button>
++      <div class="navbar">
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
++
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/context.html"
++          ><span class="nav-icon">①</span> Personal Context</a
++        >
++
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Legal Architecture</a>
++
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">②</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
++
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
++        <a href="/posts.html">Blog</a>
++
++        <!-- Bloc Outils & Références -->
++        <div class="nav-section">Tools & References</div>
++        <a href="/glossary.html">Glossary</a>
++        <a href="/notes.html">Notes</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
++
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
++        <a href="https://ob1.se/forum.html">Forum</a>
++        <a href="/legal.html">Legal</a>
++        <a href="/faq.html">Defense FAQ</a>
++        <a href="/guide.html">Reading Help</a>
++        <a href="/press.html">Media Access</a>
++        <a href="/contact.html">Contact</a>
++      </div>
++    </header>
+     <main
+       style="
+         max-width: 740px;
+@@ -80,15 +87,7 @@
+         font-family: 'Source Sans Pro', sans-serif;
        "
      >
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+-      <h1>
+-
+-
+-
+-
+-Legal Notice &amp; Data Policy</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Thursday, May 1, 2025 at 02:20 AM</small
+-      >
++      <h1>Legal Notice &amp; Data Policy</h1>
  
+       <h2>1. Site Publisher</h2>
+       <p>
+@@ -198,13 +197,6 @@ Legal Notice &amp; Data Policy</h1>
+       </p>
+     </main>
  
- 
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/logs/updates-archive.html b/logs/updates-archive.html
+index ac097ed..5e91a6c 100644
+--- a/logs/updates-archive.html
++++ b/logs/updates-archive.html
+@@ -250,13 +250,6 @@
+ <p>📊 Yesterday: 7 updates across 63 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -526,13 +519,6 @@
+ <p>📊 Yesterday: 7 updates across 63 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -802,13 +788,6 @@
+ <p>📊 Yesterday: 7 updates across 63 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -1085,13 +1064,6 @@
+ <p>📊 Yesterday: 2 updates across 26 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -1372,13 +1344,6 @@
+ <p>📊 Yesterday: 2 updates across 26 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -1659,13 +1624,6 @@
+ <p>📊 Yesterday: 2 updates across 26 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -1947,13 +1905,6 @@
+ <p>📊 Yesterday: 2 updates across 26 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -2235,13 +2186,6 @@
+ <p>📊 Yesterday: 2 updates across 26 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -2519,13 +2463,6 @@
+ <p>📊 Yesterday: 3 updates across 27 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -2807,13 +2744,6 @@
+ <p>📊 Yesterday: 3 updates across 27 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -3096,13 +3026,6 @@
+ <p>📊 Yesterday: 3 updates across 27 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -3385,13 +3308,6 @@
+ <p>📊 Yesterday: 3 updates across 27 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -3655,13 +3571,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -3929,13 +3838,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -4203,13 +4105,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -4478,13 +4373,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -4753,13 +4641,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -5029,13 +4910,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -5305,13 +5179,6 @@
+ <p>📊 Yesterday: 0 updates across 0 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -5578,13 +5445,6 @@
+ <p>📊 Yesterday: 4 updates across 28 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -5857,13 +5717,6 @@
+ <p>📊 Yesterday: 5 updates across 29 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -6130,13 +5983,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -6407,13 +6253,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -6684,13 +6523,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -6962,13 +6794,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -7240,13 +7065,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -7519,13 +7337,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -7798,13 +7609,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -8078,13 +7882,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -8358,13 +8155,6 @@
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -8642,13 +8432,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -8926,13 +8709,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -9210,13 +8986,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -9495,13 +9264,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -9780,13 +9542,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -10066,13 +9821,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -10354,13 +10102,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+@@ -10643,13 +10384,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
 diff --git a/narrative-grid.html b/narrative-grid.html
-index 8f14ad7..f566a05 100644
+index f566a05..fc23e7c 100644
 --- a/narrative-grid.html
 +++ b/narrative-grid.html
-@@ -76,7 +76,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+@@ -305,13 +305,6 @@ Narrative Grid</h1>
+         </p>
+       </details>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/notes.html b/notes.html
-index 61dc3a9..bd445e7 100644
+index bd445e7..1a9a510 100644
 --- a/notes.html
 +++ b/notes.html
-@@ -78,7 +78,7 @@
+@@ -77,17 +77,8 @@
+       </div>
      </header>
      <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+-      <h1>
+-
+-
+-
+-
+-Notes</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Monday, May 12, 2025 at 05:32 AM</small
+-      >
+-
+-      <details id="note-auditor-thresholds" class="note-auditor-thresholds">
++      <h1>Notes</h1>
++    <details id="note-auditor-thresholds" class="note-auditor-thresholds">
+         <summary>
+           <strong>📌 Note — Auditor Appointment Requirement in Sweden</strong>
+         </summary>
+@@ -677,13 +668,6 @@ Notes</h1>
+           >45 archived snapshots</a
+         >
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/package.json b/package.json
+index 5bc6c42..f6cde47 100644
+--- a/package.json
++++ b/package.json
+@@ -6,11 +6,10 @@
+   },
+   "scripts": {
+     "prepare": "husky install",
+-    "add-timestamps": "node scripts/add-timestamps.mjs",
+     "generate-home-updates": "node scripts/generate-home-updates.mjs",
+-    "prepare-commit": "npm run add-timestamps && npm run generate-home-updates && npm run generate-updates",
++    "prepare-commit": "npm run generate-home-updates && npm run generate-updates",
+     "generate-updates": "node scripts/generate-updates.mjs",
+-    "update-site": "node scripts/add-timestamps.mjs && node scripts/generate-home-updates.mjs && node scripts/generate-updates.mjs"
++    "update-site": "node scripts/generate-home-updates.mjs && node scripts/generate-updates.mjs"
+   },
+   "dependencies": {
+     "simple-git": "^3.27.0"
 diff --git a/philosophy.html b/philosophy.html
-index 16dd4c9..9355de9 100644
+index 9a92aeb..90c9b03 100644
 --- a/philosophy.html
 +++ b/philosophy.html
-@@ -72,7 +72,7 @@
+@@ -67,20 +67,14 @@
+       <div class="nav-section">Community & Legal</div>
+       <a href="https://ob1.se/forum.html">Forum</a>
+       <a href="/legal.html">Legal</a>
++      <a href="/faq.html">Defense FAQ</a>
++      <a href="/guide.html">Reading Help</a>
++      <a href="/press.html">Media Access</a>
+       <a href="/contact.html">Contact</a>
+     </div>
    </header>
    <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+-      <h1>
+-
+-
+-
+-
+-Personal Operating Principle</h1>
+-<small class="timestamp" style="display: block; text-align: center;">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
+-
+-
+-
++      <h1>Personal Operating Principle</h1>
+       <section class="narrative-intro">
+         <details open>
+           <summary class="section-order">
+@@ -106,14 +100,6 @@ Personal Operating Principle</h1>
+           </div>
+         </details>
+       </section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </a>
+-    </footer>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br>
+-        Content provided as-is without warranty.<br>
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/posts.html b/posts.html
-index 97049f5..aa1f033 100644
+index aa1f033..95da749 100644
 --- a/posts.html
 +++ b/posts.html
-@@ -80,7 +80,7 @@
+@@ -79,15 +79,7 @@
+       </div>
      </header>
      <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+-      <h1>
+-
+-
+-
+-
+-Upcoming Publications</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
+-      >
++      <h1>Upcoming Publications</h1>
  
+       <p>
+         This section will soon feature a handful of articles. Each release will
+@@ -167,14 +159,6 @@ Upcoming Publications</h1>
  
- 
+       <p>Thank you.</p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 OB1. All rights reserved.<br />
+-        Content provided “as is” without warranties.<br />
+-        Terms governed by Swedish law – Malmö courts have exclusive
+-        jurisdiction.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/posts/on-dismissal-sms-restaurant-sweden.html b/posts/on-dismissal-sms-restaurant-sweden.html
+index 5f97c4d..d299264 100644
+--- a/posts/on-dismissal-sms-restaurant-sweden.html
++++ b/posts/on-dismissal-sms-restaurant-sweden.html
+@@ -168,15 +168,6 @@
+                 </p>
+             </div>
+           </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Some names have been changed for privacy.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>ning law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/posts_old.html b/posts_old.html
-index 11d9908..33bcb22 100644
+index 33bcb22..0a9ee7e 100644
 --- a/posts_old.html
 +++ b/posts_old.html
-@@ -60,7 +60,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+@@ -186,14 +186,6 @@ Upcoming Publications</h1>
  
- 
- 
+       <p>Thank you.</p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 OB1. All rights reserved.<br />
+-        Content provided “as is” without warranties.<br />
+-        Terms governed by Swedish law – Malmö courts have exclusive
+-        jurisdiction.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/press.html b/press.html
-index 15ba9ce..7c4a87f 100644
+index 7c4a87f..d26d18a 100644
 --- a/press.html
 +++ b/press.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+@@ -87,13 +87,6 @@
  
- 
- 
+ Template</h1>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/scripts/add-timestamps.mjs b/scripts/add-timestamps.mjs
-index 70c39d0..fbded48 100755
+deleted file mode 100755
+index 7fc53b0..0000000
 --- a/scripts/add-timestamps.mjs
-+++ b/scripts/add-timestamps.mjs
-@@ -1,73 +1,103 @@
--// scripts/add-timestamp-once.js
--import fs from "fs/promises";
++++ /dev/null
+@@ -1,103 +0,0 @@
+-// scripts/add-timestamps.mjs
+-// Script ultra simple pour mettre à jour manuellement une liste de fichiers
 -
--const filePath = process.argv[2];
+-import fs from "fs";
+-import path from "path";
+-import simpleGit from "simple-git";
+-import { fileURLToPath } from "url";
 -
--console.log("🔍 Starting timestamp injection process...");
+-// Setup Node ES modules
+-const __filename = fileURLToPath(import.meta.url);
+-const __dirname = path.dirname(__filename);
 -
--if (!filePath) {
--  console.error(
--    "❌ No file path provided. Usage: node scripts/add-timestamp-once.js path/to/file.html"
--  );
--  process.exit(1);
--}
+-// Préparer Git pour aller chercher la date du dernier commit
+-const git = simpleGit();
 -
--console.log(`📄 Target file: ${filePath}`);
+-// ✍️ Ici tu ajoutes manuellement tous les fichiers à mettre à jour
+-const filesToUpdate = [
+-  "index.html",
+-  "updates.html",
+-  "home.html",
+-  "timeline.html",
+-  "about.html",
+-  "legal.html",
+-  "posts.html",
+-  "claim.html",
+-  "context.html",
+-  "structure.html",
+-  "governance.html",
+-  "search.html",
+-  "simulator.html",
+-  "philosophy.html",
+-  "glossary.html",
+-  "contact.html",
+-  "notes.html",
+-  "form.html",
 -
--let content;
--try {
--  content = await fs.readFile(filePath, "utf-8");
--  console.log("✅ File successfully read.");
--} catch (err) {
--  console.error("❌ Failed to read the file:", err.message);
--  process.exit(1);
--}
+-  "foundations.html",
+-  "working-dynamics.html",
+-  "posts/on-dismissal-sms-restaurant-sweden.html",
+-  // Ajoute ici d'autres fichiers HTML manuellement si besoin
+-];
 -
--const timestampHTML = `<small class="timestamp">Last updated: ${new Date().toLocaleString(
--  "en-US",
--  {
-+// scripts/add-timestamps.mjs
-+// Script ultra simple pour mettre à jour manuellement une liste de fichiers
-+
-+import fs from "fs";
-+import path from "path";
-+import simpleGit from "simple-git";
-+import { fileURLToPath } from "url";
-+
-+// Setup Node ES modules
-+const __filename = fileURLToPath(import.meta.url);
-+const __dirname = path.dirname(__filename);
-+
-+// Préparer Git pour aller chercher la date du dernier commit
-+const git = simpleGit();
-+
-+// ✍️ Ici tu ajoutes manuellement tous les fichiers à mettre à jour
-+const filesToUpdate = [
-+  "index.html",
-+  "updates.html",
-+  "home.html",
-+  "timeline.html",
-+  "about.html",
-+  "legal.html",
-+  "posts.html",
-+  "claim.html",
-+  "context.html",
-+  "structure.html",
-+  "governance.html",
-+  "search.html",
-+  "simulator.html",
-+  "philosophy.html",
-+  "glossary.html",
-+  "contact.html",
-+  "notes.html",
-+  "form.html",
-+
-+  "foundations.html",
-+  "working-dynamics.html",
-+  "posts/on-dismissal-sms-restaurant-sweden.html",
-+  // Ajoute ici d'autres fichiers HTML manuellement si besoin
-+];
-+
-+// Fonction pour récupérer la date du dernier commit
-+const getLastCommitDate = async () => {
-+  const log = await git.log({ maxCount: 1 });
-+  return new Date(log.latest.date);
-+};
-+
-+const updateTimestamps = async () => {
-+  if (filesToUpdate.length === 0) {
-+    console.log("ℹ️ No files listed for timestamp update.");
-+    process.exit(0);
-+  }
-+
-+  console.log("🛠 Starting manual timestamp update...");
-+
-+  const lastCommitDate = await getLastCommitDate();
-+
-+  const options = {
-     weekday: "long",
-     year: "numeric",
-     month: "long",
-     day: "numeric",
-     hour: "2-digit",
-     minute: "2-digit",
--    hour12: true,
-+  };
-+  const formattedDate = lastCommitDate.toLocaleString("en-US", options);
-+
-+  const timestampHTML = `<small class="timestamp" style="display: block; text-align: center;">Last updated: ${formattedDate}</small>\n`;
-+
-+  for (const file of filesToUpdate) {
-+    const filePath = path.resolve(__dirname, "../", file);
-+    console.log(`📄 Processing ${file}...`);
-+
-+    if (fs.existsSync(filePath)) {
-+      let content = fs.readFileSync(filePath, "utf-8");
-+
-+      if (content.includes('<small class="timestamp"')) {
-+        content = content.replace(
-+          /<small class="timestamp".*?<\/small>\n?/,
-+          timestampHTML
-+        );
-+        console.log(`♻️ Updated existing timestamp in ${file}`);
-+      } else if (content.includes("<h1")) {
-+        content = content.replace(
-+          /(<h1[^>]*>.*?<\/h1>)/s,
-+          `$1\n${timestampHTML}`
-+        );
-+        console.log(`➕ Inserted new timestamp after <h1> in ${file}`);
-+      } else {
-+        console.warn(`⚠️ No <h1> found in ${file}. Skipped.`);
-+      }
-+
-+      fs.writeFileSync(filePath, content, "utf-8");
-+    } else {
-+      console.warn(`⚠️ File ${file} not found. Skipped.`);
-+    }
-   }
--)}</small>\n`;
+-// Fonction pour récupérer la date du dernier commit
+-const getLastCommitDate = async () => {
+-  const log = await git.log({ maxCount: 1 });
+-  return new Date(log.latest.date);
+-};
 -
--console.log("⏱️ Generated timestamp:", timestampHTML.trim());
+-const updateTimestamps = async () => {
+-  if (filesToUpdate.length === 0) {
+-    console.log("ℹ️ No files listed for timestamp update.");
+-    process.exit(0);
+-  }
 -
--// Vérifie s’il y a déjà une balise <small class="timestamp"> pour l’enlever
--if (content.includes('<small class="timestamp">')) {
--  content = content.replace(
--    /<small class="timestamp"[^>]*>[\s\S]*?<\/small>\s*/g,
--    ""
--  );
--  console.log("♻️ Existing timestamp removed.");
--} else {
--  console.log("ℹ️ No existing timestamp found. Proceeding...");
--}
+-  console.log("🛠 Starting manual timestamp update...");
 -
--// Trouver <h1> pour insérer après
--const h1Match = content.match(/<h1[^>]*>/);
--if (!h1Match) {
--  console.error("❌ No <h1> tag found in the file. Cannot insert timestamp.");
--  process.exit(1);
--}
+-  const lastCommitDate = await getLastCommitDate();
 -
--const indexAfterH1 = content.indexOf(h1Match[0]) + h1Match[0].length;
+-  const options = {
+-    weekday: "long",
+-    year: "numeric",
+-    month: "long",
+-    day: "numeric",
+-    hour: "2-digit",
+-    minute: "2-digit",
+-  };
+-  const formattedDate = lastCommitDate.toLocaleString("en-US", options);
 -
--const updated =
--  content.slice(0, indexAfterH1) +
--  "\n" +
--  timestampHTML +
--  content.slice(indexAfterH1);
+-  const timestampHTML = `<small class="timestamp" style="display: block; text-align: center;">Last updated: ${formattedDate}</small>\n`;
 -
--try {
--  await fs.writeFile(filePath, updated);
--  console.log(`✅ Timestamp successfully injected into ${filePath}`);
--} catch (err) {
--  console.error("❌ Failed to write to the file:", err.message);
--  process.exit(1);
--}
-+
-+  console.log("✅ Manual timestamp update process finished.");
-+};
-+
-+updateTimestamps();
+-  for (const file of filesToUpdate) {
+-    const filePath = path.resolve(__dirname, "../", file);
+-    console.log(`📄 Processing ${file}...`);
+-
+-    if (fs.existsSync(filePath)) {
+-      let content = fs.readFileSync(filePath, "utf-8");
+-
+-      if (content.includes('<small class="timestamp"')) {
+-        content = content.replace(
+-          /<small class="timestamp"[^>]*>[\s\S]*?<\/small>\s*/g,
+-          ""
+-        );
+-        console.log(`♻️ Updated existing timestamp in ${file}`);
+-      } else if (content.includes("<h1")) {
+-        content = content.replace(
+-          /(<h1[^>]*>.*?<\/h1>)/s,
+-          `$1\n${timestampHTML}`
+-        );
+-        console.log(`➕ Inserted new timestamp after <h1> in ${file}`);
+-      } else {
+-        console.warn(`⚠️ No <h1> found in ${file}. Skipped.`);
+-      }
+-
+-      fs.writeFileSync(filePath, content, "utf-8");
+-    } else {
+-      console.warn(`⚠️ File ${file} not found. Skipped.`);
+-    }
+-  }
+-
+-  console.log("✅ Manual timestamp update process finished.");
+-};
+-
+-updateTimestamps();
 diff --git a/search.html b/search.html
-index 90d8d32..7d82b39 100644
+index 24b04c4..b9aa049 100644
 --- a/search.html
 +++ b/search.html
-@@ -103,7 +103,7 @@
-     template.html
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+@@ -100,17 +100,57 @@
+     <!-- End Matomo Code -->
+   </head>
+   <body>
+-    template.html
+-    <main class="main-content">
+-      <h1>
++    <header>
++      <button id="toggleNavbar" class="toggle-btn">☰</button>
++      <div class="navbar">
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
  
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/context.html"
++          ><span class="nav-icon">①</span> Personal Context</a
++        >
  
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Legal Architecture</a>
  
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">②</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
+ 
+-Search Page (Beta)</h1>
+-<small class="timestamp" style="display: block; text-align: center;">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
++        <a href="/posts.html">Blog</a>
+ 
++        <!-- Bloc Outils & Références -->
++        <div class="nav-section">Tools & References</div>
++        <a href="/glossary.html">Glossary</a>
++        <a href="/notes.html">Notes</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
+ 
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
++        <a href="https://ob1.se/forum.html">Forum</a>
++        <a href="/legal.html">Legal</a>
++        <a href="/faq.html">Defense FAQ</a>
++        <a href="/guide.html">Reading Help</a>
++        <a href="/press.html">Media Access</a>
++        <a href="/contact.html">Contact</a>
++      </div>
++    </header>
++    <main class="main-content">
++      <h1>Search Page (Beta)</h1>
+       <p>
+         This search tool will soon allow you to explore indexed articles, legal
+         records, hyperlinks and glossary entries using <strong>Algolia</strong>.
+@@ -120,13 +160,6 @@ Search Page (Beta)</h1>
+         Search engine under development — expect major updates soon.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/structure.html b/structure.html
-index 3590229..357c669 100644
+index 357c669..20a4782 100644
 --- a/structure.html
 +++ b/structure.html
-@@ -78,7 +78,7 @@
+@@ -77,16 +77,8 @@
+       </div>
      </header>
      <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+-      <h1>
+-
+-
+-
+-
+-The Emergence of a Model</h1>
++      <h1>The Emergence of a Model</h1>
+       <h2 class="subtitleh2">Outsourced Neo-Asian Restauranting</h2>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Friday, May 9, 2025 at 02:29 AM</small
+-      >
+       <details
+         open
+         style="
+@@ -483,13 +475,6 @@ The Emergence of a Model</h1>
+         contracts prevents confirmation.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
 diff --git a/template.html b/template.html
-index cd15b78..967dad9 100644
+index 967dad9..c39b7f4 100644
 --- a/template.html
 +++ b/template.html
-@@ -81,7 +81,7 @@
-     </header>
-     <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+@@ -87,13 +87,6 @@
  
+ Template</h1>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");
+diff --git a/timeline.html b/timeline.html
+index 7126c48..3f1e0a6 100644
+--- a/timeline.html
++++ b/timeline.html
+@@ -30,48 +30,55 @@
+     <!-- End Matomo Code -->
+   </head>
+   <body>
+-<header>
+-  <button id="toggleNavbar" class="toggle-btn">☰</button>
++    <header>
++      <button id="toggleNavbar" class="toggle-btn">☰</button>
++      <div class="navbar">
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
  
+-  <div class="navbar">
+-    <a href="/">Home</a>
+-    <!-- Bloc Auteur -->
+-    <div class="nav-section">About the Author</div>
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/context.html"
++          ><span class="nav-icon">①</span> Personal Context</a
++        >
  
+-    <a href="/philosophy.html">Operating Principles</a>
+-    <a href="/about.html">Trajectory</a>
+-    <a href="/claim.html">Editorial Framework</a>
+-    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Legal Architecture</a>
+ 
+-    <!-- Bloc Contexte -->
+-    <div class="nav-section">Case Background</div>
+-    <a href="/working-dynamics.html"
+-      ><span class="nav-icon">②</span> Working Dynamics</a
+-    >
+-    <a href="/governance.html"
+-      ><span class="nav-icon">③</span> Operational Authority</a
+-    >
+-    <a href="/structure.html">Legal Structure</a>
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">②</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
+ 
+-    <!-- Bloc Publications -->
+-    <div class="nav-section">Articles</div>
+-    <a href="/posts.html">Blog</a>
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
++        <a href="/posts.html">Blog</a>
+ 
+-    <!-- Bloc Références -->
+-    <div class="nav-section">Tools & References</div>
+-    <a href="/glossary.html">Glossary</a>
+-    <a href="/search.html">Search</a>
+-    <a href="/timeline.html">Timeline</a>
+-    <a href="/updates.html">Logs</a>
+-    <a href="/simulator.html">Simulator</a>
++        <!-- Bloc Outils & Références -->
++        <div class="nav-section">Tools & References</div>
++        <a href="/glossary.html">Glossary</a>
++        <a href="/notes.html">Notes</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
+ 
+-    <!-- Bloc Communauté et légal -->
+-    <div class="nav-section">Community & Legal</div>
+-    <a href="https://ob1.se/forum.html">Forum</a>
+-    <a href="/legal.html">Legal</a>
+-    <a href="/contact.html">Contact</a>
+-  </div>
+-</header>
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
++        <a href="https://ob1.se/forum.html">Forum</a>
++        <a href="/legal.html">Legal</a>
++        <a href="/faq.html">Defense FAQ</a>
++        <a href="/guide.html">Reading Help</a>
++        <a href="/press.html">Media Access</a>
++        <a href="/contact.html">Contact</a>
++      </div>
++    </header>
+     <main
+       style="
+         max-width: 740px;
+@@ -84,12 +91,8 @@
+         class="mb-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded"
+       >
+         <h1 class="text-2xl font-semibold mb-4">
+-Chronology of the Events (Nov 23 - Dec 28)
++          Chronology of the Events (Nov 23 - Dec 28)
+         </h1>
+-        <small class="timestamp" style="display: block; text-align: center"
+-          >Last updated: Thursday, May 1, 2025 at 02:20 AM</small
+-        >
+-
+         <p class="mb-3">
+           Between <time datetime="2024-11-23">23&nbsp;Nov&nbsp;2024</time> and
+           <time datetime="2025-01-28">28&nbsp;Dec&nbsp;2025</time> a rapid‑fire
+@@ -110,14 +113,6 @@ Chronology of the Events (Nov 23 - Dec 28)
+ 
+       <!-- FOOTER INCHANGÉ -->
+ 
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 OB1. All rights reserved.<br />
+-          Content provided “as is” without warranties.<br />
+-          Terms governed by Swedish law – Malmö courts have exclusive
+-          jurisdiction.
+-        </p>
+-      </footer>
+     </main>
+   </body>
+   <script>
 diff --git a/updates.html b/updates.html
-index 70e514b..6a79a4e 100644
+index 5c3ff0e..b3d616a 100644
 --- a/updates.html
 +++ b/updates.html
-@@ -82,7 +82,7 @@
-     >
-       <div class="intro_changelog">
-         <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
- 
- 
- 
+@@ -267,13 +267,6 @@ Activity Log</h1>
+ <p>📊 Yesterday: 2 updates across 22 files.</p>
+ </div>
+ <!-- END UPDATES SNIPPET -->
+-      <footer class="site-footer">
+-        <p>
+-          © 2025 AfterShift. All rights reserved.<br />
+-          Content provided as-is without warranty.<br />
+-          Governing law: Swedish law. Jurisdiction: Malmö courts.
+-        </p>
+-      </footer>
+     </main>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
 diff --git a/working-dynamics.html b/working-dynamics.html
-index 1d71ea7..7c7c632 100644
+index 7c7c632..d490082 100644
 --- a/working-dynamics.html
 +++ b/working-dynamics.html
-@@ -78,7 +78,7 @@
+@@ -77,15 +77,7 @@
+       </div>
      </header>
      <main class="main-content">
-       <h1>
--<small class="timestamp">Last updated: Wednesday, May 14, 2025 at 08:11 PM</small>
-+
+-      <h1>
+-
+-
+-
+-
+-Working Dynamics</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Monday, May 12, 2025 at 05:32 AM</small
+-      >
++      <h1>Working Dynamics</h1>
  
- 
- 
+       <section class="narrative-intro">
+         <p>
+@@ -343,14 +335,6 @@ Working Dynamics</h1>
+         <strong>replace them</strong> due to dissatisfaction with their work.
+       </p>
+     </main>
+-    <footer class="site-footer">
+-      <p>
+-        © 2025 AfterShift. All rights reserved.<br />
+-        Content provided as-is without warranty.<br />
+-        Some names have been changed for privacy.<br />
+-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+-      </p>
+-    </footer>
+     <script>
+       const toggleBtn = document.getElementById("toggleNavbar");
+       const navbar = document.querySelector(".navbar");

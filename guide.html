@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>What's New</title>
+    <title>Reading Help — AfterShift</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,27 +79,65 @@
         <a href="/contact.html">Contact</a>
       </div>
     </header>
-    <main class="main-content">
-      <h1>
+    <main class="main-content" style="max-width: 740px; margin: auto; padding: 2rem;">
+      <h1>Reading Help</h1>
 
-
-
-
-Template</h1>
-    </main>
-    <footer class="site-footer">
       <p>
-        © 2025 AfterShift. All rights reserved.<br />
-        Content provided as-is without warranty.<br />
-        Governing law: Swedish law. Jurisdiction: Malmö courts.
+        This section is designed to help readers understand the structure and logic behind the AfterShift archive.
+        It is not a blog in the conventional sense — it is a layered civic testimony built with legal and editorial intention.
       </p>
-    </footer>
+
+      <h2>🧭 What this archive contains</h2>
+      <ul>
+        <li><strong>Chronological posts</strong> documenting events and grievances as they unfolded</li>
+        <li><strong>Fact-based reconstructions</strong> of employment abuse, contract denial, wage theft</li>
+        <li><strong>Structural analyses</strong> of corporate opacity and hidden employer responsibility</li>
+        <li><strong>Legal framing tools</strong> such as glossary, FAQ, or timeline</li>
+        <li><strong>Public evidence</strong> (e.g. payslips, certificates, email captures)</li>
+      </ul>
+
+      <h2>📚 How to navigate</h2>
+      <ul>
+        <li>Start with <a href="/context.html">Personal Context</a> and <a href="/claim.html">Editorial Framework</a></li>
+        <li>Use the <a href="/timeline.html">Timeline</a> for event-based navigation</li>
+        <li>Consult the <a href="/glossary.html">Glossary</a> if legal or technical terms are unclear</li>
+        <li>Refer to <a href="/faq.html">Defense FAQ</a> for legal boundaries and intent</li>
+        <li>Visit <a href="/notes.html">Notes</a> for deep dives into corporate or procedural anomalies</li>
+      </ul>
+
+      <h2>🧠 What to keep in mind</h2>
+      <ul>
+        <li>This is a real situation, involving real legal and financial damage</li>
+        <li>The tone is factual, deliberate, and non-emotional — even when the content is serious</li>
+        <li>The site is <strong>not intended as a diary</strong> but as a reference dossier for legal, journalistic, or civic use</li>
+        <li>Each post is linked to one or more verifiable documents</li>
+      </ul>
+
+      <h2>💬 Questions or clarifications?</h2>
+      <p>
+        If something is unclear, or if you'd like to contribute, correct, or discuss a specific post, feel free to:
+        <ul>
+          <li>Use the <a href="/contact.html">contact form</a></li>
+          <li>Email: <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a></li>
+        </ul>
+        I welcome all respectful inquiries — whether legal, journalistic, or personal.
+      </p>
+    </main>
     <script>
+      // Script pour la sidebar
       const toggleBtn = document.getElementById("toggleNavbar");
       const navbar = document.querySelector(".navbar");
       toggleBtn.addEventListener("click", () => {
         navbar.classList.toggle("collapsed");
       });
+            // Script pour injecter le footer
+            fetch("/components/footer.html")
+        .then(res => res.text())
+        .then(html => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
     </script>
   </body>
 </html>
