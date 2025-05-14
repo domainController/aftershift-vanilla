@@ -159,13 +159,21 @@ Contact & Collaboration</h1>
         </div>
       </section>
     </main>
-    <script>
-      const toggleBtn = document.getElementById('toggleNavbar');
-      const navbar = document.querySelector('.navbar');
-    
-      toggleBtn.addEventListener('click', () => {
-        navbar.classList.toggle('collapsed');
-      });
-    </script>
-  </body>
+<script>
+  // Script pour la sidebar
+  const toggleBtn = document.getElementById("toggleNavbar");
+  const navbar = document.querySelector(".navbar");
+  toggleBtn?.addEventListener("click", () => {
+    navbar.classList.toggle("collapsed");
+  });
+
+  // Script pour injecter le footer
+  fetch("/components/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      const footerContainer = document.createElement("div");
+      footerContainer.innerHTML = html;
+      document.body.appendChild(footerContainer);
+    });
+</script>  </body>
 </html>

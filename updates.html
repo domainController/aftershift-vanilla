@@ -7,26 +7,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Matomo -->
-    <script>
-      var _paq = (window._paq = window._paq || []);
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-      _paq.push(["setCookieDomain", "*.aftershift.se"]);
-      _paq.push(["setDomains", ["*.aftershift.se"]]);
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "https://aftershift.matomo.cloud/";
-        _paq.push(["setTrackerUrl", u + "matomo.php"]);
-        _paq.push(["setSiteId", "1"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
     <!-- End Matomo Code -->
   </head>
   <body>
@@ -206,8 +186,9 @@ Activity Log</h1>
       </div>
       <!-- START UPDATES SNIPPET -->
 <div class="legal-container">
-<strong>🔄 Wednesday 14 May 2025</strong>
+<strong>⚖️ Wednesday 14 May 2025</strong>
 <ul>
+  <li>⚖️ 22:13:02 – ⚖️ content: added core static pages — Defense FAQ, Reading Help, Press & Legal</li>
   <li>🔄 22:12:45 – 🧱 layout: unified page layout, removed legacy footers, standardized main wrappers and headers</li>
   <li>⚖️ 20:26:52 – feat(navigation): added new sidebar links to glossary, notes, and defense/legal sections</li>
   <li>🔄 20:11:58 – Restore on-dismissal-sms post removed in commit e4f944a</li>
@@ -270,13 +251,21 @@ Activity Log</h1>
 </div>
 <!-- END UPDATES SNIPPET -->
     </main>
-    <script>
-      const toggleBtn = document.getElementById("toggleNavbar");
-      const navbar = document.querySelector(".navbar");
+<script>
+  // Script pour la sidebar
+  const toggleBtn = document.getElementById("toggleNavbar");
+  const navbar = document.querySelector(".navbar");
+  toggleBtn?.addEventListener("click", () => {
+    navbar.classList.toggle("collapsed");
+  });
 
-      toggleBtn.addEventListener("click", () => {
-        navbar.classList.toggle("collapsed");
-      });
-    </script>
-  </body>
+  // Script pour injecter le footer
+  fetch("/components/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      const footerContainer = document.createElement("div");
+      footerContainer.innerHTML = html;
+      document.body.appendChild(footerContainer);
+    });
+</script>  </body>
 </html>
