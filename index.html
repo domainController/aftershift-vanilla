@@ -76,17 +76,29 @@
         />
       </div>
       <div class="legal-container">
-        <h2 class="centered">Development Log – Last 24 h</h2>
-        <p>
-          This site is in an early test phase. The goal is to lay the groundwork
-          for a fast, multilingual, data-driven platform optimised for SEO and
-          long-form legal content.
+        <h2 class="centered">⚠️ This site is a draft sandbox</h2>
+        <p style="line-height: 1.6em">
+          This is a <strong>live working draft</strong> — a sandbox to develop
+          <u>core structural elements</u>:
+          <span class="highlight">legal narrative grids</span>,
+          <span class="highlight">ownership timelines</span>,
+          <span class="highlight">operating principles</span>, and
+          <span class="highlight">foundational trajectories</span>. These are
+          the internal scaffolding for future articles.
+        </p>
+        <p style="line-height: 1.6em">
+          A few early texts may appear here as warm-up material, but the
+          complete version will eventually be published under a
+          <u>different domain</u> and
+          <strong>fully optimised for long-form SEO content</strong> and
+          <strong>strategic legal storytelling</strong>.
         </p>
       </div>
       <!-- START INDEX UPDATES -->
 <div class="legal-container">
-<h2>⚖️ Wednesday 14 May 2025</h2>
+<h2>📌 Wednesday 14 May 2025</h2>
 <ul>
+  <li>📌 22:19:15 – 🧩 script: injected sidebar toggle and dynamic footer into all HTML pages</li>
   <li>⚖️ 22:13:02 – ⚖️ content: added core static pages — Defense FAQ, Reading Help, Press & Legal</li>
   <li>📌 22:12:45 – 🧱 layout: unified page layout, removed legacy footers, standardized main wrappers and headers</li>
   <li>⚖️ 20:26:52 – feat(navigation): added new sidebar links to glossary, notes, and defense/legal sections</li>
@@ -102,21 +114,22 @@
 </div>
 <!-- END INDEX UPDATES -->
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
 
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
 </html>

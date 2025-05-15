@@ -59,29 +59,102 @@
         <a href="/contact.html">Contact</a>
       </div>
     </header>
-    <main class="main-content">
-      <h1>
+    <main
+      class="main-content"
+      style="max-width: 740px; margin: auto; padding: 2rem"
+    >
+      <h1>Press & Legal Access</h1>
 
+      <p>
+        This page provides structured access for journalists, legal advisors, or
+        labor advocates who wish to engage with AfterShift's content. Whether
+        your goal is to reference, clarify, or challenge specific information,
+        this guide outlines available channels and responsibilities.
+      </p>
 
+      <h2>🎙️ For Journalists</h2>
+      <ul>
+        <li>
+          All content is original and publicly accessible under Swedish
+          editorial protection.
+        </li>
+        <li>
+          Reproductions are permitted with citation:
+          <strong>“AfterShift.se”</strong> and date of access.
+        </li>
+        <li>
+          Interview requests, background questions, or fact-checks can be
+          submitted via <a href="/contact.html">the contact form</a> or email:
+          <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>
+        </li>
+      </ul>
 
+      <h2>⚖️ For Legal Professionals</h2>
+      <ul>
+        <li>
+          The blog documents lived experience, factual records, and formal
+          documents (contracts, payslips, HRAK letters).
+        </li>
+        <li>
+          If you represent a party mentioned, or a regulatory body, please
+          include reference dates or filenames in your message.
+        </li>
+        <li>
+          Requests for correction or legal rebuttal are acknowledged under
+          Swedish law (see <a href="/faq.html">Defense FAQ</a>).
+        </li>
+        <li>No hidden tracking or paywall restricts access to evidence.</li>
+      </ul>
 
-Template</h1>
+      <h2>🧰 Legal & Editorial Framing</h2>
+      <ul>
+        <li>
+          The project is documented under civic journalism and editorial
+          responsibility.
+        </li>
+        <li>
+          Names and companies are mentioned when directly tied to structural
+          facts or proven misconduct.
+        </li>
+        <li>
+          Any redacted content or aliases are used to protect personal privacy
+          or pending investigations.
+        </li>
+      </ul>
+
+      <h2>🤝 Collaboration & Verification</h2>
+      <ul>
+        <li>Contributions or suggestions are welcome from:</li>
+        <ul>
+          <li>Labor law experts</li>
+          <li>Investigative reporters</li>
+          <li>Union officials or ombudsmän</li>
+          <li>Academic researchers</li>
+        </ul>
+        <li>All contributions are attributed unless otherwise agreed.</li>
+      </ul>
+
+      <p style="margin-top: 2rem; font-style: italic; color: #999">
+        This page reflects the editorial transparency policy of AfterShift.
+        Questions may be addressed to the site author.
+      </p>
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
 
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
 </html>
