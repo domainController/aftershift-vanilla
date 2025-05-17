@@ -127,6 +127,33 @@
           </div>
         </details>
       </section>
+
+      <section class="narrative-comparison">
+        <h2>Last Job Before Quan</h2>
+        <p>
+          Before joining Quan, I worked for 14 months as a dishwasher at
+          <strong>Da Peppe Due</strong>, a well-known pizzeria in Stockholm. The
+          environment was relaxed yet functional. When tasks were done, it was
+          acceptable to rest, scroll through Instagram, or sit in the private
+          dining room until the next rush. What mattered was being ready when
+          needed, and responsive under pressure.
+        </p>
+        <p>
+          My chef’s philosophy was simple: the restaurant should work smoothly
+          <u>without his constant presence</u>. That meant trusting the staff,
+          avoiding drama, and preventing complaints. We were never monitored for
+          how we spent our downtime. We ate what we wanted. I regularly
+          photographed my meals, which ranged from lasagna to steak, and even
+          considered creating an Instagram account just for them. Salaries were
+          fair—and sometimes higher than expected.
+        </p>
+        <p>
+          I left for strategic reasons, but I never felt disposable. That job
+          left me with a sense of
+          <strong>trust, dignity, and horizontal respect</strong>. It shaped my
+          expectations—and helped me detect when the opposite was happening.
+        </p>
+      </section>
       <p>
         I arrived in Sweden in April 2022, first in Gothenburg, then in
         Stockholm. I worked for 14 months at
@@ -326,21 +353,22 @@
         interpreted as the <strong>start of formal employment</strong>.
       </p>
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
 
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <div class="nav-section">About the Author</div>
+
+        <a href="/philosophy.html">Operating Principles</a>
+        <a href="/about.html">Trajectory</a>
+        <a href="/claim.html">Editorial Framework</a>
+        <a href="/context.html"
+          ><span class="nav-icon">①</span> Personal Context</a
+        >
+
+        <!-- Bloc Contexte -->
+        <div class="nav-section">Case Background</div>
+        <a href="/foundations.html">Founding Genesis</a>
+        <a href="/structure.html">Legal Architecture</a>
+
+        <a href="/working-dynamics.html"
+          ><span class="nav-icon">②</span> Working Dynamics</a
+        >
+        <a href="/governance.html"
+          ><span class="nav-icon">③</span> Operational Authority</a
+        >
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/posts.html">Blog</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/search.html">Search</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <a href="/simulator.html">Simulator</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </header>
+    <main class="main-content">
+      <h1>🔐 Confidential Insight Access</h1>
+
+      <p>
+        This section grants access to
+        <strong>three high-sensitivity documents</strong> and ongoing updates
+        regarding:
+      </p>
+
+      <ul>
+        <li>
+          📊 <strong>Strategic Comparison</strong> — Financial breakdown of Quan
+          vs. Elite Hotel from 2019–2023
+        </li>
+        <li>
+          🌐 <strong>Offshore Flows </strong> — Asset redirection episodes
+          involving Cyprus and Panama entities (2004-2011)
+        </li>
+        <li>
+          📄 <strong>Audit & Legal Records</strong> — Public records, tax
+          authority audits, and court filings on file
+        </li>
+      </ul>
+
+      ⚠️ Why This Is Not Public This content includes sensitive elements
+      involving revenue concentration, individual payouts, offshore structuring,
+      and potential compliance breaches. Publishing them openly may harm ongoing
+      negotiations and reduce leverage in potential reparations.
+
+      <p>
+        📩 <strong>Send a WhatsApp message</strong> to
+        <span class="highlight">076 007 63 74</span> with:
+      </p>
+
+      <ul>
+        <li>🪪 <strong>Your full name</strong> (e.g. "Carl Nilsson")</li>
+        <li>
+          🌍 <strong>Your city and year of birth</strong> (e.g. "Malmö, 1987")
+        </li>
+        <li>
+          🔍
+          <strong>A short line about your background or interest</strong> (e.g.
+          "restaurant owner in Gothenburg", "legal researcher")
+        </li>
+      </ul>
+
+      Requests with vague or anonymous profiles may not be processed.
+    </p>
+  
+    <p style="margin-top: 1.2em;">
+      <span style="display: inline-block; margin-right: 0.5em;">☑️</span>
+      <strong>I will never disclose or cross-reference submitted identities with third parties — 
+      <span class="highlight">not under any voluntary circumstance</span>.</strong>
+    </p>
+    
+    <p style="margin-top: 0.8em;">
+      This includes all requests, legal or informal. <u>Only in the event of direct and credible death threats</u> — 
+      such as <span class="highlight">being confronted at gunpoint</span> — would disclosure become a matter of physical self-preservation.
+      Identity tracking is implemented <strong>only</strong> to protect the structural integrity of this project and assess distribution risk.
+    </p>
+  
+
+      <p style="margin-top: 1.5em">
+        This material is not indexed, not archived, and may evolve based on
+        legal context. You will never be subscribed or tracked beyond this
+        one-time exchange.
+      </p>
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>

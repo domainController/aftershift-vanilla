@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <div class="nav-section">About the Author</div>
+
+        <a href="/philosophy.html">Operating Principles</a>
+        <a href="/about.html">Trajectory</a>
+        <a href="/claim.html">Editorial Framework</a>
+        <a href="/context.html"
+          ><span class="nav-icon">①</span> Personal Context</a
+        >
+
+        <!-- Bloc Contexte -->
+        <div class="nav-section">Case Background</div>
+        <a href="/foundations.html">Founding Genesis</a>
+        <a href="/structure.html">Legal Architecture</a>
+
+        <a href="/working-dynamics.html"
+          ><span class="nav-icon">②</span> Working Dynamics</a
+        >
+        <a href="/governance.html"
+          ><span class="nav-icon">③</span> Operational Authority</a
+        >
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/posts.html">Blog</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/search.html">Search</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <a href="/simulator.html">Simulator</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/reply.html">Reply Policy</a>
+        <a href="/exchanges.html">Letters and Pressure</a>
+        <a href="/cost.html">Research Cost</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </header>
+    <main
+      class="main-content"
+      style="max-width: 740px; margin: auto; padding: 2rem"
+    >
+      <h1>The Price of Research</h1>
+
+      <p class="intro">
+        This page outlines the time, money, tools, and investigative choices
+        made to compile and document this archive. From data extraction and
+        translation to document purchase and workflow traceability — everything
+        is logged.
+      </p>
+
+      <h2>📄 Document Acquisition Costs</h2>
+      <ul>
+        <li><strong>Bolagsverket Historical Extracts (×3):</strong> 375 SEK</li>
+        <li>
+          <strong>Corporate Beneficial Ownership Reports:</strong> 260 SEK
+        </li>
+        <li><strong>Property & Address Mapping:</strong> 125 SEK</li>
+        <li>
+          <strong>Total Direct Cost (as of May 2025):</strong>
+          <strong>760 SEK</strong>
+        </li>
+      </ul>
+
+      <h2>🕒 Time Invested</h2>
+      <ul>
+        <li><strong>Translation from Swedish to English:</strong> ~12h</li>
+        <li><strong>Document analysis and synthesis:</strong> ~15h</li>
+        <li><strong>HTML formatting and layout edits:</strong> ~6h</li>
+        <li><strong>Legal correspondence preparation:</strong> ~4h</li>
+        <li><strong>Total tracked hours:</strong> ~37h</li>
+      </ul>
+
+      <h2>💻 Digital Workflow</h2>
+      <ul>
+        <li>
+          <strong>Writing & Structuring:</strong> Obsidian, Notion, ChatGPT
+        </li>
+        <li><strong>Archiving:</strong> ArchiveBox, local PDF backups</li>
+        <li>
+          <strong>OS-level logs:</strong> Session tracking via ScreenTime
+          (MacOS) & ActivityWatch
+        </li>
+      </ul>
+
+      <h2>🔍 Motivation</h2>
+      <p>
+        Transparency isn't just a principle — it's an audit trail. This section
+        exists so that any restaurateur, journalist, or curious party can
+        understand the effort behind the inquiry. It also allows readers to
+        evaluate the seriousness of the method, and the value of making silence
+        speak.
+      </p>
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>

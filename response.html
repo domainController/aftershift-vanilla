@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <div class="nav-section">About the Author</div>
+
+        <a href="/philosophy.html">Operating Principles</a>
+        <a href="/about.html">Trajectory</a>
+        <a href="/claim.html">Editorial Framework</a>
+        <a href="/context.html"
+          ><span class="nav-icon">①</span> Personal Context</a
+        >
+
+        <!-- Bloc Contexte -->
+        <div class="nav-section">Case Background</div>
+        <a href="/foundations.html">Founding Genesis</a>
+        <a href="/structure.html">Legal Architecture</a>
+
+        <a href="/working-dynamics.html"
+          ><span class="nav-icon">②</span> Working Dynamics</a
+        >
+        <a href="/governance.html"
+          ><span class="nav-icon">③</span> Operational Authority</a
+        >
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/posts.html">Blog</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/search.html">Search</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <a href="/simulator.html">Simulator</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </header>
+    <main class="main-content">
+      <h1>Response Rights & Legal Integrity</h1>
+
+      <h2>🛡️ Purpose</h2>
+      <p>
+        This page outlines the public policy for legal interactions, factual
+        rebuttals, correction requests, and the documentation of any attempts to
+        suppress or informally negotiate away public interest material.
+      </p>
+
+      <h2>📣 Right of Reply</h2>
+      <ul>
+        <li>Submit a verifiable factual correction</li>
+        <li>Provide context or supporting documents</li>
+        <li>Request anonymization (if justified and proportionate)</li>
+      </ul>
+      <p>
+        Requests will be reviewed in good faith. Valid additions or
+        clarifications will be acknowledged and publicly reflected in footnotes
+        or appendices.
+      </p>
+
+      <h2>☎️ Recording Policy for Calls & Outreach</h2>
+      <p>
+        Due to past experiences of coercion and veiled threats, all phone calls
+        and voice messages <strong>may be recorded</strong> for transparency,
+        archiving, and legal protection.
+      </p>
+      <ul>
+        <li>
+          This includes direct calls, intermediaries, and informal emissaries.
+        </li>
+        <li>
+          Any interaction deemed intimidatory, manipulative, or designed to
+          bypass formal channels
+          <strong>may be documented and referenced</strong> in future updates.
+        </li>
+      </ul>
+
+      <h2>📨 Handling Legal Letters or Notices</h2>
+      <ul>
+        <li>
+          Legal communication may be summarized, quoted, or published in full.
+        </li>
+        <li>Identities may be anonymized unless public or legally relevant.</li>
+        <li>
+          Communications relying on intimidation may be publicly challenged.
+        </li>
+      </ul>
+
+      <h2>🔍 Transparency Clause</h2>
+      <p>This project maintains the right to:</p>
+      <ul>
+        <li>Publicly respond to formal or informal pressure</li>
+        <li>Trace outreach patterns and motives</li>
+        <li>Document attempts to distort or silence structural critique</li>
+      </ul>
+      <blockquote>
+        This archive is not a negotiation table — it is a civic documentation
+        platform.
+      </blockquote>
+
+      <h2>📬 Contact Protocol</h2>
+      <p>For rebuttals or formal communication:</p>
+      <ul>
+        <li>
+          Email:
+          <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>
+        </li>
+        <li>Use the <a href="/contact.html">contact form</a></li>
+      </ul>
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>

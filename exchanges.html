@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What's New</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <div class="nav-section">About the Author</div>
+
+        <a href="/philosophy.html">Operating Principles</a>
+        <a href="/about.html">Trajectory</a>
+        <a href="/claim.html">Editorial Framework</a>
+        <a href="/context.html"
+          ><span class="nav-icon">①</span> Personal Context</a
+        >
+
+        <!-- Bloc Contexte -->
+        <div class="nav-section">Case Background</div>
+        <a href="/foundations.html">Founding Genesis</a>
+        <a href="/structure.html">Legal Architecture</a>
+
+        <a href="/working-dynamics.html"
+          ><span class="nav-icon">②</span> Working Dynamics</a
+        >
+        <a href="/governance.html"
+          ><span class="nav-icon">③</span> Operational Authority</a
+        >
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/posts.html">Blog</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/search.html">Search</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <a href="/simulator.html">Simulator</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </header>
+    <main class="main-content">
+      <h1>Exchange Archive & Formal Interactions</h1>
+      <div class="legal-warning-box">
+        <strong>Why this page exists:</strong><br />
+        This page curates letters and legal communications received in response
+        to our investigation. It offers the reader a glimpse into the language,
+        tone, and strategies used — from veiled threats to formal settlements.
+        All identifying details have been redacted where appropriate.
+        <h2>📄 April 2025 — Letter from Head Chef Henrik Ling</h2>
+
+        <p><strong>Sender:</strong> Henrik Kling, Head Chef at Quan / HSSC Event AB<br />
+        <strong>Recipient:</strong> AfterShift Editor (K.P.)<br />
+        <strong>Date:</strong> April 17, 2025<br />
+        <strong>Method:</strong> Attached PDF, sent via personal email, no subject line</p>
+        
+        <p>
+        This letter was sent in response to an initial legal notice issued by the editor of this site in early April 2025. The notice related to delayed employer certificates, potential unlawful dismissal, and informal coercion following a trial contract termination.
+        </p>
+        
+        <p>
+        Instead of receiving a reply from legal counsel or management, the company delegated the response to <strong>Henrik Kling</strong>, the <em>head chef and senior figure in the kitchen brigade</em>. The letter arrived as a simple PDF attachment, with no explanatory message or subject line. This form and channel of response were perceived as <strong>dismissive and non-serious</strong>, which prompted a second formal notice from the claimant — never opened by the company.
+        </p>
+        
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 1em; font-style: italic; color: #555;">
+        “It is reasonable to interpret this response not as an official legal stance, but rather as a delegated placeholder — written quickly between two shifts, perhaps with the assistance of a generative language model.”<br /> 
+        – Editorial Note
+        </blockquote>
+        
+        <p>
+        The letter offers no legal rebuttal, acknowledges no facts, and closes with a vague offer of two weeks’ compensation — unsigned and without legal formatting.
+        </p>
+        
+        <p>
+        🔗 <a href="/assets/docs/letters/2025-04-17_chef-ling-reply_redacted.pdf" target="_blank">View the redacted letter (PDF)</a>
+        </p>
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>
