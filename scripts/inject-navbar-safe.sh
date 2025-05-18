@@ -1,28 +1,48 @@
 #!/bin/bash
 
-# Vérifie que le fichier cible est passé en argument
-TARGET="$1"
-NAVFILE="navblock.html"
-BACKUP="${TARGET}.bak"
+# === CONFIGURATION ===
+NAVBAR_FILE="scripts/navblock.html"
+TARGET_FILE="philosophy.html"
+BACKUP_FILE="${TARGET_FILE}.bak"
 
-if [[ -z "$TARGET" || ! -f "$TARGET" ]]; then
-  echo "❌ Veuillez fournir un fichier HTML valide en argument."
-  echo "Usage : ./inject-navbar-safe.sh fichier.html"
+echo "🔧 Injection de la navbar depuis: $NAVBAR_FILE"
+echo "➡️  Cible : $TARGET_FILE"
+
+# === ÉTAPE 1 : Vérification des fichiers existants ===
+if [[ ! -f "$NAVBAR_FILE" ]]; then
+  echo "❌ ERREUR : Le fichier navbar ($NAVBAR_FILE) est introuvable."
   exit 1
 fi
 
-if [[ ! -f "$NAVFILE" ]]; then
-  echo "❌ Fichier $NAVFILE introuvable."
+if [[ ! -f "$TARGET_FILE" ]]; then
+  echo "❌ ERREUR : Le fichier cible ($TARGET_FILE) est introuvable."
   exit 1
 fi
 
-echo "📦 Sauvegarde de $TARGET → $BACKUP"
-cp "$TARGET" "$BACKUP"
+# === ÉTAPE 2 : Sauvegarde de la version actuelle ===
+cp "$TARGET_FILE" "$BACKUP_FILE"
+echo "✅ Sauvegarde effectuée → $BACKUP_FILE"
 
-echo "🧹 Suppression du bloc <header> existant dans $TARGET"
-sed -i '' -e '/<header>/,/<\/header>/d' "$TARGET"
+# === ÉTAPE 3 : Suppression du header actuel dans le fichier cible ===
+# On supprime tout le bloc entre <header> et </header>
+echo "🧹 Suppression de l'ancien bloc <header>...</header>..."
+sed -i '' '/<header>/,/<\/header>/d' "$TARGET_FILE"
+echo "✅ Bloc <header> supprimé"
 
-echo "➕ Insertion du contenu de $NAVFILE juste après <body>"
-awk '/<body>/ { print; system("cat navblock.html"); next } 1' "$TARGET" > temp && mv temp "$TARGET"
+# === ÉTAPE 4 : Insertion de la nouvelle navbar ===
+# On insère juste après <body>
+echo "🛠️ Insertion de la nouvelle navbar après <body>..."
+awk -v insert="$(cat $NAVBAR_FILE)" '
+  /<body[^>]*>/ {
+    print;
+    print insert;
+    next
+  }
+  1
+' "$BACKUP_FILE" > "$TARGET_FILE"
 
-echo "✅ Navbar insérée avec succès dans $TARGET"
+echo "✅ Navbar injectée avec succès"
+
+# === ÉTAPE 5 : Résumé final ===
+echo "✅ Fichier mis à jour : $TARGET_FILE"
+echo "🗃️ Ancienne version disponible ici : $BACKUP_FILE"

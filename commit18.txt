@@ -1,0 +1,2125 @@
+diff --git a/commit17may.txt b/commit17may.txt
+deleted file mode 100644
+index e12c9c5..0000000
+--- a/commit17may.txt
++++ /dev/null
+@@ -1,735 +0,0 @@
+-diff --git a/.husky/pre-push b/.husky/pre-push
+-index cc956cb..32cbcdc 100755
+---- a/.husky/pre-push
+-+++ b/.husky/pre-push
+-@@ -1,30 +1,4 @@
+- #!/bin/sh
+- . "$(dirname "$0")/_/husky.sh"
+- 
+--echo "🔍 Checking staged changes for HTML files..."
+--
+--# Liste des fichiers modifiés qui sont en attente de push
+--MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+--
+--# Liste des fichiers HTML à surveiller dans OB1 Vanilla
+--TARGET_FILES="index.html updates.html legal.html forum.html about.html timeline.html home.html"
+--
+--TO_UPDATE=""
+--
+--# Vérifie si un fichier modifié fait partie de ceux qu'on veut timestamp
+--for file in $MODIFIED_FILES; do
+--  for target in $TARGET_FILES; do
+--    if [ "$file" = "$target" ]; then
+--      TO_UPDATE="$TO_UPDATE $file"
+--    fi
+--  done
+--done
+--
+--# Si aucun fichier HTML important n'est modifié ➔ push direct
+--if [ -z "$TO_UPDATE" ]; then
+--  echo "✅ No relevant HTML files changed. Proceeding to push."
+--else
+--  echo "🔄 Updating timestamps for modified HTML files..."
+--  node scripts/add-timestamps.mjs $TO_UPDATE
+--  git add $TO_UPDATE
+--fi
+-\ No newline at end of file
+-+echo "🚀 Pre-push hook active — no timestamp logic present."
+-\ No newline at end of file
+-diff --git a/context.html b/context.html
+-index b3c0635..fbb38d3 100644
+---- a/context.html
+-+++ b/context.html
+-@@ -127,6 +127,33 @@
+-           </div>
+-         </details>
+-       </section>
+-+
+-+      <section class="narrative-comparison">
+-+        <h2>Last Job Before Quan</h2>
+-+        <p>
+-+          Before joining Quan, I worked for 14 months as a dishwasher at
+-+          <strong>Da Peppe Due</strong>, a well-known pizzeria in Stockholm. The
+-+          environment was relaxed yet functional. When tasks were done, it was
+-+          acceptable to rest, scroll through Instagram, or sit in the private
+-+          dining room until the next rush. What mattered was being ready when
+-+          needed, and responsive under pressure.
+-+        </p>
+-+        <p>
+-+          My chef’s philosophy was simple: the restaurant should work smoothly
+-+          <u>without his constant presence</u>. That meant trusting the staff,
+-+          avoiding drama, and preventing complaints. We were never monitored for
+-+          how we spent our downtime. We ate what we wanted. I regularly
+-+          photographed my meals, which ranged from lasagna to steak, and even
+-+          considered creating an Instagram account just for them. Salaries were
+-+          fair—and sometimes higher than expected.
+-+        </p>
+-+        <p>
+-+          I left for strategic reasons, but I never felt disposable. That job
+-+          left me with a sense of
+-+          <strong>trust, dignity, and horizontal respect</strong>. It shaped my
+-+          expectations—and helped me detect when the opposite was happening.
+-+        </p>
+-+      </section>
+-       <p>
+-         I arrived in Sweden in April 2022, first in Gothenburg, then in
+-         Stockholm. I worked for 14 months at
+-@@ -326,21 +353,22 @@
+-         interpreted as the <strong>start of formal employment</strong>.
+-       </p>
+-     </main>
+--<script>
+--  // Script pour la sidebar
+--  const toggleBtn = document.getElementById("toggleNavbar");
+--  const navbar = document.querySelector(".navbar");
+--  toggleBtn?.addEventListener("click", () => {
+--    navbar.classList.toggle("collapsed");
+--  });
+-+    <script>
+-+      // Script pour la sidebar
+-+      const toggleBtn = document.getElementById("toggleNavbar");
+-+      const navbar = document.querySelector(".navbar");
+-+      toggleBtn?.addEventListener("click", () => {
+-+        navbar.classList.toggle("collapsed");
+-+      });
+- 
+--  // Script pour injecter le footer
+--  fetch("/components/footer.html")
+--    .then(res => res.text())
+--    .then(html => {
+--      const footerContainer = document.createElement("div");
+--      footerContainer.innerHTML = html;
+--      document.body.appendChild(footerContainer);
+--    });
+--</script>  </body>
+-+      // Script pour injecter le footer
+-+      fetch("/components/footer.html")
+-+        .then((res) => res.text())
+-+        .then((html) => {
+-+          const footerContainer = document.createElement("div");
+-+          footerContainer.innerHTML = html;
+-+          document.body.appendChild(footerContainer);
+-+        });
+-+    </script>
+-+  </body>
+- </html>
+-diff --git a/faq.html b/faq.html
+-index c4e8582..3f563d0 100644
+---- a/faq.html
+-+++ b/faq.html
+-@@ -121,6 +121,12 @@
+-         No. The initiative is personal and independent. Any external reuse by union or political actors is not coordinated or solicited.
+-       </p>
+- 
+-+      <h2>8. Why are some materials access-restricted?</h2>
+-+<p>
+-+  Some financial breakdowns, offshore documentation, or legal records are not published openly to preserve negotiation leverage, ensure editorial safety, or avoid premature exposure of sensitive data.
+-+  These are accessible on a case-by-case basis through the <a href="/confidential.html">Confidential Insight Access</a> section, where requesters must identify themselves and explain their interest.
+-+</p>
+-+
+-     </main>
+- <script>
+-   // Script pour la sidebar
+-diff --git a/foundations.html b/foundations.html
+-index c84aab9..a35d7fe 100644
+---- a/foundations.html
+-+++ b/foundations.html
+-@@ -48,16 +48,19 @@
+-         <a href="/timeline.html">Timeline</a>
+-         <a href="/updates.html">Logs</a>
+-         <a href="/simulator.html">Simulator</a>
+-+        <a href="/archive.html">Download PDF</a>
+- 
+-         <!-- Bloc Communauté et légal -->
+-         <div class="nav-section">Community & Legal</div>
+-         <a href="https://ob1.se/forum.html">Forum</a>
+-         <a href="/legal.html">Legal</a>
+-         <a href="/faq.html">Defense FAQ</a>
+-+        <a href="/reply.html">Reply Policy</a>
+-+        <a href="/exchanges.html">Letters and Pressure</a>
+-+        <a href="/cost.html">Research Cost</a>
+-         <a href="/guide.html">Reading Help</a>
+-         <a href="/press.html">Media Access</a>
+-         <a href="/contact.html">Contact</a>
+--      </div>
+-     </header>
+-     <main class="main-content">
+-       <h1>Legacy Foundations of Quan</h1>
+-@@ -302,6 +305,14 @@
+-           The company’s official address is simultaneously changed to <strong>c/o Etagegruppen AB, Stortorget 6, 211 34 Malmö</strong>, directly aligning its operations with the group’s headquarters. From this point onward, <strong>IzakayaKoi AB becomes a wholly owned subsidiary</strong> of Etagegruppen AB, marking the end of the Peterson era and a <span class="highlight">strategic absorption into a new corporate lineage</span>.
+-           </p>
+- 
+-+          <p>
+-+            <span style="font-size: 1.2em">📍 <strong>2013</strong></span>
+-+          </p>
+-+          <p>
+-+            In <strong>November 2013</strong>, ?????
+-+            This strategic shift resulted in the <span class="highlight">loss of its 5-star status</span>, replaced by a <u>4-star premium classification</u> under the Swedish chain <i>Elite Hotels</i>. 
+-+            The change reflected a pivot toward local control, reduced concierge standards, and higher operational autonomy.
+-+            </p>
+- <script>
+-   // Script pour la sidebar
+-   const toggleBtn = document.getElementById("toggleNavbar");
+-diff --git a/index.html b/index.html
+-index 6d668c0..97cee30 100644
+---- a/index.html
+-+++ b/index.html
+-@@ -27,7 +27,7 @@
+-         <!-- Bloc Contexte -->
+-         <div class="nav-section">Case Background</div>
+-         <a href="/foundations.html">Founding Genesis</a>
+--        <a href="/structure.html">Legal Architecture</a>
+-+        <a href="/structure.html">Current Architecture</a>
+- 
+-         <a href="/working-dynamics.html"
+-           ><span class="nav-icon">②</span> Working Dynamics</a
+-@@ -54,10 +54,12 @@
+-         <a href="https://ob1.se/forum.html">Forum</a>
+-         <a href="/legal.html">Legal</a>
+-         <a href="/faq.html">Defense FAQ</a>
+-+        <a href="/reply.html">Reply Policy</a>
+-+        <a href="/exchanges.html">Letters and Pressure</a>
+-+        <a href="/cost.html">Research Cost</a>
+-         <a href="/guide.html">Reading Help</a>
+-         <a href="/press.html">Media Access</a>
+-         <a href="/contact.html">Contact</a>
+--      </div>
+-     </header>
+-     <main class="main-content">
+-       <div class="legal-container">
+-diff --git a/notes.html b/notes.html
+-index c1019ee..7f8dc35 100644
+---- a/notes.html
+-+++ b/notes.html
+-@@ -53,8 +53,13 @@
+-         <div class="nav-section">Community & Legal</div>
+-         <a href="https://ob1.se/forum.html">Forum</a>
+-         <a href="/legal.html">Legal</a>
+-+        <a href="/faq.html">Defense FAQ</a>
+-+        <a href="/reply.html">Reply Policy</a>
+-+        <a href="/exchanges.html">Letters and Pressure</a>
+-+        <a href="/cost.html">Research Cost</a>
+-+        <a href="/guide.html">Reading Help</a>
+-+        <a href="/press.html">Media Access</a>
+-         <a href="/contact.html">Contact</a>
+--      </div>
+-     </header>
+-     <main class="main-content">
+-       <h1>Notes</h1>
+-@@ -692,66 +697,38 @@
+-           In a premium hotel environment, this raises red flags for unions, auditors, and brand partners.
+-         </p>
+-       </details>
+--      <details id="note-holding-definition">
+--        <summary><strong>📚 Note — Understanding Holding Companies and Their Use in Sweden</strong></summary>
+--      
+--        <p style="line-height: 1.6em">
+--          A <strong>holding company</strong> is a legal entity that owns shares in one or more other companies, typically to control or consolidate their operations. It <u>does not necessarily operate a commercial business</u> of its own. In Sweden, this is often used for:  
+--        </p>
+--      
+--        <ul style="line-height: 1.6em">
+--          <li>📂 Grouping ownership of multiple subsidiaries under one entity</li>
+--          <li>💼 Receiving dividends or profit transfers from operating companies</li>
+--          <li>💰 Facilitating strategic financial operations (e.g., capital injections, risk insulation)</li>
+--          <li>🧾 Tax structuring — using intercompany loans, transfers, or consolidation of accounts</li>
+--        </ul>
+--      
+--        <p style="line-height: 1.6em">
+--          While this structure can offer <strong>efficiency and transparency</strong> in large groups (e.g., a restaurant group with multiple brands), it can also be <span class="highlight">misused for opacity</span>, especially when there is:
+--        </p>
+--      
+--        <ul style="line-height: 1.6em">
+--          <li>❌ No real operational subsidiaries under the holding</li>
+--          <li>❌ No declared ownership in other companies</li>
+--          <li>❌ Distributions of profits without a traceable origin of revenue</li>
+--        </ul>
+--      
+--        <p style="line-height: 1.6em"><strong>🔍 Case: Kehda Holding AB</strong></p>
+--      
+--        <ul style="line-height: 1.6em">
+--          <li>🧾 Declares itself as a <strong>holding company</strong> ("bedriva förvaltning av fast och lös egendom").</li>
+--          <li>📊 Pays out consistent <strong>dividends since 2021</strong> (rising from SEK 360,000 to SEK 1,000,000 in 2024).</li>
+--          <li>📉 However: there is <span class="highlight">no legal proof</span> of ownership in any other company in Bolagsverket.</li>
+--          <li>🔗 No public link between Kehda and HSSC Event AB, despite their overlap in people (Daniela Dahl as CEO or authorized signatory).</li>
+--        </ul>
+--      
+--        <p style="line-height: 1.6em">
+--          This suggests that <strong>Kehda is not functioning as a real holding</strong> under the strict sense of the term. Instead, it might serve as a <em>distribution box</em> — a pass-through structure for personal income declared as "dividends", potentially <span class="highlight">without formal shareholder links to the revenue source</span>.
+--        </p>
+--      
+--        <hr>
+--      
+--        <p style="line-height: 1.6em"><strong>🧾 Legal Implications:</strong></p>
+--        <ul style="line-height: 1.6em">
+--          <li>✅ It is <u>legal</u> to pay dividends if the company has retained earnings and proper accounting.</li>
+--          <li>❌ But the declared nature as a "holding" requires economic substance (control of shares, consolidation logic).</li>
+--          <li>🔍 Without ownership of revenue-generating entities, this structure may be scrutinized as <strong>income shifting or mislabeling</strong> of earnings.</li>
+--        </ul>
+--      
+--        <p style="line-height: 1.6em"><strong>📥 Documents to acquire next:</strong></p>
+--        <ul style="line-height: 1.6em">
+--          <li>📑 <strong>Historical Certificates</strong> for both Kehda and HSSC Event AB (to check if ownership was ever declared or removed).</li>
+--          <li>📂 <strong>Shareholder Register</strong> or Board Minutes mentioning share acquisition, especially around 2020–2021.</li>
+--          <li>🧾 <strong>Lönedata (Ratsit)</strong> for Daniela Dahl — confirm if her only income comes from dividends (via LöneKollen).</li>
+--          <li>💼 If possible: HSSC Event AB’s payment flows to Kehda (requires access to invoices or audit logs).</li>
+--        </ul>
+--      
+--        <p style="line-height: 1.6em">
+--          ➕ Bonus: Consider requesting a <strong>tax statement (Skatteverket)</strong> via FOI request if public interest can be proven.
+--        </p>
+--      </details>
+--
+--
+-+<details id="note-strategic-salary-entrepreneurs"><summary><strong>📎 Note – Strategic Salary Levels Among Restaurateurs in Sweden</strong></summary><p style="line-height: 1.6em">In Sweden, many restaurateurs and small business owners consistently report personal **net salaries between 30,000 and 45,000 SEK per month**. These figures appear across tax declarations, Bolagsverket reports, and UC credit data. This range is not accidental — it reflects a **calculated strategy** to balance <strong>fiscal efficiency</strong>, <strong>social legitimacy</strong>, and <strong>administrative simplicity</strong>.</p><p style="line-height: 1.6em">This income band is high enough to demonstrate financial stability and ensure access to services (like housing, loans, and visas), while remaining below thresholds that could trigger enhanced taxation or scrutiny.</p><ul style="line-height: 1.6em"><li><strong>🧾 Tax efficiency:</strong> staying below the <u>state tax threshold</u> of approx. <strong>613,900 SEK/year brutto</strong> (≈51,000 SEK/month) avoids an extra 20% income tax on top of the standard municipal tax</li><li><strong>🏛 Administrative visibility:</strong> allows owners to show a clean, steady income for Försäkringskassan, Migrationsverket, Skatteverket, and banks</li><li><strong>📉 Risk minimization:</strong> avoids suspicion or red flags associated with excessive declared income or undeclared gains</li><li><strong>📦 Image management:</strong> aligns with public expectations of “working owner” rather than silent shareholder extracting dividends</li></ul><p style="line-height: 1.6em">In many cases, the **salary is not a reflection of actual profit**, but a strategic benchmark. A business owner might earn more through dividends, leasing benefits, or reinvested company funds, but declares a stable salary for optics and structure.</p><p style="line-height: 1.6em">Some patterns observed across restaurants and consultancies:</p><ul style="line-height: 1.6em"><li><strong>Daniela:</strong> ≈30,000 SEK net/month – stable and modest</li><li><strong>Henrik:</strong> 31,000 SEK net/month – just under state tax limit</li><li><strong>Sahar:</strong> ~41,000 SEK net/month – close to threshold, but possibly offset by deductions</li></ul><p style="line-height: 1.6em">These salaries offer an ideal balance: they are <strong>visible, plausible, and sustainable</strong>. They avoid scrutiny while preserving access to administrative benefits. In some cases, they may also help reduce the perceived need to explain or justify dividends.</p><ul style="line-height: 1.6em"><li><strong>✅ Avoids assumptions of under-declaration</strong> (too low)</li><li><strong>✅ Avoids suspicion of overpayment or artificial profit inflation</strong> (too high)</li><li><strong>✅ Creates a "normal" middle-class profile</strong> without excessive exposure</li></ul><p style="line-height: 1.6em">This strategy is often part of a broader compensation plan where salary is just one element. Others include:</p><ul style="line-height: 1.6em"><li>🚗 <u>Company car leasing</u></li><li>📱 <u>Phone, laptop and subscription expenses</u></li><li>💳 <u>Meals and perks via business cards</u></li><li>💼 <u>Intermittent dividend payouts below visibility threshold</u></li></ul><p style="line-height: 1.6em">In doing so, the entrepreneur achieves three things at once: (1) a steady, credible income line; (2) reduced tax load; and (3) minimal personal exposure.</p><p style="line-height: 1.6em">In most cases, <strong>30k–45k SEK net/month</strong> appears to be a psychological and fiscal “sweet spot” — high enough to look legitimate, low enough to remain under the radar. This is especially relevant in **high-turnover, high-cash sectors** like restaurants, catering, and events.</p><p style="line-height: 1.6em">It also enables long-term administrative consistency: social security contributions, pension points, and sickness insurance are all linked to declared salary — not to dividends.</p><p style="line-height: 1.6em"><strong>📌 Summary:</strong> Restaurateurs often pick salary levels that are <strong>just below the national tax cliff</strong> while satisfying social and legal visibility requirements. This gives them legitimacy, flexibility, and protection — without inviting audits or raising questions.</p><p style="line-height: 1.6em"><strong>📚 Further reading:</strong></p><ul style="line-height: 1.6em"><li>🔍 Skatteverket – "Företagare och beskattning" reports (annual summaries)</li><li>📑 UC & Allabolag – declared owner salary comparisons in restaurant sector</li><li>📊 Företagarna – advice papers on "Löneoptimering för ägare"</li><li>📘 Driva Eget – strategic tax planning guides for SME owners</li><li>🎓 Academic: "Owner-Manager Income Smoothing in Sweden" (Jönköping Int. Business School)</li></ul><p style="line-height: 1.6em">This note can be used to better interpret observed salary patterns and understand why **not exceeding 50,000 SEK/month** often serves as a deliberate signal of control, not constraint.</p></details>
+-+<details id="note-holding-delay">
+-+  <summary>
+-+    <strong>📌 Note – Can you create a holding company after launching an operational one?</strong>
+-+  </summary>
+-+
+-+  <p style="line-height: 1.6em">
+-+    In Sweden (and most jurisdictions), it's perfectly legal to <u>set up a holding structure after the operational company already exists</u>. This setup is neither unusual nor suspect.
+-+  </p>
+-+
+-+  <p style="line-height: 1.6em">
+-+    It’s often done when the owner reaches a stage where <span class="highlight">income, control, or risk visibility</span> become strategically relevant. It’s a post-hoc move — but a deliberate one.
+-+  </p>
+-+
+-+  <p style="line-height: 1.6em">
+-+    Common reasons include:
+-+    <ul>
+-+      <li>🧾 <strong>Tax-efficient dividend routing</strong> (via a holding AB)</li>
+-+      <li>🔐 <strong>Capital separation</strong> between private wealth & business activity</li>
+-+      <li>👥 <strong>Future-proofing</strong> for family ownership or silent partners</li>
+-+      <li>⚙️ <strong>Low-profile restructuring</strong> without touching the daily operations</li>
+-+    </ul>
+-+  </p>
+-+
+-+  <p style="line-height: 1.6em">
+-+    In the case studied here, <strong>KEHDA Holding AB</strong> was created roughly <u>two years after</u> HSSC Event AB. This timeline suggests a reactive structure, likely aiming to <span class="highlight">formalize asset flows</span> and anticipate capital maneuvering — without changing the restaurant’s visible surface.
+-+  </p>
+-+
+-+  <p style="line-height: 1.6em">
+-+    ➕ Such “after-the-fact” holdcos are especially common in hospitality, where <u>income visibility rises faster than legal preparation</u>.
+-+  </p>
+-+</details>
+-     </main>
+- <script>
+-   // Script pour la sidebar
+-diff --git a/structure.html b/structure.html
+-index d4287cf..e96fe6a 100644
+---- a/structure.html
+-+++ b/structure.html
+-@@ -59,144 +59,58 @@
+-     <main class="main-content">
+-       <h1>The Emergence of a Model</h1>
+-       <h2 class="subtitleh2">Outsourced Neo-Asian Restauranting</h2>
+--      <details
+--        open
+--        style="
+--          background-color: #e5e7eb;
+--          border-radius: 0.6rem;
+--          padding: 1.5rem;
+--          margin: 1.5rem 0;
+--          font-size: 0.96rem;
+--          line-height: 1.6;
+--        "
+--      >
+--        <summary style="font-weight: bold; font-size: 1.05rem">
+--          <strong>Liability Mapping (Hybrid Restaurant Governance)</strong>
+--        </summary>
+--        <p>
+--          <strong>Function:</strong> This mapping helps clarify
+--          <strong
+--            >who acts, who decides, and who holds legal responsibility</strong
+-+      <header>
+-+        <button id="toggleNavbar" class="toggle-btn">☰</button>
+-+        <div class="navbar">
+-+          <a href="/">Home</a>
+-+          <!-- Bloc Auteur -->
+-+          <div class="nav-section">About the Author</div>
+-+  
+-+          <a href="/philosophy.html">Operating Principles</a>
+-+          <a href="/about.html">Trajectory</a>
+-+          <a href="/claim.html">Editorial Framework</a>
+-+          <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-+          <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+-+  
+-+          <!-- Bloc Contexte -->
+-+          <div class="nav-section">Case Background</div>
+-+          <a href="/foundations.html">Founding Genesis</a>
+-+          <a href="/structure.html">Current Architecture</a>
+-+  
+-+          <a href="/working-dynamics.html"
+-+            ><span class="nav-icon">③</span> Working Dynamics</a
+-           >
+--          within Quan’s operational structure. It highlights overlaps between
+--          <strong>ownership, delegation, and public-facing control</strong>.
+--        </p>
+--
+--        <details>
+--          <summary><strong>PPOWER(E) Method</strong></summary>
+--
+--          <p style="line-height: 1.4">
+--            The PPOWER(E) method is a simple tool to figure out who really
+--            controls a business — not just on paper, but in practice. It’s used
+--            when official ownership doesn’t match what’s actually happening on
+--            the ground.
+--          </p>
+--
+--          <p style="line-height: 1.4">
+--            The name stands for six key things to check. If one person or group
+--            shows up on most of them, they’re likely in charge — even if they
+--            don’t legally “own” anything.
+--          </p>
+--
+--          <table
+--            style="width: 100%; border-collapse: collapse; font-size: 0.95em"
+-+          <a href="/governance.html"
+-+            ><span class="nav-icon">③</span> Operational Authority</a
+-           >
+--            <thead>
+--              <tr style="background-color: #f3f4f6">
+--                <th style="text-align: left; padding: 8px">Axis</th>
+--                <th style="text-align: left; padding: 8px">What to look for</th>
+--              </tr>
+--            </thead>
+--            <tbody>
+--              <tr>
+--                <td style="padding: 8px"><strong>P – Power</strong></td>
+--                <td style="padding: 8px">
+--                  Who gives orders? Who takes the real decisions?
+--                </td>
+--              </tr>
+--              <tr style="background-color: #f9fafb">
+--                <td style="padding: 8px"><strong>P – Property</strong></td>
+--                <td style="padding: 8px">
+--                  Who owns it — even indirectly or through someone else?
+--                </td>
+--              </tr>
+--              <tr>
+--                <td style="padding: 8px"><strong>O – Operation</strong></td>
+--                <td style="padding: 8px">
+--                  Who runs it day to day? Who shows up on site?
+--                </td>
+--              </tr>
+--              <tr style="background-color: #f9fafb">
+--                <td style="padding: 8px"><strong>W – Wallet</strong></td>
+--                <td style="padding: 8px">
+--                  Who receives payments? Who pays the bills?
+--                </td>
+--              </tr>
+--              <tr>
+--                <td style="padding: 8px"><strong>E – Employees</strong></td>
+--                <td style="padding: 8px">
+--                  Are staff shared across companies? Who hires them?
+--                </td>
+--              </tr>
+--              <tr style="background-color: #f9fafb">
+--                <td style="padding: 8px"><strong>R – Reputation</strong></td>
+--                <td style="padding: 8px">
+--                  Who is publicly seen as “the boss” or the face of the company?
+--                </td>
+--              </tr>
+--            </tbody>
+--          </table>
+--
+--          <p style="line-height: 1.4; margin-top: 1rem">
+--            <span style="background-color: #e5e7eb"
+--              >In your case, this is useful to understand how HSSC, Aspircio,
+--              Queda Consulting and Tributum AB might be controlled by the same
+--              group — without sharing official owners.</span
+--            >
+--          </p>
+--
+--          <h4 style="margin-top: 1rem">📚 Where does it come from?</h4>
+--          <p style="line-height: 1.4">
+--            The method was first developed in the 2010s by financial
+--            investigators working on corruption and shell companies. It’s now
+--            used by investigative journalists, fraud examiners, and forensic
+--            analysts to spot real control hidden behind fake legal structures.
+--          </p>
+--        </details>
+--        <p>
+--          <strong>Fields:</strong> Inspired by tools like a
+--          <strong>liability map</strong> (legal strategy),
+--          <strong>delegated ownership charts</strong> (corporate audits), and
+--          <strong>hybrid governance diagrams</strong> (used in
+--          <em>hospitality outsourcing</em>, <em>franchise consulting</em>, or
+--          <em>operational compliance</em>).
+--        </p>
+--        <p>
+--          <strong>Usage:</strong> Used by <strong>legal analysts</strong>,
+--          <strong>compliance teams</strong> (e.g. internal audit, regulatory
+--          staff), and <strong>governance advisors</strong> (e.g. strategic
+--          consultants for partnerships) to examine
+--          <strong>responsibility chains</strong>,
+--          <strong>control logic</strong>, and
+--          <strong>ownership/operation boundaries</strong> in co-managed
+--          ventures.
+--        </p>
+--        <p>
+--          <strong>Adaptation:</strong> This model is applied to
+--          <strong>clarify how responsibility was distributed</strong> without
+--          formal titles or clear legal attribution. It provides a lens to
+--          observe
+--          <strong>how tasks and decisions shifted between actors</strong>.
+--        </p>
+--        <p>
+--          <strong>Structure:</strong> The section highlights
+--          <strong>visible and latent hierarchies</strong> between hotel staff,
+--          branded leadership, and off-site owners. It distinguishes
+--          <strong>contractual obligations</strong> from
+--          <strong>day-to-day control</strong> — to map where legal and
+--          operational authority may diverge.
+--        </p>
+--      </details>
+-+  
+-+          <!-- Bloc Publications -->
+-+          <div class="nav-section">Articles</div>
+-+          <a href="/posts.html">Blog</a>
+-+          <a href="/confidential.html">Confidential</a>
+-+  
+-+          <!-- Bloc Outils & Références -->
+-+          <div class="nav-section">Tools & References</div>
+-+          <a href="/glossary.html">Glossary</a>
+-+          <a href="/notes.html">Notes</a>
+-+          <a href="/search.html">Search</a>
+-+          <a href="/timeline.html">Timeline</a>
+-+          <a href="/updates.html">Logs</a>
+-+          <a href="/simulator.html">Simulator</a>
+-+          <a href="/archive.html">Download PDF</a>
+-+  
+-+          <!-- Bloc Communauté et légal -->
+-+          <div class="nav-section">Community & Legal</div>
+-+          <a href="https://ob1.se/forum.html">Forum</a>
+-+          <a href="/legal.html">Legal</a>
+-+          <a href="/faq.html">Defense FAQ</a>
+-+          <a href="/reply.html">Reply Policy</a>
+-+          <a href="/exchanges.html">Letters and Pressure</a>
+-+          <a href="/cost.html">Research Cost</a>
+-+          <a href="/guide.html">Reading Help</a>
+-+          <a href="/press.html">Media Access</a>
+-+          <a href="/contact.html">Contact</a>
+-+      </header>
+- 
+-       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2015</span></h3>
+-       <p>
+-@@ -336,9 +250,50 @@
+-         <span style="background-color: #e5e7eb">private holding layer</span>,
+-         designed to channel earnings while shielding visible ownership.
+-       </p>
+-+      <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2022</span></h3>
+-+      <p>
+-+        <strong>As of 31 December</strong>, for the fiscal year 2022,
+-+        <strong>Daniella Dahl</strong> declared a monthly net salary of
+-+        approximately <span class="highlight">41,680 SEK</span> and
+-+        <strong>16,879 SEK</strong> in dividends issued via
+-+        <u>KEHDA Holding AB</u>, main shareholder of HSSC Event AB.
+-+      </p>
+-+
+-+      <p>
+-+        <strong>As of 31 December</strong>, <strong>Henrik</strong> declared a
+-+        net monthly salary of approximately
+-+        <span class="highlight">63,267 SEK</span> for the 2022 fiscal year.
+-+        <strong>No capital income</strong> was reported.
+-+      </p>
+-+
+-+      <p>
+-+        <strong>As of 31 December</strong>, <strong>Saahil</strong> declared a
+-+        net monthly salary of approximately
+-+        <span class="highlight">53,168 SEK</span> and received
+-+        <strong>dividends of 33,750 SEK/month</strong> via
+-+        <u>Chudasama Invest AB</u>.
+-+      </p>
+-+
+-+      <p>
+-+        Among these dividends,
+-+        <span class="highlight">64% originated from affiliated companies</span>
+-+        (including his stake in HSSC Event AB), while <strong>36%</strong> came
+-+        from external financial holdings with no declared activity.
+-+      </p>
+-+      <p>
+-+        <strong>As of 31 December</strong>, <strong>Sahar</strong> declared a
+-+        net monthly salary of approximately
+-+        <span class="highlight">54,234 SEK</span> for the 2022 fiscal year.
+-+        <strong>No capital income</strong> was reported.
+-+      </p>
+- 
+-       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2023</span></h3>
+- 
+-+      <p>
+-+        I cannot confirm whether she was present on-site, as her name was never
+-+        mentioned during my time there. I only discovered her existence while
+-+        conducting post-employment research.
+-+      </p>
+-       <p>
+-         <strong>As of 31 December</strong>,
+-         <span class="highlight">Saahil</span>, holding between
+-@@ -375,6 +330,28 @@
+-         <span class="highlight">31 000 SEK net/month</span>, with no operational
+-         decision-making observed on site.
+-       </p>
+-+
+-+      <p>
+-+        At year-end, <strong>Elite Rosen Malmö AB</strong> (25 employees)
+-+        recorded a revenue of <strong>41,759,000 SEK</strong> and a monthly net
+-+        profit of <strong>≈ 106,083 SEK</strong>, with a
+-+        <strong>net profit margin of 3.05%</strong>. Each employee generated ≈
+-+        <strong>1,670,360 SEK/year</strong> in gross revenue.
+-+      </p>
+-+
+-+      <p>
+-+        In the same period, <strong>HSSC Event AB</strong> (Quan, 21 employees)
+-+        posted a revenue of <strong>41,107,903 SEK</strong> and a monthly net
+-+        profit of <strong>≈ 440,843 SEK</strong>, yielding a
+-+        <strong>net margin of 12.87%</strong>. Revenue per employee reached ≈
+-+        <strong>1,957,519 SEK/year</strong>.
+-+      </p>
+-+
+-+      <p>
+-+        Quan generated <strong>4.15× more net profit per month</strong> than the
+-+        host hotel, with fewer staff and almost identical turnover — underlining
+-+        a sharply different financial extraction model.
+-+      </p>
+-       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2024</span></h3>
+- 
+-       <p>
+-@@ -413,19 +390,6 @@
+-         project Henrik was focused on at the time.
+-       </p>
+- 
+--      <p>
+--        🧱 <strong>Tributum AB</strong> is declared as a restaurant business,
+--        while <strong>Aspiratio</strong> is set up as a property and asset
+--        manager. This distinction suggests an early intent to separate
+--        <u>operational activities</u> from <u>holding structures</u>.
+--      </p>
+--
+--      <p>
+--        📍 Both are registered at the same address as HSSC and KEHDA, further
+--        reinforcing the emerging architecture. Whether these entities were
+--        created to absorb risk, optimize flows, or serve future roles remains to
+--        be clarified.
+--      </p>
+-       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2025</span></h3>
+- 
+-       <p>
+-@@ -444,6 +408,20 @@
+-         >.
+-       </p>
+- 
+-+      <p>
+-+        🧱 <strong>Tributum AB</strong> is declared as a restaurant business,
+-+        while <strong>Aspiratio</strong> is set up as a property and asset
+-+        manager. This distinction suggests an early intent to separate
+-+        <u>operational activities</u> from <u>holding structures</u>.
+-+      </p>
+-+
+-+      <p>
+-+        📍 Both are registered at the same address as HSSC and KEHDA, further
+-+        reinforcing the emerging architecture. Whether these entities were
+-+        created to absorb risk, optimize flows, or serve future roles remains to
+-+        be clarified.
+-+      </p>
+-+
+-       <p>
+-         A quick search in the Swedish business register confirmed that
+-         <strong>HSSC Event AB</strong> was the legal entity linked to the
+-diff --git a/updates.html b/updates.html
+-index df86650..2c7824d 100644
+---- a/updates.html
+-+++ b/updates.html
+-@@ -10,48 +10,57 @@
+-     <!-- End Matomo Code -->
+-   </head>
+-   <body>
+--<header>
+--  <button id="toggleNavbar" class="toggle-btn">☰</button>
+-+    <header>
+-+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+-+      <div class="navbar">
+-+        <a href="/">Home</a>
+-+        <!-- Bloc Auteur -->
+-+        <div class="nav-section">About the Author</div>
+- 
+--  <div class="navbar">
+--    <a href="/">Home</a>
+--    <!-- Bloc Auteur -->
+--    <div class="nav-section">About the Author</div>
+-+        <a href="/philosophy.html">Operating Principles</a>
+-+        <a href="/about.html">Trajectory</a>
+-+        <a href="/claim.html">Editorial Framework</a>
+-+        <a href="/context.html"
+-+          ><span class="nav-icon">①</span> Personal Context</a
+-+        >
+- 
+--    <a href="/philosophy.html">Operating Principles</a>
+--    <a href="/about.html">Trajectory</a>
+--    <a href="/claim.html">Editorial Framework</a>
+--    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
+-+        <!-- Bloc Contexte -->
+-+        <div class="nav-section">Case Background</div>
+-+        <a href="/foundations.html">Founding Genesis</a>
+-+        <a href="/structure.html">Current Architecture</a>
+- 
+--    <!-- Bloc Contexte -->
+--    <div class="nav-section">Case Background</div>
+--    <a href="/working-dynamics.html"
+--      ><span class="nav-icon">②</span> Working Dynamics</a
+--    >
+--    <a href="/governance.html"
+--      ><span class="nav-icon">③</span> Operational Authority</a
+--    >
+--    <a href="/structure.html">Legal Structure</a>
+-+        <a href="/working-dynamics.html"
+-+          ><span class="nav-icon">②</span> Working Dynamics</a
+-+        >
+-+        <a href="/governance.html"
+-+          ><span class="nav-icon">③</span> Operational Authority</a
+-+        >
+- 
+--    <!-- Bloc Publications -->
+--    <div class="nav-section">Articles</div>
+--    <a href="/posts.html">Blog</a>
+-+        <!-- Bloc Publications -->
+-+        <div class="nav-section">Articles</div>
+-+        <a href="/posts.html">Blog</a>
+- 
+--    <!-- Bloc Références -->
+--    <div class="nav-section">Tools & References</div>
+--    <a href="/glossary.html">Glossary</a>
+--    <a href="/search.html">Search</a>
+--    <a href="/timeline.html">Timeline</a>
+--    <a href="/updates.html">Logs</a>
+--    <a href="/simulator.html">Simulator</a>
+-+        <!-- Bloc Outils & Références -->
+-+        <div class="nav-section">Tools & References</div>
+-+        <a href="/glossary.html">Glossary</a>
+-+        <a href="/notes.html">Notes</a>
+-+        <a href="/search.html">Search</a>
+-+        <a href="/timeline.html">Timeline</a>
+-+        <a href="/updates.html">Logs</a>
+-+        <a href="/simulator.html">Simulator</a>
+- 
+--    <!-- Bloc Communauté et légal -->
+--    <div class="nav-section">Community & Legal</div>
+--    <a href="https://ob1.se/forum.html">Forum</a>
+--    <a href="/legal.html">Legal</a>
+--    <a href="/contact.html">Contact</a>
+--  </div>
+--</header>
+-+        <!-- Bloc Communauté et légal -->
+-+        <div class="nav-section">Community & Legal</div>
+-+        <a href="https://ob1.se/forum.html">Forum</a>
+-+        <a href="/legal.html">Legal</a>
+-+        <a href="/faq.html">Defense FAQ</a>
+-+        <a href="/reply.html">Reply Policy</a>
+-+        <a href="/exchanges.html">Letters and Pressure</a>
+-+        <a href="/cost.html">Research Cost</a>
+-+        <a href="/guide.html">Reading Help</a>
+-+        <a href="/press.html">Media Access</a>
+-+        <a href="/contact.html">Contact</a>
+-+    </header>
+-     <main
+-       style="
+-         max-width: 740px;
+diff --git a/confidential.html b/confidential.html
+index 6a2df47..751f7c8 100644
+--- a/confidential.html
++++ b/confidential.html
+@@ -61,11 +61,10 @@
+     </header>
+     <main class="main-content">
+       <h1>🔐 Confidential Insight Access</h1>
+-
+-      <p>
+-        This section grants access to
+-        <strong>three high-sensitivity documents</strong> and ongoing updates
+-        regarding:
++      <p style="margin-top: 1.5rem">
++        🔐 This section grants access to
++        <strong>one internal PDF document</strong> containing high-sensitivity
++        insights across three themes:
+       </p>
+ 
+       <ul>
+@@ -74,27 +73,27 @@
+           vs. Elite Hotel from 2019–2023
+         </li>
+         <li>
+-          🌐 <strong>Offshore Flows </strong> — Asset redirection episodes
+-          involving Cyprus and Panama entities (2004-2011)
++          🌐 <strong>Offshore Flows</strong> — Traces of offshore activity noted
++          across audit reports and filings
+         </li>
+         <li>
+           📄 <strong>Audit & Legal Records</strong> — Public records, tax
+-          authority audits, and court filings on file
++          authority audits, and court materials
+         </li>
+       </ul>
+ 
+-      ⚠️ Why This Is Not Public This content includes sensitive elements
+-      involving revenue concentration, individual payouts, offshore structuring,
+-      and potential compliance breaches. Publishing them openly may harm ongoing
+-      negotiations and reduce leverage in potential reparations.
+-
+       <p>
+-        📩 <strong>Send a WhatsApp message</strong> to
+-        <span class="highlight">076 007 63 74</span> with:
++        ⚠️ <strong>Why This Is Not Public:</strong> This content includes
++        sensitive elements involving revenue concentration, individual payouts,
++        offshore structuring, and potential compliance breaches. Publishing them
++        openly may harm ongoing negotiations and reduce leverage in potential
++        reparations.
+       </p>
+ 
++      <p>💬 <strong>Send a WhatsApp message</strong> to 076 007 63 74 with:</p>
++
+       <ul>
+-        <li>🪪 <strong>Your full name</strong> (e.g. "Carl Nilsson")</li>
++        <li>🧾 <strong>Your full name</strong> (e.g. "Carl Nilsson")</li>
+         <li>
+           🌍 <strong>Your city and year of birth</strong> (e.g. "Malmö, 1987")
+         </li>
+@@ -105,24 +104,54 @@
+         </li>
+       </ul>
+ 
+-      Requests with vague or anonymous profiles may not be processed.
+-    </p>
+-  
+-    <p style="margin-top: 1.2em;">
+-      <span style="display: inline-block; margin-right: 0.5em;">☑️</span>
+-      <strong>I will never disclose or cross-reference submitted identities with third parties — 
+-      <span class="highlight">not under any voluntary circumstance</span>.</strong>
+-    </p>
+-    
+-    <p style="margin-top: 0.8em;">
+-      This includes all requests, legal or informal. <u>Only in the event of direct and credible death threats</u> — 
+-      such as <span class="highlight">being confronted at gunpoint</span> — would disclosure become a matter of physical self-preservation.
+-      Identity tracking is implemented <strong>only</strong> to protect the structural integrity of this project and assess distribution risk.
+-    </p>
+-  
+-
+-      <p style="margin-top: 1.5em">
+-        This material is not indexed, not archived, and may evolve based on
++      <p>Requests with vague or anonymous profiles may not be processed.</p>
++
++      <p>
++        📬
++        <strong
++          >Applicants who do not meet the required criteria will receive a
++          polite rejection notice,</strong
++        >
++        stating that access has been declined. This ensures clarity and
++        preserves the integrity of the process.
++      </p>
++
++      <p>
++        ✅
++        <strong
++          >I will never disclose or cross-reference submitted identities with
++          third parties — not under any voluntary circumstance.</strong
++        >
++      </p>
++
++      <p>
++        This includes all requests, legal or informal.
++        <a href="#">Only in the event of direct and credible death threats</a
++        >would disclosure become a matter of physical self-preservation.
++        Identity tracking is implemented <strong>only</strong> to protect the
++        structural integrity of this project and assess distribution risk.
++      </p>
++
++      <p>
++        🧬 <strong>Each document is uniquely fingerprinted</strong> to trace its
++        origin in case of unauthorized replication. This mechanism ensures
++        accountability without compromising user privacy.
++      </p>
++
++      <p>
++        🌐 <strong>Language Notice:</strong> All content is provided
++        <u>in Swedish</u>, with an <u>English version</u> available on request.
++      </p>
++
++      <p>
++        🎁 <strong>Access is entirely free.</strong> These insights are based on
++        open public filings, interpreted with basic financial literacy. No
++        payment is required — the effort lies in patience and synthesis, not
++        confidential discovery.
++      </p>
++
++      <p>
++        📁 This material is not indexed, not archived, and may evolve based on
+         legal context. You will never be subscribed or tracked beyond this
+         one-time exchange.
+       </p>
+diff --git a/context.html b/context.html
+index fbb38d3..4bb9381 100644
+--- a/context.html
++++ b/context.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main class="main-content">
+       <h1>Context</h1>
+diff --git a/faq.html b/faq.html
+index 3f563d0..f1121d0 100644
+--- a/faq.html
++++ b/faq.html
+@@ -64,7 +64,10 @@
+ 
+       <h2>1. What is the legal nature of this site?</h2>
+       <p>
+-        This site is a civic archive authored by an individual residing in Sweden. It documents first-hand labor experiences, backed by personal and official records. It is non-commercial, non-affiliated, and protected under Swedish and European legal frameworks (freedom of expression, right to document, public interest).
++        This site is a civic archive authored by an individual residing in Sweden. 
++        It documents first-hand labor experiences, backed by personal and official records. 
++        It is non-commercial, non-affiliated, and protected under Swedish and European legal frameworks 
++        (freedom of expression, right to document, public interest).
+       </p>
+ 
+       <h2>2. Are personal names or companies exposed?</h2>
+@@ -127,6 +130,16 @@
+   These are accessible on a case-by-case basis through the <a href="/confidential.html">Confidential Insight Access</a> section, where requesters must identify themselves and explain their interest.
+ </p>
+ 
++<h2>9. What happens if access is denied?</h2>
++<p>
++  Requests that do not meet minimal verification criteria will receive a formal rejection notice.
++  This includes vague, unverifiable, or pseudonymous identities.
++</p>
++<p>
++  The author reserves the right to deny access at their discretion, based on editorial and security considerations.
++  Applicants are not added to any database, and rejected identities are not retained.
++</p>
++
+     </main>
+ <script>
+   // Script pour la sidebar
+diff --git a/foundations.html b/foundations.html
+index a35d7fe..3bdfed0 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -49,7 +49,7 @@
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+         <a href="/archive.html">Download PDF</a>
+-
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+diff --git a/glossary.html b/glossary.html
+index 67fd45a..6eacb02 100644
+--- a/glossary.html
++++ b/glossary.html
+@@ -7,6 +7,26 @@
+     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Matomo -->
++    <script>
++      var _paq = (window._paq = window._paq || []);
++      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
++      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
++      _paq.push(["setCookieDomain", "*.aftershift.se"]);
++      _paq.push(["setDomains", ["*.aftershift.se"]]);
++      _paq.push(["trackPageView"]);
++      _paq.push(["enableLinkTracking"]);
++      (function () {
++        var u = "https://aftershift.matomo.cloud/";
++        _paq.push(["setTrackerUrl", u + "matomo.php"]);
++        _paq.push(["setSiteId", "1"]);
++        var d = document,
++          g = d.createElement("script"),
++          s = d.getElementsByTagName("script")[0];
++        g.async = true;
++        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
++        s.parentNode.insertBefore(g, s);
++      })();
++    </script>
+     <!-- End Matomo Code -->
+   </head>
+   <body>
+@@ -16,30 +36,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
+-
++        <a href="/structure.html">Current Architecture</a>
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +68,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main
+       style="
+@@ -68,8 +91,6 @@
+       "
+     >
+       <h1>Glossary</h1>
+-
+-
+       <details id="">
+         <summary><strong>Disclaimer</strong></summary>
+         <p>
+@@ -899,22 +920,35 @@
+             </p>
+           </details>
+     
++      <footer class="site-footer">
++        <p>
++          © 2025 AfterShift. All rights reserved.<br />
++          Content provided as-is without warranty.<br />
++          Governing law: Swedish law. Jurisdiction: Malmö courts.
++        </p>
++      </footer>
++      <script>
++        const toggleBtn = document.getElementById("toggleNavbar");
++        const navbar = document.querySelector(".navbar");
++        toggleBtn.addEventListener("click", () => {
++          navbar.classList.toggle("collapsed");
++        });
++      </script>
+     </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
+-
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++    <script>
++      window.addEventListener("DOMContentLoaded", function () {
++        const hash = window.location.hash;
++        if (hash) {
++          const detailsElement = document.querySelector(hash);
++          if (
++            detailsElement &&
++            detailsElement.tagName.toLowerCase() === "details"
++          ) {
++            detailsElement.setAttribute("open", "true");
++            detailsElement.scrollIntoView({ behavior: "smooth" });
++          }
++        }
++      });
++    </script>
++  </body>
+ </html>
+diff --git a/governance.html b/governance.html
+index b15f9a6..5b100c5 100644
+--- a/governance.html
++++ b/governance.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
+-
++        <a href="/structure.html">Current Architecture</a>
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main class="main-content">
+       <h1>Operational Authority</h1>
+diff --git a/guide.html b/guide.html
+index 838c2bb..903e67e 100644
+--- a/guide.html
++++ b/guide.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main class="main-content" style="max-width: 740px; margin: auto; padding: 2rem;">
+       <h1>Reading Help</h1>
+diff --git a/index.html b/index.html
+index 9b38477..e5f7963 100644
+--- a/index.html
++++ b/index.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,7 +48,8 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -61,6 +62,7 @@
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+     </header>
++    
+     <main class="main-content">
+       <div class="legal-container">
+         <h1>
+diff --git a/legal.html b/legal.html
+index 4c8ee26..3e0e01e 100644
+--- a/legal.html
++++ b/legal.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
+-
++        <a href="/structure.html">Current Architecture</a>
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main
+       style="
+@@ -175,23 +178,37 @@
+         platform). Both are maintained by the same author but serve different
+         purposes. Legal responsibilities are clearly separated.
+       </p>
+-    </main>
+ 
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
++      <h2>12. PDF Fingerprinting & Traceability</h2>
++      <p>
++        Each access-restricted document is uniquely fingerprinted prior to
++        delivery. This process does not affect readability or file structure but
++        embeds a non-visible identifier to help trace unauthorized
++        redistribution.
++      </p>
++      <p>
++        Fingerprinting serves both to discourage leaks and to identify the
++        origin of any unauthorized reproduction, without storing personal
++        information in the file.
++      </p>
++    </main>
+ 
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++    <script>
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
++
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>
+diff --git a/notes.html b/notes.html
+index 7f8dc35..371c2b4 100644
+--- a/notes.html
++++ b/notes.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,7 +48,8 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -516,14 +517,13 @@
+           need to stay out of public documents.
+         </p>
+ 
+-        <p style="line-height: 1.6em">
+-          In the case of <strong>HHSC Event AB</strong>, for instance, Mr.
+-          Henrik Siebert, widely acknowledged as a key architect of the
+-          <em>Quan</em> project, does
+-          <span class="highlight">not appear in any official filing</span>.
+-          Instead, Saahil Chudasama and Sahar El Nasser are listed, while the
+-          beneficial owner is Ms. Dahl.
+-        </p>
++        <p>
++          In the case of <strong>HHSC Event AB</strong>, for instance, <strong>Mr. Henrik Siebert</strong>, widely acknowledged as a key architect of the <em>Quan</em> project, <u>does not appear in any official filing</u>.
++          </p>
++          
++          <p>
++          Instead, <strong>Saahil Chudasama</strong> and <strong>Sahar El Nasser</strong> are listed as <u>board members</u>, while <span class="highlight">the majority stake (50–75%)</span> is held by <strong>Ms. Dahl</strong>, and <span class="highlight">Mr. Chudasama holds between 0 and 25%</span> of the shares.
++          </p>
+ 
+         <p style="line-height: 1.6em">
+           This discrepancy suggests a
+@@ -729,6 +729,22 @@
+     ➕ Such “after-the-fact” holdcos are especially common in hospitality, where <u>income visibility rises faster than legal preparation</u>.
+   </p>
+ </details>
++
++<details id="note-shell-company">
++  <summary><strong>🏚️ Note – What is a Shell Company?</strong></summary>
++
++  <p style="line-height: 1.6em">
++    A <strong>shell company</strong> (or <em>“société écran”</em>) is a legal entity that has <span class="highlight">no significant assets or active operations</span>. It exists mainly on paper and is often used to <strong><u>hold shares, obscure ownership</u></strong>, or structure financial flows.
++  </p>
++
++  <p style="line-height: 1.6em">
++    Shell companies are commonly used to <span class="highlight">limit liability, avoid taxes</span>, or enable <u>offshore asset transfers</u>. While they can serve legitimate purposes (e.g., pre-launch entities, investment vehicles), they are frequently involved in <strong>opacity, cross-border layering</strong>, or <u>delayed ownership disclosure</u>.
++  </p>
++
++  <p style="line-height: 1.6em">
++    In legal and forensic contexts, the presence of a shell company often signals a need for <strong>deeper investigation into beneficial ownership</strong>, governance proxies, or income redirection strategies.
++  </p>
++</details>
+     </main>
+ <script>
+   // Script pour la sidebar
+diff --git a/philosophy.html b/philosophy.html
+index 0a0c638..ed275f9 100644
+--- a/philosophy.html
++++ b/philosophy.html
+@@ -14,30 +14,30 @@
+       <a href="/">Home</a>
+       <!-- Bloc Auteur -->
+       <div class="nav-section">About the Author</div>
+-
++  
+       <a href="/philosophy.html">Operating Principles</a>
+       <a href="/about.html">Trajectory</a>
+       <a href="/claim.html">Editorial Framework</a>
+-      <a href="/context.html"
+-        ><span class="nav-icon">①</span> Personal Context</a
+-      >
+-
++      <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++      <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++  
+       <!-- Bloc Contexte -->
+       <div class="nav-section">Case Background</div>
+       <a href="/foundations.html">Founding Genesis</a>
+-      <a href="/structure.html">Legal Architecture</a>
+-
++      <a href="/structure.html">Current Architecture</a>
++  
+       <a href="/working-dynamics.html"
+-        ><span class="nav-icon">②</span> Working Dynamics</a
++        ><span class="nav-icon">③</span> Working Dynamics</a
+       >
+       <a href="/governance.html"
+         ><span class="nav-icon">③</span> Operational Authority</a
+       >
+-
++  
+       <!-- Bloc Publications -->
+       <div class="nav-section">Articles</div>
+       <a href="/posts.html">Blog</a>
+-
++      <a href="/confidential.html">Confidential</a>
++  
+       <!-- Bloc Outils & Références -->
+       <div class="nav-section">Tools & References</div>
+       <a href="/glossary.html">Glossary</a>
+@@ -46,16 +46,19 @@
+       <a href="/timeline.html">Timeline</a>
+       <a href="/updates.html">Logs</a>
+       <a href="/simulator.html">Simulator</a>
+-
++      <a href="/archive.html">Download PDF</a>
++  
+       <!-- Bloc Communauté et légal -->
+       <div class="nav-section">Community & Legal</div>
+       <a href="https://ob1.se/forum.html">Forum</a>
+       <a href="/legal.html">Legal</a>
+       <a href="/faq.html">Defense FAQ</a>
++      <a href="/reply.html">Reply Policy</a>
++      <a href="/exchanges.html">Letters and Pressure</a>
++      <a href="/cost.html">Research Cost</a>
+       <a href="/guide.html">Reading Help</a>
+       <a href="/press.html">Media Access</a>
+       <a href="/contact.html">Contact</a>
+-    </div>
+   </header>
+   <main class="main-content">
+       <h1>Personal Operating Principle</h1>
+diff --git a/posts.html b/posts.html
+index ec37081..da770cb 100644
+--- a/posts.html
++++ b/posts.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
+-
++        <a href="/structure.html">Current Architecture</a>
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,16 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main class="main-content">
+       <h1>Upcoming Publications</h1>
+diff --git a/posts_old.html b/posts_old.html
+deleted file mode 100644
+index d8f0693..0000000
+--- a/posts_old.html
++++ /dev/null
+@@ -1,187 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-  <head>
+-    <meta charset="UTF-8" />
+-    <title>Blog – AfterShift</title>
+-    <link rel="stylesheet" href="/assets/css/main.css" />
+-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <!-- Matomo -->
+-    <!-- End Matomo Code -->
+-  </head>
+-  <body>
+-    <header>
+-      <button id="toggleNavbar" class="toggle-btn">☰</button>
+-      <div class="navbar">
+-        <!-- Bloc Dossier d'Enquête -->
+-        <a href="/" aria-current="page">Home</a>
+-        <a href="/posts.html">Blog</a>
+-        <a href="/claim.html">Position Framwork</a>
+-        <hr />
+-        <!-- Bloc Références -->
+-        <strong>Case Dossier</strong>
+-        <a href="/context.html" aria-current="page">Context</a>
+-        <a href="/working-dynamics.html">Working Dynamics</a>
+-<a href="/governance.html">Governance</a>
+-        <a href="/philosophy.html">Mindset</a>
+-        <hr />
+-        <!-- Bloc Références -->
+-        <strong>References</strong>
+-        <a href="/glossary.html">Glossary</a>
+-<a href="/search.html">Search</a>        <a href="/timeline.html">Timeline</a>
+-        <a href="/updates.html">Logs</a>
+-        <hr />
+-        <!-- Bloc Communauté et Légal -->
+-        <strong>Other</strong>
+-        <a href="https://ob1.se/forum.html">Forum</a>
+-        <a href="/legal.html">Legal</a>
+-        <a href="/about.html">Author</a>
+-        <a href="/contact.html">Contact</a>
+-<a href="/simulator.html">Simulator</a>      </div>
+-    </header>
+-    <main class="main-content">
+-      <h1>
+-
+-
+-
+-
+-Upcoming Publications</h1>
+-      <small class="timestamp" style="display: block; text-align: center"
+-        >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
+-      >
+-
+-      <p>
+-        This section will soon feature a handful of articles. Each release will
+-        consist of two distinct parts: a
+-        <strong>detailed chronological reconstruction of events</strong> and an
+-        <strong>autonomous legal reflection</strong> focusing on applicable
+-        laws, available remedies, and broader systemic issues.
+-      </p>
+-
+-      <p>
+-        No more than <strong>three pairs</strong> will be published at this
+-        stage—<strong>six articles maximum</strong>. The objective is to explore
+-        formats, refine editorial tone, and prepare for a future advanced
+-        platform.
+-      </p>
+-
+-      <h2>
+-        First Article: <em>On Dismissal by Text</em> (Om uppsägning via SMS)
+-      </h2>
+-
+-      <p>
+-        Across industries, from anonymous workers to famous CEOs and
+-        professional sports coaches, dismissals have often adopted the form of a
+-        <strong>coward elegance</strong>: swift, discreet, and elegantly
+-        detached, avoiding the direct confrontation of a traditional
+-        face-to-face dismissal, which though painful, retains a certain
+-        nobility.
+-      </p>
+-
+-      <p>
+-        These practices reflect less a conscious cruelty than a blend of urgent
+-        pragmatism and <strong>efficient contempt</strong>, treating individuals
+-        not as unique beings but as disposable assets — echoing, perhaps, the
+-        raw cynicism embedded in the term "Human Resources."
+-      </p>
+-
+-      <p>
+-        Drawing from personal experience and broader examples, the articles will
+-        examine:
+-      </p>
+-      <ul>
+-        <li>What constitutes a valid resignation?</li>
+-        <li>What is the purpose of a notice period?</li>
+-        <li>How can an employment contract be terminated?</li>
+-        <li>Is a <strong>friendly procedure</strong> legally acceptable?</li>
+-        <li>
+-          What concrete remedies are available to contest such dismissals?
+-        </li>
+-      </ul>
+-
+-      <p>
+-        Each article pair will serve as an
+-        <strong>exercise in style and structure</strong>, setting the
+-        foundations for the editorial DNA of the future platform.
+-      </p>
+-
+-      <p>
+-        The first article is nearing completion and will be released when the
+-        foundations feel right.
+-      </p>
+-
+-      <h2>Call for Collaboration</h2>
+-
+-      <p>
+-        To strengthen the legal reflections, a call for collaboration is open.
+-      </p>
+-      <p>
+-        I am seeking serious contributors interested in bringing their
+-        expertise, whether through short commentaries or more structured
+-        validations.
+-      </p>
+-
+-      <p>Primarily, I am looking for:</p>
+-      <ul>
+-        <li>
+-          <strong>Blogging lawyers</strong> (especially those interested in
+-          labor and employment topics),
+-        </li>
+-        <li><strong>Experienced union representatives</strong>,</li>
+-        <li><strong>Retired labor inspectors</strong>,</li>
+-        <li><strong>PhD candidates in labor law</strong>,</li>
+-        <li><strong>Labor law jurists</strong> (junior or experienced),</li>
+-        <li>
+-          <strong>Master’s students working on labor-related theses</strong>.
+-        </li>
+-      </ul>
+-
+-      <p>
+-        This list is not exclusive. Anyone with a serious background in labor
+-        law and employment relations is warmly encouraged to reach out.
+-      </p>
+-
+-      <p>
+-        If you are interested, please contact me directly at
+-        <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>.
+-      </p>
+-
+-      <h2>In Conclusion</h2>
+-
+-      <p>
+-        As Friedrich Nietzsche once wrote,
+-        <em>"No one lies as much as an indignant man."</em>
+-      </p>
+-
+-      <p>
+-        Rather than indulging in outrage, these articles aim to observe,
+-        document, and reflect calmly on realities that have long been part of
+-        the contemporary employment landscape.
+-      </p>
+-
+-      <p>
+-        This current site is a <strong>foundational workspace</strong>: a place
+-        to establish methods, define themes, and set structural baselines before
+-        transitioning to a more advanced, writing-focused platform.
+-      </p>
+-
+-      <p>Thank you.</p>
+-    </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
+-
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
+-</html>
+diff --git a/scripts/inject-navbar-safe.sh b/scripts/inject-navbar-safe.sh
+index a9adc58..1f94d69 100755
+--- a/scripts/inject-navbar-safe.sh
++++ b/scripts/inject-navbar-safe.sh
+@@ -1,28 +1,48 @@
+ #!/bin/bash
+ 
+-# Vérifie que le fichier cible est passé en argument
+-TARGET="$1"
+-NAVFILE="navblock.html"
+-BACKUP="${TARGET}.bak"
+-
+-if [[ -z "$TARGET" || ! -f "$TARGET" ]]; then
+-  echo "❌ Veuillez fournir un fichier HTML valide en argument."
+-  echo "Usage : ./inject-navbar-safe.sh fichier.html"
++# === CONFIGURATION ===
++NAVBAR_FILE="scripts/navblock.html"
++TARGET_FILE="philosophy.html"
++BACKUP_FILE="${TARGET_FILE}.bak"
++
++echo "🔧 Injection de la navbar depuis: $NAVBAR_FILE"
++echo "➡️  Cible : $TARGET_FILE"
++
++# === ÉTAPE 1 : Vérification des fichiers existants ===
++if [[ ! -f "$NAVBAR_FILE" ]]; then
++  echo "❌ ERREUR : Le fichier navbar ($NAVBAR_FILE) est introuvable."
+   exit 1
+ fi
+ 
+-if [[ ! -f "$NAVFILE" ]]; then
+-  echo "❌ Fichier $NAVFILE introuvable."
++if [[ ! -f "$TARGET_FILE" ]]; then
++  echo "❌ ERREUR : Le fichier cible ($TARGET_FILE) est introuvable."
+   exit 1
+ fi
+ 
+-echo "📦 Sauvegarde de $TARGET → $BACKUP"
+-cp "$TARGET" "$BACKUP"
++# === ÉTAPE 2 : Sauvegarde de la version actuelle ===
++cp "$TARGET_FILE" "$BACKUP_FILE"
++echo "✅ Sauvegarde effectuée → $BACKUP_FILE"
++
++# === ÉTAPE 3 : Suppression du header actuel dans le fichier cible ===
++# On supprime tout le bloc entre <header> et </header>
++echo "🧹 Suppression de l'ancien bloc <header>...</header>..."
++sed -i '' '/<header>/,/<\/header>/d' "$TARGET_FILE"
++echo "✅ Bloc <header> supprimé"
+ 
+-echo "🧹 Suppression du bloc <header> existant dans $TARGET"
+-sed -i '' -e '/<header>/,/<\/header>/d' "$TARGET"
++# === ÉTAPE 4 : Insertion de la nouvelle navbar ===
++# On insère juste après <body>
++echo "🛠️ Insertion de la nouvelle navbar après <body>..."
++awk -v insert="$(cat $NAVBAR_FILE)" '
++  /<body[^>]*>/ {
++    print;
++    print insert;
++    next
++  }
++  1
++' "$BACKUP_FILE" > "$TARGET_FILE"
+ 
+-echo "➕ Insertion du contenu de $NAVFILE juste après <body>"
+-awk '/<body>/ { print; system("cat navblock.html"); next } 1' "$TARGET" > temp && mv temp "$TARGET"
++echo "✅ Navbar injectée avec succès"
+ 
+-echo "✅ Navbar insérée avec succès dans $TARGET"
+\ No newline at end of file
++# === ÉTAPE 5 : Résumé final ===
++echo "✅ Fichier mis à jour : $TARGET_FILE"
++echo "🗃️ Ancienne version disponible ici : $BACKUP_FILE"
+\ No newline at end of file
+diff --git a/scripts/navblock.html b/scripts/navblock.html
+index 481aaa5..e8ac3b0 100644
+--- a/scripts/navblock.html
++++ b/scripts/navblock.html
+@@ -1,6 +1,5 @@
+ <header>
+   <button id="toggleNavbar" class="toggle-btn">☰</button>
+-
+   <div class="navbar">
+     <a href="/">Home</a>
+     <!-- Bloc Auteur -->
+@@ -9,34 +8,45 @@
+     <a href="/philosophy.html">Operating Principles</a>
+     <a href="/about.html">Trajectory</a>
+     <a href="/claim.html">Editorial Framework</a>
+-    <a href="/context.html"><span class="nav-icon">①</span> Personal Context</a>
++    <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++    <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+ 
+     <!-- Bloc Contexte -->
+     <div class="nav-section">Case Background</div>
++    <a href="/foundations.html">Founding Genesis</a>
++    <a href="/structure.html">Current Architecture</a>
++
+     <a href="/working-dynamics.html"
+-      ><span class="nav-icon">②</span> Working Dynamics</a
++      ><span class="nav-icon">③</span> Working Dynamics</a
+     >
+     <a href="/governance.html"
+       ><span class="nav-icon">③</span> Operational Authority</a
+     >
+-    <a href="/structure.html">Legal Structure</a>
+ 
+     <!-- Bloc Publications -->
+     <div class="nav-section">Articles</div>
+     <a href="/posts.html">Blog</a>
++    <a href="/confidential.html">Confidential</a>
+ 
+-    <!-- Bloc Références -->
++    <!-- Bloc Outils & Références -->
+     <div class="nav-section">Tools & References</div>
+     <a href="/glossary.html">Glossary</a>
++    <a href="/notes.html">Notes</a>
+     <a href="/search.html">Search</a>
+     <a href="/timeline.html">Timeline</a>
+     <a href="/updates.html">Logs</a>
+     <a href="/simulator.html">Simulator</a>
++    <a href="/archive.html">Download PDF</a>
+ 
+     <!-- Bloc Communauté et légal -->
+     <div class="nav-section">Community & Legal</div>
+     <a href="https://ob1.se/forum.html">Forum</a>
+     <a href="/legal.html">Legal</a>
++    <a href="/faq.html">Defense FAQ</a>
++    <a href="/reply.html">Reply Policy</a>
++    <a href="/exchanges.html">Letters and Pressure</a>
++    <a href="/cost.html">Research Cost</a>
++    <a href="/guide.html">Reading Help</a>
++    <a href="/press.html">Media Access</a>
+     <a href="/contact.html">Contact</a>
+-  </div>
+ </header>
+diff --git a/working-dynamics.html b/working-dynamics.html
+index 644e67f..6ec61df 100644
+--- a/working-dynamics.html
++++ b/working-dynamics.html
+@@ -16,30 +16,30 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-
++    
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
+-
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Structure</a>
+-
++        <a href="/structure.html">Current Architecture</a>
++    
+         <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
++          ><span class="nav-icon">③</span> Working Dynamics</a
+         >
+         <a href="/governance.html"
+           ><span class="nav-icon">③</span> Operational Authority</a
+         >
+-
++    
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-
++        <a href="/confidential.html">Confidential</a>
++    
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -48,13 +48,19 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+-
++        <a href="/archive.html">Download PDF</a>
++    
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
++        <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
++        <a href="/guide.html">Reading Help</a>
++        <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-      </div>
+     </header>
+     <main class="main-content">
+       <h1>Working Dynamics</h1>
