@@ -1,0 +1,572 @@
+diff --git a/foundations.html b/foundations.html
+index 3bdfed0..99fda79 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -260,14 +260,17 @@
+         unconscious after an altercation with Izakaya Koi’s security staff.
+         Police opened an investigation for assault.
+       </p>
+-
+-      <p>
+-        <strong>On June 18</strong>, the five-star <strong>Renaissance Hotel Malmö</strong> opens its doors — the first <span class="highlight">Marriott-branded location in Sweden</span>. Operated by <u>Luxury Hotels International Sweden AB</u> (org. no. <span class="highlight">559182-9386</span>), the hotel is based at <strong>Mäster Johansgatan 15</strong>, where <u>Quan will later operate</u>.
++        <p>
++          <strong>On June 18</strong>, the <strong>Renaissance Hotel Malmö</strong> opens — the first Marriott-branded location in Sweden. 
++          Operated by <a href="#">Luxury Hotels International Sweden AB</a> (org. no. 559182-9386), the venue is located at <strong>Mäster Johansgatan 15</strong>, 
++          <span style="color:#666;">where <a href="#">Quan will later operate</a></span>.
+         </p>
+-      
+         <p>
+-          The hotel features the <strong>Rosen Bar & Dining</strong>, a venue known for blending <span class="highlight">contemporary Swedish cuisine</span> with <u>Spanish influences</u>, focused on seasonal and local ingredients.
+-          </p>
++          The property includes <strong>approximately 128 rooms</strong> and was the <span style="color:#666;">first in Malmö to receive an official five-star rating</span>. 
++          It also features the <strong>Rosen Bar & Dining</strong>, a space blending modern Swedish cuisine with 
++          <a href="#">Spanish influences</a>, focused on seasonal and local ingredients.
++        </p>
++   
+ 
+       <h3>📍 <span style="font-size: 1.2rem; font-weight: 600">2011</span></h3>
+ 
+diff --git a/governance.html b/governance.html
+index 5b100c5..5f826ec 100644
+--- a/governance.html
++++ b/governance.html
+@@ -127,6 +127,63 @@
+         </details>
+       </section>
+ 
++      <h2>How I Learned to Look at Power</h2>
++      <section>
++        <h2>🧠 From Reluctance to Lucidity</h2>
++        <p>
++          I was raised by a man who never worked for anyone else. Self-employed all his life, my father was always working—nights, weekends, holidays. 
++          By age 16, I had fled that model. For decades, I rejected anything resembling business, ownership, or entrepreneurship.
++        </p>
++        <p>
++          From 30 to 35, I worked seriously—for the first and only time in my life—in software and IT. The experience reinforced my conviction: I couldn't survive corporate life. 
++          At 38, while freelancing for a developer, I discovered the world of startups. It wasn’t a passion. It was a survival instinct. 
++          <strong>Startups felt like the only exit route</strong> from wage dependency.
++        </p>
++      </section>
++      
++      <section>
++        <h3>⚙️ 2018 · <em>GotMyTeam</em> (Léo & Antoine)</h3>
++        <p><strong>Context:</strong> Retired and active hockey players building a LinkedIn-style app for elite athletes.</p>
++        <p>
++          I joined the project as the developer—older, disconnected, and without shared history. 
++          The partnership lacked structure, clarity, and direction. Communication gaps were obvious.
++        </p>
++        <blockquote>
++          <strong>Lesson:</strong> Complementary skills aren’t enough. <strong>You need shared vision, rhythm, and presence.</strong>
++        </blockquote>
++      </section>
++      
++      <section>
++        <h3>⚠️ 2020–21 · <em>Near-liquidation rescue</em> (Samuel)</h3>
++        <p><strong>Context:</strong> My former best friend, an entrepreneur battling alcohol issues, invited me to revive his collapsing business.</p>
++        <p>
++          Once onsite, I learned I’d be expected to cofound the relaunch with his partner—someone I’d never met. 
++          There had been <strong>no discussion, no alignment, no clear roles</strong>.
++        </p>
++        <blockquote>
++          I left after a few days, sensing legal and personal incoherence. <br />
++          <strong>Lesson:</strong> You don’t walk into a venture without deep clarity. Friendship is not a structure.
++        </blockquote>
++      </section>
++      
++      <section>
++        <h3>💡 2023–24 · <em>Product Review App</em> (Sarah)</h3>
++        <p><strong>Context:</strong> My partner at the time, a single mother on severance pay, asked to join a consumer review web app I was prototyping.</p>
++        <p>
++          We rented a shared office and started strong. But her availability, emotional bandwidth, and communication style weren’t compatible with the demands of a startup.
++          We hit friction. She shut down. The project ended.
++        </p>
++        <blockquote>
++          <strong>Lesson:</strong> <em>Founders must resolve ambiguity.</em> Energy and enthusiasm aren't enough. Alignment, honesty, and clarity are non-negotiable.
++        </blockquote>
++      </section>
++      
++      <section>
++        <p>
++          These three experiences shaped my understanding of what it means to build something with someone. 
++          <strong>A bad founding pair kills a good idea faster than anything else.</strong>
++        </p>
++      </section>
+       <p>
+         The ambiguity in responsibility at the heart of Quan’s management —
+         marked by <strong>avoidance</strong>, <strong>blurred roles</strong>,
+diff --git a/posts/On_Dissmissal_By_Text.jpg b/posts/On_Dissmissal_By_Text.jpg
+deleted file mode 100644
+index b9ba340..0000000
+Binary files a/posts/On_Dissmissal_By_Text.jpg and /dev/null differ
+diff --git a/posts/on-dismissal-sms-restaurant-sweden.html b/posts/on-dismissal-sms-restaurant-sweden.html
+index ec6ad8b..fab28cc 100644
+--- a/posts/on-dismissal-sms-restaurant-sweden.html
++++ b/posts/on-dismissal-sms-restaurant-sweden.html
+@@ -13,31 +13,54 @@
+     <header>
+       <button id="toggleNavbar" class="toggle-btn">☰</button>
+       <div class="navbar">
+-        <!-- Bloc Dossier d'Enquête -->
+-        <a href="/" aria-current="page">Home</a>
++        <a href="/">Home</a>
++        <!-- Bloc Auteur -->
++        <div class="nav-section">About the Author</div>
++    
++        <a href="/philosophy.html">Operating Principles</a>
++        <a href="/about.html">Trajectory</a>
++        <a href="/claim.html">Editorial Framework</a>
++        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
++        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++    
++        <!-- Bloc Contexte -->
++        <div class="nav-section">Case Background</div>
++        <a href="/foundations.html">Founding Genesis</a>
++        <a href="/structure.html">Current Architecture</a>
++    
++        <a href="/working-dynamics.html"
++          ><span class="nav-icon">③</span> Working Dynamics</a
++        >
++        <a href="/governance.html"
++          ><span class="nav-icon">③</span> Operational Authority</a
++        >
++    
++        <!-- Bloc Publications -->
++        <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+-        <a href="/claim.html">Position Framework</a>
+-        <hr />
+-        <!-- Bloc Références -->
+-        <strong>Case Dossier</strong>
+-        <a href="/context.html">Context</a>
+-        <a href="/working-dynamics.html">Working Dynamics</a>
+-<a href="/governance.html">Governance</a>
+-        <a href="/philosophy.html">Mindset</a>
+-        <hr />
+-        <!-- Bloc Références -->
+-        <strong>References</strong>
++        <a href="/confidential.html">Confidential</a>
++    
++        <!-- Bloc Outils & Références -->
++        <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+-<a href="/search.html">Search</a>        <a href="/timeline.html">Timeline</a>
+-        <a href="/updates.html">Activity Logs</a>
+-        <hr />
+-        <!-- Bloc Communauté et Légal -->
+-        <strong>Other</strong>
++        <a href="/notes.html">Notes</a>
++        <a href="/search.html">Search</a>
++        <a href="/timeline.html">Timeline</a>
++        <a href="/updates.html">Logs</a>
++        <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
++    
++        <!-- Bloc Communauté et légal -->
++        <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+-        <a href="/about.html">Author</a>
++        <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
++        <a href="/guide.html">Reading Help</a>
++        <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+-<a href="/simulator.html">Simulator</a>      </div>
+     </header>
+     <main class="main-content">
+         <section class="article-meta">
+diff --git a/sector.html b/sector.html
+index 1b4293f..c6f46b5 100644
+--- a/sector.html
++++ b/sector.html
+@@ -20,8 +20,12 @@
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
++        <a href="/sector.html"
++          ><span class="nav-icon">①</span>Kitchen Structures</a
++        >
++        <a href="/context.html"
++          ><span class="nav-icon">②</span> Personal Context</a
++        >
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+@@ -61,49 +65,292 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+-
+     <main class="main-content">
+       <h1>📃 Structural Realities in the Restaurant Sector</h1>
+ 
+       <p class="lead">
+-        This page opens a fourth dimension to the <strong>Narrative Grid</strong>: the sectoral backdrop that shaped how I experienced work before Quan. It contrasts two kitchen cultures—one respectful, one dismissive—while grounding both in economic realities.
++        This page opens a fourth dimension to the
++        <strong>Narrative Grid</strong>: the sectoral backdrop that shaped how I
++        experienced work before Quan. It contrasts two kitchen cultures—one
++        respectful, one dismissive—while grounding both in economic realities.
+       </p>
+-  
++
+       <hr />
+-  
++
+       <h2>④ Kitchen Structure: A Sectoral Overview</h2>
+       <ul>
+-        <li>Average net margins for Swedish restaurants remain between <strong>2.5% and 8%</strong>, with intense seasonal fluctuations.</li>
+-        <li>Informal infractions are common: undocumented overtime, undeclared staff, hybrid contract practices.</li>
+-        <li>Structural pressure is widespread—but how that pressure is distributed varies radically.</li>
++        <li>
++          Average net margins for Swedish restaurants remain between
++          <strong>2.5% and 8%</strong>, with intense seasonal fluctuations.
++        </li>
++        <li>
++          Informal infractions are common: undocumented overtime, undeclared
++          staff, hybrid contract practices.
++        </li>
++        <li>
++          Structural pressure is widespread—but how that pressure is distributed
++          varies radically.
++        </li>
+       </ul>
+-  
++
+       <h2>Case Comparison: A Restaurant That Let Me Breathe</h2>
+       <ul>
+-        <li>I spent 14 months as a dishwasher in a high-volume establishment where I was paid on time, listened to, and respected.</li>
+-        <li>We were encouraged to rest during downtime. No one punished phone use during calm periods.</li>
+-        <li>The chef wanted smooth operations and no drama. That attitude shaped the atmosphere for everyone.</li>
++        <li>
++          I spent 14 months as a dishwasher in a high-volume establishment where
++          I was paid on time, listened to, and respected.
++        </li>
++        <li>
++          We were encouraged to rest during downtime. No one punished phone use
++          during calm periods.
++        </li>
++        <li>
++          The chef wanted smooth operations and no drama. That attitude shaped
++          the atmosphere for everyone.
++        </li>
+       </ul>
+-  
+-      <h2>Trust as Compensation: What Makes a Rule-Bending Workplace Acceptable</h2>
++
++      <h2>
++        Trust as Compensation: What Makes a Rule-Bending Workplace Acceptable
++      </h2>
+       <ul>
+-        <li>The law may not always be followed, but respect can compensate. That was the deal.</li>
+-        <li>At that restaurant, I had access to quality meals, flexible breaks, and autonomy—all without fear.</li>
+-        <li>I was even offered a raise without asking. These gestures forged a kind of social contract.</li>
++        <li>
++          The law may not always be followed, but respect can compensate. That
++          was the deal.
++        </li>
++        <li>
++          At that restaurant, I had access to quality meals, flexible breaks,
++          and autonomy—all without fear.
++        </li>
++        <li>
++          I was even offered a raise without asking. These gestures forged a
++          kind of social contract.
++        </li>
+       </ul>
+-  
++
++      <h2>Culture of Secrecy: A Slow Realization</h2>
++
++      <p>
++        My background in the restaurant sector spans about two years in
++        total—mostly split between short experiences in 2011–2012 and a 14-month
++        stretch at Da Peppe Due in Stockholm. That last position was by far the
++        longest, and came at a time when I was more mature, more curious about
++        workplace dynamics, and more attentive to what makes a business
++        function—or fail.
++      </p>
++
++      <p>
++        One of my earliest shocks came while offering to work two unpaid trial
++        hours at a small restaurant (RIPIG, possibly "Le Port Poilu"). The owner
++        looked alarmed and insisted I clock in immediately. Her tone was sharp,
++        almost canonical—marking a deep fear of external scrutiny. That reaction
++        made visible a rule I hadn’t seen, and it revealed something else too: a
++        sector where legality is not about doing things right, but about not
++        doing them in view.
++      </p>
++
++      <p>
++        At Da Peppe Due, I witnessed a refined version of this tendency: a
++        culture of silence wrapped in ritualized vigilance. The owner rarely
++        made things explicit, but his presence shaped everyone’s behavior. It
++        wasn’t fear—it was calibration. A kind of managerial gravity that set
++        the rhythm without ever speaking.
++      </p>
++
++      <p>
++        My manager maintained an extraordinary level of control: focused,
++        composed, and perpetually measured in both tone and presence. At first,
++        I interpreted this as the hallmark of a serious entrepreneur—someone who
++        simply took his business seriously. But over time, I began to sense
++        something more layered: a system of guardedness, a constant filtering of
++        visibility, and an authority built not through charisma but through
++        caution.
++      </p>
++
++      <p>
++        What struck me most was the sheer generosity. I was offered a solid
++        salary from day one—handwritten on paper—and even invited to ask for
++        more. I could eat virtually anything from the kitchen, including premium
++        cuts of organic beef, desserts, or crustaceans. The owner himself would
++        sometimes step in to replace the pizza chef and ask, “Want one or two
++        tonight?” It wasn’t just tolerated—it was offered.
++      </p>
++
++      <p>
++        I eventually understood that this generosity had a cost—or at least a
++        logic. It created a climate of loyalty, but also of vigilance. You could
++        enjoy the privileges, but only if you remained within invisible limits.
++        Nothing was said, yet everything was monitored. It was a world of
++        unspoken contracts: abundance, yes—but never excess.
++      </p>
++
++      <p>
++        Dishwashing was structured in flexible pairs. If one of us called in
++        sick or didn’t feel like coming, the other would cover—and no one
++        interfered. For our manager, the only requirement was that the absence
++        remain invisible. No explanations, no approvals. Just quiet efficiency.
++      </p>
++
++      <p>
++        I could divide my workload as I pleased. With rare exceptions (like
++        cleaning the toilets), I was free to take breaks, disappear for 45
++        minutes, or even run errands— as long as the kitchen team didn’t need
++        me. I was hired to start at 3 p.m., even though nothing ever happened
++        before 5. These were paid hours. I could be scrolling Instagram, and no
++        one cared. What mattered was presence when it mattered.
++      </p>
++
++      <p>
++        This liberty wasn’t just practical—it was emotional. My manager didn’t
++        micromanage, didn’t interrogate my movements. When someone offers you
++        that kind of trust, you want to repay it. It made me feel loyal. And
++        even now, I find it hard to criticize him publicly— not because
++        everything was right, but because the generosity was real. I was never
++        questioned, even when taking long pauses or lounging in client spaces.
++      </p>
++
++      <p>
++        Over time, I began to notice patterns that suggested not everyone was
++        paid the same way—or through the same channels. Some colleagues worked
++        full schedules but seemed to report far less on paper. Others had side
++        arrangements I could only guess at. It created a sense of hierarchy not
++        based on title or skill, but on financial entanglement. The more
++        dependent they were, the worse they behaved—with one toxic colleague
++        seemingly untouchable.
++      </p>
++
++      <p>
++        I always carried a stainless steel flask—a CamelBak-style thermos that
++        kept liquids cold and unidentifiable. For me, it was normal: I train
++        four to five days a week, run before shifts, mix powdered protein
++        drinks, and avoid alcohol entirely. I’ve never bought alcohol in Sweden
++        without my partner—and I’ve never touched it before a shift.
++      </p>
++
++      <p>
++        One day, the flask became a problem. Whispers started. Maybe I was
++        drinking. Maybe that’s why I was so intense. I responded by creating a
++        WhatsApp group and proposing alcohol tests with a twist: if anyone
++        failed, they owed €5 or had to run 10km. I thought I was being funny. I
++        wasn’t.
++      </p>
++
++      <p>
++        My manager left the group immediately. He drank moderately, but my
++        message hit a nerve. Some colleagues apologized. Others withdrew. And I
++        realized something: in this world, what you carry becomes what people
++        project. Suspicion doesn't require evidence—it just needs a vessel no
++        one can see through.
++      </p>
++
++      <p>
++        I don’t drink beer. I never have. To me, beer is empty, the drink of
++        resignation—not of joy. If I drink at all, it’s a glass of wine with
++        something sacred: smoked sausage, ham, cheese, dark bread. I never
++        finish the glass. I save it for later, like truffles or caviar. Alcohol,
++        for me, is a ritual—never an escape.
++      </p>
++
++      <p>
++        I run. I lift. I train four or five times a week. I sleep well. I eat
++        well. And that gives you a charge— a sort of extroverted vitality that
++        others notice, and often resent. No one in the kitchen trained. I was
++        the only one moving fast, lifting crates, running errands, staying
++        sharp. And somehow, I became the suspect.
++      </p>
++
++      <p>
++        Being a dishwasher is physical. You don’t do it half-awake. You can’t.
++        It demands speed, coordination, energy. And so yes, I found it
++        obscene—being the one carrying, lifting, helping, and still being
++        whispered about. Being accused of drinking, simply because I was alive
++        in a place that ran on exhaustion.
++      </p>
++
++      <p>
++        The kitchen was mostly Turkish—my boss, most of the chefs. There was a
++        Syrian dishwasher like me, and one Indonesian waitress. There was also a
++        Greek cook, Yannis, who had been there long before the current
++        ownership. His behavior was toxic—loud, degrading, sometimes cruel—and
++        yet tolerated. My boss would lower his head, literally, and wait. He
++        knew Yannis was planning to leave and open a food stand near a stadium.
++        It was easier to endure him than confront him.
++      </p>
++
++      <p>
++        Despite everything, generosity flowed. Friends of the owner ate for
++        free—former staff, restaurant colleagues, even a few children. He never
++        advertised it. They didn’t come every day. But it was known: if you had
++        once belonged to this place, you could still be fed. It built loyalty in
++        quiet, invisible ways.
++      </p>
++
++      <p>
++        He paid me fully and on time. He once wired money within two hours after
++        a delay. He offered me more than I asked. He listened when I had
++        something to say. He once sent me a Facebook request—which I declined,
++        not out of spite, but because I don’t maintain casual social links. He
++        wasn’t cold, he wasn’t dominant, and he wasn’t trying to prove anything.
++        He was just kind.
++      </p>
++      <p>
++        And because of that, I can’t betray him. I’ve seen things, yes. But I
++        won’t speak of them here. If I’m speaking to you now, it’s because he
++        gave me the space and dignity to survive.
++      </p>
++      <p>
++        I had a clash within the first three months—sparked not by the boss, but
++        by a server who tried to give me orders like I was beneath him. I
++        belonged to the kitchen, not the floor, and I made that clear. After my
++        earlier scandal about the flask, this incident was another fire. My boss
++        pulled me aside. He didn’t yell, but the message was clear: calm down—or
++        it ends here.
++      </p>
++
++      <p>
++        So I calmed down. I learned the order of things. I stayed fourteen
++        months. No one pushed me again. Even the manager kept a distance. People
++        knew: I spoke up, and I knew how to write. I wasn’t explosive—but I
++        wasn’t passive. And the boss—he stayed kind. Even then. That’s why I
++        never betrayed him.
++      </p>
++
++      <p>
++        When you work for someone generous, someone who listens, someone who
++        pays you well and lets you eat freely, you want to give something back.
++        I always filled in when needed. I did extra cleaning. I tried to make
++        him proud—despite my temper. That balance worked. We understood each
++        other. And that’s what kept it all going.
++      </p>
++
+       <h2>Quan's Failure Was Not Structural—It Was Personal</h2>
+       <ul>
+-        <li>Quan's setup wasn’t impossible. The real failure came from how one person enforced it.</li>
+-        <li><span class="highlight">Sahar's attitude combined legal opacity with open hostility</span>.</li>
+-        <li>Had someone else been in charge, I might have stayed. It wasn't the floor plan. It was the leadership.</li>
++        <li>
++          Quan's setup wasn’t impossible. The real failure came from how one
++          person enforced it.
++        </li>
++        <li>
++          <span class="highlight"
++            >Sahar's attitude combined legal opacity with open hostility</span
++          >.
++        </li>
++        <li>
++          Had someone else been in charge, I might have stayed. It wasn't the
++          floor plan. It was the leadership.
++        </li>
+       </ul>
+-  
++
+       <h2>Closing Note: Contextual Shielding</h2>
+       <ul>
+-        <li>This section exists to preempt bad-faith critiques that I was unstable or unrealistic.</li>
+-        <li>It shows that I thrived in another setting, under pressure, with high standards—as long as mutual respect was there.</li>
++        <li>
++          This section exists to preempt bad-faith critiques that I was unstable
++          or unrealistic.
++        </li>
++        <li>
++          It shows that I thrived in another setting, under pressure, with high
++          standards—as long as mutual respect was there.
++        </li>
+         <li>This is not a romanticized detour. It's structural testimony.</li>
+       </ul>
+     </main>
+diff --git a/structure.html b/structure.html
+index 88e280c..efcb580 100644
+--- a/structure.html
++++ b/structure.html
+@@ -89,24 +89,16 @@
+       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2017</span></h3>
+       <p><strong>On July 14</strong>, <a href="#">Sliders and Shakes AB</a> (559119-7628) was created by <strong>Saahil</strong> (37), <strong>Alexander Zinnert</strong> (44) and <strong>Darine El Nasser</strong> (39). The team launched a venue focused on miniature gourmet burgers and handcrafted milkshakes, based at <a href="#">Malmö Central Station</a>.</p>
+ 
+-      <p>A few months later, <strong>Darine</strong> was replaced by <strong>Sachin Gore</strong> (36), former Five Guys UK national director. At that point, <strong>Saahil</strong> and <strong>Zinnert</strong> held the majority of shares (50/50), with Zinnert as chairman, Saahil as board member, and Gore joining as deputy.</p>      
++      <p>A few months later, <strong>Darine</strong> was replaced by <strong>Sachin Gore</strong> (36), former Five Guys UK national director. At that point, <strong>Saahil</strong> and <strong>Alexander</strong> held the majority of shares (50/50), with Zinnert as chairman, Saahil as board member, and Gore joining as deputy.</p>      
+       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2018</span></h3>
+       <p>
+-    
+-        <strong>On February 1, 2018</strong>, following negotiations with
+-        <span class="highlight">Balder (556525-6905)</span>, the
+-        <strong>Elite Hotels of Sweden</strong> group (5562485259) secured the
+-        <u>operating rights</u> to the <strong>Renaissance Malmö Hotel</strong>,
+-        replacing <span class="highlight">Marriott</span> as operator.
++        <strong>On February 1</strong>, following negotiations with Balder (556525-6905), <strong>Elite Hotels of Sweden</strong> (5562485259) 
++        secured operating rights to the former <span style="color:#666;">Renaissance hotel</span> — a <span style="color:#666;">luxury-label franchise operated under the Marriott group</span>.
+       </p>
+-
+       <p>
+-        The dedicated subsidiary <strong>Elite Rosen Malmö AB</strong> assumed
+-        control and temporarily <u>rebranded the venue</u> as
+-        <strong>Elite Hotel Adlon</strong>, a transitional identity during the
+-        franchise handover phase.
++        Its dedicated vehicle <strong>Elite Rosen Malmö AB</strong> assumed control and temporarily <a href="#">rebranded the venue</a> as <strong>Elite Hotel Adlon</strong>. 
++        The transition marked both the <span style="color:#666;">end of the Renaissance identity</span> and the likely <span style="color:#666;">loss of its five-star status</span>.
+       </p>
+-
+       <p>
+         📄 <strong>On June 25</strong>, a company
+         <strong>HSSC Event AB</strong> (registration no.
+@@ -187,8 +179,13 @@
+           net margin of 0.49%</u>. Operations ran on <a href="notes.html#note-netmargin" class="subtle-link"><strong>flux tendu</strong></a>, with minimal retention.</p>
+ <p>Personnel costs absorbed <strong>49%</strong> of gross revenue, while <u>dividends issued by Chudasama Invest AB</u> reached <span class="highlight">56,855 SEK/month</span> — representing <strong>≈ 90%</strong> of the year’s total profits. This confirms that <strong>Chudasama Invest AB</strong> was, at the time, <u>the sole extraction vehicle</u>.</p>
+ 
+-<p><u>Slide & Check AB</u>, also held by Saahil Chudasama, showed <strong>no revenue activity</strong> and <span class="highlight">no declared dividends</span> in 2019. The company posted a negative balance sheet of <strong>–45,000 SEK</strong>, operating at a loss with no impact on the year’s distribution flows.</p>
++<p><u>Slides & Shakes AB</u>, also held by Saahil Chudasama, showed <strong>no revenue activity</strong> and <span class="highlight">no declared dividends</span> in 2019. The company posted a negative balance sheet of <strong>–45,000 SEK</strong>, operating at a loss with no impact on the year’s distribution flows.</p>
+ 
++<p>
++  Official records confirm that <strong>no dividends were distributed</strong> by Restaurang Steakhouse Lilla Torg AB between 2019 and 2023. 
++  The <strong>sole registered beneficial owner</strong> remains Ingrid Jeanette Chudasama, and 
++  <strong>Saahil does not appear in any ownership or legal capacity</strong> during this period.
++</p>
+       <h3>📌 <span style="font-size: 1.2rem; font-weight: 600">2020</span></h3>
+ 
+       <p>
+@@ -219,8 +216,6 @@
+         designed to channel earnings while shielding visible ownership.
+       </p>
+ 
+-      📌 <strong>2020</strong>
+-
+       <p><strong>As of December 31</strong>, <u>HSSC Event AB</u> employed <span class="highlight">10 people</span> and generated <span class="highlight">16.3 million SEK</span> in revenue — <u>23% down</u> from 2019. Despite this, net profit rose to <strong>≈1.18 million SEK</strong> — a <u>+1270% increase</u> — yielding a <strong>net margin of 7.25%</strong>. <span class="highlight">No dividends were issued</span>, and profits were fully retained.</p>
+       
+       <p>This marks a break from the previous <a href="notes.html#fluxtendu" class="subtle-link">flux tendu</a> logic, suggesting a strategic pause in distribution. The change coincides with the creation of KEHDA Holding AB (30 Sept), yet no direct outflows were recorded that year.</p>
