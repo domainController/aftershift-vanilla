@@ -1,10 +1,13 @@
 {
   "type": "module",
   "devDependencies": {
+    "cheerio": "^1.0.0",
     "husky": "^8.0.0",
-    "cheerio": "^1.0.0"
+    "vite-plugin-purgecss": "^0.2.13"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "prepare": "husky install",
     "generate-home-updates": "node scripts/generate-home-updates.mjs",
     "prepare-commit": "npm run generate-home-updates && npm run generate-updates",

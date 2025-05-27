@@ -7,6 +7,26 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.aftershift.se"]);
+      _paq.push(["setDomains", ["*.aftershift.se"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://aftershift.matomo.cloud/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = "https://cdn.matomo.cloud/aftershift.matomo.cloud/matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
     <!-- End Matomo Code -->
   </head>
   <body>
@@ -20,38 +40,42 @@
         <a href="/philosophy.html">Operating Principles</a>
         <a href="/about.html">Trajectory</a>
         <a href="/claim.html">Editorial Framework</a>
-        <a href="/context.html"
-          ><span class="nav-icon">①</span> Personal Context</a
-        >
+        <a href="/sector.html">Kitchen Culture</a>
+        <a href="/context.html"> Personal Context</a>
 
         <!-- Bloc Contexte -->
         <div class="nav-section">Case Background</div>
         <a href="/foundations.html">Founding Genesis</a>
-        <a href="/structure.html">Setup Path</a>
+        <a href="/structure.html">Current Architecture</a>
 
-        <a href="/working-dynamics.html"
-          ><span class="nav-icon">②</span> Working Dynamics</a
-        >
-        <a href="/governance.html"
-          ><span class="nav-icon">③</span> Operational Authority</a
-        >
+        <a href="/working-dynamics.html"> Working Dynamics</a>
+        <a href="/governance.html"> Operational Authority</a>
 
         <!-- Bloc Publications -->
         <div class="nav-section">Articles</div>
         <a href="/posts.html">Blog</a>
+        <a href="/confidential.html">Confidential</a>
 
-        <!-- Bloc Références -->
+        <!-- Bloc Outils & Références -->
         <div class="nav-section">Tools & References</div>
         <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
         <a href="/search.html">Search</a>
         <a href="/timeline.html">Timeline</a>
         <a href="/updates.html">Logs</a>
         <a href="/simulator.html">Simulator</a>
+        <a href="/archive.html">Download PDF</a>
 
         <!-- Bloc Communauté et légal -->
         <div class="nav-section">Community & Legal</div>
         <a href="https://ob1.se/forum.html">Forum</a>
         <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/reply.html">Reply Policy</a>
+        <a href="/exchanges.html">Letters and Pressure</a>
+        <a href="/cost.html">Research Cost</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
         <a href="/contact.html">Contact</a>
       </div>
     </header>
@@ -63,12 +87,7 @@
         font-family: 'Source Sans Pro', sans-serif;
       "
     >
-      <h1>
-
-
-
-
-Perspectives and Ideas</h1>
+      <h1>Perspectives and Ideas</h1>
       <small class="timestamp" style="display: block; text-align: center"
         >Last updated: Thursday, May 1, 2025 at 02:20 AM</small
       >
@@ -85,21 +104,5 @@ Perspectives and Ideas</h1>
         broader context are invited to explore the rationale behind this log.
       </p>
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
-
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+  </body>
 </html>

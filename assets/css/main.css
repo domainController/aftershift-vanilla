@@ -290,13 +290,47 @@ details.info-box[open] {
 
 
 /* Contenu principal décalé */
-.main-content {
+:root {
+  --sidebar-desktop-width: 160px;
+  --sidebar-mobile-width: 70vw;
+}
 
-  margin: auto;
-  flex-grow: 1;
-  padding: 2rem;
-  transition: margin-left 0.3s ease-in-out;
+/* style par défaut : contenu centré */
+.main-content {
   max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: margin 0.3s ease-in-out;
+}
+
+/* À l’ouverture desktop : on décale de la moitié de l’espace restant + la sidebar */
+@media (min-width: 641px) {
+  body.nav-open .main-content {
+    /* 
+      Explication calc :
+      100% - sidebar - 640px = largeur libre restante ;
+      on prend la moitié pour margin-left ;
+      on ajoute la largeur de la sidebar pour décaler complètement.
+    */
+    margin-left: calc(
+      var(--sidebar-desktop-width)
+      + (100% - var(--sidebar-desktop-width) - 640px) / 2
+    );
+    margin-right: auto;
+  }
+}
+
+/* Mobile : on laisse la sidebar en overlay (pas de push), 
+   donc on désactive tout décalage pour que le texte reste lisible */
+@media (max-width: 640px) {
+  /* On ne touche pas à main-content en nav-open */
+  body.nav-open .main-content {
+    margin-left: auto;
+    margin-right: auto;
+    /* width reste à 100% */
+  }
 }
 
 /* Mobile: comportement responsive */
@@ -311,12 +345,8 @@ details.info-box[open] {
     transform: translateX(-100%);
   }
 
-  .navbar.show {
-    transform: translateX(0);
-  }
 
   .main-content {
-    margin-left: 0;
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -324,9 +354,7 @@ details.info-box[open] {
 }
 
 
-.navbar.collapsed + .main-content {
-  margin-left: 0;
-}
+
 
 
 /* === Sidebar retractable (modifié par ChatGPT) === */
@@ -334,10 +362,6 @@ details.info-box[open] {
   transition: transform 0.3s ease-in-out;
   transform: translateX(0);
   z-index: 10;
-}
-
-.navbar.collapsed {
-  transform: translateX(-100%);
 }
 
 
@@ -371,19 +395,21 @@ details.info-box[open] {
   font-size: 0.9rem;
 }
 
+
 a.subtle-link {
-  color: #4c6e91; /* Gris-bleu doux */
+  color: inherit;
+  font-weight: inherit; /* ← empêche le lien d'être en gras */
   text-decoration: underline dotted;
-  text-underline-offset: 3px;
-  text-decoration-color: #a0b8ce;
-  font-weight: 600;
-  transition: color 0.2s ease-in-out;
+  text-decoration-thickness: 1px;
+  background-color: #fff9cc; /* jaune doux, très pâle */
+  padding: 0 2px;
+  border-radius: 2px;
 }
 
 a.subtle-link:hover {
-  color: #203851; /* Teinte plus foncée au survol */
-  text-decoration-color: #203851;
+  background-color: #fff3a6;
 }
+
 
 .nav-section {
   background-color: #e5e7eb;         /* Gris clair uniforme */

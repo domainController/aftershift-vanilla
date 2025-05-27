@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aftershift Blog</title>
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+    <link rel="stylesheet" crossorigin href="/assets/index-CTQp0NqH.css">
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <div class="nav-section">About the Author</div>
+
+        <a href="/philosophy.html">Operating Principles</a>
+        <a href="/about.html">Trajectory</a>
+        <a href="/claim.html">Editorial Framework</a>
+        <a href="/sector.html">Kitchen Culture</a>
+        <a href="/context.html"> Personal Context</a>
+
+        <!-- Bloc Contexte -->
+        <div class="nav-section">Case Background</div>
+        <a href="/foundations.html">Founding Genesis</a>
+        <a href="/structure.html">Current Architecture</a>
+
+        <a href="/working-dynamics.html"> Working Dynamics</a>
+        <a href="/governance.html"> Operational Authority</a>
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/posts.html">Blog</a>
+        <a href="/confidential.html">Confidential</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/search.html">Search</a>
+        <a href="/timeline.html">Timeline</a>
+        <a href="/updates.html">Logs</a>
+        <a href="/simulator.html">Simulator</a>
+        <a href="/archive.html">Download PDF</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="https://ob1.se/forum.html">Forum</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/faq.html">Defense FAQ</a>
+        <a href="/reply.html">Reply Policy</a>
+        <a href="/exchanges.html">Letters and Pressure</a>
+        <a href="/cost.html">Research Cost</a>
+        <a href="/guide.html">Reading Help</a>
+        <a href="/press.html">Media Access</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="legal-container">
+        <h1>
+          The Inconvenient Hours<br /><small class="subtitle"
+            >A Tactical Journal of Legal Inertia and Employer Neglect in a
+            High-end Malmö Restaurant.</small
+          >
+        </h1>
+      </div>
+      <div style="text-align: center; margin-top: 10px; margin-bottom: 10px">
+        <img
+          src="/assets/20231026_155218-CWjtj9kB.jpg"
+          alt="AfterShift Banner"
+          style="max-width: 40%; height: auto; border-radius: 8px"
+        />
+      </div>
+      <div class="legal-container">
+        <h2 class="centered">⚠️ This site is a draft sandbox</h2>
+        <p style="line-height: 1.6em">
+          This is a <strong>live working draft</strong> — a sandbox to develop
+          <u>core structural elements</u>:
+          <span class="highlight">legal narrative grids</span>,
+          <span class="highlight">ownership timelines</span>,
+          <span class="highlight">operating principles</span>, and
+          <span class="highlight">foundational trajectories</span>. These are
+          the internal scaffolding for future articles.
+        </p>
+        <p style="line-height: 1.6em">
+          A few early texts may appear here as warm-up material, but the
+          complete version will eventually be published under a
+          <u>different domain</u> and
+          <strong>fully optimised for long-form SEO content</strong> and
+          <strong>strategic legal storytelling</strong>.
+        </p>
+      </div>
+      <!-- START INDEX UPDATES -->
+      <div class="legal-container">
+        <h2>✍️ Sunday 25 May 2025</h2>
+        <ul>
+          <li>
+            ✍️ 03:00:31 – :content: enriched sector.html and governance.html
+            with co-founder insights, added new paragraph on cash-out logic and
+            shifted tone from ‘fuck-you money’ to purpose-driven work
+          </li>
+        </ul>
+      </div>
+      <!-- END INDEX UPDATES -->
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>
