@@ -142,6 +142,23 @@
           past 6 months, I’ve been living in Malmö, where a
           <a href="/context.html">new chapter</a> has quietly started.
         </p>
+        <p>
+          Since March
+          <a
+            href="https://github.com/domainController/openheart/commits/layout-v1-profile/"
+            class="subtle-link"
+            >21</a
+          >
+          , 2025, I had begun working on the development of a
+          <a
+            href="https://github.com/domainController/openheart"
+            class="subtle-link"
+            >dating app</a
+          >
+          mvp. But on April 13, I decided to put this work on hold in order to
+          fully dedicate myself to the research, writing, and development of
+          <strong>Aftershift.se</strong>.
+        </p>
         <p class="disclaimer">
           ⚖️ This biography reflects the author's personal experience and legal
           observations. It does not constitute legal advice or institutional
@@ -150,21 +167,22 @@
         </p>
       </section>
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
 
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
 </html>
