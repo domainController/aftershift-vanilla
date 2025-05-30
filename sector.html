@@ -168,7 +168,8 @@
           >
           people start restaurants because it’s what they know — not because
           it’s scalable or defensible. Most restaurants end up competing
-          locally, with no moat.”</em
+          locally, with
+          <a href="notes.html#note-no-moat" class="note-link">no moat</a>.”</em
         >
         <br />
         <span class="quote-source subtle-link"
@@ -176,6 +177,12 @@
         >
       </blockquote>
 
+      <a href="#note-no-moat">test link</a>
+
+      <details id="note-no-moat">
+        <summary>Test note</summary>
+        <p>It works if you see this open after clicking the link above.</p>
+      </details>
       <p><u>Low Margins</u></p>
 
       <p>
@@ -219,8 +226,7 @@
         <strong>9.5%</strong> net margin in 2023. Carlsberg followed with
         <strong>14.7%</strong> on SEK 111.87 billion. Steakhouse Lilla Torg AB
         reached <strong>SEK 13.2 million</strong> in revenue with
-        <strong>7.2%</strong> margin. Mello Yello led the square with a turnover
-        above <strong>SEK 15 million</strong>.
+        <strong>7.2%</strong> margin.
       </p>
       <p>
         Personalkollen posted a margin of <strong>38.7%</strong> on SEK 78
@@ -737,6 +743,19 @@
       </ul>
     </main>
     <script>
+      // open <details> when anchor is targeted
+      function openDetailsFromHash() {
+        const hash = window.location.hash;
+        if (hash) {
+          const details = document.querySelector(hash);
+          if (details && details.tagName.toLowerCase() === "details") {
+            details.setAttribute("open", true);
+            details.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+      window.addEventListener("DOMContentLoaded", openDetailsFromHash);
+      window.addEventListener("hashchange", openDetailsFromHash);
       // Script pour la sidebar
       const toggleBtn = document.getElementById("toggleNavbar");
       const navbar = document.querySelector(".navbar");

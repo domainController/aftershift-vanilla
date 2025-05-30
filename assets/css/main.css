@@ -411,6 +411,20 @@ a.subtle-link:hover {
 }
 
 
+a.note-link {
+  color: inherit;
+  font-weight: inherit; /* empêche le gras */
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  background-color: #d7e9f8; /* bleu très doux */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+a.note-link:hover {
+  background-color: #d3eaff; /* bleu pastel un peu plus visible */
+}
+
 .nav-section {
   background-color: #e5e7eb;         /* Gris clair uniforme */
   margin: 0 -1rem;                   /* Annule le padding horizontal de .navbar */
