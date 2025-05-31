@@ -1,0 +1,1220 @@
+diff --git a/governance.html b/governance.html
+index f41df90..d853d96 100644
+--- a/governance.html
++++ b/governance.html
+@@ -157,6 +157,13 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/tear.jpg"
++          alt=""
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <section>
+         <h2>Entrepreneur Prototype</h2>
+ 
+@@ -185,6 +192,13 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/schedule.jpg"
++          alt="Conteneur de papier mouillé et caisse de bouteilles vides derrière Da Peppe Due"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <section>
+         <h2>Restaurateur Archetype</h2>
+         <p>
+@@ -221,6 +235,14 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/plumb.jpg"
++          alt="Conteneur de papier mouillé et caisse de bouteilles vides derrière Da Peppe Due"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
+       <section>
+         <h2>Cofounding Teams</h2>
+         <p>
+@@ -250,7 +272,8 @@
+ 
+       <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
+         <img
+-          src="./assets/img/bathroom_wirebin_da_peppe_due_2023.jpg"
++          src="./assets/img/desk.webp
++        "
+           alt=""
+           style="max-width: 100%; height: auto; border-radius: 8px"
+         />
+@@ -278,7 +301,14 @@
+           Complementary skills aren’t enough.
+           <strong>You need shared vision, rhythm, and presence.</strong>
+         </section>
+-
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/RegusPanel.jpeg
++        "
++            alt=""
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
+         <section id="governance-fragment">
+           <h2>
+             Late 2021 ·
+@@ -292,7 +322,7 @@
+           <p><strong>Founding Team:</strong> Samuel, Maggie & Patrice</p>
+ 
+           <p>
+-            <strong>Value Proposition:</strong> Installation of
++            <strong>Value Proposition:</strong> financing of
+             <mark style="background-color: #ccc"
+               >heat pumps and solar panels</mark
+             >, financed through a mix of <u>green public subsidies</u> and
+@@ -356,7 +386,7 @@
+             <a
+               href="https://www.village-justice.com/articles/critere-classification-des,16989.html"
+               class="subtle-link"
+-              ><strong>"fictitious company"</strong></a
++              ><strong>"legal fiction"</strong></a
+             >
+             <a href="#note-fiction" class="note-link"
+               >(<em>fiction juridique</em>)</a
+@@ -385,6 +415,14 @@
+           </p>
+         </section>
+ 
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/shelves.webp
++        "
++            alt=""
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
+         <section>
+           <h2>2023–24 Justisse</h2>
+           <p><strong>Founding Team:</strong> Sara & Patrice</p>
+@@ -408,7 +446,7 @@
+ 
+         <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
+           <img
+-            src="./assets/img/backyard_recycling_dapeppedue_2024.jpg"
++            src="./assets/img/printer.jpg"
+             alt="Conteneur de papier mouillé et caisse de bouteilles vides derrière Da Peppe Due"
+             style="max-width: 100%; height: auto; border-radius: 8px"
+           />
+@@ -618,6 +656,13 @@
+         disconnected from declared payroll operations.
+       </p>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/ultrawide.jpg"
++          alt="Conteneur de papier mouillé et caisse de bouteilles vides derrière Da Peppe Due"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <details
+         open
+         style="
+diff --git a/notes.html b/notes.html
+index dce4793..ead8d2f 100644
+--- a/notes.html
++++ b/notes.html
+@@ -16,30 +16,26 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-    
++
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+-    
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
++
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-    
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">③</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
+-    
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/governance.html"> Operational Authority</a>
++
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+         <a href="/confidential.html">Confidential</a>
+-    
++
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -49,7 +45,7 @@
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+         <a href="/archive.html">Download PDF</a>
+-    
++
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -61,10 +57,11 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+     <main class="main-content">
+       <h1>Notes</h1>
+-    <details id="note-auditor-thresholds" class="note-auditor-thresholds">
++      <details id="note-auditor-thresholds" class="note-auditor-thresholds">
+         <summary>
+           <strong>📌 Note — Auditor Appointment Requirement in Sweden</strong>
+         </summary>
+@@ -322,34 +319,63 @@
+         </p>
+       </details>
+       <details id="note-netmargin">
+-  <summary><strong>💡 Net Margin in Flux-Tendu Models</strong></summary>
+-  <p>
+-    A monthly net profit of <strong>8,665 SEK</strong> across <u>23 employees</u> equates to <span class="highlight">≈ 377 SEK per employee</span>. 
+-    Such low retention — after taxes, rent, salaries, and operational expenses — signals a <strong>flux tendu</strong> model: the company runs lean, 
+-    reinvesting little, with nearly all flows absorbed by fixed costs or external withdrawals.
+-  </p>
+-</details>
++        <summary><strong>💡 Net Margin in Flux-Tendu Models</strong></summary>
++        <p>
++          A monthly net profit of <strong>8,665 SEK</strong> across
++          <u>23 employees</u> equates to
++          <span class="highlight">≈ 377 SEK per employee</span>. Such low
++          retention — after taxes, rent, salaries, and operational expenses —
++          signals a <strong>flux tendu</strong> model: the company runs lean,
++          reinvesting little, with nearly all flows absorbed by fixed costs or
++          external withdrawals.
++        </p>
++      </details>
+       <details id="note-sac-union">
+         <summary><strong>📌 Note – SAC Syndikalisterna (1910)</strong></summary>
+         <p style="line-height: 1.6em">
+-          <strong>SAC</strong> is a <span class="highlight">self-managed, non-hierarchical union</span> founded in <u>Malmö in 1910</u>, historically active in sectors like <span class="highlight">hospitality, cleaning, and temp work</span>. It prioritizes direct action over institutional negotiation.
++          <strong>SAC</strong> is a
++          <span class="highlight">self-managed, non-hierarchical union</span>
++          founded in <u>Malmö in 1910</u>, historically active in sectors like
++          <span class="highlight">hospitality, cleaning, and temp work</span>.
++          It prioritizes direct action over institutional negotiation.
+         </p>
+         <p style="line-height: 1.6em">
+-          <span class="highlight">The 26 protesters</span> on December 1<sup>st</sup> were part of the <em>Hotell & Restaurangsyndikatet</em> section — several of them direct colleagues of the dismissed employee. Their collective goal: <strong>reinstatement, union recognition</strong>, and <strong>retroactive payment</strong>.
++          <span class="highlight">The 26 protesters</span> on December 1<sup
++            >st</sup
++          >
++          were part of the <em>Hotell & Restaurangsyndikatet</em> section —
++          several of them direct colleagues of the dismissed employee. Their
++          collective goal: <strong>reinstatement, union recognition</strong>,
++          and <strong>retroactive payment</strong>.
+         </p>
+       </details>
+       <details id="note-ecommerce-law">
+-        <summary><strong>⚖️ Note – Swedish E-commerce Act (2002:562)</strong></summary>
++        <summary>
++          <strong>⚖️ Note – Swedish E-commerce Act (2002:562)</strong>
++        </summary>
+         <p style="line-height: 1.6em">
+-        Under <strong>Act 2002:562</strong>, Sweden mandates all commercial websites to clearly display <u>the legal entity</u> operating the business, a valid <u>VAT number</u>, a <u>physical or electronic contact address</u>, and—if applicable—the name of a supervisory authority. 
++          Under <strong>Act 2002:562</strong>, Sweden mandates all commercial
++          websites to clearly display <u>the legal entity</u> operating the
++          business, a valid <u>VAT number</u>, a
++          <u>physical or electronic contact address</u>, and—if applicable—the
++          name of a supervisory authority.
+         </p>
+         <p style="line-height: 1.6em">
+-        This law, in force since <span class="highlight">July 2002</span>, was introduced to enhance <strong>transparency</strong> and <strong>consumer protection</strong> in online commerce. It aligns with the EU’s <em>E-commerce Directive (2000/31/EC)</em>, aiming to curb anonymity in business transactions and ensure accountability across digital platforms.
++          This law, in force since <span class="highlight">July 2002</span>, was
++          introduced to enhance <strong>transparency</strong> and
++          <strong>consumer protection</strong> in online commerce. It aligns
++          with the EU’s <em>E-commerce Directive (2000/31/EC)</em>, aiming to
++          curb anonymity in business transactions and ensure accountability
++          across digital platforms.
+         </p>
+         <p style="line-height: 1.6em">
+-        The obligation applies especially to <strong>hospitality venues</strong>—bars, restaurants, hotels—when operating a website for promotion or booking. <u>Failure to comply</u> may raise red flags during audits, legal disputes, or due diligence checks.
++          The obligation applies especially to
++          <strong>hospitality venues</strong>—bars, restaurants, hotels—when
++          operating a website for promotion or booking.
++          <u>Failure to comply</u> may raise red flags during audits, legal
++          disputes, or due diligence checks.
+         </p>
+-        </details>
++      </details>
+       <details id="note-shelf-provider">
+         <summary>
+           <strong>📌 Note — What’s a “Shelf Company Provider”?</strong>
+@@ -526,12 +552,20 @@
+         </p>
+ 
+         <p>
+-          In the case of <strong>HHSC Event AB</strong>, for instance, <strong>Mr. Henrik Siebert</strong>, widely acknowledged as a key architect of the <em>Quan</em> project, <u>does not appear in any official filing</u>.
+-          </p>
+-          
+-          <p>
+-          Instead, <strong>Saahil Chudasama</strong> and <strong>Sahar El Nasser</strong> are listed as <u>board members</u>, while <span class="highlight">the majority stake (50–75%)</span> is held by <strong>Ms. Dahl</strong>, and <span class="highlight">Mr. Chudasama holds between 0 and 25%</span> of the shares.
+-          </p>
++          In the case of <strong>HHSC Event AB</strong>, for instance,
++          <strong>Mr. Henrik Siebert</strong>, widely acknowledged as a key
++          architect of the <em>Quan</em> project,
++          <u>does not appear in any official filing</u>.
++        </p>
++
++        <p>
++          Instead, <strong>Saahil Chudasama</strong> and
++          <strong>Sahar El Nasser</strong> are listed as <u>board members</u>,
++          while <span class="highlight">the majority stake (50–75%)</span> is
++          held by <strong>Ms. Dahl</strong>, and
++          <span class="highlight">Mr. Chudasama holds between 0 and 25%</span>
++          of the shares.
++        </p>
+ 
+         <p style="line-height: 1.6em">
+           This discrepancy suggests a
+@@ -648,243 +682,638 @@
+         </ul>
+       </details>
+       <details id="note-etagegruppen-profile">
+-        <summary><strong>📌 Note – Etagegruppen AB: From Club Etage to Malmö's Nightlife Empire</strong></summary>
++        <summary>
++          <strong
++            >📌 Note – Etagegruppen AB: From Club Etage to Malmö's Nightlife
++            Empire</strong
++          >
++        </summary>
+         <p style="line-height: 1.6em">
+-          <strong>Etagegruppen AB</strong> (org. 556402-6697) is a regional hospitality group founded on <strong>July 25, 1990</strong> by <strong>Michael Hagqvist</strong> (21), to operate the Malmö nightclub <strong>Etage</strong>, located at <span class="highlight">Stortorget 6</span>. The venue, originally opened in the 1980s, became one of the largest clubs in the city with <span class="highlight">4 dance floors and a karaoke bar</span>, and has remained an iconic nightlife spot.
++          <strong>Etagegruppen AB</strong> (org. 556402-6697) is a regional
++          hospitality group founded on <strong>July 25, 1990</strong> by
++          <strong>Michael Hagqvist</strong> (21), to operate the Malmö nightclub
++          <strong>Etage</strong>, located at
++          <span class="highlight">Stortorget 6</span>. The venue, originally
++          opened in the 1980s, became one of the largest clubs in the city with
++          <span class="highlight">4 dance floors and a karaoke bar</span>, and
++          has remained an iconic nightlife spot.
+         </p>
+         <p style="line-height: 1.6em">
+-          During the 2000s, Etagegruppen expanded its footprint in Malmö with a portfolio including:
+-          <ul>
+-            <li><strong>Centiliter & Gram</strong> (created 2007, opened 2008) – a premium cocktail bar (Stortorget 17), popular among the 25+ crowd;</li>
+-            <li><strong>Goose Bar & Restaurang</strong> (launched 2010) – a casual pub-restaurant near Gustav Adolfs Torg;</li>
+-            <li><strong>Club operations at Hotel Scandic Crown</strong> – under the names <em>Level</em> (mainstream) and <em>Wonk</em> (LGBT+), active since 2011.</li>
+-          </ul>
+-          By 2012, the group simultaneously managed <span class="highlight">Etage, Centiliter & Gram, Goose, and Level/Wonk</span>, employing cross-venue synergies in marketing, ticketing, and HR.
++          During the 2000s, Etagegruppen expanded its footprint in Malmö with a
++          portfolio including:
+         </p>
++        <ul>
++          <li>
++            <strong>Centiliter & Gram</strong> (created 2007, opened 2008) – a
++            premium cocktail bar (Stortorget 17), popular among the 25+ crowd;
++          </li>
++          <li>
++            <strong>Goose Bar & Restaurang</strong> (launched 2010) – a casual
++            pub-restaurant near Gustav Adolfs Torg;
++          </li>
++          <li>
++            <strong>Club operations at Hotel Scandic Crown</strong> – under the
++            names <em>Level</em> (mainstream) and <em>Wonk</em> (LGBT+), active
++            since 2011.
++          </li>
++        </ul>
++        <!-- Avant la liste -->
++        <p>
++          By 2012, the group simultaneously managed
++          <span class="highlight"
++            >Etage, Centiliter & Gram, Goose, and Level/Wonk</span
++          >, employing cross-venue synergies in marketing, ticketing, and HR.
++        </p>
++
++        <!-- Liste indépendante (si elle existe encore, ici elle semble avoir été fermée à la ligne 662) -->
++        <!-- Si elle est inutile ou vide, retire-la entièrement -->
++
++        <!-- Nouveau paragraphe -->
+         <p style="line-height: 1.6em">
+-          In <strong>April 2012</strong>, Etagegruppen acquired <strong>Izakaya Koi AB</strong> (556765-3844), absorbing its operational structure but preserving its original name and atmosphere. This marked the closure of the <em>Henrik Siebert era</em> and consolidated Etagegruppen’s control over key nightlife assets in Malmö’s central square.
++          In <strong>April 2012</strong>, Etagegruppen acquired
++          <strong>Izakaya Koi AB</strong> (556765-3844), absorbing its
++          operational structure but preserving its original name and atmosphere.
++        </p>
++
++        <p>
++          This marked the closure of the <em>Henrik Siebert era</em> and
++          consolidated Etagegruppen’s control over key nightlife assets in
++          Malmö’s central square.
+         </p>
+ 
+         <p style="line-height: 1.6em">
+-          Etagegruppen’s reputation remains solid in Malmö’s nightlife scene. In 2013, its parent company posted revenues of <strong>~5.5 million SEK</strong> (excluding subsidiaries), and its venues are regularly featured in nightlife guides. Hagqvist has also acted as a semi-official spokesperson for local business owners, including public opposition to restrictive terrace regulations.
++          Etagegruppen’s reputation remains solid in Malmö’s nightlife scene. In
++          2013, its parent company posted revenues of
++          <strong>~5.5 million SEK</strong> (excluding subsidiaries), and its
++          venues are regularly featured in nightlife guides. Hagqvist has also
++          acted as a semi-official spokesperson for local business owners,
++          including public opposition to restrictive terrace regulations.
+         </p>
+-  
+       </details>
+       <details id="note-transparent-outsourcing">
+-        <summary><strong>📎 Note — Transparent Alternatives to Complex Hotel Outsourcing</strong></summary>
+-      
++        <summary>
++          <strong
++            >📎 Note — Transparent Alternatives to Complex Hotel
++            Outsourcing</strong
++          >
++        </summary>
++
++        <p style="line-height: 1.6em">
++          In the context of a 4-star hotel like <u>Elite Hotel Esplanade</u>, a
++          <strong>restaurant operated on-site</strong> should follow a
++          transparent, minimal structure. Instead, the setup around
++          <strong>Restaurant Steakhouse Lilla Torg AB</strong> involves at least
++          <span class="highlight">five companies</span> — <u>Tributum AB</u>,
++          <u>Aspiratio Holding AB</u>, <u>HSSC Event AB</u>,
++          <u>Kedah Holding AB</u>, and <u>Chudasama Invest AB</u> — with
++          overlapping control and unclear division of functions.
++        </p>
++
++        <ul style="line-height: 1.6em">
++          <li>
++            📄 <strong>Tributum AB</strong> was used for VAT registration and to
++            employ restaurant staff.
++          </li>
++          <li>
++            🏢 <strong>HSSC Event AB</strong> signed the commercial lease with
++            the hotel, acting as legal tenant.
++          </li>
++          <li>
++            🧾 <strong>Kedah Holding AB</strong> issued invoices to customers
++            and processed payments, despite having no front-facing role.
++          </li>
++          <li>
++            🔒 <strong>Chudasama Invest AB</strong> received dividends and
++            declared capital movement without direct operational involvement.
++          </li>
++          <li>
++            💼 <strong>Aspiratio Holding AB</strong> remains
++            <span class="highlight">untraceable in ownership structure</span>,
++            with no beneficial owners listed in the registry.
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          A healthy and conventional structure in such a hospitality context
++          would involve:
++        </p>
++
++        <ul style="line-height: 1.6em">
++          <li>
++            ✅ <strong>One single operational company</strong> handling all
++            front-of-house and contractual responsibilities.
++          </li>
++          <li>
++            ✅ Registered VAT and F-skatt directly under the same legal entity.
++          </li>
++          <li>
++            ✅ Transparent board and <u>declared beneficial ownership</u>.
++          </li>
++          <li>
++            ✅ Public declaration of
++            <strong>profit distribution</strong> through standard Bolagsverket
++            filings.
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          Splitting leases, invoices, and payroll across multiple shell
++          companies in the same space creates operational opacity,
++          <strong>limits accountability</strong>, and can be seen as a tactic to
++          <u>compartmentalize risk or obscure liability</u>. In a premium hotel
++          environment, this raises red flags for unions, auditors, and brand
++          partners.
++        </p>
++      </details>
++      <details id="note-strategic-salary-entrepreneurs">
++        <summary>
++          <strong>
++            📎 Note – Strategic Salary Levels Among Restaurateurs in
++            Sweden</strong
++          >
++        </summary>
++        <p style="line-height: 1.6em">
++          In Sweden, many restaurateurs and small business owners consistently
++          report personal **net salaries between 30,000 and 45,000 SEK per
++          month**. These figures appear across tax declarations, Bolagsverket
++          reports, and UC credit data. This range is not accidental — it
++          reflects a **calculated strategy** to balance
++          <strong>fiscal efficiency</strong>,
++          <strong>social legitimacy</strong>, and
++          <strong>administrative simplicity</strong>.
++        </p>
++        <p style="line-height: 1.6em">
++          This income band is high enough to demonstrate financial stability and
++          ensure access to services (like housing, loans, and visas), while
++          remaining below thresholds that could trigger enhanced taxation or
++          scrutiny.
++        </p>
++        <ul style="line-height: 1.6em">
++          <li>
++            <strong>🧾 Tax efficiency:</strong> staying below the
++            <u>state tax threshold</u> of approx.
++            <strong>613,900 SEK/year brutto</strong> (≈51,000 SEK/month) avoids
++            an extra 20% income tax on top of the standard municipal tax
++          </li>
++          <li>
++            <strong>🏛 Administrative visibility:</strong> allows owners to show
++            a clean, steady income for Försäkringskassan, Migrationsverket,
++            Skatteverket, and banks
++          </li>
++          <li>
++            <strong>📉 Risk minimization:</strong> avoids suspicion or red flags
++            associated with excessive declared income or undeclared gains
++          </li>
++          <li>
++            <strong>📦 Image management:</strong> aligns with public
++            expectations of “working owner” rather than silent shareholder
++            extracting dividends
++          </li>
++        </ul>
++        <p style="line-height: 1.6em">
++          In many cases, the **salary is not a reflection of actual profit**,
++          but a strategic benchmark. A business owner might earn more through
++          dividends, leasing benefits, or reinvested company funds, but declares
++          a stable salary for optics and structure.
++        </p>
++        <p style="line-height: 1.6em">
++          Some patterns observed across restaurants and consultancies:
++        </p>
++        <ul style="line-height: 1.6em">
++          <li>
++            <strong>Daniela:</strong> ≈30,000 SEK net/month – stable and modest
++          </li>
++          <li>
++            <strong>Henrik:</strong> 31,000 SEK net/month – just under state tax
++            limit
++          </li>
++          <li>
++            <strong>Sahar:</strong> ~41,000 SEK net/month – close to threshold,
++            but possibly offset by deductions
++          </li>
++        </ul>
+         <p style="line-height: 1.6em">
+-          In the context of a 4-star hotel like <u>Elite Hotel Esplanade</u>, a <strong>restaurant operated on-site</strong> should follow 
+-          a transparent, minimal structure. Instead, the setup around <strong>Restaurant Steakhouse Lilla Torg AB</strong> involves at least 
+-          <span class="highlight">five companies</span> — <u>Tributum AB</u>, <u>Aspiratio Holding AB</u>, <u>HSSC Event AB</u>, <u>Kedah Holding AB</u>, and <u>Chudasama Invest AB</u> — 
+-          with overlapping control and unclear division of functions.
++          These salaries offer an ideal balance: they are
++          <strong>visible, plausible, and sustainable</strong>. They avoid
++          scrutiny while preserving access to administrative benefits. In some
++          cases, they may also help reduce the perceived need to explain or
++          justify dividends.
+         </p>
+-      
+         <ul style="line-height: 1.6em">
+-          <li>📄 <strong>Tributum AB</strong> was used for VAT registration and to employ restaurant staff.</li>
+-          <li>🏢 <strong>HSSC Event AB</strong> signed the commercial lease with the hotel, acting as legal tenant.</li>
+-          <li>🧾 <strong>Kedah Holding AB</strong> issued invoices to customers and processed payments, despite having no front-facing role.</li>
+-          <li>🔒 <strong>Chudasama Invest AB</strong> received dividends and declared capital movement without direct operational involvement.</li>
+-          <li>💼 <strong>Aspiratio Holding AB</strong> remains <span class="highlight">untraceable in ownership structure</span>, with no beneficial owners listed in the registry.</li>
++          <li>
++            <strong>✅ Avoids assumptions of under-declaration</strong> (too
++            low)
++          </li>
++          <li>
++            <strong
++              >✅ Avoids suspicion of overpayment or artificial profit
++              inflation</strong
++            >
++            (too high)
++          </li>
++          <li>
++            <strong>✅ Creates a "normal" middle-class profile</strong> without
++            excessive exposure
++          </li>
+         </ul>
+-      
+         <p style="line-height: 1.6em">
+-          A healthy and conventional structure in such a hospitality context would involve:
++          This strategy is often part of a broader compensation plan where
++          salary is just one element. Others include:
+         </p>
+-      
+         <ul style="line-height: 1.6em">
+-          <li>✅ <strong>One single operational company</strong> handling all front-of-house and contractual responsibilities.</li>
+-          <li>✅ Registered VAT and F-skatt directly under the same legal entity.</li>
+-          <li>✅ Transparent board and <u>declared beneficial ownership</u>.</li>
+-          <li>✅ Public declaration of <strong>profit distribution</strong> through standard Bolagsverket filings.</li>
++          <li>🚗 <u>Company car leasing</u></li>
++          <li>📱 <u>Phone, laptop and subscription expenses</u></li>
++          <li>💳 <u>Meals and perks via business cards</u></li>
++          <li>
++            💼 <u>Intermittent dividend payouts below visibility threshold</u>
++          </li>
+         </ul>
+-      
+         <p style="line-height: 1.6em">
+-          Splitting leases, invoices, and payroll across multiple shell companies in the same space creates operational opacity,
+-          <strong>limits accountability</strong>, and can be seen as a tactic to <u>compartmentalize risk or obscure liability</u>.
+-          In a premium hotel environment, this raises red flags for unions, auditors, and brand partners.
++          In doing so, the entrepreneur achieves three things at once: (1) a
++          steady, credible income line; (2) reduced tax load; and (3) minimal
++          personal exposure.
++        </p>
++        <p style="line-height: 1.6em">
++          In most cases, <strong>30k–45k SEK net/month</strong> appears to be a
++          psychological and fiscal “sweet spot” — high enough to look
++          legitimate, low enough to remain under the radar. This is especially
++          relevant in **high-turnover, high-cash sectors** like restaurants,
++          catering, and events.
++        </p>
++        <p style="line-height: 1.6em">
++          It also enables long-term administrative consistency: social security
++          contributions, pension points, and sickness insurance are all linked
++          to declared salary — not to dividends.
++        </p>
++        <p style="line-height: 1.6em">
++          <strong>📌 Summary:</strong> Restaurateurs often pick salary levels
++          that are <strong>just below the national tax cliff</strong> while
++          satisfying social and legal visibility requirements. This gives them
++          legitimacy, flexibility, and protection — without inviting audits or
++          raising questions.
++        </p>
++        <p style="line-height: 1.6em"><strong>📚 Further reading:</strong></p>
++        <ul style="line-height: 1.6em">
++          <li>
++            🔍 Skatteverket – "Företagare och beskattning" reports (annual
++            summaries)
++          </li>
++          <li>
++            📑 UC & Allabolag – declared owner salary comparisons in restaurant
++            sector
++          </li>
++          <li>📊 Företagarna – advice papers on "Löneoptimering för ägare"</li>
++          <li>📘 Driva Eget – strategic tax planning guides for SME owners</li>
++          <li>
++            🎓 Academic: "Owner-Manager Income Smoothing in Sweden" (Jönköping
++            Int. Business School)
++          </li>
++        </ul>
++        <p style="line-height: 1.6em">
++          This note can be used to better interpret observed salary patterns and
++          understand why **not exceeding 50,000 SEK/month** often serves as a
++          deliberate signal of control, not constraint.
++        </p>
++      </details>
++      <details id="note-holding-delay">
++        <summary>
++          <strong
++            >📌 Note – Can you create a holding company after launching an
++            operational one?</strong
++          >
++        </summary>
++
++        <p style="line-height: 1.6em">
++          In Sweden (and most jurisdictions), it's perfectly legal to
++          <u
++            >set up a holding structure after the operational company already
++            exists</u
++          >. This setup is neither unusual nor suspect.
++        </p>
++
++        <p style="line-height: 1.6em">
++          It’s often done when the owner reaches a stage where
++          <span class="highlight">income, control, or risk visibility</span>
++          become strategically relevant. It’s a post-hoc move — but a deliberate
++          one.
++        </p>
++
++        <p style="line-height: 1.6em">Common reasons include:</p>
++        <ul>
++          <li>
++            🧾 <strong>Tax-efficient dividend routing</strong> (via a holding
++            AB)
++          </li>
++          <li>
++            🔐 <strong>Capital separation</strong> between private wealth &
++            business activity
++          </li>
++          <li>
++            👥 <strong>Future-proofing</strong> for family ownership or silent
++            partners
++          </li>
++          <li>
++            ⚙️ <strong>Low-profile restructuring</strong> without touching the
++            daily operations
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          In the case studied here, <strong>KEHDA Holding AB</strong> was
++          created roughly <u>two years after</u> HSSC Event AB. This timeline
++          suggests a reactive structure, likely aiming to
++          <span class="highlight">formalize asset flows</span> and anticipate
++          capital maneuvering — without changing the restaurant’s visible
++          surface.
++        </p>
++
++        <p style="line-height: 1.6em">
++          ➕ Such “after-the-fact” holdcos are especially common in hospitality,
++          where <u>income visibility rises faster than legal preparation</u>.
++        </p>
++      </details>
++
++      <details id="note-shell-company">
++        <summary><strong>🏚️ Note – What is a Shell Company?</strong></summary>
++
++        <p style="line-height: 1.6em">
++          A <strong>shell company</strong> (or <em>“société écran”</em>) is a
++          legal entity that has
++          <span class="highlight"
++            >no significant assets or active operations</span
++          >. It exists mainly on paper and is often used to
++          <strong><u>hold shares, obscure ownership</u></strong
++          >, or structure financial flows.
++        </p>
++
++        <p style="line-height: 1.6em">
++          Shell companies are commonly used to
++          <span class="highlight">limit liability, avoid taxes</span>, or enable
++          <u>offshore asset transfers</u>. While they can serve legitimate
++          purposes (e.g., pre-launch entities, investment vehicles), they are
++          frequently involved in
++          <strong>opacity, cross-border layering</strong>, or
++          <u>delayed ownership disclosure</u>.
++        </p>
++
++        <p style="line-height: 1.6em">
++          In legal and forensic contexts, the presence of a shell company often
++          signals a need for
++          <strong>deeper investigation into beneficial ownership</strong>,
++          governance proxies, or income redirection strategies.
++        </p>
++      </details>
++      <details id="note-no-moat">
++        <summary><strong>🛡️ Note – What does "No Moat" mean?</strong></summary>
++
++        <p style="line-height: 1.6em">
++          Originally, a
++          <strong>
++            <a
++              href="https://commons.wikimedia.org/w/index.php?curid=35164296"
++              class="subtle-link"
++              >moat</a
++            ></strong
++          >
++          was a <u>deep trench filled with water</u> built around a castle,
++          acting as a physical defense system against invaders. Its purpose was
++          to protect the stronghold by making access difficult and dangerous. 🏰
++        </p>
++
++        <p style="line-height: 1.6em">
++          The term <strong>"moat"</strong> was later adopted in finance by
++          <a href="https://www.morningstar.com/" class="subtle-link"
++            >Morningstar</a
++          >, which evaluates companies based on their
++          <span class="highlight">long-term competitive advantages</span>. A
++          “moat” refers to any structural edge — <u>brand</u>, <u>patents</u>,
++          <u>cost leadership</u> — that protects profits over time.
++        </p>
++
++        <p style="line-height: 1.6em">
++          A company rated as <strong>“No Moat”</strong> by Morningstar is seen
++          as <span class="highlight">vulnerable to competitive erosion</span>.
++          It lacks pricing power, customer lock-in, or meaningful scale
++          advantage. Its business model is replicable, and its margins are
++          easily threatened.
++        </p>
++
++        <p style="line-height: 1.6em">
++          In the restaurant sector — especially in
++          <span class="highlight">congested hubs like Lilla Torg</span> — the
++          “no moat” label fits venues that rely on foot traffic or local
++          familiarity, but <strong>have no economic defense mechanism</strong>.
++        </p>
++
++        <p style="line-height: 1.6em">
++          This concept explains why many restaurants — even successful-looking
++          ones — eventually fail:
++          <em
++            >they operate in a low-margin, high-substitution environment, with
++            no protective moat</em
++          >.
++        </p>
++      </details>
++      <details id="note-affectio">
++        <summary>
++          <strong>🧩 Note — What does "Affectio Societatis" mean?</strong>
++        </summary>
++
++        <p style="line-height: 1.6em">
++          🗣️ <strong>Term origin:</strong> <em>Affectio societatis</em> is a
++          Latin legal phrase used in French corporate law. It literally means
++          "<em>willingness to form a company</em>". It refers to the mutual
++          intention of individuals to form and operate a business together as
++          partners.
++        </p>
++
++        <ul>
++          <li>
++            🇬🇧 <strong>English translation:</strong> Mutual intent to associate
++            / Shared partnership intention
++          </li>
++          <li>
++            🇸🇪 <strong>Översättning på svenska:</strong> Gemensam vilja att
++            bilda ett bolag
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          ⚖️ In French jurisprudence, <strong>affectio societatis</strong> is a
++          legal condition for the validity of a partnership or company. It
++          proves that the founding members are not just nominal shareholders —
++          but truly wish to cooperate and take joint risks.
++        </p>
++
++        <ul>
++          <li>
++            📍 Used by French courts to detect
++            <strong>fake companies</strong> or <strong>abusive setups</strong>.
++          </li>
++          <li>📚 Required for all types of sociétés: SARL, SAS, SCI, etc.</li>
++          <li>
++            🚨 Its absence may lead to reclassification or nullification of the
++            company.
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          📘 <strong>Typical legal usage:</strong><br />
++          <em
++            >“La société doit être dotée d’un objet licite, d’un capital social,
++            et d’un affectio societatis entre les associés.”</em
++          >
++        </p>
++
++        <p style="line-height: 1.6em">
++          📘 <strong>Translated in English:</strong><br />
++          <em
++            >“The company must have a lawful purpose, shared capital, and mutual
++            intention to associate between the partners.”</em
++          >
++        </p>
++
++        <p style="line-height: 1.6em">
++          🔗 Original source:
++          <a
++            href="https://www.village-justice.com/articles/critere-classification-des,16989.html"
++            class="subtile-link"
++          >
++            Le critère casuistique de classification des sociétés
++          </a>
++        </p>
++      </details>
++      <details id="note-instrument">
++        <summary>
++          <strong>⚖️ Note — What does "Instrument d’escroquerie" mean?</strong>
++        </summary>
++
++        <p style="line-height: 1.6em">
++          🗣️ <strong>Term origin:</strong> The expression
++          <em>instrument d’escroquerie</em> (literally “fraud device” or “fraud
++          tool”) is used by French lawyer <strong>Maître Viguier</strong> to
++          describe a company that was not created to operate a real business —
++          but to simulate legitimacy while enabling fraudulent activities.
++        </p>
++
++        <ul>
++          <li>
++            🇫🇷 <strong>Traduction en français :</strong> Moyen ou structure
++            utilisée pour organiser une fraude
++          </li>
++          <li>🇬🇧 <strong>English translation:</strong> Instrument of fraud</li>
++          <li>
++            🇸🇪 <strong>Översättning på svenska:</strong> Bedrägeriverktyg /
++            Juridiskt verktyg för bedrägeri
++          </li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          ⚠️ A company becomes an <strong>instrument d’escroquerie</strong> when
++          it exists only on paper, and is structured to:
++        </p>
++
++        <ul>
++          <li>🧾 Simulate contracts or cash flow without real delivery</li>
++          <li>🏦 Capture public subsidies or loans under false pretenses</li>
++          <li>🚪 Disappear or go bankrupt once funds are extracted</li>
++        </ul>
++
++        <p style="line-height: 1.6em">
++          🕵️ These setups are legally registered, may have bank accounts,
++          websites, and invoices — but their sole purpose is to provide a
++          <u>legal-looking interface for illicit operations</u>.
++        </p>
++
++        <p style="line-height: 1.6em">
++          🎥 <strong>Source (vidéo, 3:07):</strong><br />
++          <a
++            href="https://www.youtube.com/watch?v=xGnADkJAAWQ&t=187s"
++            class="subtile-link"
++          >
++            Maître Viguier – Le critère de classification des sociétés
++          </a>
++        </p>
++      </details>
++      <details id="note-legal-fiction">
++        <summary><strong>📎 Note — Legal Fiction</strong></summary>
++
++        <p>
++          <strong>Definition:</strong> A <em>legal fiction</em> is a fact
++          assumed or created by courts, legislatures, or institutions to apply a
++          legal rule. It allows the law to treat something as true or existing
++          even if it is not, strictly speaking, the case.
++        </p>
++
++        <p>
++          <strong>Origin:</strong> Latin expression <em>“fictio juris”</em> —
++          widely used in Roman law and revived in modern legal theory. The
++          French term <strong>fiction juridique</strong> translates precisely to
++          <strong>legal fiction</strong> in English and to
++          <strong>rättslig fiktion</strong> in Swedish.
++        </p>
++
++        <p><strong>Contextual Usage:</strong></p>
++        <ul>
++          <li>
++            📄 A company with no real operational activity but legally
++            incorporated may be described as a <strong>legal fiction</strong>.
++          </li>
++          <li>
++            🏛️ Often used to create artificial constructs like corporate
++            personality or the presumption of paternity.
++          </li>
++          <li>
++            📊 In business analysis, it can highlight a discrepancy between the
++            appearance of legitimacy and the absence of actual governance or
++            shared intent.
++          </li>
++        </ul>
++
++        <p>
++          <strong>In Swedish:</strong> <em>rättslig fiktion</em> — används i
++          juridiska sammanhang när något behandlas som verkligt trots att det
++          inte är det i praktiken.
++        </p>
++
++        <p>
++          <strong>Example sentence:</strong> "The entity had no staff, no
++          office, and no operations. It was a
++          <strong>legal fiction</strong> used to route subsidies." (<em
++            >Une fiction juridique utilisée pour capter des subventions</em
++          >.)
+         </p>
+       </details>
+-<details id="note-strategic-salary-entrepreneurs"><summary><strong>📎 Note – Strategic Salary Levels Among Restaurateurs in Sweden</strong></summary><p style="line-height: 1.6em">In Sweden, many restaurateurs and small business owners consistently report personal **net salaries between 30,000 and 45,000 SEK per month**. These figures appear across tax declarations, Bolagsverket reports, and UC credit data. This range is not accidental — it reflects a **calculated strategy** to balance <strong>fiscal efficiency</strong>, <strong>social legitimacy</strong>, and <strong>administrative simplicity</strong>.</p><p style="line-height: 1.6em">This income band is high enough to demonstrate financial stability and ensure access to services (like housing, loans, and visas), while remaining below thresholds that could trigger enhanced taxation or scrutiny.</p><ul style="line-height: 1.6em"><li><strong>🧾 Tax efficiency:</strong> staying below the <u>state tax threshold</u> of approx. <strong>613,900 SEK/year brutto</strong> (≈51,000 SEK/month) avoids an extra 20% income tax on top of the standard municipal tax</li><li><strong>🏛 Administrative visibility:</strong> allows owners to show a clean, steady income for Försäkringskassan, Migrationsverket, Skatteverket, and banks</li><li><strong>📉 Risk minimization:</strong> avoids suspicion or red flags associated with excessive declared income or undeclared gains</li><li><strong>📦 Image management:</strong> aligns with public expectations of “working owner” rather than silent shareholder extracting dividends</li></ul><p style="line-height: 1.6em">In many cases, the **salary is not a reflection of actual profit**, but a strategic benchmark. A business owner might earn more through dividends, leasing benefits, or reinvested company funds, but declares a stable salary for optics and structure.</p><p style="line-height: 1.6em">Some patterns observed across restaurants and consultancies:</p><ul style="line-height: 1.6em"><li><strong>Daniela:</strong> ≈30,000 SEK net/month – stable and modest</li><li><strong>Henrik:</strong> 31,000 SEK net/month – just under state tax limit</li><li><strong>Sahar:</strong> ~41,000 SEK net/month – close to threshold, but possibly offset by deductions</li></ul><p style="line-height: 1.6em">These salaries offer an ideal balance: they are <strong>visible, plausible, and sustainable</strong>. They avoid scrutiny while preserving access to administrative benefits. In some cases, they may also help reduce the perceived need to explain or justify dividends.</p><ul style="line-height: 1.6em"><li><strong>✅ Avoids assumptions of under-declaration</strong> (too low)</li><li><strong>✅ Avoids suspicion of overpayment or artificial profit inflation</strong> (too high)</li><li><strong>✅ Creates a "normal" middle-class profile</strong> without excessive exposure</li></ul><p style="line-height: 1.6em">This strategy is often part of a broader compensation plan where salary is just one element. Others include:</p><ul style="line-height: 1.6em"><li>🚗 <u>Company car leasing</u></li><li>📱 <u>Phone, laptop and subscription expenses</u></li><li>💳 <u>Meals and perks via business cards</u></li><li>💼 <u>Intermittent dividend payouts below visibility threshold</u></li></ul><p style="line-height: 1.6em">In doing so, the entrepreneur achieves three things at once: (1) a steady, credible income line; (2) reduced tax load; and (3) minimal personal exposure.</p><p style="line-height: 1.6em">In most cases, <strong>30k–45k SEK net/month</strong> appears to be a psychological and fiscal “sweet spot” — high enough to look legitimate, low enough to remain under the radar. This is especially relevant in **high-turnover, high-cash sectors** like restaurants, catering, and events.</p><p style="line-height: 1.6em">It also enables long-term administrative consistency: social security contributions, pension points, and sickness insurance are all linked to declared salary — not to dividends.</p><p style="line-height: 1.6em"><strong>📌 Summary:</strong> Restaurateurs often pick salary levels that are <strong>just below the national tax cliff</strong> while satisfying social and legal visibility requirements. This gives them legitimacy, flexibility, and protection — without inviting audits or raising questions.</p><p style="line-height: 1.6em"><strong>📚 Further reading:</strong></p><ul style="line-height: 1.6em"><li>🔍 Skatteverket – "Företagare och beskattning" reports (annual summaries)</li><li>📑 UC & Allabolag – declared owner salary comparisons in restaurant sector</li><li>📊 Företagarna – advice papers on "Löneoptimering för ägare"</li><li>📘 Driva Eget – strategic tax planning guides for SME owners</li><li>🎓 Academic: "Owner-Manager Income Smoothing in Sweden" (Jönköping Int. Business School)</li></ul><p style="line-height: 1.6em">This note can be used to better interpret observed salary patterns and understand why **not exceeding 50,000 SEK/month** often serves as a deliberate signal of control, not constraint.</p></details>
+-<details id="note-holding-delay">
+-  <summary>
+-    <strong>📌 Note – Can you create a holding company after launching an operational one?</strong>
+-  </summary>
+-
+-  <p style="line-height: 1.6em">
+-    In Sweden (and most jurisdictions), it's perfectly legal to <u>set up a holding structure after the operational company already exists</u>. This setup is neither unusual nor suspect.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    It’s often done when the owner reaches a stage where <span class="highlight">income, control, or risk visibility</span> become strategically relevant. It’s a post-hoc move — but a deliberate one.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    Common reasons include:
+-    <ul>
+-      <li>🧾 <strong>Tax-efficient dividend routing</strong> (via a holding AB)</li>
+-      <li>🔐 <strong>Capital separation</strong> between private wealth & business activity</li>
+-      <li>👥 <strong>Future-proofing</strong> for family ownership or silent partners</li>
+-      <li>⚙️ <strong>Low-profile restructuring</strong> without touching the daily operations</li>
+-    </ul>
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    In the case studied here, <strong>KEHDA Holding AB</strong> was created roughly <u>two years after</u> HSSC Event AB. This timeline suggests a reactive structure, likely aiming to <span class="highlight">formalize asset flows</span> and anticipate capital maneuvering — without changing the restaurant’s visible surface.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    ➕ Such “after-the-fact” holdcos are especially common in hospitality, where <u>income visibility rises faster than legal preparation</u>.
+-  </p>
+-</details>
+-
+-<details id="note-shell-company">
+-  <summary><strong>🏚️ Note – What is a Shell Company?</strong></summary>
+-
+-  <p style="line-height: 1.6em">
+-    A <strong>shell company</strong> (or <em>“société écran”</em>) is a legal entity that has <span class="highlight">no significant assets or active operations</span>. It exists mainly on paper and is often used to <strong><u>hold shares, obscure ownership</u></strong>, or structure financial flows.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    Shell companies are commonly used to <span class="highlight">limit liability, avoid taxes</span>, or enable <u>offshore asset transfers</u>. While they can serve legitimate purposes (e.g., pre-launch entities, investment vehicles), they are frequently involved in <strong>opacity, cross-border layering</strong>, or <u>delayed ownership disclosure</u>.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    In legal and forensic contexts, the presence of a shell company often signals a need for <strong>deeper investigation into beneficial ownership</strong>, governance proxies, or income redirection strategies.
+-  </p>
+-</details>
+-<details id="note-no-moat">
+-  <summary><strong>📎 Note – What does "No Moat" mean?</strong></summary>
+-
+-  <p style="line-height: 1.6em">
+-    The term <strong>"moat"</strong> originates from the financial research firm   <a
+-          href="https://www.morningstar.com/"
+-          class="subtle-link"
+-          >Morningstar</a
+-        >, which evaluates companies based on their
+-    <span class="highlight">long-term competitive advantages</span>.
+-    A “moat” refers to any structural edge — brand, patents, cost leadership — that protects profits over time.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    A company rated as <strong>“No Moat”</strong> by Morningstar is seen as <span class="highlight">vulnerable to competitive erosion</span>.
+-    It lacks pricing power, customer lock-in, or meaningful scale advantage.
+-    Its business model is replicable, and its margins are easily threatened.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    In the restaurant sector — especially in <span class="highlight">congested hubs like Lilla Torg</span> — the “no moat” label fits venues that rely on foot traffic or local familiarity,
+-    but <strong>have no economic defense mechanism</strong>.
+-  </p>
+-
+-  <p style="line-height: 1.6em">
+-    This concept explains why many restaurants — even successful-looking ones — eventually fail: <em>they operate in a low-margin,
+-    high-substitution environment, with no protective moat</em>.
+-  </p>
+-</details>
+-<details id="note-affectio">
+-<summary><strong>🧩 Note — What does "Affectio Societatis" mean?</strong></summary>
+-
+-<p style="line-height: 1.6em">
+-🗣️ <strong>Term origin:</strong> <em>Affectio societatis</em> is a Latin legal phrase used in French corporate law. It literally means "<em>willingness to form a company</em>". It refers to the mutual intention of individuals to form and operate a business together as partners.
+-</p>
+-
+-<ul>
+-  <li>🇫🇷 <strong>Traduction en français :</strong> Volonté commune de s’associer</li>
+-  <li>🇬🇧 <strong>English translation:</strong> Mutual intent to associate / Shared partnership intention</li>
+-  <li>🇸🇪 <strong>Översättning på svenska:</strong> Gemensam vilja att bilda ett bolag</li>
+-</ul>
+-
+-<p style="line-height: 1.6em">
+-⚖️ In French jurisprudence, <strong>affectio societatis</strong> is a legal condition for the validity of a partnership or company. It proves that the founding members are not just nominal shareholders — but truly wish to cooperate and take joint risks.
+-</p>
+-
+-<ul>
+-  <li>📍 Used by French courts to detect <strong>fake companies</strong> or <strong>abusive setups</strong>.</li>
+-  <li>📚 Required for all types of sociétés: SARL, SAS, SCI, etc.</li>
+-  <li>🚨 Its absence may lead to reclassification or nullification of the company.</li>
+-</ul>
+-
+-<p style="line-height: 1.6em">
+-📘 <strong>Typical legal usage:</strong><br>
+-<em>“La société doit être dotée d’un objet licite, d’un capital social, et d’un affectio societatis entre les associés.”</em>
+-</p>
+-
+-<p style="line-height: 1.6em">
+-📘 <strong>Translated in English:</strong><br>
+-<em>“The company must have a lawful purpose, shared capital, and mutual intention to associate between the partners.”</em>
+-</p>
+-
+-<p style="line-height: 1.6em">
+-🔗 Original source:  
+-<a href="https://www.village-justice.com/articles/critere-classification-des,16989.html" class="subtile-link">
+-Le critère casuistique de classification des sociétés
+-</a>
+-</p>
+-</details>
+-<details id="note-instrument">
+-<summary><strong>⚖️ Note — What does "Instrument d’escroquerie" mean?</strong></summary>
+-
+-<p style="line-height: 1.6em">
+-🗣️ <strong>Term origin:</strong> The expression <em>instrument d’escroquerie</em> (literally “fraud device” or “fraud tool”) is used by French lawyer <strong>Maître Viguier</strong> to describe a company that was not created to operate a real business — but to simulate legitimacy while enabling fraudulent activities.
+-</p>
+-
+-<ul>
+-  <li>🇫🇷 <strong>Traduction en français :</strong> Moyen ou structure utilisée pour organiser une fraude</li>
+-  <li>🇬🇧 <strong>English translation:</strong> Instrument of fraud</li>
+-  <li>🇸🇪 <strong>Översättning på svenska:</strong> Bedrägeriverktyg / Juridiskt verktyg för bedrägeri</li>
+-</ul>
+-
+-<p style="line-height: 1.6em">
+-⚠️ A company becomes an <strong>instrument d’escroquerie</strong> when it exists only on paper, and is structured to:
+-</p>
+-
+-<ul>
+-  <li>🧾 Simulate contracts or cash flow without real delivery</li>
+-  <li>🏦 Capture public subsidies or loans under false pretenses</li>
+-  <li>🚪 Disappear or go bankrupt once funds are extracted</li>
+-</ul>
+-
+-<p style="line-height: 1.6em">
+-🕵️ These setups are legally registered, may have bank accounts, websites, and invoices — but their sole purpose is to provide a <u>legal-looking interface for illicit operations</u>.
+-</p>
+-
+-<p style="line-height: 1.6em">
+-🎥 <strong>Source (vidéo, 3:07):</strong><br>
+-<a href="https://www.youtube.com/watch?v=xGnADkJAAWQ&t=187s" class="subtile-link">
+-Maître Viguier – Le critère de classification des sociétés
+-</a>
+-</p>
+-</details>
+     </main>
+-<script>
+-  // open <details> when anchor is targeted
+-function openDetailsFromHash() {
+-  const hash = window.location.hash;
+-  if (hash) {
+-    const details = document.querySelector(hash);
+-    if (details && details.tagName.toLowerCase() === "details") {
+-      details.open = true;
+-      details.scrollIntoView({ behavior: "smooth" });
+-    }
+-  }
+-}
+-window.addEventListener("DOMContentLoaded", openDetailsFromHash);
+-window.addEventListener("hashchange", openDetailsFromHash);
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
+-
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++    <script>
++      // open <details> when anchor is targeted
++      function openDetailsFromHash() {
++        const hash = window.location.hash;
++        if (hash) {
++          const details = document.querySelector(hash);
++          if (details && details.tagName.toLowerCase() === "details") {
++            details.open = true;
++            details.scrollIntoView({ behavior: "smooth" });
++          }
++        }
++      }
++      window.addEventListener("DOMContentLoaded", openDetailsFromHash);
++      window.addEventListener("hashchange", openDetailsFromHash);
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
++
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>
+diff --git a/philosophy.html b/philosophy.html
+index 89f0bcb..f8b06c7 100644
+--- a/philosophy.html
++++ b/philosophy.html
+@@ -58,7 +58,7 @@
+       </div>
+     </header>
+     <main class="main-content">
+-      <h1>Personal Operating Principle</h1>
++      <h1>Personal Operating Principles</h1>
+       <!--
+       <section class="narrative-intro">
+         <details open>
+diff --git a/sector.html b/sector.html
+index 17706f0..c05755b 100644
+--- a/sector.html
++++ b/sector.html
+@@ -177,12 +177,6 @@
+         >
+       </blockquote>
+ 
+-      <a href="#note-no-moat">test link</a>
+-
+-      <details id="note-no-moat">
+-        <summary>Test note</summary>
+-        <p>It works if you see this open after clicking the link above.</p>
+-      </details>
+       <p><u>Low Margins</u></p>
+ 
+       <p>
+@@ -222,11 +216,11 @@
+       </p>
+ 
+       <p>
+-        Bastard Burgers posted <strong>SEK 979 million</strong> revenue with
+-        <strong>9.5%</strong> net margin in 2023. Carlsberg followed with
+-        <strong>14.7%</strong> on SEK 111.87 billion. Steakhouse Lilla Torg AB
+-        reached <strong>SEK 13.2 million</strong> in revenue with
+-        <strong>7.2%</strong> margin.
++        Steakhouse Lilla Torg AB reached <strong>SEK 13.2 million</strong> in
++        revenue with <strong>7.2%</strong> margin. Bastard Burgers posted
++        <strong>SEK 979 million</strong> revenue with <strong>9.5%</strong> net
++        margin in 2023. Carlsberg followed with <strong>14.7%</strong> on SEK
++        111.87 billion.
+       </p>
+       <p>
+         Personalkollen posted a margin of <strong>38.7%</strong> on SEK 78
+@@ -238,9 +232,14 @@
+           >Balder</a
+         >, which leases space to <u>Elite Hotel Esplanade</u> where
+         <strong>Quan</strong> operates, secured a margin of
+-        <strong>25.7%</strong> on SEK 12.88 billion. Tesla posted
+-        <strong>15.4%</strong> on SEK 9.1 trillion, while Apple led with
+-        <strong>25.9%</strong> on SEK 44.2 trillion.
++        <strong>25.7%</strong> on SEK 12.88 billion.
++        <a
++          href="https://www.youtube.com/watch?v=trmvdvl72fc"
++          class="subtle-link"
++          target="_blank"
++          >Google</a
++        >
++        posted <strong>15.4%</strong> on SEK 9.1 trillion.
+       </p>
+ 
+       <p><u>Intense Labor</u></p>
