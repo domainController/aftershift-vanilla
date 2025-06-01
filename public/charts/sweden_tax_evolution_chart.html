@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évolution Fiscalité Entrepreneuriale Suède 1950-2025</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .chart-container {
+            position: relative;
+            height: 500px;
+            margin: 30px 0;
+        }
+        .analysis {
+            background: #ecf0f1;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid #3498db;
+        }
+        .period {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .period h3 {
+            color: #2980b9;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8e6cf 0%, #dcedc1 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .warning {
+            background: linear-gradient(120deg, #ffaaa5 0%, #ff8a95 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .metric {
+            display: inline-block;
+            background: #34495e;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Évolution de la Fiscalité des Entrepreneurs en Suède</h1>
+        <p class="subtitle">Ce qui reste réellement aux entrepreneurs après impôts et charges (1950-2025)</p>
+        
+        <div class="chart-container">
+            <canvas id="taxChart"></canvas>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e74c3c;"></div>
+                <span>Taux d'imposition total effectif</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #27ae60;"></div>
+                <span>% net conservé par l'entrepreneur</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #3498db;"></div>
+                <span>Impôt société seul</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f39c12;"></div>
+                <span>Charges sociales employeur</span>
+            </div>
+        </div>
+
+        <div class="analysis">
+            <h2>🔍 Analyse de l'Évolution Fiscale</h2>
+            <p><strong>La Suède a connu une transformation fiscale majeure en 70 ans :</strong></p>
+            <ul>
+                <li><span class="highlight">Années 1950</span> : Fiscalité favorable aux entrepreneurs (~20% total)</li>
+                <li><span class="warning">Années 1980</span> : Pic de pression fiscale (~70-80% total)</li>
+                <li><span class="highlight">Depuis 2000</span> : Modération et compétitivité (~45-55% total)</li>
+            </ul>
+        </div>
+
+        <div class="period">
+            <h3>🌟 L'Âge d'Or (1950-1960)</h3>
+            <p>
+                <span class="metric">Impôt société: 20-25%</span>
+                <span class="metric">Charges sociales: 6%</span>
+                <span class="metric">Net conservé: 75-80%</span>
+            </p>
+            <p><strong>Contexte :</strong> Reconstruction d'après-guerre, faible pression fiscale, focus sur la croissance économique. Les entrepreneurs conservaient facilement 75-80% de leurs bénéfices.</p>
+        </div>
+
+        <div class="period">
+            <h3>⚡ L'Expansion (1960-1970)</h3>
+            <p>
+                <span class="metric">Impôt société: 25-35%</span>
+                <span class="metric">Charges sociales: 15-20%</span>
+                <span class="metric">Net conservé: 60-70%</span>
+            </p>
+            <p><strong>Contexte :</strong> Construction de l'État-providence, début de l'augmentation des charges sociales pour financer les services publics.</p>
+        </div>
+
+        <div class="period">
+            <h3>📈 La Montée en Puissance (1970-1980)</h3>
+            <p>
+                <span class="metric">Impôt société: 35-45%</span>
+                <span class="metric">Charges sociales: 25-35%</span>
+                <span class="metric">Net conservé: 45-55%</span>
+            </p>
+            <p><strong>Contexte :</strong> Expansion massive du système social, augmentation rapide des cotisations patronales pour financer retraites, santé, chômage.</p>
+        </div>
+
+        <div class="period">
+            <h3>🔥 Le Pic de Pression (1980-1990)</h3>
+            <p>
+                <span class="metric">Impôt société: 50-60%</span>
+                <span class="metric">Charges sociales: 35-40%</span>
+                <span class="metric">Net conservé: 20-30%</span>
+            </p>
+            <p><strong>Contexte :</strong> Apogée du modèle redistributif suédois. <span class="warning">Pic historique en 1989 : 60,1% d'impôt société</span>. Les entrepreneurs ne conservaient que 20-30% de leurs bénéfices.</p>
+        </div>
+
+        <div class="period">
+            <h3>🔄 La Grande Réforme (1990-2000)</h3>
+            <p>
+                <span class="metric">Impôt société: 30-35%</span>
+                <span class="metric">Charges sociales: 30-35%</span>
+                <span class="metric">Net conservé: 40-50%</span>
+            </p>
+            <p><strong>Contexte :</strong> Réforme fiscale majeure de 1991, réduction des taux pour maintenir la compétitivité internationale. Début de la modération.</p>
+        </div>
+
+        <div class="period">
+            <h3>⚖️ L'Équilibre Moderne (2000-2025)</h3>
+            <p>
+                <span class="metric">Impôt société: 20-22%</span>
+                <span class="metric">Charges sociales: 31%</span>
+                <span class="metric">Net conservé: 45-55%</span>
+            </p>
+            <p><strong>Contexte :</strong> Stabilisation autour d'un modèle équilibré : <span class="highlight">protection sociale maintenue mais fiscalité compétitive</span>. Taux corporatif réduit à 20,6% depuis 2021.</p>
+        </div>
+
+        <div class="analysis">
+            <h2>📊 Points Clés de l'Évolution</h2>
+            <ul>
+                <li><strong>Transformation radicale :</strong> De 80% net conservé (1950) à 20% (1989), puis remontée à 50% (2025)</li>
+                <li><strong>Charges sociales :</strong> Explosion de 6% (1950) à 40% (fin 1970s), stabilisation à 31% aujourd'hui</li>
+                <li><strong>Compétitivité retrouvée :</strong> Réformes des années 1990-2000 pour attirer les investissements</li>
+                <li><strong>Modèle durable :</strong> Équilibre entre protection sociale forte et attractivité entrepreneuriale</li>
+            </ul>
+            
+            <p><strong>Leçon pour les entrepreneurs :</strong> Les périodes de très haute fiscalité (1980s) ont poussé vers des montages d'optimisation complexes, expliquant en partie l'émergence de structures comme celles observées dans le cas Quan.</p>
+        </div>
+    </div>
+
+    <script>
+        // Données historiques basées sur les recherches
+        const data = {
+            labels: ['1950', '1960', '1970', '1980', '1989', '1995', '2000', '2010', '2021', '2025'],
+            datasets: [
+                {
+                    label: 'Taux d\'imposition total effectif (%)',
+                    data: [25, 35, 50, 70, 80, 60, 55, 50, 47, 45],
+                    borderColor: '#e74c3c',
+                    backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: '% net conservé par l\'entrepreneur',
+                    data: [75, 65, 50, 30, 20, 40, 45, 50, 53, 55],
+                    borderColor: '#27ae60',
+                    backgroundColor: 'rgba(39, 174, 96, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Impôt société seul (%)',
+                    data: [20, 25, 35, 50, 60, 30, 28, 26, 21, 21],
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    tension: 0.4,
+                    fill: false
+                },
+                {
+                    label: 'Charges sociales employeur (%)',
+                    data: [6, 15, 25, 35, 40, 33, 32, 31, 31, 31],
+                    borderColor: '#f39c12',
+                    backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                    tension: 0.4,
+                    fill: false
+                }
+            ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Pourcentage (%)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Année',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                        borderColor: 'rgba(0,0,0,0.8)',
+                        borderWidth: 1,
+                        callbacks: {
+                            afterLabel: function(context) {
+                                if (context.datasetIndex === 1) {
+                                    return 'Sur 100€ de bénéfice, l\'entrepreneur garde ' + context.parsed.y + '€';
+                                }
+                                return '';
+                            }
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                },
+                elements: {
+                    point: {
+                        radius: 6,
+                        hoverRadius: 8
+                    },
+                    line: {
+                        borderWidth: 3
+                    }
+                }
+            }
+        };
+
+        // Création du graphique
+        const ctx = document.getElementById('taxChart').getContext('2d');
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>

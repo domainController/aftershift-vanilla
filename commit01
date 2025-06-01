@@ -1,0 +1,2014 @@
+diff --git a/assets/css/main.css b/assets/css/main.css
+index b871439..35bb553 100644
+--- a/assets/css/main.css
++++ b/assets/css/main.css
+@@ -425,6 +425,20 @@ a.note-link:hover {
+   background-color: #d3eaff; /* bleu pastel un peu plus visible */
+ }
+ 
++
++a.chart-link {
++  color: inherit;
++  font-weight: inherit;
++  text-decoration: underline dotted;
++  text-decoration-thickness: 1px;
++  background-color: #d1f2eb; /* vert menthe doux */
++  padding: 0 2px;
++  border-radius: 2px;
++}
++
++a.chart-link:hover {
++  background-color: #b9e9df; /* vert un peu plus intense au survol */
++}
+ .nav-section {
+   background-color: #e5e7eb;         /* Gris clair uniforme */
+   margin: 0 -1rem;                   /* Annule le padding horizontal de .navbar */
+diff --git a/confidential.html b/confidential.html
+index 099dfda..1fe2c9c 100644
+--- a/confidential.html
++++ b/confidential.html
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/contact.html b/contact.html
+index ef17d9d..1ea735e 100644
+--- a/contact.html
++++ b/contact.html
+@@ -15,28 +15,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -46,12 +44,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+@@ -60,15 +62,7 @@
+     <main class="main-content">
+       <section class="max-w-3xl mx-auto p-4 text-lg leading-relaxed">
+         <h1>
+-
+-
+-
+-
+ Contact & Collaboration</h1>
+-
+-
+-
+-
+         <!-- Formulaire Formspree -->
+         <form
+           action="https://formspree.io/f/myzweywr"
+diff --git a/context.html b/context.html
+index 17558ec..3d27456 100644
+--- a/context.html
++++ b/context.html
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+@@ -128,26 +130,41 @@
+         </details>
+       </section>-->
+ 
+-      <p>
+-        After three years in Ireland and a strategic return through
+-        <u>Nice</u> and <u>Barcelona</u>, I arrived in
+-        <strong>Sweden</strong> in April 2022. I first lived in
+-        <strong>Gothenburg</strong>, where I spent one year—including three
+-        months as a <u>food delivery worker</u>. Then, I relocated to
+-        <strong>Stockholm</strong> to pursue higher-paying roles in hospitality.
+-      </p>
++      <main class="main-content">
++        <p><u>Strategic Return to Sweden</u></p>
++        <p>
++          After three years in Ireland and a strategic return through Nice and
++          Barcelona, I arrived in
++          <a
++            href="https://drive.google.com/open?id=1K--ARlW9Eh5ONV2ndh0zXcdg__feClr4&usp=drive_fs"
++            class="subtle-link"
++            target="_blank"
++            >Sweden</a
++          >
++          in April 2022. I first lived in <strong>Gothenburg</strong>, where I
++          spent one year—including three months as a <u>fodora delivery</u>.
++          Then, I relocated to <strong>Stockholm</strong> to pursue
++          higher-paying roles in hospitality.
++        </p>
+ 
+-      <p>
+-        The move was deliberate. My goal was to stabilize my legal and financial
+-        status while gradually preparing for
+-        <strong>independent tech work</strong>. I chose restaurants as a
+-        <strong>strategic entry point</strong>: quick cashflow, proof of
+-        address, and immediate access to the
+-        <u>Swedish system</u> (personnummer, unemployment insurance, banking).
+-      </p>
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/toofar.jpg"
++            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
+ 
+-      <section class="narrative-comparison">
+-        <h2>Last Job Before Quan</h2>
++        <p><u>Using Restaurants as a Launch Pad</u></p>
++        <p>
++          The move was deliberate. My goal was to stabilize my legal and
++          financial status while gradually preparing for
++          <strong>independent tech work</strong>. I chose restaurants as a
++          <strong>strategic entry point</strong>: quick cashflow, proof of
++          address, and immediate access to the
++          <u>Swedish system</u> (personnummer, unemployment insurance, banking).
++        </p>
++        <p><u>Last Job Before Quan</u></p>
+         <p>
+           Before joining Quan, I worked for 14 months as a dishwasher at
+           <strong>Da Peppe Due</strong>, a well-known pizzeria in Stockholm. The
+@@ -156,6 +173,7 @@
+           dining room until the next rush. What mattered was being ready when
+           needed, and responsive under pressure.
+         </p>
++
+         <p>
+           My chef’s philosophy was simple: the restaurant should work smoothly
+           <u>without his constant presence</u>. That meant trusting the staff,
+@@ -165,205 +183,73 @@
+           considered creating an Instagram account just for them. Salaries were
+           fair—and sometimes higher than expected.
+         </p>
+-        <p>
+-          I left for strategic reasons, but I never felt disposable. That job
+-          left me with a sense of
+-          <strong>trust, dignity, and horizontal respect</strong>. It shaped my
+-          expectations—and helped me detect when the opposite was happening.
+-        </p>
+-      </section>
+-      <p>
+-        I arrived in Sweden in April 2022, first in Gothenburg, then in
+-        Stockholm. I worked for 14 months at
+-        <strong><a href="https://dapeppedue.se/">Da Peppe Due</a></strong
+-        >, a pizzeria where I earned up to
+-        <strong
+-          ><a
+-            href="https://drive.google.com/file/d/1dgAYR3CPEaqNFUOpsShy7LYe7sNq49jW/view?usp=sharing"
+-            >28,000 SEK net</a
+-          ></strong
+-        >
+-        per month, enjoyed free meals, and operated in a flexible environment.
+-      </p>
+ 
+-      <p>
+-        Before Stockholm, I lived in Gothenburg. I had arrived from Nice, after
+-        three years in Ireland. In Gothenburg, I worked briefly as a delivery
+-        rider. I also met Sara on a dating app; within 15 days, I had moved into
+-        her place. That relationship aligned with my goal of relocating to
+-        Stockholm to seek better opportunities.
+-      </p>
+-
+-      <p>
+-        I had regained everything I needed materially after nearly a decade of
+-        precariousness. I had secured eligibility for unemployment benefits. But
+-        remaining a <strong>dishwasher</strong> any longer would have meant
+-        accepting a symbolic label I could no longer carry. The second phase of
+-        my strategy had to begin.
+-      </p>
++        <section class="narrative-comparison">
++          <p>
++            I left for strategic reasons, but I never felt disposable. That job
++            left me with a sense of
++            <strong>trust, dignity, and horizontal respect</strong>. It shaped
++            my expectations—and helped me detect when the opposite was
++            happening.
++          </p>
+ 
+-      <p>
+-        In May 2024, after a breakup, I entered a period of
+-        <strong
+-          ><a
+-            href="https://drive.google.com/file/d/1rtj9b9BVrquGxQHegjPrs6o0ZP-9BRoR/view?usp=sharing"
+-            >housing precarity</a
+-          ></strong
+-        >
+-        in Stockholm. I no longer had stable shelter, but I retained 24/7 access
+-        to a <strong>coworking space</strong>. The following month, in June, I
+-        worked in two restaurants and earned <strong>32,000 SEK</strong>—my
+-        highest official monthly income.
+-      </p>
++          <p>
++            Despite this, the city's
++            <strong>stress, noise, and compressed energy</strong> had become too
++            much. I needed calmer surroundings, both socially and mentally.
++            <strong>Malmö offered a logical reset</strong>: softer social
++            dynamics, fewer frictions, and a milder climate—one I knew would be
++            safer to endure if housing became uncertain again.
++          </p>
++        </section>
+ 
+-      <p>
+-        Despite this, the city's
+-        <strong>stress, noise, and compressed energy</strong> had become too
+-        much. I needed calmer surroundings, both socially and mentally.
+-        <strong>Malmö offered a logical reset</strong>: softer social dynamics,
+-        fewer frictions, and a milder climate—one I knew would be safer to
+-        endure if housing became uncertain again.
+-      </p>
++        <p><u>End of Phase One</u></p>
+ 
+-      <p>
+-        This marked the start of <strong>Phase Two</strong>: securing the final
+-        tools for <strong>tech entrepreneurship</strong>. I aimed to acquire a
+-        car, an ultra-wide monitor, a backup laptop, and
+-        <strong
+-          ><a
+-            href="https://verksamt.se/en/setting-up/choose-business-type/limited-company"
+-            >25,000 SEK in incorporation funds</a
+-          ></strong
+-        >. Once covered, <strong>Phase Three</strong>—building the company—could
+-        begin.
+-      </p>
+-      <p>
+-        I arrived in Malmö on <strong>November 1, 2024</strong>, determined to
+-        resume work in a higher-standard kitchen. I shortlisted venues with
+-        <strong>top-rated service reviews</strong>, hoping to find a place where
+-        my obsessive attention to detail would be seen as an asset—not a flaw,
+-        as in my last job.
+-      </p>
+-      <p>
+-        On <strong>November 16</strong>, I sent a spontaneous application to
+-        <strong>Quan</strong>. I was aware the restaurant was attached to a
+-        hotel, but only during my trial shift did I fully realize the extent of
+-        its integration within a <strong>4-star hotel</strong>.
+-      </p>
++        <p>
++          I had regained everything I needed materially after nearly a decade of
++          precariousness. I had secured eligibility for unemployment benefits.
++          But remaining a <strong>dishwasher</strong> any longer would have
++          meant accepting a symbolic label I could no longer carry. The second
++          phase of my strategy had to begin.
++        </p>
+ 
+-      <p>
+-        Many of my early questions—about dishware, trolleys, or food
+-        storage—were answered with “it’s for the hotel.” I deduced that the
+-        entire food and conference service, including breakfast, was run by the
+-        same company, but no clear onboarding ever explained these overlaps. The
+-        structure remained opaque.
+-      </p>
+-      <p>
+-        <strong>
+-          <a
+-            href="https://drive.google.com/file/d/1s6uTnBQCgQGC0qQVsxj-ili6KFA7bZ1/view?usp=sharing"
+-            >around 2 PM</a
++        <p><u>Phase Two – From Precarity to Readiness</u></p>
++        <p>
++          In May 2024, after a breakup, I entered a period of
++          <strong
++            ><a
++              href="https://drive.google.com/file/d/1rtj9b9BVrquGxQHegjPrs6o0ZP-9BRoR/view?usp=sharing"
++              >housing precarity</a
++            ></strong
+           >
+-        </strong>
+-      </p>
+-
+-      <p>
+-        Her familiarity felt disproportionate coming from someone I’d never met.
+-        I responded politely but awkwardly, unsure who she was. When she and
+-        Henrik entered the meeting room together, she naturally led the
+-        conversation. That’s when I assumed she was
+-        <strong>in charge of the restaurant</strong>—someone with practical
+-        authority beyond her official title.
+-      </p>
+-
+-      <p>
+-        No one introduced her or confirmed her title. Later, colleagues casually
+-        referred to her as <em>“the boss.”</em> I had no reason to doubt it. I
+-        only discovered much later she was
+-        <strong>formally listed as Deputy Board Member</strong>—a position that
+-        carries no formal management authority in Sweden.
+-      </p>
+-
+-      <p>
+-        That gap between perceived authority and official status didn’t strike
+-        me immediately, but it shaped a subtle confusion. I adapted to her
+-        leadership as if she were the founder or legal manager. At no point was
+-        I told otherwise.
+-      </p>
+-
+-      <p>
+-        That ambiguity had immediate consequences: moments earlier, I had
+-        greeted several team members, including a
+-        <strong>floor manager</strong> I’d bonded with during my shift. He
+-        ignored my handshake. In retrospect, I interpreted this as a reaction to
+-        my rushed greeting to her—possibly seen as a
+-        <strong>lack of deference to the executive lead</strong>.
+-      </p>
+-
+-      <p>
+-        The session itself was warm.
+-        <strong>Henrik showed visible enthusiasm</strong>, while Sahar remained
+-        measured but positive. Both seemed relieved to have found someone
+-        <em>“reliable”</em>. I, too, felt I had landed in the right place,
+-        though I sensed a slight mismatch between Sahar’s informal posture and
+-        the authority she embodied.
+-      </p>
+-      <p>
+-        The tone was enthusiastic. They expressed visible relief at finding
+-        someone “reliable.” They emphasized three principles:
+-        <strong>punctuality</strong>, <strong>exclusive availability</strong>,
+-        and <strong>attention to detail</strong>—framed as missing virtues in
+-        their previous hires.
+-      </p>
+-
+-      <p>
+-        I was offered an hourly rate of <strong>160 SEK/h</strong> on the spot,
+-        based on my CV and the trial performance. I disclosed an existing
+-        weekend job, which Sahar acknowledged without hesitation, even framing
+-        it as a sign of integrity.
+-      </p>
+-
+-      <p>
+-        During that meeting,
+-        <strong>Sahar mentioned a digital contract</strong> would be sent. I
+-        expected it within days, but no document ever arrived. No login
+-        credentials, no confirmation, no follow-up. The promise remained
+-        unfulfilled despite clear mutual agreement.
+-      </p>
+-
+-      <p>
+-        I also raised a condition: receiving a share of <strong>tips</strong>.
+-        They said the matter would be discussed with the floor and bar managers.
+-        A few days later, both confirmed their approval individually. No
+-        contract followed, but Sahar briefly mentioned one would—possibly via
+-        their internal system. That mention was never repeated.
+-      </p>
+-      <p>
+-        Throughout this period,
+-        <strong>my only point of contact was Henrik</strong>. His number was the
+-        only one I received. Any attempt to address questions or follow up—about
+-        schedules, duties, or documents—was redirected:
+-        <em>“I'll ask Sahar.”</em> Eventually,
+-        <strong>I stopped asking</strong>. He often seemed embarrassed or
+-        reluctant.
+-      </p>
++          in Stockholm. I no longer had stable shelter, but I retained 24/7
++          access to a <strong>coworking space</strong>. The following month, in
++          June, I worked in two restaurants and earned
++          <strong>32,000 SEK</strong>—my highest official monthly income.
++        </p>
+ 
+-      <p>
+-        When he was absent, I was told to ask the <strong>sous-chefs</strong>.
+-        That proved even more difficult. Their responses felt dismissive, and I
+-        quickly sensed that <strong>pushing further was unwelcome</strong>. I
+-        began submitting written questions to the restaurant’s general email.
+-        These were not challenged, but I knew
+-        <strong>they fell outside accepted channels</strong>.
+-      </p>
++        <p>
++          This marked the start of <strong>Phase Two</strong>: securing the
++          final tools for <strong>tech entrepreneurship</strong>. I aimed to
++          acquire a car, an ultra-wide monitor, a backup laptop, and
++          <strong
++            ><a
++              href="https://verksamt.se/en/setting-up/choose-business-type/limited-company"
++              >25,000 SEK in incorporation funds</a
++            ></strong
++          >. Once covered, <strong>Phase Three</strong>—building the
++          company—could begin.
++        </p>
+ 
+-      <p>
+-        The meeting lasted approximately <strong>30 minutes</strong>, between
+-        <strong>13:53 and 14:28</strong>, as confirmed in my Google Timeline.
+-        Though informal in tone, it set the
+-        <strong>essential terms of work</strong> and gave rise to what I
+-        interpreted as the <strong>start of formal employment</strong>.
+-      </p>
++        <p><u>Arrival in Malmö</u></p>
++        <p>
++          I arrived in Malmö on <strong>November 1, 2024</strong>, determined to
++          resume work in a higher-standard kitchen. I shortlisted venues with
++          <strong>top-rated service reviews</strong>, hoping to find a place
++          where my obsessive attention to detail would be seen as an asset—not a
++          flaw, as in my last job.
++        </p>
++      </main>
+     </main>
+     <script>
+       // Script pour la sidebar
+diff --git a/cost.html b/cost.html
+index 7d1bb80..9503fdb 100644
+--- a/cost.html
++++ b/cost.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,6 +46,7 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+diff --git a/exchanges.html b/exchanges.html
+index c5767a7..5336b92 100644
+--- a/exchanges.html
++++ b/exchanges.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,12 +46,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+diff --git a/faq.html b/faq.html
+index f1121d0..74c2a88 100644
+--- a/faq.html
++++ b/faq.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,12 +46,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+diff --git a/foundations.html b/foundations.html
+index 0deeeb1..593491e 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/glossary.html b/glossary.html
+index 6eacb02..2ff2997 100644
+--- a/glossary.html
++++ b/glossary.html
+@@ -36,30 +36,28 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-    
++
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+-    
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
++
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-    
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">③</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
+-    
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
++
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+         <a href="/confidential.html">Confidential</a>
+-    
++
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -69,7 +67,7 @@
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+         <a href="/archive.html">Download PDF</a>
+-    
++
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -81,6 +79,7 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+     <main
+       style="
+diff --git a/governance.html b/governance.html
+index d853d96..b4eadb8 100644
+--- a/governance.html
++++ b/governance.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/guide.html b/guide.html
+index 903e67e..326ffa4 100644
+--- a/guide.html
++++ b/guide.html
+@@ -16,30 +16,28 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-    
++
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+-    
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
++
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-    
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">③</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
+-    
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
++
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+         <a href="/confidential.html">Confidential</a>
+-    
++
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -49,7 +47,7 @@
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+         <a href="/archive.html">Download PDF</a>
+-    
++
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -61,6 +59,7 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+     <main class="main-content" style="max-width: 740px; margin: auto; padding: 2rem;">
+       <h1>Reading Help</h1>
+diff --git a/home.html b/home.html
+index 0161aad..01fb532 100644
+--- a/home.html
++++ b/home.html
+@@ -37,9 +37,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -49,6 +49,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/index.html b/index.html
+index 598f1cf..e7c4723 100644
+--- a/index.html
++++ b/index.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+@@ -96,14 +98,20 @@
+         </p>
+       </div>
+       <!-- START INDEX UPDATES -->
+-<div class="legal-container">
+-<h2>🗂️ Saturday 31 May 2025</h2>
+-<ul>
+-  <li>🗂️ 02:05:11 – :structure: sector – updated margin analysis and contextualized Balder/Elite Hotel</li>
+-  <li>⚖️ 02:05:08 – :legal: governance – clarified ownership layers and shareholder control</li>
+-</ul>
+-</div>
+-<!-- END INDEX UPDATES -->
++      <div class="legal-container">
++        <h2>🗂️ Saturday 31 May 2025</h2>
++        <ul>
++          <li>
++            🗂️ 02:05:11 – :structure: sector – updated margin analysis and
++            contextualized Balder/Elite Hotel
++          </li>
++          <li>
++            ⚖️ 02:05:08 – :legal: governance – clarified ownership layers and
++            shareholder control
++          </li>
++        </ul>
++      </div>
++      <!-- END INDEX UPDATES -->
+     </main>
+     <script>
+       // Script pour la sidebar
+diff --git a/legal.html b/legal.html
+index c311056..f15a8f9 100644
+--- a/legal.html
++++ b/legal.html
+@@ -16,30 +16,28 @@
+         <a href="/">Home</a>
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+-    
++
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/sector.html"><span class="nav-icon">①</span>Kitchen Structures</a>
+-        <a href="/context.html"><span class="nav-icon">②</span> Personal Context</a>
+-    
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
++
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+-    
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">③</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
+-    
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
++
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
+         <a href="/confidential.html">Confidential</a>
+-    
++
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+         <a href="/glossary.html">Glossary</a>
+@@ -49,7 +47,7 @@
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
+         <a href="/archive.html">Download PDF</a>
+-    
++
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+@@ -61,6 +59,7 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+     <main
+       style="
+@@ -194,26 +193,40 @@
+ 
+       <h2>13. Access Control and Strategic Extract Requests</h2>
+ 
+-<p>
+-  Access to certain high-sensitivity materials—such as those contained within the <strong>Strategic Extract</strong>—is restricted and subject to manual review.
+-  Requests may be denied at the author's discretion.
+-</p>
++      <p>
++        Access to certain high-sensitivity materials—such as those contained
++        within the <strong>Strategic Extract</strong>—is restricted and subject
++        to manual review. Requests may be denied at the author's discretion.
++      </p>
+ 
+-<p>
+-  In order to protect both the integrity of the archive and the identity of contributors, any request to access these documents requires identifiable contact details.
+-</p>
++      <p>
++        In order to protect both the integrity of the archive and the identity
++        of contributors, any request to access these documents requires
++        identifiable contact details.
++      </p>
+ 
+-<p>
+-  These details (such as <strong>name, email address, professional affiliation</strong>, or equivalent) are logged for the sole purpose of traceability and will <u>never</u> be shared, sold, or publicly disclosed. This approach is designed to <span class="highlight">prevent abuse, reduce data diffusion, and preserve the site’s independence</span>.
+-</p>
++      <p>
++        These details (such as
++        <strong>name, email address, professional affiliation</strong>, or
++        equivalent) are logged for the sole purpose of traceability and will
++        <u>never</u> be shared, sold, or publicly disclosed. This approach is
++        designed to
++        <span class="highlight"
++          >prevent abuse, reduce data diffusion, and preserve the site’s
++          independence</span
++        >.
++      </p>
+ 
+-<p>
+-  If a request is declined, a brief notification may be sent to the requester explaining the reason.
+-</p>
++      <p>
++        If a request is declined, a brief notification may be sent to the
++        requester explaining the reason.
++      </p>
+ 
+-<p>
+-  Your submission constitutes acceptance of this protocol. The database of access requests is stored securely and used exclusively to assess access legitimacy.
+-</p>
++      <p>
++        Your submission constitutes acceptance of this protocol. The database of
++        access requests is stored securely and used exclusively to assess access
++        legitimacy.
++      </p>
+     </main>
+ 
+     <script>
+diff --git a/notes.html b/notes.html
+index ead8d2f..0892365 100644
+--- a/notes.html
++++ b/notes.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+@@ -1284,6 +1286,76 @@
+           >.)
+         </p>
+       </details>
++      <details id="note-debt-origin">
++        <summary>
++          <strong
++            >📎 Note — When and how did Sweden's public debt begin?</strong
++          >
++        </summary>
++        <p style="line-height: 1.6em">
++          🇸🇪 In <u>1789</u>, Sweden launched its public debt by creating the
++          Office of National Debt to fund war against Russia — despite already
++          having a central bank, the <u>Riksbank</u> (founded 1668). 🏦 Instead
++          of issuing sovereign money, the State chose to borrow from unnamed
++          creditors — likely nobles, merchant elites, or foreign banks — without
++          ever publishing a full list 🕵️‍♂️. This choice locked Sweden into a
++          fiscal model where
++          <strong>taxation grew to repay, not to build</strong>, and that logic
++          was never reversed 🔁. Today’s income tax, employer contributions and
++          VAT structure still trace back to that original decision. 📈
++          <a
++            href="./public/charts/sweden_debt_history_1789.html"
++            class="subtitle-link"
++            >See debt-to-GDP evolution chart</a
++          >.
++        </p>
++      </details>
++      <details id="note-debt-tax-weight">
++        <summary>
++          <strong>📎 Note — Who pays what, and where does the money go?</strong>
++        </summary>
++
++        <p style="line-height: 1.6em">
++          💸 <strong>Tax origin:</strong> About <strong>50%</strong> of Sweden's
++          national income is collected through taxes. Of that, an estimated
++          <strong>25–30%</strong> comes from <u>entrepreneurs</u> (corporate
++          tax, VAT, payroll fees), and the rest from individuals (income tax,
++          consumption tax).
++        </p>
++
++        <p style="line-height: 1.6em">
++          🧾 <strong>Tax usage:</strong> Approximately
++          <strong>60–65%</strong> of that revenue is spent on public services
++          (education, health, pensions). Only about <strong>1.37%</strong> goes
++          to servicing the public debt — covering interest, not capital.
++        </p>
++
++        <p style="line-height: 1.6em">
++          🔁 <strong>Debt mechanism:</strong> Sweden does not repay its debt
++          like a household would. Instead of paying back the principal, the
++          State <u>rolls the debt</u> — borrowing again to refinance maturing
++          obligations. As long as market confidence holds, this cycle is
++          infinite.
++        </p>
++
++        <p style="line-height: 1.6em">
++          🇸🇪 <strong>Debt trend:</strong> Sweden’s public debt dropped from
++          <strong>80% of GDP in 1994</strong> to around
++          <strong>32% in 2024</strong>.
++          <mark style="background-color: #e0e0e0"
++            >But despite this drop, the overall tax burden remains high</mark
++          >, especially on entrepreneurs.
++        </p>
++
++        <p style="line-height: 1.6em">
++          📊
++          <a
++            href="/publics.charts/sweden_debt_tax_analysis(1).html"
++            class="subtle-link"
++            >Explore the chart</a
++          >
++        </p>
++      </details>
+     </main>
+     <script>
+       // open <details> when anchor is targeted
+diff --git a/philosophy.html b/philosophy.html
+index f8b06c7..84e69be 100644
+--- a/philosophy.html
++++ b/philosophy.html
+@@ -15,9 +15,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -27,6 +27,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/posts.html b/posts.html
+index 7249e43..68803bc 100644
+--- a/posts.html
++++ b/posts.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/press.html b/press.html
+index 99a2c81..c4aaa33 100644
+--- a/press.html
++++ b/press.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,12 +46,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+diff --git a/response.html b/response.html
+index bdefcc8..74098c0 100644
+--- a/response.html
++++ b/response.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
++
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,12 +46,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+diff --git a/search.html b/search.html
+index b641371..00983f2 100644
+--- a/search.html
++++ b/search.html
+@@ -87,28 +87,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -118,12 +116,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+@@ -140,21 +142,22 @@
+         Search engine under development — expect major updates soon.
+       </p>
+     </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
+-
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++    <script>
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
++
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>
+diff --git a/sector.html b/sector.html
+index c05755b..4d9b8a1 100644
+--- a/sector.html
++++ b/sector.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+@@ -177,6 +179,8 @@
+         >
+       </blockquote>
+ 
++      <h2 id="culture-alcoholism"><mark>Culture of Fraud</mark></h2>
++
+       <p><u>Low Margins</u></p>
+ 
+       <p>
+@@ -242,6 +246,133 @@
+         posted <strong>15.4%</strong> on SEK 9.1 trillion.
+       </p>
+ 
++      <div
++        style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem"
++      >
++        <img
++          src="./assets/img/backyard_recycling_dapeppedue_2024.jpg"
++          alt="Damaged and half-open locker with name written in marker"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem">
++          <em>Half-open staff locker, handwritten marker, fall 2023.</em>
++        </p>
++      </div>
++
++      <p><u>Heavy Regulation</u></p>
++
++      <p>
++        So we have the tax added to everything the customer pays
++        (<small>MOMS</small>) (12%), the tax the restaurateur pays on top of
++        every salary (31.42%), the tax on <u>company profits</u> (20.6%), and
++        the tax the owner pays again to take money out of their own business
++        (20%).
++      </p>
++
++      <p>
++        In 1950, restaurateurs
++        <a href="notes.html#note-restaurant-tax-curve" class="note-link"
++          >kept around 75%</a
++        >
++        of their profits. By 1980, under
++        <a href="notes.html#note-olof-palme-tax-impact" class="note-link"
++          >Olof Palme</a
++        >, that dropped to 25%. Since then, caught in one tax
++        <a href="notes.html#note-tax-breakdown" class="note-link">cascade</a>
++        after another, they end up with <strong>50%</strong> —
++        <span style="background-color: #e0e0e0"
++          >in line with other Swedish entrepreneurs</span
++        >, but far from
++        <a
++          href="./public/charts/sweden_restaurant_tax_evolution.html"
++          class="chart-link"
++          >Dubai’s 91%</a
++        >.
++      </p>
++
++      <p></p>
++      <p>
++        In Sweden, <strong>8.4%</strong> of the national income comes from
++        <a
++          href="/public/charts/sweden_budget_pie_chart_swedish.html"
++          class="chart-link"
++          >business taxation</a
++        >, <strong>17.3%</strong> from
++        <a href="/notes/note_taxation_breakdown.html" class="subtle-link"
++          >individual income taxes</a
++        >, and <strong>22.4%</strong> from
++        <span style="text-decoration: underline">consumption taxes</span>. Since
++        a restaurant owner is both an entrepreneur and a consumer, their real
++        contribution to the state's budget is significantly higher than the 8.4%
++        business share alone.
++      </p>
++
++      <p>
++        To make matters worse, the sector is still repaying
++        <span style="background-color: #e0e0e0"
++          >SEK 1.6 billion in Covid-era tax debt</span
++        >, affecting more than 1,700 businesses. Monthly repayments tighten
++        margins further,
++        <strong>trapping restaurateurs in a permanent survival loop</strong>.
++        The system does not absorb volatility—it externalizes it to the
++        operator.
++      </p>
++
++      <div
++        style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem"
++      >
++        <img
++          src="./assets/img/glass.jpg"
++          alt="Damaged and half-open locker with name written in marker"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem">
++          <em>Half-open staff locker, handwritten marker, fall 2023.</em>
++        </p>
++      </div>
++
++      <p><u>Rent Trap</u></p>
++      <p>
++        One of the most overlooked burdens for independent restaurateurs in
++        <u>Lilla Torg</u> is the <strong>commercial rent</strong>. Over the past
++        few years, lease prices have soared under tourist demand and speculative
++        pressure, with increases
++        <span style="color: #6b7280"
++          >often disconnected from actual revenues</span
++        >. Today, large franchises and corporate chains dominate the square,
++        <strong>gradually pushing small independents out</strong>. A detailed
++        analysis is available in this
++        <a href="/notes/lilla-torg-rent.html" class="note_link"
++          >dedicated note</a
++        >.
++      </p>
++
++      <p>
++        Alongside that, another silent but equally devastating force has
++        emerged: <strong>inflation</strong>. Since 2022, the
++        <u>price of electricity and food supplies</u> has surged dramatically.
++        The war in Ukraine disrupted Europe’s supply chains,
++        <span style="color: #6b7280"
++          >triggering spikes in energy and agricultural costs</span
++        >. Even the most disciplined restaurateurs saw their margins collapse,
++        with no realistic way to pass on the costs to customers. A breakdown of
++        this dynamic is provided in this
++        <a href="/notes/inflation-food-energy.html" class="note_link"
++          >linked note</a
++        >.
++      </p>
++      <div
++        style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem"
++      >
++        <img
++          src="./assets/img/offload.jpg"
++          alt="Damaged and half-open locker with name written in marker"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem">
++          <em>Half-open staff locker, handwritten marker, fall 2023.</em>
++        </p>
++      </div>
+       <p><u>Intense Labor</u></p>
+       <p>
+         Staffing eats 25–35% of revenue, yet salaries remain modest. The job
+@@ -299,24 +430,6 @@
+         rewriting menus.
+       </p>
+ 
+-      <p><u>Heavy Regulation</u></p>
+-      <p>
+-        From VAT declarations to hygiene audits, the bureaucracy is relentless.
+-        In Sweden, VAT on food service is 12%. In France, it's 10%. In Denmark,
+-        25%. Meanwhile, the US varies between 2–7.25%, and Dubai sits at 5%.
+-        <span class="highlight"
+-          >Each form and inspection adds invisible cost and legal risk</span
+-        >.
+-      </p>
+-
+-      <p>
+-        In 2023, Sweden’s restaurant sector still carried
+-        <span class="highlight">SEK 1.6 billion in Covid-era tax debt</span>,
+-        spread across 1,700 restaurants. Repayment plans remain active,
+-        tightening margins further. The weight is legal, not just financial —
+-        every delay risks default or seizure.
+-      </p>
+-
+       <div
+         style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem"
+       >
+diff --git a/structure.html b/structure.html
+index ff07253..7380b8b 100644
+--- a/structure.html
++++ b/structure.html
+@@ -17,9 +17,9 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+         <a href="/sector.html">Kitchen Culture</a>
+         <a href="/context.html"> Personal Context</a>
+ 
+@@ -29,6 +29,8 @@
+         <a href="/structure.html">Current Architecture</a>
+ 
+         <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
+         <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+diff --git a/template.html b/template.html
+index 7edc0b4..c292e7c 100644
+--- a/template.html
++++ b/template.html
+@@ -20,25 +20,21 @@
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+         <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,40 +44,40 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+       </div>
+     </header>
+     <main class="main-content">
+-      <h1>
+-
+-
+-
+-
+-Template</h1>
++      <h1>Template</h1>
+     </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
++    <script>
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
+ 
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>
+diff --git a/timeline.html b/timeline.html
+index e351890..7d49a5f 100644
+--- a/timeline.html
++++ b/timeline.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+-        <a href="/structure.html">Legal Architecture</a>
++        <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,12 +46,16 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+         <a href="https://ob1.se/forum.html">Forum</a>
+         <a href="/legal.html">Legal</a>
+         <a href="/faq.html">Defense FAQ</a>
++        <a href="/reply.html">Reply Policy</a>
++        <a href="/exchanges.html">Letters and Pressure</a>
++        <a href="/cost.html">Research Cost</a>
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
+@@ -92,23 +94,23 @@
+       </section>
+ 
+       <!-- FOOTER INCHANGÉ -->
+-
+     </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
++    <script>
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
+ 
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>
+diff --git a/updates.html b/updates.html
+index 22c6d79..34e2f82 100644
+--- a/updates.html
++++ b/updates.html
+@@ -17,28 +17,26 @@
+         <!-- Bloc Auteur -->
+         <div class="nav-section">About the Author</div>
+ 
++        <a href="/claim.html">Editorial Framework</a>
+         <a href="/philosophy.html">Operating Principles</a>
+         <a href="/about.html">Trajectory</a>
+-        <a href="/claim.html">Editorial Framework</a>
+-        <a href="/context.html"
+-          ><span class="nav-icon">①</span> Personal Context</a
+-        >
++        <a href="/sector.html">Kitchen Culture</a>
++        <a href="/context.html"> Personal Context</a>
+ 
+         <!-- Bloc Contexte -->
+         <div class="nav-section">Case Background</div>
+         <a href="/foundations.html">Founding Genesis</a>
+         <a href="/structure.html">Current Architecture</a>
+ 
+-        <a href="/working-dynamics.html"
+-          ><span class="nav-icon">②</span> Working Dynamics</a
+-        >
+-        <a href="/governance.html"
+-          ><span class="nav-icon">③</span> Operational Authority</a
+-        >
++        <a href="/working-dynamics.html"> Working Dynamics</a>
++        <a href="/signals.html"> Perceived Authority</a>
++
++        <a href="/governance.html"> Operational Authority</a>
+ 
+         <!-- Bloc Publications -->
+         <div class="nav-section">Articles</div>
+         <a href="/posts.html">Blog</a>
++        <a href="/confidential.html">Confidential</a>
+ 
+         <!-- Bloc Outils & Références -->
+         <div class="nav-section">Tools & References</div>
+@@ -48,6 +46,7 @@
+         <a href="/timeline.html">Timeline</a>
+         <a href="/updates.html">Logs</a>
+         <a href="/simulator.html">Simulator</a>
++        <a href="/archive.html">Download PDF</a>
+ 
+         <!-- Bloc Communauté et légal -->
+         <div class="nav-section">Community & Legal</div>
+@@ -60,6 +59,7 @@
+         <a href="/guide.html">Reading Help</a>
+         <a href="/press.html">Media Access</a>
+         <a href="/contact.html">Contact</a>
++      </div>
+     </header>
+     <main
+       style="
+@@ -70,12 +70,7 @@
+       "
+     >
+       <div class="intro_changelog">
+-        <h1>
+-
+-
+-
+-
+-Activity Log</h1>
++        <h1>Activity Log</h1>
+         <small class="timestamp" style="display: block; text-align: center"
+           >Last updated: Thursday, May 1, 2025 at 02:33 AM</small
+         >
+@@ -194,58 +189,109 @@ Activity Log</h1>
+         </details>
+       </div>
+       <!-- START UPDATES SNIPPET -->
+-<div class="legal-container">
+-<strong>🗂️ Saturday 31 May 2025</strong>
+-<ul>
+-  <li>🗂️ 02:05:11 – :structure: sector – updated margin analysis and contextualized Balder/Elite Hotel</li>
+-  <li>⚖️ 02:05:08 – :legal: governance – clarified ownership layers and shareholder control</li>
+-</ul>
+-<strong>🕰️ Friday 30 May 2025</strong>
+-<ul>
+-  <li>🕰️ 05:30:31 – :lock: confidential: revised access disclaimers and risk-based filtration logic</li>
+-  <li>⚖️ 05:30:15 – :legal: legal: clarified authority layers and proxy ownership attribution</li>
+-  <li>🗂️ 05:29:58 – :scroll: structure: reordered sections in Working Dynamics for clarity and visual balance</li>
+-</ul>
+-<strong>📄 Thursday 29 May 2025</strong>
+-<ul>
+-  <li>📄 02:01:12 – 🔎 docs: clarified self-positioning in 'about.html' with smoother anchoring to narrative grid and indirect framing via language choice</li>
+-  <li>✍️ 02:01:02 – 🧠 content: refined final section of 'philosophy.html' with emphasis on narrative responsibility, clarity of intent, and implicit logic of withdrawal</li>
+-</ul>
+-<strong>🎨 Tuesday 27 May 2025</strong>
+-<ul>
+-  <li>🎨 03:04:46 – :chore: adjusted vite config to support asset imports for markdown-style image referencing</li>
+-  <li>🕰️ 03:04:30 – :feat: extended pickIcon.js with refined rules and fallback icons for commit logs</li>
+-  <li>🎨 03:04:18 – :style: updated sidebar anchors and visual weight for lateral nav blocks on homepage and sector</li>
+-  <li>✍️ 03:03:12 – :content: enriched navigation structure and sidebar visuals across multiple pages (philosophy.html, claim.html, sector.html). Added image embedding and caption logic for inline visuals. Initiated draft of 'Personal Operating Principle' with Naval Ravikant + Philippe Guillemant references. Refined icon logic and synced commit emoji handler in pickIcon()</li>
+-</ul>
+-<strong>📄 Sunday 25 May 2025</strong>
+-<ul>
+-  <li>📄 03:00:33 – :docs: added transitional image before QUAN chapter – personnel waste & container corner at Da Peppe Due (2024)</li>
+-  <li>✍️ 03:00:31 – :content: enriched sector.html and governance.html with co-founder insights, added new paragraph on cash-out logic and shifted tone from ‘fuck-you money’ to purpose-driven work</li>
+-</ul>
+-<strong>✍️ Friday 23 May 2025</strong>
+-<ul>
+-  <li>✍️ 03:14:53 – 📊 content: integrated 'Golden Rule' in-line with Low Margins and added supportive comparative VAT analysis across countries</li>
+-</ul>
+-<p>📊 Yesterday: 3 updates across 16 files.</p>
+-</div>
+-<!-- END UPDATES SNIPPET -->
++      <div class="legal-container">
++        <strong>🗂️ Saturday 31 May 2025</strong>
++        <ul>
++          <li>
++            🗂️ 02:05:11 – :structure: sector – updated margin analysis and
++            contextualized Balder/Elite Hotel
++          </li>
++          <li>
++            ⚖️ 02:05:08 – :legal: governance – clarified ownership layers and
++            shareholder control
++          </li>
++        </ul>
++        <strong>🕰️ Friday 30 May 2025</strong>
++        <ul>
++          <li>
++            🕰️ 05:30:31 – :lock: confidential: revised access disclaimers and
++            risk-based filtration logic
++          </li>
++          <li>
++            ⚖️ 05:30:15 – :legal: legal: clarified authority layers and proxy
++            ownership attribution
++          </li>
++          <li>
++            🗂️ 05:29:58 – :scroll: structure: reordered sections in Working
++            Dynamics for clarity and visual balance
++          </li>
++        </ul>
++        <strong>📄 Thursday 29 May 2025</strong>
++        <ul>
++          <li>
++            📄 02:01:12 – 🔎 docs: clarified self-positioning in 'about.html'
++            with smoother anchoring to narrative grid and indirect framing via
++            language choice
++          </li>
++          <li>
++            ✍️ 02:01:02 – 🧠 content: refined final section of 'philosophy.html'
++            with emphasis on narrative responsibility, clarity of intent, and
++            implicit logic of withdrawal
++          </li>
++        </ul>
++        <strong>🎨 Tuesday 27 May 2025</strong>
++        <ul>
++          <li>
++            🎨 03:04:46 – :chore: adjusted vite config to support asset imports
++            for markdown-style image referencing
++          </li>
++          <li>
++            🕰️ 03:04:30 – :feat: extended pickIcon.js with refined rules and
++            fallback icons for commit logs
++          </li>
++          <li>
++            🎨 03:04:18 – :style: updated sidebar anchors and visual weight for
++            lateral nav blocks on homepage and sector
++          </li>
++          <li>
++            ✍️ 03:03:12 – :content: enriched navigation structure and sidebar
++            visuals across multiple pages (philosophy.html, claim.html,
++            sector.html). Added image embedding and caption logic for inline
++            visuals. Initiated draft of 'Personal Operating Principle' with
++            Naval Ravikant + Philippe Guillemant references. Refined icon logic
++            and synced commit emoji handler in pickIcon()
++          </li>
++        </ul>
++        <strong>📄 Sunday 25 May 2025</strong>
++        <ul>
++          <li>
++            📄 03:00:33 – :docs: added transitional image before QUAN chapter –
++            personnel waste & container corner at Da Peppe Due (2024)
++          </li>
++          <li>
++            ✍️ 03:00:31 – :content: enriched sector.html and governance.html
++            with co-founder insights, added new paragraph on cash-out logic and
++            shifted tone from ‘fuck-you money’ to purpose-driven work
++          </li>
++        </ul>
++        <strong>✍️ Friday 23 May 2025</strong>
++        <ul>
++          <li>
++            ✍️ 03:14:53 – 📊 content: integrated 'Golden Rule' in-line with Low
++            Margins and added supportive comparative VAT analysis across
++            countries
++          </li>
++        </ul>
++        <p>📊 Yesterday: 3 updates across 16 files.</p>
++      </div>
++      <!-- END UPDATES SNIPPET -->
+     </main>
+-<script>
+-  // Script pour la sidebar
+-  const toggleBtn = document.getElementById("toggleNavbar");
+-  const navbar = document.querySelector(".navbar");
+-  toggleBtn?.addEventListener("click", () => {
+-    navbar.classList.toggle("collapsed");
+-  });
++    <script>
++      // Script pour la sidebar
++      const toggleBtn = document.getElementById("toggleNavbar");
++      const navbar = document.querySelector(".navbar");
++      toggleBtn?.addEventListener("click", () => {
++        navbar.classList.toggle("collapsed");
++      });
+ 
+-  // Script pour injecter le footer
+-  fetch("/components/footer.html")
+-    .then(res => res.text())
+-    .then(html => {
+-      const footerContainer = document.createElement("div");
+-      footerContainer.innerHTML = html;
+-      document.body.appendChild(footerContainer);
+-    });
+-</script>  </body>
++      // Script pour injecter le footer
++      fetch("/components/footer.html")
++        .then((res) => res.text())
++        .then((html) => {
++          const footerContainer = document.createElement("div");
++          footerContainer.innerHTML = html;
++          document.body.appendChild(footerContainer);
++        });
++    </script>
++  </body>
+ </html>

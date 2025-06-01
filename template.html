@@ -20,25 +20,21 @@
         <a href="/philosophy.html">Operating Principles</a>
         <a href="/about.html">Trajectory</a>
         <a href="/claim.html">Editorial Framework</a>
-        <a href="/context.html"
-          ><span class="nav-icon">①</span> Personal Context</a
-        >
+        <a href="/sector.html">Kitchen Culture</a>
+        <a href="/context.html"> Personal Context</a>
 
         <!-- Bloc Contexte -->
         <div class="nav-section">Case Background</div>
         <a href="/foundations.html">Founding Genesis</a>
-        <a href="/structure.html">Legal Architecture</a>
+        <a href="/structure.html">Current Architecture</a>
 
-        <a href="/working-dynamics.html"
-          ><span class="nav-icon">②</span> Working Dynamics</a
-        >
-        <a href="/governance.html"
-          ><span class="nav-icon">③</span> Operational Authority</a
-        >
+        <a href="/working-dynamics.html"> Working Dynamics</a>
+        <a href="/governance.html"> Operational Authority</a>
 
         <!-- Bloc Publications -->
         <div class="nav-section">Articles</div>
         <a href="/posts.html">Blog</a>
+        <a href="/confidential.html">Confidential</a>
 
         <!-- Bloc Outils & Références -->
         <div class="nav-section">Tools & References</div>
@@ -48,40 +44,40 @@
         <a href="/timeline.html">Timeline</a>
         <a href="/updates.html">Logs</a>
         <a href="/simulator.html">Simulator</a>
+        <a href="/archive.html">Download PDF</a>
 
         <!-- Bloc Communauté et légal -->
         <div class="nav-section">Community & Legal</div>
         <a href="https://ob1.se/forum.html">Forum</a>
         <a href="/legal.html">Legal</a>
         <a href="/faq.html">Defense FAQ</a>
+        <a href="/reply.html">Reply Policy</a>
+        <a href="/exchanges.html">Letters and Pressure</a>
+        <a href="/cost.html">Research Cost</a>
         <a href="/guide.html">Reading Help</a>
         <a href="/press.html">Media Access</a>
         <a href="/contact.html">Contact</a>
       </div>
     </header>
     <main class="main-content">
-      <h1>
-
-
-
-
-Template</h1>
+      <h1>Template</h1>
     </main>
-<script>
-  // Script pour la sidebar
-  const toggleBtn = document.getElementById("toggleNavbar");
-  const navbar = document.querySelector(".navbar");
-  toggleBtn?.addEventListener("click", () => {
-    navbar.classList.toggle("collapsed");
-  });
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
 
-  // Script pour injecter le footer
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      const footerContainer = document.createElement("div");
-      footerContainer.innerHTML = html;
-      document.body.appendChild(footerContainer);
-    });
-</script>  </body>
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
 </html>

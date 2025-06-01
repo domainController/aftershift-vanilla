@@ -425,6 +425,20 @@ a.note-link:hover {
   background-color: #d3eaff; /* bleu pastel un peu plus visible */
 }
 
+
+a.chart-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  background-color: #d1f2eb; /* vert menthe doux */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+a.chart-link:hover {
+  background-color: #b9e9df; /* vert un peu plus intense au survol */
+}
 .nav-section {
   background-color: #e5e7eb;         /* Gris clair uniforme */
   margin: 0 -1rem;                   /* Annule le padding horizontal de .navbar */
