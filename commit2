@@ -1,0 +1,273 @@
+diff --git a/context.html b/context.html
+index 3d27456..d0a262e 100644
+--- a/context.html
++++ b/context.html
+@@ -131,30 +131,144 @@
+       </section>-->
+ 
+       <main class="main-content">
+-        <p><u>Strategic Return to Sweden</u></p>
++        <p><u>Strategic Relocation & System Entry</u></p>
+         <p>
+-          After three years in Ireland and a strategic return through Nice and
+-          Barcelona, I arrived in
+-          <a
+-            href="https://drive.google.com/open?id=1K--ARlW9Eh5ONV2ndh0zXcdg__feClr4&usp=drive_fs"
+-            class="subtle-link"
+-            target="_blank"
+-            >Sweden</a
++          After three years in Ireland, I began a strategic return through Nice
++          and
++          <a href="governance.html#governance-fragment" class="subtle-link"
++            >Paris</a
++          >, where I attempted to join a failing business led by a former
++          friend. The plan—framed as a company revival—quickly revealed deeper
++          structural issues (see
++          <a href="governance.html#governance-fragment" class="subtle-link"
++            >Governance Section</a
++          >). After seven months, I left and chose to relocate to
++          <strong
++            ><a
++              href="https://drive.google.com/open?id=1K--ARlW9Eh5ONV2ndh0zXcdg_feClr4&usp=drive_fs"
++              class="subtle-link"
++              >Sweden</a
++            ></strong
+           >
+-          in April 2022. I first lived in <strong>Gothenburg</strong>, where I
+-          spent one year—including three months as a <u>fodora delivery</u>.
+-          Then, I relocated to <strong>Stockholm</strong> to pursue
+-          higher-paying roles in hospitality.
++          in April 2022, aiming for a more stable and transparent environment.
++        </p>
++
++        <p>
++          I first settled in <strong>Gothenburg</strong>, where I stayed several
++          months and briefly worked as an independent courier for
++          <a href="https://www.foodora.se" class="subtle-link">Foodora</a>. This
++          role enabled me to obtain a
++          <strong>samordningsnummer</strong> (temporary number), and shortly
++          after, a <strong>personnummer</strong> through formal employment.
+         </p>
+ 
+         <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
+           <img
+-            src="./assets/img/toofar.jpg"
++            src="./assets/img/cake.jpg"
+             alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
+             style="max-width: 100%; height: auto; border-radius: 8px"
+           />
+         </div>
+ 
++        <p>
++          Before leaving Gothenburg, I had already rented a
++          <strong>coworking space</strong> where I began outlining long-term
++          projects. This was my first professional space in Sweden—an anchor
++          that typically signals the start of any personal rebuild.
++        </p>
++
++        <video
++          controls
++          width="100%"
++          style="margin: 2rem auto; display: block; border-radius: 8px"
++        >
++          <source src="/assets/videos/lounge.mp4" type="video/mp4" />
++        </video>
++
++        <section class="context-block">
++          <p><u>Early Cohabitation & Mutual Dependence</u></p>
++          <p>
++            I met Sarah online shortly before relocating to Stockholm. Within
++            two weeks, we moved in together—partly due to a strong connection,
++            but mostly driven by mutual economic need. She had two children and
++            had just lost her flatmate. I needed stable housing in Stockholm. It
++            felt mutually logical.
++          </p>
++        </section>
++
++        <section class="context-block">
++          <p><u>Shared Budget & Informal Agreement</u></p>
++          <p>
++            From my first full paycheck, I contributed up to
++            <strong>16,000 SEK/month</strong> toward rent, food, car fuel,
++            insurance, and more. This amount also included an informal
++            reimbursement for the initial months she had supported me.
++          </p>
++          <p>
++            We had a verbal agreement: either we would build a family, or we
++            would build a company. This was my condition for long-term
++            involvement. I called it our <em>pilot agreement</em>.
++          </p>
++        </section>
++
++        <section class="context-block">
++          <p><u>Communication Challenges & “Pilotalks”</u></p>
++          <p>
++            From the outset, I insisted on structured communication. I created
++            the concept of <em>Pilotalks</em>: one hour of discussion every
++            evening, and weekend walks to reflect and recalibrate. These efforts
++            were short-lived. Over time, communication degraded. My repeated
++            attempts to create a weekly agenda or set shared goals were avoided.
++          </p>
++        </section>
++
++        <section class="context-block">
++          <p><u>Business Initiative & Weekend Withdrawal</u></p>
++          <p>
++            We rented a shared office to develop a review-based platform. I
++            covered around <strong>75% of the costs</strong>, and she was to
++            contribute time. Although enthusiastic at first, she soon
++            disengaged—particularly on weekends, which she reserved for leisure.
++          </p>
++          <p>
++            I tried to bridge our differences by aligning on values, building a
++            company culture, researching competitors, and setting a shared
++            vision. I proposed working sessions to define purpose, mission, and
++            market niche. Despite pockets of motivation, the consistent effort
++            never followed.
++          </p>
++        </section>
++
++        <section class="context-block">
++          <p><u>Imbalance & Emotional Weight</u></p>
++          <p>
++            I began to notice deeper misalignments: parenting philosophies far
++            from my own, unresolved emotional burdens from her past, and
++            recurring disrespect—from both her and her children. Her
++            ex-partner’s presence added stress, often interrupting our daily
++            rhythm or affecting her mood.
++          </p>
++          <p>
++            I felt reduced to a provider. The trust I offered was used for
++            comfort, not growth. Meanwhile, I was contributing over
++            <strong>three-quarters of my income</strong>, emotionally and
++            financially committed to something that wasn’t moving forward.
++          </p>
++        </section>
++
++        <section class="context-block">
++          <p><u>Departure & Closure</u></p>
++          <p>
++            I lived with her for 14 months. When neither a family nor a business
++            seemed possible, I made the decision to leave. My departure was
++            clean, without conflict. I never demanded anything in return.
++          </p>
++          <p>
++            I retain full documentation of my financial contributions. I believe
++            we helped each other for a time, but when the terms silently
++            collapsed, I chose to walk away and realign with my path.
++          </p>
++        </section>
+         <p><u>Using Restaurants as a Launch Pad</u></p>
+         <p>
+           The move was deliberate. My goal was to stabilize my legal and
+diff --git a/governance.html b/governance.html
+index b4eadb8..11ebc21 100644
+--- a/governance.html
++++ b/governance.html
+@@ -322,7 +322,10 @@
+           </h2>
+ 
+           <p><strong>Founding Team:</strong> Samuel, Maggie & Patrice</p>
+-
++          <div class="location-meta">
++            <strong>Location:</strong> Legal address registered at Paris;
++            operations conducted from Marines(95)
++          </div>
+           <p>
+             <strong>Value Proposition:</strong> financing of
+             <mark style="background-color: #ccc"
+diff --git a/sector.html b/sector.html
+index 4d9b8a1..7766a6b 100644
+--- a/sector.html
++++ b/sector.html
+@@ -275,10 +275,16 @@
+           >kept around 75%</a
+         >
+         of their profits. By 1980, under
+-        <a href="notes.html#note-olof-palme-tax-impact" class="note-link"
++        <a
++          href="./public/charts/swedish_leaders_tax_impact.html"
++          class="chart-link"
+           >Olof Palme</a
+         >, that dropped to 25%. Since then, caught in one tax
+-        <a href="notes.html#note-tax-breakdown" class="note-link">cascade</a>
++        <a
++          href="./public/charts/sweden_tax_evolution_chart.html"
++          class="chart-link"
++          >cascade</a
++        >
+         after another, they end up with <strong>50%</strong> —
+         <span style="background-color: #e0e0e0"
+           >in line with other Swedish entrepreneurs</span
+@@ -292,7 +298,13 @@
+ 
+       <p></p>
+       <p>
+-        In Sweden, <strong>8.4%</strong> of the national income comes from
++        In Sweden,
++        <a href="./public/charts/sweden_charts_fixed.html" class="chart-link"
++          ><strong>9.2%</strong></a
++        >
++        of adults are entrepreneurs — and only <strong>1.8%</strong> of them are
++        restaurant owners. Yet <strong>8.4%</strong> of the national income
++        comes from
+         <a
+           href="/public/charts/sweden_budget_pie_chart_swedish.html"
+           class="chart-link"
+@@ -301,21 +313,27 @@
+         <a href="/notes/note_taxation_breakdown.html" class="subtle-link"
+           >individual income taxes</a
+         >, and <strong>22.4%</strong> from
+-        <span style="text-decoration: underline">consumption taxes</span>. Since
+-        a restaurant owner is both an entrepreneur and a consumer, their real
+-        contribution to the state's budget is significantly higher than the 8.4%
+-        business share alone.
++        <a
++          href="https://en.wikipedia.org/wiki/Sales_taxes_in_Sweden"
++          class="subtle-link"
++          target="_blank"
++          >consumption taxes</a
++        >. As both business operators and everyday consumers, entrepreneurs
++        contribute across all three pillars.
+       </p>
+ 
+       <p>
+-        To make matters worse, the sector is still repaying
+-        <span style="background-color: #e0e0e0"
+-          >SEK 1.6 billion in Covid-era tax debt</span
+-        >, affecting more than 1,700 businesses. Monthly repayments tighten
+-        margins further,
+-        <strong>trapping restaurateurs in a permanent survival loop</strong>.
+-        The system does not absorb volatility—it externalizes it to the
+-        operator.
++        During the <u>Covid-19</u> crisis, Swedish businesses could defer tax
++        payments (including
++        <a
++          href="https://en.wikipedia.org/wiki/Value-added_tax"
++          class="subtle-link"
++          target="_blank"
++          >VAT</a
++        >, employer fees, and payroll taxes) to preserve short-term liquidity.
++        The restaurant sector is now repaying
++        <span style="background-color: #e0e0e0">SEK 1.6B</span> across
++        <strong>1,700 businesses</strong>, under monthly installments.
+       </p>
+ 
+       <div
+@@ -373,7 +391,16 @@
+           <em>Half-open staff locker, handwritten marker, fall 2023.</em>
+         </p>
+       </div>
++
+       <p><u>Intense Labor</u></p>
++
++      <p>
++        In this sector, the job extends far beyond schedules or payroll. You
++        become a <u>part-time psychiatrist</u>, decoding silences, de-escalating
++        tension, 'and absorbing instability.
++        <u>The hardest part is not the work — it's the humans</u>.'
++      </p>
++
+       <p>
+         Staffing eats 25–35% of revenue, yet salaries remain modest. The job
+         requires long hours, unpredictable shifts, and multitasking under

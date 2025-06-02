@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweden Entrepreneurship Analysis 2024</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            height: 380px;
+            margin-bottom: 15px;
+        }
+        
+        .data-source {
+            font-size: 0.8rem;
+            color: #6c757d;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .key-insights {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .key-insights h3 {
+            color: #2980b9;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .insight-item {
+            margin: 10px 0;
+            color: #34495e;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇸🇪 Sweden Entrepreneurship Analysis 2024</h1>
+        <p class="subtitle">Professional distribution and detailed breakdown by activity sectors</p>
+        
+        <div class="stats-cards">
+            <div class="stat-card">
+                <div class="stat-number">10.64M</div>
+                <div class="stat-label">Total Population<br>100% of Sweden</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5.22M</div>
+                <div class="stat-label">Working Population<br>49.1% of total population</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">556K</div>
+                <div class="stat-label">Entrepreneurs<br>10.65% of working population</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12,400</div>
+                <div class="stat-label">Restaurants in Sweden<br>2.2% of all entrepreneurs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">900</div>
+                <div class="stat-label">Restaurants in Malmö<br>7.3% of all Swedish restaurants</div>
+            </div>
+        </div>
+        
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3 class="chart-title">Swedish Working Population by Status</h3>
+                <div class="chart-wrapper">
+                    <canvas id="employmentChart"></canvas>
+                </div>
+                <p class="data-source">Source: Statistics Sweden, World Bank 2024</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">Entrepreneurs by Business Sector</h3>
+                <div class="chart-wrapper">
+                    <canvas id="entrepreneursChart"></canvas>
+                </div>
+                <p class="data-source">Source: Statistics Sweden, Eurostat 2024</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">Focus: Entrepreneurs in Hospitality</h3>
+                <div class="chart-wrapper">
+                    <canvas id="hospitalityChart"></canvas>
+                </div>
+                <p class="data-source">Source: Statistics Sweden, Eurostat 2024</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">Restaurant Distribution: Sweden's Major Cities</h3>
+                <div class="chart-wrapper">
+                    <canvas id="locationChart"></canvas>
+                </div>
+                <p class="data-source">Source: Statistics Sweden, TripAdvisor 2024</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">Restaurant/Bar/Catering by Company Size</h3>
+                <div class="chart-wrapper">
+                    <canvas id="restaurantSizeChart"></canvas>
+                </div>
+                <p class="data-source">Source: Statistics Sweden 2024</p>
+            </div>
+        </div>
+        
+        <div class="key-insights">
+            <h3>📊 Key Findings</h3>
+            <div class="insight-item">
+                <strong>• Entrepreneurs:</strong> 556,000 people representing 10.65% of working population (5.22M)
+            </div>
+            <div class="insight-item">
+                <strong>• Construction dominant:</strong> 35% of entrepreneurs (195K people) in construction sector
+            </div>
+            <div class="insight-item">
+                <strong>• Restaurants:</strong> 12,400 establishments representing 2.2% of all Swedish entrepreneurs
+            </div>
+            <div class="insight-item">
+                <strong>• Malmö concentration:</strong> 900 restaurants (7.3% of national total) for 365K inhabitants
+            </div>
+            <div class="insight-item">
+                <strong>• Small structures:</strong> 57% of restaurants have less than 5 employees (micro-entrepreneurs)
+            </div>
+            <div class="insight-item">
+                <strong>• Geographic concentration:</strong> Stockholm (3,300), Gothenburg (1,600), Malmö (900)
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const getChartOptions = (title) => ({
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 15,
+                        font: {
+                            size: 11,
+                            weight: '500'
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    titleColor: 'white',
+                    bodyColor: 'white',
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.parsed;
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((value / total) * 100).toFixed(1);
+                            return `${context.label}: ${value} (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 1: Working population
+        const ctx1 = document.getElementById('employmentChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['Private Employees (3.05M)', 'Public Employees (1.31M)', 'Entrepreneurs (556K)', 'Others (304K)'],
+                datasets: [{
+                    data: [3050, 1310, 556, 304],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c', '#f39c12'],
+                    borderWidth: 3,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: getChartOptions('Working Population')
+        });
+
+        // Chart 2: Entrepreneurs by sector
+        const ctx2 = document.getElementById('entrepreneursChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Construction (195K)', 'Professional Services (89K)', 'Trade/Retail (78K)', 'Transport (67K)', 'Hospitality (25K)', 'Manufacturing (45K)', 'Others (57K)'],
+                datasets: [{
+                    data: [195, 89, 78, 67, 25, 45, 57],
+                    backgroundColor: ['#e67e22', '#3498db', '#2ecc71', '#9b59b6', '#e74c3c', '#34495e', '#95a5a6'],
+                    borderWidth: 3,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: getChartOptions('Business Sector')
+        });
+
+        // Chart 3: Hospitality focus
+        const ctx3 = document.getElementById('hospitalityChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Restaurants (12.4K)', 'Bars/Cafés (4.8K)', 'Hotels (2.1K)', 'Catering (2.2K)', 'Fast-Food (1.8K)', 'Events (1.7K)'],
+                datasets: [{
+                    data: [12400, 4800, 2100, 2200, 1800, 1700],
+                    backgroundColor: ['#e74c3c', '#f39c12', '#3498db', '#2ecc71', '#9b59b6', '#1abc9c'],
+                    borderWidth: 3,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: getChartOptions('Hospitality')
+        });
+
+        // Chart 4: Geographic distribution (SANS Lilla Torg)
+        const ctx4 = document.getElementById('locationChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'pie',
+            data: {
+                labels: ['Rest of Sweden (6,600)', 'Stockholm (3,300)', 'Gothenburg (1,600)', 'Malmö (900)'],
+                datasets: [{
+                    data: [6600, 3300, 1600, 900],
+                    backgroundColor: ['#95a5a6', '#3498db', '#2ecc71', '#e74c3c'],
+                    borderWidth: 3,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: getChartOptions('Geographic Distribution')
+        });
+
+        // Chart 5: Restaurant size
+        const ctx5 = document.getElementById('restaurantSizeChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'pie',
+            data: {
+                labels: ['Less than 5 emp. (7,900)', '5-9 employees (2,100)', '10-19 employees (1,800)', '20-49 employees (1,502)', '50+ employees (450)'],
+                datasets: [{
+                    data: [7900, 2100, 1800, 1502, 450],
+                    backgroundColor: ['#e74c3c', '#f39c12', '#3498db', '#2ecc71', '#9b59b6'],
+                    borderWidth: 3,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: getChartOptions('Restaurant Size')
+        });
+    </script>
+</body>
+</html>
