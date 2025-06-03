@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Lease Protection for Restaurants - Europe</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 600px;
+            margin: 30px 0;
+        }
+        
+        .legend {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        .legend h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .scale-item {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .scale-item.high {
+            border-left-color: #27ae60;
+        }
+        
+        .scale-item.medium {
+            border-left-color: #f39c12;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        th {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .country-flag {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        .protection-score {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            min-width: 40px;
+            display: inline-block;
+        }
+        
+        .score-low { background: #e74c3c; }
+        .score-medium { background: #f39c12; }
+        .score-high { background: #27ae60; }
+        
+        .methodology {
+            background: #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .methodology h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .sources {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏪 Commercial Lease Legal Protection</h1>
+        <p class="subtitle">Level of tenant protection for restaurateurs in Europe (2024-2025)</p>
+        
+        <div class="chart-container">
+            <canvas id="protectionChart"></canvas>
+        </div>
+        
+        <div class="legend">
+            <h3>📊 Protection Scale (0-10)</h3>
+            <div class="scale-item">
+                <strong>0-3:</strong> Minimal protection - Landlord can freely increase rent or evict without major constraints
+            </div>
+            <div class="scale-item medium">
+                <strong>4-6:</strong> Moderate protection - Some legal protections but significant landlord power
+            </div>
+            <div class="scale-item high">
+                <strong>7-10:</strong> Strong protection - Binding legal framework, facilitated renewal, rent control
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Score</th>
+                        <th>Main Legal Characteristics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="country-flag">🇬🇧</span>United Kingdom</td>
+                        <td><span class="protection-score score-low">2</span></td>
+                        <td>Extensive contractual freedom, no automatic renewal right (except limited Landlord and Tenant Act 1954), facilitated evictions</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇵🇱</span>Poland</td>
+                        <td><span class="protection-score score-low">3</span></td>
+                        <td>Minimal protection, liberal market, little commercial rent control</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇸🇪</span>Sweden</td>
+                        <td><span class="protection-score score-medium">4</span></td>
+                        <td>Limited indirect protection, possible compensation (1 year rent) if unjustified eviction, free indexation</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇳🇴</span>Norway</td>
+                        <td><span class="protection-score score-medium">5</span></td>
+                        <td>Typical 5-10 year leases, mandatory notice, possibility of negotiated renewal</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇫🇮</span>Finland</td>
+                        <td><span class="protection-score score-medium">5</span></td>
+                        <td>System similar to other Nordic countries, moderate protection</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇩🇰</span>Denmark</td>
+                        <td><span class="protection-score score-medium">6</span></td>
+                        <td>Commercial Rent Act 2022, regulated termination conditions, mandatory notice periods</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇩🇪</span>Germany</td>
+                        <td><span class="protection-score score-medium">6</span></td>
+                        <td>Reasonable protection, 3-9 month notice depending on duration, limited eviction grounds</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇪🇸</span>Spain</td>
+                        <td><span class="protection-score score-high">7</span></td>
+                        <td>3% increase cap (2024), extraordinary extensions for vulnerable tenants</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇮🇹</span>Italy</td>
+                        <td><span class="protection-score score-high">7</span></td>
+                        <td>Tenant-friendly laws, limited termination, regulated rate contracts available</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇧🇪</span>Belgium</td>
+                        <td><span class="protection-score score-high">8</span></td>
+                        <td>9-year commercial leases, renewal rights, substantial eviction compensation</td>
+                    </tr>
+                    <tr>
+                        <td><span class="country-flag">🇫🇷</span>France</td>
+                        <td><span class="protection-score score-high">9</span></td>
+                        <td>9-year commercial lease, automatic renewal right, mandatory eviction compensation, capped increases (10%/year max)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="methodology">
+            <h3>🔍 Methodology</h3>
+            <p>This evaluation is based on the following criteria:</p>
+            <ul>
+                <li><strong>Right to renewal:</strong> Automatic, negotiated or non-existent</li>
+                <li><strong>Rent control:</strong> Caps on annual increases</li>
+                <li><strong>Eviction compensation:</strong> Amount and conditions</li>
+                <li><strong>Minimum lease duration:</strong> Protection against precarious leases</li>
+                <li><strong>Eviction grounds:</strong> Restrictions imposed on landlords</li>
+                <li><strong>Mandatory notice periods:</strong> Tenant protection timeframes</li>
+            </ul>
+        </div>
+        
+        <div class="sources">
+            <p><strong>Sources:</strong> Legal research 2024-2025 - National commercial codes, comparative analysis of European commercial lease rights, UK Law Commission reports, current national legislation.</p>
+            <p><em>Note:</em> Scores are indicative and based on comparative analysis of current legal frameworks. Situations may vary according to local jurisdictions and specific contractual agreements.</p>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('protectionChart').getContext('2d');
+        
+        const data = {
+            labels: [
+                '🇬🇧 United Kingdom',
+                '🇵🇱 Poland', 
+                '🇸🇪 Sweden',
+                '🇳🇴 Norway',
+                '🇫🇮 Finland',
+                '🇩🇰 Denmark',
+                '🇩🇪 Germany',
+                '🇪🇸 Spain',
+                '🇮🇹 Italy',
+                '🇧🇪 Belgium',
+                '🇫🇷 France'
+            ],
+            datasets: [{
+                label: 'Protection Level (0-10)',
+                data: [2, 3, 4, 5, 5, 6, 6, 7, 7, 8, 9],
+                backgroundColor: [
+                    '#e74c3c', // UK
+                    '#e74c3c', // Pologne  
+                    '#f39c12', // Suède
+                    '#f39c12', // Norvège
+                    '#f39c12', // Finlande
+                    '#f39c12', // Danemark
+                    '#f39c12', // Allemagne
+                    '#27ae60', // Espagne
+                    '#27ae60', // Italie
+                    '#27ae60', // Belgique
+                    '#27ae60'  // France
+                ],
+                borderColor: '#34495e',
+                borderWidth: 1,
+                borderRadius: 5
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Legal Protection for Commercial Leases - Restaurants',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        color: '#2c3e50'
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(44, 62, 80, 0.9)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                        borderColor: '#34495e',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `Protection: ${context.parsed.x}/10`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        },
+                        ticks: {
+                            color: '#7f8c8d',
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#2c3e50',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        };
+
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>
