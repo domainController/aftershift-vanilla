@@ -440,6 +440,19 @@ a.chart-link:hover {
   background-color: #b9e9df; /* vert un peu plus intense au survol */
 }
 
+a.file-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  background-color: #f4c2c2; /* rose pastel doux */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+a.file-link:hover {
+  background-color: #f29ea0; /* rose un peu plus vif au survol */
+}
 a.internal-link {
   color: inherit;
   font-weight: inherit;

@@ -1,0 +1,1490 @@
+diff --git a/assets/css/main.css b/assets/css/main.css
+index d124fac..708cba6 100644
+--- a/assets/css/main.css
++++ b/assets/css/main.css
+@@ -440,6 +440,19 @@ a.chart-link:hover {
+   background-color: #b9e9df; /* vert un peu plus intense au survol */
+ }
+ 
++a.file-link {
++  color: inherit;
++  font-weight: inherit;
++  text-decoration: underline dotted;
++  text-decoration-thickness: 1px;
++  background-color: #f4c2c2; /* rose pastel doux */
++  padding: 0 2px;
++  border-radius: 2px;
++}
++
++a.file-link:hover {
++  background-color: #f29ea0; /* rose un peu plus vif au survol */
++}
+ a.internal-link {
+   color: inherit;
+   font-weight: inherit;
+diff --git a/assets/img/20230511_161420.jpg b/assets/img/20230511_161420.jpg
+deleted file mode 100644
+index 1b850e4..0000000
+Binary files a/assets/img/20230511_161420.jpg and /dev/null differ
+diff --git a/confidential.html b/confidential.html
+index 641f2c0..1a146e9 100644
+--- a/confidential.html
++++ b/confidential.html
+@@ -2,7 +2,7 @@
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+-    <title>What's New</title>
++    <title>Strategic Memo</title>
+     <link rel="stylesheet" href="/assets/css/main.css" />
+     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+@@ -60,51 +60,38 @@
+         evidence-driven. Its restraint is deliberate: each detail is sourced and
+         hard to dismiss once read in full.
+       </p>
+-      <ul>
+-        <li>
+-          📊 <strong>Strategic Comparison</strong> — Financial breakdown of Quan
+-          vs. Elite Hotel (2019–2023)
+-        </li>
+-        <li>
+-          📄 <strong>Audit & Legal Records</strong> — Public filings and audit
+-          trails (2004–2008)
+-        </li>
++  <ul>
++  <li>📊 <strong>Strategic Comparison</strong> — Financial breakdown of Quan vs. Elite Hotel (2019–2023)</li>
+ 
+-        <li>
+-          🍔 <strong>Spin-Off Ventures</strong> — Case study: Sliders & Shakes
+-          AB (2017–2025)
+-        </li>
+-        <li>
+-          🧾 <strong>Staffing Visibility Gaps</strong> — Example: Buri
+-          Handelsbolag (2022–2025), not listed in reports despite regular staff
+-          presence
+-        </li>
+-        <li>
+-          🧠 <strong>Fallout-Inspired Legal Architecture</strong> — Izakaya
+-          Koi’s collapse appears to have led to a shift toward a more protected
+-          and split legal setup.
+-        </li>
++  <li>🧠 <strong>Fallout-Inspired Legal Architecture</strong> — Izakaya Koi’s collapse appears to have led to a shift toward a more protected and split legal setup.</li>
+ 
+-        <li>
+-          ➕ <strong>Supplementary Internal Patterns</strong> — Additional
+-          historical signals and legal configurations are documented separately
+-          for archival coherence.
+-        </li>
+-        <li>
+-          💸 <strong>Share Buyout Scenarios & Reallocation Risks</strong> —
+-          Potential ownership transitions and negotiation pathways post-Henrik
+-          exit, including Saahil's leverage evolution.
+-        </li>
+-        <li>
+-          🗂️
+-          <strong>Document Annexes – Licenses & Structural Transfers</strong> —
+-          Archived permits, architectural drawings, and ownership history
+-          supporting timeline coherence.
+-        </li>
+-      </ul>
++  <li>👩‍⚖️ <strong>Proxy Signers & Domestic Shields</strong> — Wives, partners or neighbors quietly used as legal fronts or fallback signatories.</li>
++  <li>🔗 <strong>Bank Leverage & Proxy Governance</strong> — Case: Izakaya AB & HSSC Event (2004–2025). Legal structuring, loan tactics & proxy board maneuvers shaping ownership shifts.</li>
++
++  <li>💸 <strong>Share Buyout Scenarios & Reallocation Risks</strong> — Potential ownership transitions and negotiation pathways post-Henrik exit, including Saahil's leverage evolution.</li>
++
++  <li>🍔 <strong>Spin-Off Ventures</strong> — Case study: Sliders & Shakes AB (2017–2025)</li>
++
++  <li>🗞️ <strong>Staffing Visibility Gaps</strong> — Example: Buri Handelsbolag (2022–2025), not listed in reports despite regular staff presence</li>
++
++  <li>➕ <strong>Supplementary Internal Patterns</strong> — Additional historical signals and legal configurations are documented separately for archival coherence.</li>
++
++  <li>🗂️ <strong>Audit & Legal Records</strong> — Public filings and audit trails (2004–2008)</li>
++
++  <li>📁 <strong>Document Annexes – Licenses & Structural Transfers</strong> — Archived permits, architectural drawings, and ownership history supporting timeline coherence. <mark style="background-color: #e0e0e0">120+ pages</mark> retrieved, total acquisition cost: <mark style="background-color: #e0e0e0">4,320 SEK</mark></li>
++</ul>
+       <!--<li>
+     🏙️ <strong>Etagegruppen Analysis</strong> — Profit shifts before/after the Izakaya Koi acquisition (2011–2013)
+   </li>-->
++
++  <p style="margin-top: 2rem">
++
++
++📬 <strong>Exchange of Record:</strong> On April 9, a formal 
++<a href="https://drive.google.com/file/d/1j_yyQmsELeOgqia1I6lGyMHIDclzE4xB/view?usp=sharing" 
++class="subtle-link">Notice of Breach</a> was issued— 3 months after the end of the 45-day delay period. The only reply came from 
++<a href="https://drive.google.com/file/d/1YUFw5uQpJin4YjZRbFMMdBwF3djMiI5R/view?usp=sharing" class="subtle-link">Quan's Head Chef</a>, acting as proxy. No response was ever received from the company’s three directors.
++
+       <details class="narrative-intro">
+         <summary>
+           ⚠️ <strong>Note — Restricted Access Policy & Identity Checks</strong>
+diff --git a/context.html b/context.html
+index 227b364..4eb6cca 100644
+--- a/context.html
++++ b/context.html
+@@ -123,25 +123,100 @@
+ 
+       <main class="main-content">
+         <p><u>Strategic Relocation & System Entry</u></p>
++
+         <p>
+-          After three years in Ireland, I began a strategic return through Nice
+-          and
+-          <a href="governance.html#governance-fragment" class="subtle-link"
+-            >Paris</a
+-          >, where I attempted to join a failing business led by a former
+-          friend. The plan—framed as a company revival—quickly revealed deeper
+-          structural issues (see
+-          <a href="governance.html#governance-fragment" class="subtle-link"
+-            >Governance Section</a
+-          >). After seven months, I left and chose to relocate to
+-          <strong
+-            ><a
+-              href="https://drive.google.com/open?id=1K--ARlW9Eh5ONV2ndh0zXcdg_feClr4&usp=drive_fs"
+-              class="subtle-link"
+-              >Sweden</a
+-            ></strong
++          I moved to <strong>Ireland</strong> in 2019 — the
++          <a
++            href="https://en.wikipedia.org/wiki/Double_Irish_arrangement"
++            class="subtle-link"
++            >Silicon Valley of EU tech support</a
++          >. It was a natural relaunch zone after Asia, with hundreds of roles
++          in top-tier call centers. I got
++          <mark style="background-color: #e0e0e0"
++            >multiple interviews at
++            <a href="#" class="note-link">FAANG</a></mark
++          >
++          — but failed to convert.
++        </p>
++
++        <p>
++          Too senior, too independent, I didn’t fit the mold. Instead, I focused
++          on fundamentals: <strong>web development</strong>,
++          <strong>low-level C</strong>, and basic algorithms. By 2021, as
++          <u>Covid restrictions were lifted</u>, I was ready to move.
++        </p>
++        <p>
++          In <strong>2021</strong>, after 3 years in <strong>Ireland</strong>, I
++          booked a one-way flight to
++          <a
++            href="https://drive.google.com/file/d/1LwZOYkruenzI7NelJh5O5Ro87yPblRyB/view?usp=sharing"
++            class="file-link"
++            >Norway</a
+           >
+-          in April 2022, aiming for a more stable and transparent environment.
++          to escape, but was
++          <mark style="background-color: #e0e0e0">denied entry</mark> after one
++          week in custody — likely due to
++          <span class="note-link">Covid status</span> and
++          <span class="note-link">lack of clear purpose</span>. Authorities paid
++          my return to
++          <a href="https://www.google.com/maps/place/Nice" class="subtle-link"
++            >Nice</a
++          >.
++        </p>
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/backfeet.jpg"
++            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
++        <p>
++          From Nice, I was contacted by an old friend based in
++          <span class="internal-link">Paris</span>, proposing a vague idea of
++          launching a business " to make money together" —. Once on site, I
++          discovered the true intent: using my name to rescue a
++          <a href="governance.html#governance-fragment" class="internal-link"
++            >failing company</a
++          >.
++        </p>
++
++        <p>
++          <strong
++            >Quickly disillusioned by his instability and lack of
++            structure</strong
++          >, I left the project after a few months. It had no legal basis, no
++          clarity, and no long-term direction. I left Paris drained, and headed
++          to <strong>Gothenburg</strong>
++        </p>
++        <p>
++          — a quieter choice, since I'd already lived in Stockholm. Normally, I
++          never repeat countries, but
++          <span class="note-link">Sweden was familiar</span>, relaxed on Covid
++          (no mandates, no vax), and I had context: I’d worked here in
++          <a href="governance.html#gotmyteam" class="internal-link">2018</a>.
++        </p>
++
++        <p>
++          The goal: <strong>launch a startup</strong> or find paid work to
++          bootstrap one. My long-term plan — still active — was
++          <strong>Asia</strong>. Not Hong Kong again, but
++          <span class="note-link">Singapore</span>: a clean reset.
++        </p>
++
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/empty.jpg"
++            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
++
++        <p>
++          I moved to <span class="internal-link">Gothenburg</span> seeking
++          greater stability. I briefly worked as an independent courier for
++          <a href="https://www.foodora.se" class="subtle-link">Foodora</a>,
++          which allowed me to obtain a <strong>samordningsnummer</strong>, then
++          a <strong>personnummer</strong> through formal work.
+         </p>
+ 
+         <p>
+@@ -372,6 +447,48 @@
+           fully dedicate myself to the research, writing, and development of
+           <strong>Aftershift.se</strong>.
+         </p>
++
++        <section id="personal-sacrifice">
++          <h2>⏳ Personal Cost & Strategic Time Lost</h2>
++
++          <p>
++            <mark style="background-color: #e0e0e0">Since 2011</mark>, I had
++            been seeking a rare combination:
++            <u>stable shelter, secured income, and uninterrupted time</u> to
++            build a company. For over a decade, I never reached that
++            equilibrium—until now.
++          </p>
++
++          <p>
++            In <strong>March 2024</strong>, I finally entered this phase: I had
++            access to a coworking space, received unemployment benefits, and
++            cleared the bandwidth to launch my own startup. For the first time
++            in <mark style="background-color: #e0e0e0">15 years</mark>, I was
++            not consumed by survival. I had one year, a desk, and the breathing
++            room to <u>work toward independence</u>.
++          </p>
++
++          <p>
++            Yet within weeks of returning to Malmö, I discovered a situation
++            that violated
++            <u>both labor laws and personal dignity</u>. I had to make a choice:
++            pursue my startup, or investigate what I was witnessing. I chose the
++            second.
++            <strong
++              >This research cost me 3 months—and counting— of the only
++              protected time I’ve had since 2011</strong
++            >.
++          </p>
++
++          <p>
++            This sacrifice isn’t symbolic. It means I delayed the
++            <mark style="background-color: #e0e0e0"
++              >only professional window I’ve ever secured</mark
++            >—in terms of time, finances, and tools.
++            <u>I was not paid, nor prepared, to do this work</u>. But ethically,
++            it felt impossible to look away.
++          </p>
++        </section>
+       </main>
+     </main>
+     <script>
+diff --git a/cost.html b/cost.html
+index d1570c9..733fbda 100644
+--- a/cost.html
++++ b/cost.html
+@@ -58,6 +58,50 @@
+     >
+       <h1>The Price of Research</h1>
+ 
++      <p>
++        Behind these documents lies more than investigation — it’s a full-stack
++        continuity simulation:
++      </p>
++
++      <ul>
++        <li>
++          <strong>Architecture design:</strong> From scratch, using
++          <mark style="background-color: #e0e0e0">Astro.js</mark>,
++          <mark style="background-color: #e0e0e0">Markdown</mark>,
++          <mark style="background-color: #e0e0e0">React</mark> & version control
++          via GitHub
++        </li>
++        <li>
++          <strong>Web & SEO engineering:</strong> Handling
++          <mark style="background-color: #e0e0e0">DNS settings</mark>,
++          <mark style="background-color: #e0e0e0">custom email routing</mark>,
++          and
++          <mark style="background-color: #e0e0e0">Google indexing</mark> from
++          end to end
++        </li>
++        <li>
++          <strong>Documentation pipeline:</strong> Strategic use of
++          <mark style="background-color: #e0e0e0">Obsidian</mark> &
++          <mark style="background-color: #e0e0e0">Notion</mark> to produce
++          <strong>150+ documents</strong>, translated, annotated, and archived
++        </li>
++        <li>
++          <strong>Legal-technical blend:</strong> Structuring evidence, refining
++          claims, and preparing exit options like a
++          <u>crisis consultant</u> would
++        </li>
++      </ul>
++
++      <p>
++        Each page, each table, and each PDF was curated with the intent of
++        making things clearer — not just for legal purposes, but to build a
++        model of <strong>organizational resilience</strong>. The result is a
++        research dossier
++        <mark style="background-color: #e0e0e0"
++          >valued at over 500€ in upfront cost</mark
++        >, now public.
++      </p>
++
+       <p class="intro">
+         This page outlines the time, money, tools, and investigative choices
+         made to compile and document this archive. From data extraction and
+diff --git a/critique.html b/critique.html
+index 27c051d..cb28cb4 100644
+--- a/critique.html
++++ b/critique.html
+@@ -64,127 +64,142 @@
+         </p>
+       </section>
+ 
+-      <section>
+-        <h2>🧠 Epicurisme</h2>
++      <section id="epicureanism">
++        <h2>🍇 Epicureanism</h2>
++
++        <p>
++          According to <u>Epicurus</u>, there are <u>three types of desires</u>.
++          The first are <u>natural and necessary desires</u>:
++          <mark style="background-color: #e0e0e0">drinking when thirsty</mark>,
++          <mark style="background-color: #e0e0e0">eating when hungry</mark>.
++          These are
++          <strong>vital needs, shared by both animals and humans</strong>.
++          Ignoring them puts life at risk.
++        </p>
+ 
+         <p>
+-          Selon <strong>Épicure</strong>, il existe trois types de désirs. Les
+-          premiers sont les
+-          <strong><u>désirs naturels et nécessaires</u></strong
+-          > :
+-          <mark style="background-color: #e0e0e0">boire quand on a soif</mark>,
+-          <mark style="background-color: #e0e0e0">manger quand on a faim</mark>.
+-          Ce sont des besoins <strong>vitaux</strong>,
+-          <u>communs aux animaux et aux humains</u>. Leur non-satisfaction mène
+-          à la mort.
++          The second category is <u>natural but non-necessary desires</u>:
++          <mark style="background-color: #e0e0e0">sexuality</mark>,
++          <mark style="background-color: #e0e0e0">gustatory pleasures</mark>,
++          <mark style="background-color: #e0e0e0">superfluous cravings</mark>.
++          These are <u>shared with animals</u>, but
++          <u>not essential for survival</u>.
+         </p>
+ 
+         <p>
+-          Viennent ensuite les
+-          <strong><u>désirs naturels mais non nécessaires</u></strong
+-          > : <mark style="background-color: #e0e0e0">sexualité</mark>, plaisirs
+-          corporels superflus, recherche d’intensité sensorielle. Ils sont aussi
+-          <u>communs aux animaux</u>, mais leur absence ne met pas la vie en
+-          péril.
++          Finally, there are <u>non-natural and non-necessary desires</u>:
++          <mark style="background-color: #e0e0e0">wealth</mark>,
++          <mark style="background-color: #e0e0e0">status</mark>,
++          <mark style="background-color: #e0e0e0">fame</mark>. No animal seeks
++          <u>honor</u> or <u>accumulation</u>. These are
++          <u>uniquely human</u> and bring
++          <mark style="background-color: #e0e0e0">stress</mark>,
++          <mark style="background-color: #e0e0e0">envy</mark>, and
++          <mark style="background-color: #e0e0e0">illusion</mark>.
+         </p>
+ 
+         <p>
+-          Enfin, les
+-          <strong><u>désirs non naturels et non nécessaires</u></strong
+-          > :
++          For Epicurus, <strong>real pleasure</strong> comes only from the
++          <u>satisfaction of natural and necessary desires</u>:
++          <mark style="background-color: #e0e0e0">drink water</mark>,
++          <mark style="background-color: #e0e0e0">eat bread</mark> when needed.
++          Anything else is <u>drift</u>, <u>social theatre</u>, or
++          <u>distraction</u>.
++        </p>
++      </section>
++
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/mess.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
++      <section id="value-hierarchy">
++        <h2>🧭 Value Hierarchy</h2>
++
++        <p>
++          <u>Every human action reveals a system of values</u>, whether we’re
++          concious of it or not.
++          <mark style="background-color: #e0e0e0">Working the weekend</mark>,
++          <mark style="background-color: #e0e0e0">skipping a family dinner</mark
++          >,
+           <mark style="background-color: #e0e0e0"
+-            >richesse, status, pouvoir</mark
+-          >. Aucun animal ne cherche à posséder, diriger ou briller. Ces désirs
+-          sont <u>propres aux humains</u> et souvent sources d’angoisse.
++            >visiting friends instead of building a project</mark
++          >
++          — <u>each act reflects a priority structure</u>.
+         </p>
+ 
+         <p>
+-          Pour <strong>Épicure</strong>, le véritable
+-          <u>plaisir durable</u> vient de la
+-          <strong>satisfaction simple</strong> des
+-          <u>désirs naturels et nécessaires</u>.
+-          <mark style="background-color: #e0e0e0">Boire de l’eau</mark>,
+-          <mark style="background-color: #e0e0e0">manger du pain</mark>, quand
+-          le corps en a besoin. Tout le reste est <strong>dérive</strong>,
+-          <u>artifice</u>, ou
+-          <mark style="background-color: #e0e0e0">mise en scène sociale</mark>.
++          We <u>operate inside a value hierarchy</u>.
++          <mark style="background-color: #e0e0e0"
++            >Working to feed your children</mark
++          >
++          → survival.
++          <mark style="background-color: #e0e0e0">Clubbing despite debt</mark> →
++          instant pleasure.
++          <mark style="background-color: #e0e0e0"
++            >Choosing stability over discomfort</mark
++          >
++          → safety. <u>Each reveals a hidden system of priorities</u>, even when
++          denied or unconscious.
+         </p>
+ 
+-        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
+-          <img
+-            src="./assets/img/mess.jpg"
+-            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
+-            style="max-width: 100%; height: auto; border-radius: 8px"
+-          />
+-        </div>
++        <p>
++          <u>We all exist within layered value systems</u>. The more fragmented,
++          the more we act through
++          <mark style="background-color: #e0e0e0"
++            >contradictory subpersonalities</mark
++          >. Wanting to work, yet wasting time. Wanting peace, yet escaping
++          every night.
++          <strong>That’s not paradox — that’s confusion of priority</strong>.
++        </p>
+ 
+-        <section id="hedonisme">
+-          <h2>🧭 Hiérarchie des valeurs</h2>
+-
+-          <p>
+-            <strong>Chaque action révèle un jugement</strong> : dire non à une
+-            opportunité, sortir le soir malgré les dettes, zapper une visite
+-            familiale — <u>chaque choix trahit une priorité</u>.
+-            <mark style="background-color: #e0e0e0"
+-              >Même ne rien faire est une décision hiérarchisée</mark
+-            >.
+-          </p>
+-
+-          <p>
+-            <strong>Tu juges que “ça vaut plus”</strong> : plaisir ou devoir,
+-            confort ou effort, stabilité ou excitation.
+-            <u>Tu fonctionnes selon une hiérarchie de valeurs</u>, consciente ou
+-            non.
+-            <mark style="background-color: #e0e0e0"
+-              >Tu crois choisir librement, mais tu arbitres à partir d’un
+-              système déjà actif</mark
+-            >.
+-          </p>
+-
+-          <p>
+-            Travailler pour nourrir ses enfants → <u>valeur de survie</u>.
+-            Refuser une promotion pour rester en couple →
+-            <u>valeur affective</u>. Sortir malgré des dettes →
+-            <u>valeur de jouissance immédiate</u>.
+-            <strong
+-              >Chaque exemple rend visible un système de valeurs
+-              sous-jacent</strong
+-            >.
+-          </p>
+-
+-          <p>
+-            <strong>On existe toujours dans une hiérarchie de valeurs</strong>.
+-            <u
+-              >Plus elle est floue, plus tu es agi par des sous-personnalités
+-              non alignées</u
+-            >. Tu dis “je veux changer de vie”, mais tu scrolles Instagram. Tu
+-            dis “je veux me poser”, mais tu sors chaque soir.
+-            <mark style="background-color: #e0e0e0"
+-              >Ce n’est pas une contradiction, c’est un conflit de
+-              priorités</mark
+-            >.
+-          </p>
+-
+-          <p>
+-            <strong>“Enjoy your life”</strong> est devenu
+-            <strong>la valeur première d’une époque</strong> : fonder sa vie sur
+-            la <u>jouissance</u>, le <u>divertissement</u>, et l’<u
+-              >évasion permanente</u
+-            >.
+-            <mark style="background-color: #e0e0e0"
+-              >On ne fait plus ce qui compte, on fait ce qui plaît</mark
+-            >.
+-          </p>
+-        </section>
++        <p>
++          <strong>“Enjoy your life”</strong> has become a
++          <u>dominant social injunction</u>, framing life around
++          <mark style="background-color: #e0e0e0">pleasure</mark>,
++          <mark style="background-color: #e0e0e0">diversion</mark>,
++          <mark style="background-color: #e0e0e0">self-indulgence</mark>.
++          <u>We act less by purpose — and more by mood</u>.
++        </p>
++      </section>
+ 
+-        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
+-          <img
+-            src="./assets/img/pizzasalad.jpg"
+-            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
+-            style="max-width: 100%; height: auto; border-radius: 8px"
+-          />
+-        </div>
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/salad.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
++      <section id="hedonisme">
+         <h2>🧠 Hédonisme</h2>
++        <p>
++          <u>Aujourd’hui</u>, le <strong>plaisir</strong> est devenu une
++          <strong>fin en soi</strong>, non un bonus. Il faut <u>profiter</u>,
++          <u>jouir</u>, <u>vivre</u>. Ne pas le faire est vu comme une faute —
++          un <mark style="background-color: #e0e0e0">manque d’adaptation</mark>,
++          de santé, de désir.
++        </p>
++        <p>
++          Les slogans ne masquent rien : <strong>“Enjoy your life”</strong>,
++          <strong>“Treat yourself”</strong>,
++          <mark style="background-color: #e0e0e0">“Work hard, play harder”</mark
++          >. Ce ne sont pas des conseils : ce sont des injonctions à l’<u
++            >hédonisme social</u
++          >.
++        </p>
++        <p>
++          <strong>Refuser la jouissance</strong>, c’est paraître frustré, triste
++          ou malade. <u>Sortir</u>, <u>se faire plaisir</u>,
++          <u>dépenser</u> sont devenus des
++          <mark style="background-color: #e0e0e0">preuves d’équilibre</mark>
++          dans le monde contemporain.
++        </p>
++      </section>
++      <section>
+         <p>
+           <strong>On ne mange plus pour vivre</strong>, on vit pour
+           <u>éprouver des sensations</u>. L’assiette devient
+@@ -212,8 +227,48 @@
+ 
+       <!-- Les sections suivantes (Statut, Divertissement, Érotisme) seront insérées après si tu valides celle-ci. -->
+       <!-- Section: Status Signaling and Identification -->
+-      <section>
+-        <h2>Status Signaling and Identification</h2>
++
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/kimBreda.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++      <h2>Status Signaling</h2>
++      <section id="status-signaling">
++        <p>
++          <u>Status Signaling</u> has become a silent law in modern restaurants.
++          <mark style="background-color: #e0e0e0">What you eat</mark>,
++          <mark style="background-color: #e0e0e0">where you sit</mark>, and
++          <mark style="background-color: #e0e0e0">who you tag</mark> say more
++          than a résumé. You no longer dine—you broadcast.
++        </p>
++
++        <p>
++          The emergence of the <strong>“foodie”</strong> figure—curator of
++          taste, chronicler of plates—turned meals into performances.
++          <u>To be seen eating</u> became as important as eating well. The
++          <strong>restaurant became a stage</strong>.
++        </p>
++
++        <p>
++          Then came <mark style="background-color: #e0e0e0">foodporn</mark>.
++          Perfect lighting. Close-ups of melting yolks. Stylized excess shared
++          on <u>Instagram</u>. Aesthetic jouissance replaced hunger.
++          <strong>Visual pleasure replaced nutritional need</strong>.
++        </p>
++
++        <p>
++          Eating out now signals <u>cultural capital</u>. A reservation at the
++          right address becomes proof of belonging.
++          <mark style="background-color: #e0e0e0"
++            >Each post says: I can afford this, I know this, I deserve
++            this.</mark
++          >
++          It’s no longer about taste—it’s about status.
++        </p>
++
+         <p>
+           Simulacre des besoins naturels. Managers and waiters often
+           unconsciously align themselves with their clientele, mimicking the
+@@ -228,10 +283,94 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/ramen.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++      <h2>Simulacre et Représentation</h2>
++      <section id="simulacre-representation">
++        <p>
++          The <strong>restaurant</strong> is no longer a place to eat. It is a
++          <u>simulacrum</u>—a theatrical representation of ancestral necessity.
++          The need for food is real. But the form it takes is entirely
++          fabricated.
++        </p>
++
++        <p>
++          <mark>Each element is staged</mark>—the lighting, the plating, the
++          scripted smiles. We don’t eat to live, we
++          <u>rehearse the idea of dining</u>. It’s consumption as narrative, not
++          nutrition.
++        </p>
++
++        <p>
++          We simulate ancient rituals (table, fire, sharing) but wrapped in
++          <strong>branding and spectacle</strong>. The dish is no longer a
++          means—it is a message. A plate now speaks:
++          <mark>you belong to a story</mark>.
++        </p>
++
++        <p>
++          Even hunger becomes optional. The experience matters more than the
++          need. We consume images, we perform desire, and the
++          <strong>restaurant becomes a representation of itself</strong>—an echo
++          without origin.
++        </p>
++      </section>
++
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/nem.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
++      <h2>Le Divertissement Pascalien</h2>
++      <section id="divertissement-diversion">
++        <p>
++          <strong>Diversion</strong> is the hidden function of contemporary
++          leisure. Echoing <u>Blaise Pascal</u>, the restaurant offers
++          <mark>escape from oneself</mark>. To eat out is to forget. To fill the
++          void.
++        </p>
++
++        <p>
++          It’s not only distraction. It’s <strong>pretext</strong>. A reason to
++          avoid solitude. <u>Smalltalk becomes the main dish</u>. Glasses of
++          wine hide existential nausea. It’s a masked flight from facing
++          silence.
++        </p>
++
++        <p>
++          Alcohol, noise, screens—every tool is used to push away the real. The
++          restaurant becomes <strong>a refuge from interiority</strong>.
++          <mark style="background-color: #e0e0e0"
++            >We digest bread, but what we hunger for is meaning</mark
++          >.
++        </p>
++
++        <p>
++          In this ecosystem, even boredom becomes unthinkable.
++          <u>Every evening must be filled</u>. Every discomfort evaded. The
++          restaurant is no longer a destination—it’s a
++          <strong>loop of self-distraction</strong>.
++        </p>
++      </section>
+       <!-- 🎭 Intro : Le restaurant comme rituel collectif -->
+       <!-- Le restaurant n’est pas un lieu anodin : il incarne le statut, la célébration, l’évitement. Il est devenu le temple du divertissement occidental. -->
+       <!-- Section: Restaurant as Collective Ritual -->
+       <section>
++        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++          <img
++            src="./assets/img/pousse.jpg"
++            alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++            style="max-width: 100%; height: auto; border-radius: 8px"
++          />
++        </div>
+         <h2>Restaurant as Collective Ritual</h2>
+         <p>
+           The restaurant is not merely a place to eat. It is a ritualistic
+@@ -280,7 +419,13 @@
+           restaurant culture and explains much of its emotional charge.
+         </p>
+       </section>
+-
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/magnum.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <!-- 🗣️ Small talk et évitement -->
+       <!-- Analyse du langage ritualisé, du refus du fond, du règne des conversations vides comme mécanique de protection collective. -->
+       <section>
+@@ -302,7 +447,13 @@
+           elevated to a form of social grace.
+         </p>
+       </section>
+-
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/poulet_turc.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <!-- 👩‍🍳 Mythe du chef et contradictions genrées -->
+       <!-- Mise en lumière de la glorification masculine du chef, de son rôle presque sacré, et des paradoxes réels (chefs qui ne cuisinent jamais chez eux, absence de cheffes, etc.) -->
+       <!-- Section: Culinary Mythologies and Masculine Prestige -->
+@@ -321,6 +472,14 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/pastalvik.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
+       <!-- 🍽️ La cuisine processée, ignorée -->
+       <!-- Dénonciation du désintérêt pour ce qu’on mange réellement. Le restaurant vend une atmosphère, un storytelling, pas de la nourriture digne. -->
+       <section>
+@@ -336,20 +495,27 @@
+           collective opiates, not nutritional institutions.
+         </p>
+       </section>
+-
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/crumble.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <!-- 👥 Identifications croisées et mépris de classe -->
+       <!-- Les managers et serveurs reproduisent les codes de leurs clients pour s’y rattacher symboliquement, au détriment de leurs collègues (plonge, cuisine). -->
+       <section>
+-        <h2>Symbolic Status and Identification</h2>
++        <h2>Mimetisme Social</h2>
+         <p>
+-          Waiters and managers often unconsciously identify with the clientele,
+-          especially when the clientele is affluent. This identification with
+-          the bourgeois class creates a perceptible hierarchy inside the
+-          restaurant itself: dishwashers and kitchen staff are silently deemed
+-          inferior. The front-of-house staff perform a form of class mimicry,
+-          adopting gestures, speech, and attitudes that align with those they
+-          serve. The more refined their demeanor, the more credible the illusion
+-          of upward mobility.
++          Theorie de Rene Girard. théorie de René Girard (imitation, désir
++          triangulaire). Waiters and managers often unconsciously identify with
++          the clientele, especially when the clientele is affluent. This
++          identification with the bourgeois class creates a perceptible
++          hierarchy inside the restaurant itself: dishwashers and kitchen staff
++          are silently deemed inferior. The front-of-house staff perform a form
++          of class mimicry, adopting gestures, speech, and attitudes that align
++          with those they serve. The more refined their demeanor, the more
++          credible the illusion of upward mobility.
+         </p>
+         <p>
+           For owners and managers—often upwardly mobile immigrants or self-made
+@@ -363,6 +529,13 @@
+         </p>
+       </section>
+ 
++      <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/poulet_riz.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <!-- 💭 Synthèse existentielle -->
+       <!-- Ce monde entier fonctionne sur la dissonance cognitive : créer du sens là où il n’y a qu’oubli, consommation, symboles de reconnaissance. -->
+       <section>
+diff --git a/foundations.html b/foundations.html
+index c6ea38f..ebb6567 100644
+--- a/foundations.html
++++ b/foundations.html
+@@ -266,6 +266,14 @@
+         The appointed auditor is <u>Berth Åke Knutsson</u>.
+       </p>
+ 
++           <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/rearrangements.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
++
+       <h3>📍 <span style="font-size: 1.2rem; font-weight: 600">2006</span></h3>
+ 
+       <p>
+@@ -486,6 +494,15 @@
+         liquidation. This marked the legal end of the original corporate entity
+         behind Izakaya Koi.
+       </p>
++
++
++           <div style="text-align: center; margin-top: 30px; margin-bottom: 20px">
++        <img
++          src="./assets/img/window.jpg"
++          alt="Cartons déchirés, bouteilles vides et déchets au sol derrière un restaurant"
++          style="max-width: 100%; height: auto; border-radius: 8px"
++        />
++      </div>
+       <p>
+         <span style="font-size: 1.2em">📍 <strong>2012</strong></span>
+       </p>
+diff --git a/governance.html b/governance.html
+index d6f29a2..029c0e0 100644
+--- a/governance.html
++++ b/governance.html
+@@ -277,7 +277,7 @@
+       </div>
+ 
+       <section>
+-        <section>
++        <section id="gotmyteam">
+           <h2>
+             2018 ·
+             <a href="https://www.gotmyteam.com/" class="subtle-link"
+@@ -337,13 +337,15 @@
+             personal reasons.
+           </p>
+ 
++          <p></p>
+           <p></p>
+           <p>
+-            🚩 <strong>Red Flags: </strong> Samuel was never able to articulate
+-            a <strong>clear value proposition</strong>, despite repeated
+-            requests. <u>No defined product</u>, <u>no target audience</u>,
+-            <mark style="background-color: #ccc">no market logic</mark>—just
+-            vague talk of network and financial upside.
++            <strong>🔺 Red Flags:</strong> Samuel was never able to articulate a
++            <strong>clear value proposition</strong>, despite repeated requests.
++            The model relied on a
++            <u>network of brokers and subcontractors</u> to circulate deals,
++            bypass ownership risk, and extract public liquidity without
++            oversight.
+           </p>
+ 
+           <p>
+@@ -357,12 +359,18 @@
+           </p>
+ 
+           <p>
+-            <strong> 💰 Financial Mechanics:</strong> Each loan issued to
+-            clients likely triggered <u>commissions from the bank</u>, in
+-            addition to state-backed installation incentives. The company relied
+-            on a <u>network of business brokers and subcontractors</u> to
+-            circulate deals and extract liquidity.
++            <strong>💰Financial Mechanics:</strong> The company was engineered
++            to
++            <a
++              href="https://www.jensnylander.com/energimyndighetens-grona-laddfiasko/"
++              class="subtle-link"
++              >capture green public subsidies</a
++            >
++            through every loan issued.
++            <u>Each financing operation unlocked dual streams</u>: bank
++            commissions and <u>state-backed solar or heat pump incentives</u>.
+           </p>
++
+           <p>
+             ⚖️ <strong>Legal & Ethical Doubt:</strong> What
+             <a
+diff --git a/legal.html b/legal.html
+index 5c48040..3a59ee7 100644
+--- a/legal.html
++++ b/legal.html
+@@ -60,413 +60,144 @@
+         font-family: 'Source Sans Pro', sans-serif;
+       "
+     >
+-      <h1>Legal Notice &amp; Data Policy</h1>
++      <h1>Legal Notice</h1>
+ 
+-      <h2>1. Site Publisher</h2>
++      <h2>1. Purpose</h2>
+       <p>
+-        Site owner: Patrice Kenmoé (individual)<br />
+-        Address: Hyllie Boulevard 34, 215 32 Malmö, Sweden<br />
+-        Email: <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>
++        This page outlines the legal and editorial stance of this investigative
++        blog. The content published here aims to clarify facts, question power
++        structures, and document documented abuses or irregularities involving
++        companies or public actors. The approach is structured, evidence-based,
++        and rooted in journalistic integrity and transparency.
+       </p>
+ 
+-      <h2>2. Hosting</h2>
+-      <p>
+-        Hosted by GitHub, Inc.<br />
+-        88 Colin P. Kelly Jr Street, San Francisco, CA 94107, USA
+-      </p>
+-
+-      <h2>3. Purpose of the Blog</h2>
+-      <p>
+-        AfterShift is a personal blog documenting legal reflections and lived
+-        experience in the context of labor, legal inertia, and social structure.
+-        It is neither a company nor a journalistic entity. Its tone is personal,
+-        reflective, and evolving.
+-      </p>
+-
+-      <h2>4. Legal Status</h2>
+-      <p>
+-        The blog is managed by an individual based in Sweden and follows Swedish
+-        legal jurisdiction. Any disputes shall be handled by the courts of
+-        Malmö.
+-      </p>
+-
+-      <h2>5. Editorial Responsibility</h2>
+-      <p>
+-        The blog is authored by Patrice Kenmoé. All content is self-published.
+-        Names and details may be anonymized to ensure privacy and legal safety.
+-      </p>
+-
+-      <h2>6. Disclaimer</h2>
++      <h2>2. Scope of Claims</h2>
+       <ol>
+         <li>
+-          This blog represents personal experience and analysis. It is not
+-          intended to target individuals or damage reputations. The aim is to
+-          document systemic issues and provide structured, respectful
+-          commentary. Content is subject to frequent updates as the platform
+-          evolves.
++          All allegations are based on verifiable documents, official records,
++          or first-hand experiences described by the author.
++        </li>
++        <li>
++          Documents cited or published may include court rulings, public
++          registries, communications from institutions, and audio or visual
++          proof when available.
+         </li>
+-
+         <li>
+-          In narrative sections of the blog, certain personal names may be
+-          altered to protect the identity of individuals. These changes are made
+-          in good faith and aim to balance narrative clarity with respect for
+-          privacy. Any resemblance to real persons, living or dead, outside of
+-          documented facts, is coincidental.
++          The aim is not to defame individuals, but to hold structures and
++          systems accountable where wrongdoing or opacity has been detected.
+         </li>
+       </ol>
+ 
+-      <h2>7. Commenting &amp; Feedback</h2>
++      <h2>3. Legal Status</h2>
+       <ol>
+         <li>
+-          The AfterShift blog includes a comment system (currently planned via
+-          Giscus, a lightweight tool built on GitHub Discussions).
++          This site is operated independently and does not represent any
++          political party, union, or commercial entity.
+         </li>
+         <li>
+-          Giscus requires a GitHub account to participate in discussions. This
+-          choice was made for fast deployment and is not intended to restrict
+-          participation.
++          It is hosted within the European Union and protected under applicable
++          freedom of expression laws, including the European Charter of
++          Fundamental Rights.
+         </li>
+         <li>
+-          Users who cannot or do not wish to use GitHub may contact us via email
+-          or participate through other platforms (e.g., OB1 Circles).
++          In case of legal dispute, Swedish and EU digital rights and procedural
++          standards apply.
+         </li>
++      </ol>
++
++      <h2>4. Public Records & Transparency</h2>
++      <ol>
+         <li>
+-          As the platform evolves, comments may migrate to alternative tools
+-          (e.g., Commento or embedded forms), provided privacy and legal
+-          compliance are maintained.
++          Many of the materials used originate from Swedish public databases
++          (Bolagsverket, Domstolsverket, Skatteverket) or EU-accessible
++          datasets.
+         </li>
+         <li>
+-          All significant changes will be clearly communicated via updated terms
+-          or page footers.
++          Fees paid for public documents are listed when relevant, to emphasize
++          the research cost and transparency effort.
++        </li>
++        <li>
++          Documents already made public (e.g. by legal filings) may be annotated
++          for clarity but not redacted unless legally required.
+         </li>
+       </ol>
+ 
+-      <h2>8. Intellectual Property</h2>
+-      <p>
+-        All texts, visuals, and documents are original creations and property of
+-        Patrice Kenmoé unless otherwise stated. No reproduction is permitted
+-        without written consent.
+-      </p>
+-
+-      <h2>9. Privacy &amp; Data</h2>
+-      <p>
+-        No personal data is collected without consent. Matomo Analytics may be
+-        used in full compliance with GDPR regulations. No cookies or identifiers
+-        are used to track individuals.
+-      </p>
+-
+-      <h2>10. Evolution &amp; Versioning</h2>
+-      <p>
+-        This blog is updated daily and may evolve significantly over time. Legal
+-        notices and key policy documents are versioned and may change regularly.
+-        Changes will be documented and dated.
+-      </p>
+-
+-      <h2>11. Cross-site Relationship</h2>
+-      <p>
+-        AfterShift is independent but connected to OB1.se (a separate community
+-        platform). Both are maintained by the same author but serve different
+-        purposes. Legal responsibilities are clearly separated.
+-      </p>
+-
+-      <h2>12. PDF Fingerprinting & Traceability</h2>
+-      <p>
+-        Each access-restricted document is uniquely fingerprinted prior to
+-        delivery. This process does not affect readability or file structure but
+-        embeds a non-visible identifier to help trace unauthorized
+-        redistribution.
+-      </p>
+-      <p>
+-        Fingerprinting serves both to discourage leaks and to identify the
+-        origin of any unauthorized reproduction, without storing personal
+-        information in the file.
+-      </p>
+-
+-      <h2>13. Access Control and Strategic Extract Requests</h2>
+-
+-      <p>
+-        Access to certain high-sensitivity materials—such as those contained
+-        within the <strong>Strategic Extract</strong>—is restricted and subject
+-        to manual review. Requests may be denied at the author's discretion.
+-      </p>
+-
+-      <p>
+-        In order to protect both the integrity of the archive and the identity
+-        of contributors, any request to access these documents requires
+-        identifiable contact details.
+-      </p>
+-
+-      <p>
+-        These details (such as
+-        <strong>name, email address, professional affiliation</strong>, or
+-        equivalent) are logged for the sole purpose of traceability and will
+-        <u>never</u> be shared, sold, or publicly disclosed. This approach is
+-        designed to
+-        <span class="highlight"
+-          >prevent abuse, reduce data diffusion, and preserve the site’s
+-          independence</span
+-        >.
+-      </p>
+-
+-      <p>
+-        If a request is declined, a brief notification may be sent to the
+-        requester explaining the reason.
+-      </p>
+-
+-      <p>
+-        Your submission constitutes acceptance of this protocol. The database of
+-        access requests is stored securely and used exclusively to assess access
+-        legitimacy.
+-      </p>
+-      <section
+-        class="defense-faq"
+-        style="max-width: 740px; margin: auto; padding: 2rem"
+-      >
+-        <h1>Defense FAQ</h1>
+-
+-        <h2>1. What is the legal nature of this site?</h2>
+-        <p>
+-          This site is a civic archive authored by an individual residing in
+-          Sweden. It documents first-hand labor experiences, backed by personal
+-          and official records. It is non-commercial, non-affiliated, and
+-          protected under Swedish and European legal frameworks (freedom of
+-          expression, right to document, public interest).
+-        </p>
+-
+-        <h2>2. Are personal names or companies exposed?</h2>
+-
+-        Names are mentioned only when they are part of:
+-        <ul>
+-          <li>Public registries (e.g., Bolagsverket, Skatteverket)</li>
+-          <li>
+-            Legally documented employer roles or decision-making positions
+-          </li>
+-          <li>
+-            Situations with direct operational or legal relevance to the
+-            grievance
+-          </li>
+-        </ul>
+-        Where appropriate, names may be anonymized or partially redacted.
+-
+-        <h2>3. Why is this public and not private?</h2>
+-        <p>
+-          Legal communication channels have been exhausted or met with silence,
+-          threats, or procedural evasion. Not all damage is litigable. Public
+-          documentation allows patterns to emerge, informs others in similar
+-          situations, and serves as a civil ledger of misconduct or procedural
+-          failure.
+-        </p>
+-
+-        <h2>4. Is this defamatory?</h2>
+-
+-        No. Every element is:
+-        <ul>
+-          <li>Backed by documents, screenshots, or official filings</li>
+-          <li>
+-            Presented in a structured, cautious, and legally filtered tone
+-          </li>
+-          <li>Free from insult or distortion</li>
+-        </ul>
+-        If an error is found, it may be corrected upon request.
+-
+-        <h2>5. What if you are mentioned?</h2>
+-
+-        You may:
+-        <ul>
+-          <li>Submit a factual correction or clarification</li>
+-          <li>Provide a verifiable rebuttal or timeline</li>
+-          <li>Request anonymization if proportionate and justified</li>
+-        </ul>
+-        Contact:
+-        <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a> or use
+-        the <a href="/contact.html">contact form</a>.
+-
+-        <h2>6. Can this be cited or reused?</h2>
+-
+-        Yes. Provided that:
+-        <ul>
+-          <li>AfterShift.se is mentioned as the source</li>
+-          <li>No modification is made to the excerpts</li>
+-          <li>
+-            The context of citation respects proportionality and good faith
+-          </li>
+-        </ul>
+-        Journalists, academics, and legal professionals are welcome to contact
+-        the author for clarification.
+-
+-        <h2>7. Is this politically or union-affiliated?</h2>
+-        <p>
+-          No. The initiative is personal and independent. Any external reuse by
+-          union or political actors is not coordinated or solicited.
+-        </p>
+-
+-        <h2>8. Why are some materials access-restricted?</h2>
+-        <p>
+-          Some financial breakdowns, offshore documentation, or legal records
+-          are not published openly to preserve negotiation leverage, ensure
+-          editorial safety, or avoid premature exposure of sensitive data. These
+-          are accessible on a case-by-case basis through the
+-          <a href="/confidential.html">Confidential Insight Access</a> section,
+-          where requesters must identify themselves and explain their interest.
+-        </p>
+-
+-        <h2>9. What happens if access is denied?</h2>
+-        <p>
+-          Requests that do not meet minimal verification criteria will receive a
+-          formal rejection notice. This includes vague, unverifiable, or
+-          pseudonymous identities.
+-        </p>
+-        <p>
+-          The author reserves the right to deny access at their discretion,
+-          based on editorial and security considerations. Applicants are not
+-          added to any database, and rejected identities are not retained.
+-        </p>
+-      </section>
+-      <section
+-        class="reply-policy"
+-        style="max-width: 740px; margin: auto; padding: 2rem"
+-      >
+-        <h1>Response Rights & Legal Integrity</h1>
+-
+-        <h2>🛡️ Purpose</h2>
+-        <p>
+-          This page outlines the public policy for legal interactions, factual
+-          rebuttals, correction requests, and the documentation of any attempts
+-          to suppress or informally negotiate away public interest material.
+-        </p>
+-
+-        <h2>📣 Right of Reply</h2>
+-        <ul>
+-          <li>Submit a verifiable factual correction</li>
+-          <li>Provide context or supporting documents</li>
+-          <li>Request anonymization (if justified and proportionate)</li>
+-        </ul>
+-        <p>
+-          Requests will be reviewed in good faith. Valid additions or
+-          clarifications will be acknowledged and publicly reflected in
+-          footnotes or appendices.
+-        </p>
+-
+-        <h2>☎️ Recording Policy for Calls & Outreach</h2>
+-        <p>
+-          Due to past experiences of coercion and veiled threats, all phone
+-          calls and voice messages <strong>may be recorded</strong> for
+-          transparency, archiving, and legal protection.
+-        </p>
+-        <ul>
+-          <li>
+-            This includes direct calls, intermediaries, and informal emissaries.
+-          </li>
+-          <li>
+-            Any interaction deemed intimidatory, manipulative, or designed to
+-            bypass formal channels
+-            <strong>may be documented and referenced</strong> in future updates.
+-          </li>
+-        </ul>
+-
+-        <h2>📨 Handling Legal Letters or Notices</h2>
+-        <ul>
+-          <li>
+-            Legal communication may be summarized, quoted, or published in full.
+-          </li>
+-          <li>
+-            Identities may be anonymized unless public or legally relevant.
+-          </li>
+-          <li>
+-            Communications relying on intimidation may be publicly challenged.
+-          </li>
+-        </ul>
+-
+-        <h2>🔍 Transparency Clause</h2>
+-        <p>This project maintains the right to:</p>
+-        <ul>
+-          <li>Publicly respond to formal or informal pressure</li>
+-          <li>Trace outreach patterns and motives</li>
+-          <li>Document attempts to distort or silence structural critique</li>
+-        </ul>
+-        <blockquote>
+-          This archive is not a negotiation table — it is a civic documentation
+-          platform.
+-        </blockquote>
+-
+-        <h2>📬 Contact Protocol</h2>
+-        <p>For rebuttals or formal communication:</p>
+-        <ul>
+-          <li>
+-            Email:
+-            <a href="mailto:patrice@aftershift.se">patrice@aftershift.se</a>
+-          </li>
+-          <li>Use the <a href="/contact.html">contact form</a></li>
+-        </ul>
+-      </section>
+-      <section class="exchanges-pressure">
+-        <h1>Exchange Archive & Formal Interactions</h1>
+-        <div class="legal-warning-box">
+-          <strong>Why this page exists:</strong><br />
+-          This page curates letters and legal communications received in
+-          response to our investigation. It offers the reader a glimpse into the
+-          language, tone, and strategies used — from veiled threats to formal
+-          settlements. All identifying details have been redacted where
+-          appropriate.
+-        </div>
+-        <h2>📄 April 2025 — Letter from Head Chef Henrik Ling</h2>
+-
+-        <p>
+-          <strong>Sender:</strong> Henrik Kling, Head Chef at Quan / HSSC Event
+-          AB<br />
+-          <strong>Recipient:</strong> AfterShift Editor (K.P.)<br />
+-          <strong>Date:</strong> April 17, 2025<br />
+-          <strong>Method:</strong> Attached PDF, sent via personal email, no
+-          subject line
+-        </p>
+-
+-        <p>
+-          This letter was sent in response to an initial legal notice issued by
+-          the editor of this site in early April 2025. The notice related to
+-          delayed employer certificates, potential unlawful dismissal, and
+-          informal coercion following a trial contract termination.
+-        </p>
++      <h2>5. Defense FAQ</h2>
++      <ol>
++        <li>
++          If you are named in an article and believe it to be in error, you have
++          a right of reply: send a signed request to the editor via email.
++          Include your corrections and supporting documents.
++        </li>
++        <li>
++          No content will be removed without an adequate factual rebuttal or
++          judicial order.
++        </li>
++        <li>
++          Malicious threats or harassment will be publicly documented and
++          forwarded to relevant authorities.
++        </li>
++      </ol>
+ 
+-        <p>
+-          Instead of receiving a reply from legal counsel or management, the
+-          company delegated the response to <strong>Henrik Kling</strong>, the
+-          <em>head chef and senior figure in the kitchen brigade</em>. The
+-          letter arrived as a simple PDF attachment, with no explanatory message
+-          or subject line. This form and channel of response were perceived as
+-          <strong>dismissive and non-serious</strong>, which prompted a second
+-          formal notice from the claimant — never opened by the company.
+-        </p>
++      <h2>6. Response Rights</h2>
++      <ol>
++        <li>
++          Any party mentioned may request a formal counterstatement to be
++          published, provided it is factual, verifiable, and respectful.
++        </li>
++        <li>
++          Such requests will be processed within 14 days if received in writing
++          and signed.
++        </li>
++        <li>
++          Anonymous denials or vague disclaimers will not be considered a valid
++          rebuttal.
++        </li>
++      </ol>
+ 
+-        <blockquote
+-          style="
+-            border-left: 4px solid #ccc;
+-            padding-left: 1em;
+-            font-style: italic;
+-            color: #555;
+-          "
+-        >
+-          “It is reasonable to interpret this response not as an official legal
+-          stance, but rather as a delegated placeholder — written quickly
+-          between two shifts, perhaps with the assistance of a generative
+-          language model.”<br />
+-          – Editorial Note
+-        </blockquote>
++      <h2>7. Commenting & Feedback</h2>
++      <ol>
++        <li>
++          This blog does not currently feature a public forum or discussion
++          board. Comments are disabled by default to preserve editorial focus
++          and legal clarity.
++        </li>
++        <li>
++          Readers may submit factual corrections, additional context, or
++          feedback by contacting the author directly via email.
++        </li>
++        <li>
++          Selected feedback may be reflected in future updates or mentioned in
++          footnotes, at the editor’s discretion.
++        </li>
++      </ol>
+ 
+-        <p>
+-          The letter offers no legal rebuttal, acknowledges no facts, and closes
+-          with a vague offer of two weeks’ compensation — unsigned and without
+-          legal formatting.
+-        </p>
++      <h2>8. Archives & Edits</h2>
++      <ol>
++        <li>
++          All previous versions of major pages are archived for accountability.
++        </li>
++        <li>
++          Each document may include a “last updated” timestamp with changelog
++          upon request.
++        </li>
++        <li>
++          Corrections and factual amendments will be timestamped and visible on
++          the page if substantial.
++        </li>
++      </ol>
+ 
+-        <p>
+-          🔗
+-          <a
+-            href="/assets/docs/letters/2025-04-17_chef-ling-reply_redacted.pdf"
+-            target="_blank"
+-            >View the redacted letter (PDF)</a
+-          >
+-        </p>
+-      </section>
++      <h2>9. Citation & Reuse</h2>
++      <ol>
++        <li>
++          Non-commercial reuse is allowed with credit to the author and link to
++          the original source.
++        </li>
++        <li>
++          Commercial reproduction, including AI scraping or integration into
++          proprietary datasets, is prohibited without written consent.
++        </li>
++      </ol>
+     </main>
+ 
+     <script>
+diff --git a/sector.html b/sector.html
+index e4e5420..44abd65 100644
+--- a/sector.html
++++ b/sector.html
+@@ -79,14 +79,21 @@
+             >course</a
+           >
+           at Stanford on how to build startups. It was part of a broader
+-          initiative shaped as a practical extension of polarizing
++          initiative shaped as a practical extension of the famously
++          <a
++            href="https://www.youtube.com/watch?v=KipDBa4bTl8&t=831s"
++            class="subtle-link"
++          >
++            outspoken</a
++          >
+           <a
+             href="https://en.wikipedia.org/wiki/Peter_Thiel"
+             class="subtle-link"
+-            >Peter Thiel</a
++          >
++            Peter Thiel</a
+           >’s original
+           <a
+-            href="https://www.youtube.com/watch?v=5_0dVHMpJlo&t=55s"
++            href="https://www.youtube.com/watch?v=5_0dVHMPJlo&t=55s"
+             class="subtle-link"
+             >CS183</a
+           >
