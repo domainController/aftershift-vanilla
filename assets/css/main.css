@@ -496,3 +496,39 @@ a.internal-link:hover {
   margin-bottom: 0.5rem;
   display: block;
 }
+/* 🟢 1. Manual Work — Écrit à la main (niveau expert) */
+.ai-human {
+  background-color: transparent;     /* Aucun fond */
+  color: #1a1a1a;                    /* Texte noir charbon */
+  border: 1px solid #1a1a1a;         /* Contour sobre */
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* 🟠 2. Mixed Work — Mix humain + AI */
+.ai-hybrid {
+  background-color: #444444;  /* Gris acier foncé */
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* 🔵 3. AI Generated — Produit majoritairement avec IA */
+.ai-ai {
+  background-color: #d1d5db;  /* Gris clair uniforme */
+  color: #333;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 400;
+}
+.nav-separator {
+  border: none;
+  border-top: 1px solid #888;
+  margin: 0.8rem 0;
+}
+
