@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aftershift Blog</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Matomo -->
+    <!-- End Matomo Code -->
+  </head>
+  <body>
+    <header>
+      <button id="toggleNavbar" class="toggle-btn">☰</button>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <!-- Bloc Auteur -->
+        <hr class="nav-separator" />
+        <a href="/claim.html" class="ai-human">Editorial Rules</a>
+        <a href="/about.html" class="ai-human">Positioning Strategy</a>
+
+        <!-- Bloc Sector Intelligence -->
+        <hr class="nav-separator" />
+        <a href="/culture.html" class="ai-hybrid">Kitchen Culture</a>
+        <a href="/sector.html" class="ai-hybrid">Sector Mechanics</a>
+
+        <!-- Bloc Contexte -->
+        <hr class="nav-separator" />
+        <a href="/foundations.html" class="ai-ai">Genesis Phase</a>
+        <a href="/structure.html" class="ai-ai">Control Matrix</a>
+
+        <!-- Bloc Team Resilience et cohesien -->
+        <hr class="nav-separator" />
+        <a href="/governance.html" class="ai-hybrid"> Operational Authority</a>
+        <a href="/working-dynamics.html" class="ai-hybrid">
+          Governance Dynamics</a
+        >
+
+        <a href="/signals.html" class="ai-hybrid"> Operational Patterns</a>
+
+        <!-- Bloc Publications -->
+        <div class="nav-section">Articles</div>
+        <a href="/violations.html">Blog</a>
+
+        <a href="/confidential.html" class="ai-human">Confidential Memos</a>
+
+        <!-- Bloc Outils & Références -->
+        <div class="nav-section">Tools & References</div>
+        <a href="/reference.html" class="ai-ai">Terminology</a>
+
+        <!-- Bloc Communauté et légal -->
+        <div class="nav-section">Community & Legal</div>
+        <a href="/legal.html" class="ai-ai">Legal Framework</a>
+        <a href="/cost.html" class="ai-ai">Research Cost</a>
+        <a href="/contact.html" class="ai-ai">Press Room</a>
+        <a href="/external.html" class="ai-ai">Mirror Access</a>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="legal-container">
+        <h1>
+          The Inconvenient Hours<br /><small class="subtitle"
+            >A Tactical Journal of Legal Inertia and Employer Neglect in a
+            High-end Malmö Restaurant.</small
+          >
+        </h1>
+      </div>
+      <div style="text-align: center; margin-top: 10px; margin-bottom: 10px">
+        <img
+          src="./assets/img/20231026_155218.jpg"
+          alt="AfterShift Banner"
+          style="max-width: 40%; height: auto; border-radius: 8px"
+        />
+      </div>
+      <div class="legal-container">
+        <h2 class="centered">⚠️ This site is a draft sandbox</h2>
+        <p style="line-height: 1.6em">
+          This is a <strong>live working draft</strong> — a sandbox to develop
+          <u>core structural elements</u>:
+          <span class="highlight">legal narrative grids</span>,
+          <span class="highlight">ownership timelines</span>,
+          <span class="highlight">operating principles</span>, and
+          <span class="highlight">foundational trajectories</span>. These are
+          the internal scaffolding for future articles.
+        </p>
+        <p style="line-height: 1.6em">
+          A few early texts may appear here as warm-up material, but the
+          complete version will eventually be published under a
+          <u>different domain</u> and
+          <strong>fully optimised for long-form SEO content</strong> and
+          <strong>strategic legal storytelling</strong>.
+        </p>
+      </div>
+    </main>
+    <script>
+      // Script pour la sidebar
+      const toggleBtn = document.getElementById("toggleNavbar");
+      const navbar = document.querySelector(".navbar");
+      toggleBtn?.addEventListener("click", () => {
+        navbar.classList.toggle("collapsed");
+      });
+
+      // Script pour injecter le footer
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const footerContainer = document.createElement("div");
+          footerContainer.innerHTML = html;
+          document.body.appendChild(footerContainer);
+        });
+    </script>
+  </body>
+</html>

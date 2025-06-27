@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suède : Dette publique vs Taxation des entreprises</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #3498db, #f1c40f, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        select, input[type="checkbox"] {
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            accent-color: #3498db;
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .chart-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #f1c40f, #e74c3c);
+        }
+
+        .chart-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+            height: 500px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .insights-section {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .insights-title {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .insight-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+        }
+
+        .insight-card.debt { border-left-color: #e74c3c; }
+        .insight-card.tax { border-left-color: #f1c40f; }
+        .insight-card.revenue { border-left-color: #27ae60; }
+        .insight-card.correlation { border-left-color: #9b59b6; }
+
+        .insight-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .insight-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #f39c12;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .period {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .methodology {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .methodology h4 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .methodology p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇸🇪 Suède : Dette Publique vs Taxation des Entreprises</h1>
+        <div class="subtitle">
+            Analyse comparative de l'évolution de la dette publique et des politiques fiscales (1990-2025)
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="showDebt">Dette publique :</label>
+                <input type="checkbox" id="showDebt" checked>
+            </div>
+            <div class="control-group">
+                <label for="showCorporate">Impôt sociétés :</label>
+                <input type="checkbox" id="showCorporate" checked>
+            </div>
+            <div class="control-group">
+                <label for="showVAT">TVA restaurants :</label>
+                <input type="checkbox" id="showVAT" checked>
+            </div>
+            <div class="control-group">
+                <label for="showRevenue">Recettes fiscales :</label>
+                <input type="checkbox" id="showRevenue" checked>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">78%</div>
+                <div class="stat-label">Dette publique max (1994)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">33%</div>
+                <div class="stat-label">Dette publique actuelle (2024)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20.6%</div>
+                <div class="stat-label">Impôt sociétés actuel (2021-)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12%</div>
+                <div class="stat-label">TVA restaurants (depuis 2010)</div>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <div class="chart-title">Dette Publique & Taux d'Imposition</div>
+                <div class="chart-container">
+                    <canvas id="debtTaxChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-title">Recettes Fiscales (% du PIB)</div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-wrapper full-width">
+                <div class="chart-title">Analyse Corrélation : Dette vs Fiscalité</div>
+                <div class="chart-container">
+                    <canvas id="correlationChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <h2 class="insights-title">📊 Analyses et Corrélations</h2>
+            <div class="insights-grid">
+                <div class="insight-card debt">
+                    <h3>🔴 Évolution de la Dette Publique</h3>
+                    <div class="period">
+                        <strong>1990-1994 :</strong> Explosion de la dette (43% → 78%) due à la crise bancaire et récession
+                    </div>
+                    <div class="period">
+                        <strong>1995-2010 :</strong> Consolidation spectaculaire grâce aux réformes structurelles
+                    </div>
+                    <div class="period">
+                        <strong>2010-2024 :</strong> Stabilisation autour de 35% - modèle européen de gestion
+                    </div>
+                    <p>La Suède démontre qu'une <span class="highlight">dette élevée peut être maîtrisée</span> sans augmenter drastiquement les impôts.</p>
+                </div>
+
+                <div class="insight-card tax">
+                    <h3>🟡 Politique Fiscale des Entreprises</h3>
+                    <div class="period">
+                        <strong>1990 :</strong> Impôt sociétés à ~30% (taux élevé européen)
+                    </div>
+                    <div class="period">
+                        <strong>2000-2010 :</strong> Réduction progressive à 26.3% puis 22%
+                    </div>
+                    <div class="period">
+                        <strong>2019-2024 :</strong> Nouvelles baisses 22% → 21.4% → 20.6%
+                    </div>
+                    <p><span class="highlight">Paradoxe suédois :</span> Baisse des taux, hausse des recettes grâce à l'élargissement de l'assiette fiscale.</p>
+                </div>
+
+                <div class="insight-card revenue">
+                    <h3>🟢 Recettes Fiscales</h3>
+                    <p><strong>Niveau élevé maintenu :</strong> ~42-44% du PIB depuis 2000</p>
+                    <p><strong>TVA restaurants :</strong> Baisse de 25% à 12% en 2010 - stimulation de l'emploi</p>
+                    <p><strong>Composition :</strong> Déplacement des impôts sur les sociétés vers la consommation et le travail</p>
+                    <p>Les <span class="highlight">recettes restent stables</span> malgré la baisse des taux grâce à une meilleure compliance et croissance économique.</p>
+                </div>
+
+                <div class="insight-card correlation">
+                    <h3>🟣 Corrélation Dette-Fiscalité</h3>
+                    <p><strong>Période 1990-2000 :</strong> Corrélation négative - baisse dette avec réformes fiscales</p>
+                    <p><strong>Période 2000-2024 :</strong> Indépendance relative - dette stable malgré baisse impôts</p>
+                    <p><strong>Facteurs clés :</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Réformes structurelles (privatisations)</li>
+                        <li>Croissance économique soutenue</li>
+                        <li>Amélioration de la collecte fiscale</li>
+                        <li>Maîtrise des dépenses publiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="methodology">
+            <h4>📋 Méthodologie et Sources</h4>
+            <p><strong>Sources principales :</strong> FMI, OCDE, Riksgälden (Office suédois de la dette), Tax Foundation, PWC Tax Summaries</p>
+            <p><strong>Données utilisées :</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Dette publique : % du PIB (définition FMI)</li>
+                <li>Impôt sur les sociétés : Taux statutaire nominal</li>
+                <li>TVA restaurants : Taux applicable depuis 1990</li>
+                <li>Recettes fiscales : % du PIB incluant tous impôts et cotisations</li>
+            </ul>
+            <p><strong>Période d'analyse :</strong> 1990-2025 avec focus sur les réformes post-crise bancaire</p>
+        </div>
+    </div>
+
+    <script>
+        // Données historiques basées sur les recherches
+        const data = {
+            years: [1990, 1992, 1994, 1996, 1998, 2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024],
+            publicDebt: [43, 60, 78, 67, 65, 60, 55, 52, 48, 45, 42, 40, 38, 42, 35, 35, 32, 33],
+            corporateTax: [30, 30, 30, 28, 28, 28, 28, 28, 28, 26.3, 26.3, 22, 22, 22, 22, 21.4, 21.4, 20.6],
+            restaurantVAT: [25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 12, 12, 12, 12, 12, 12, 12, 12],
+            taxRevenue: [48, 46, 44, 48, 50, 49, 47, 48, 47, 46, 45, 43, 42, 44, 44, 43, 42, 42]
+        };
+
+        const events = [
+            { year: 1991, label: "Crise bancaire", color: "#e74c3c" },
+            { year: 1995, label: "Début consolidation", color: "#27ae60" },
+            { year: 2008, label: "Crise financière", color: "#f39c12" },
+            { year: 2010, label: "TVA restaurants 25%→12%", color: "#3498db" },
+            { year: 2019, label: "Réforme impôt sociétés", color: "#9b59b6" }
+        ];
+
+        let debtTaxChart, revenueChart, correlationChart;
+
+        function initCharts() {
+            // Graphique dette et taxation
+            const ctx1 = document.getElementById('debtTaxChart').getContext('2d');
+            debtTaxChart = new Chart(ctx1, {
+                type: 'line',
+                data: {
+                    labels: data.years,
+                    datasets: []
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Année' }
+                        },
+                        y: {
+                            title: { display: true, text: 'Pourcentage (%)' },
+                            beginAtZero: true,
+                            max: 80
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Graphique recettes fiscales
+            const ctx2 = document.getElementById('revenueChart').getContext('2d');
+            revenueChart = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: data.years.filter((_, i) => i % 2 === 0), // Années paires pour lisibilité
+                    datasets: [{
+                        label: 'Recettes fiscales (% PIB)',
+                        data: data.taxRevenue.filter((_, i) => i % 2 === 0),
+                        backgroundColor: 'rgba(46, 204, 113, 0.7)',
+                        borderColor: '#27ae60',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: 'Année' } },
+                        y: { 
+                            title: { display: true, text: 'Pourcentage du PIB (%)' },
+                            beginAtZero: true,
+                            max: 55
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' }
+                    }
+                }
+            });
+
+            // Graphique de corrélation
+            const ctx3 = document.getElementById('correlationChart').getContext('2d');
+            correlationChart = new Chart(ctx3, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Dette vs Impôt sociétés',
+                        data: data.years.map((year, i) => ({
+                            x: data.corporateTax[i],
+                            y: data.publicDebt[i],
+                            year: year
+                        })),
+                        backgroundColor: function(context) {
+                            const year = context.parsed.year || context.raw.year;
+                            if (year <= 2000) return 'rgba(231, 76, 60, 0.7)';
+                            if (year <= 2010) return 'rgba(241, 196, 15, 0.7)';
+                            return 'rgba(52, 152, 219, 0.7)';
+                        },
+                        borderColor: function(context) {
+                            const year = context.parsed.year || context.raw.year;
+                            if (year <= 2000) return '#e74c3c';
+                            if (year <= 2010) return '#f1c40f';
+                            return '#3498db';
+                        },
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Taux impôt sociétés (%)' },
+                            min: 18,
+                            max: 32
+                        },
+                        y: {
+                            title: { display: true, text: 'Dette publique (% PIB)' },
+                            min: 25,
+                            max: 85
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const point = context.raw;
+                                    return [
+                                        `Année: ${point.year}`,
+                                        `Impôt sociétés: ${point.x}%`,
+                                        `Dette publique: ${point.y}%`
+                                    ];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            updateCharts();
+        }
+
+        function updateCharts() {
+            const showDebt = document.getElementById('showDebt').checked;
+            const showCorporate = document.getElementById('showCorporate').checked;
+            const showVAT = document.getElementById('showVAT').checked;
+            const showRevenue = document.getElementById('showRevenue').checked;
+
+            // Mise à jour du premier graphique
+            const datasets = [];
+            
+            if (showDebt) {
+                datasets.push({
+                    label: 'Dette publique (% PIB)',
+                    data: data.publicDebt,
+                    borderColor: '#e74c3c',
+                    backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                    borderWidth: 3,
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 5
+                });
+            }
+
+            if (showCorporate) {
+                datasets.push({
+                    label: 'Impôt sociétés (%)',
+                    data: data.corporateTax,
+                    borderColor: '#f1c40f',
+                    backgroundColor: 'rgba(241, 196, 15, 0.1)',
+                    borderWidth: 3,
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 5
+                });
+            }
+
+            if (showVAT) {
+                datasets.push({
+                    label: 'TVA restaurants (%)',
+                    data: data.restaurantVAT,
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    borderWidth: 3,
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 5,
+                    borderDash: [5, 5]
+                });
+            }
+
+            debtTaxChart.data.datasets = datasets;
+            debtTaxChart.update();
+
+            // Mise à jour du graphique des recettes
+            revenueChart.data.datasets[0].data = showRevenue ? 
+                data.taxRevenue.filter((_, i) => i % 2 === 0) : [];
+            revenueChart.update();
+        }
+
+        // Event listeners
+        document.getElementById('showDebt').addEventListener('change', updateCharts);
+        document.getElementById('showCorporate').addEventListener('change', updateCharts);
+        document.getElementById('showVAT').addEventListener('change', updateCharts);
+        document.getElementById('showRevenue').addEventListener('change', updateCharts);
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', initCharts);
+    </script>
+</body>
+</html>

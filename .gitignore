@@ -1,0 +1,13 @@
+# dépendances Node
+node_modules/
+
+# logs et fichiers temporaires
+npm-debug.log*
+.DS_Store
+
+# fichiers de lock auto-générés
+package-lock.json
+node_modules/.package-lock.json
+
+# génération changelog
+updates_template.htmlaftershift-vanilla.code-workspace
